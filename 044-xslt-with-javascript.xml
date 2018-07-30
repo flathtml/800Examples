@@ -1,0 +1,7 @@
+<?xml-stylesheet href="044-xslt-with-javascript.xsl" type="text/xsl" ?>
+<numbers>
+  <number>2</number>
+  <number>11</number>
+  <number>100</number>  
+  <number>-5</number>
+</numbers>

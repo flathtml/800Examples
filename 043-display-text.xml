@@ -1,0 +1,23 @@
+<?xml version="1.0"?> 
+<?xml-stylesheet type="text/xsl" href="043-display-text.xsl"?> 
+<PLANETS> 
+
+    <PLANET> 
+        <NAME>Mercury</NAME> 
+        <MASS UNITS="(Earth = 1)">.0553</MASS> 
+        <DAY UNITS="days">58.65</DAY> 
+        <RADIUS UNITS="miles">1516</RADIUS> 
+        <DENSITY UNITS="(Earth = 1)">.983</DENSITY> 
+        <DISTANCE UNITS="million miles">43.42</DISTANCE><!--At perihelion--> 
+    </PLANET> 
+
+    <PLANET> 
+        <NAME>Venus</NAME> 
+        <MASS UNITS="(Earth = 1)">.815</MASS> 
+        <DAY UNITS="days">116.75</DAY> 
+        <RADIUS UNITS="miles">3716</RADIUS> 
+        <DENSITY UNITS="(Earth = 1)">.943</DENSITY> 
+        <DISTANCE UNITS="million miles">66.8</DISTANCE><!--At perihelion--> 
+    </PLANET> 
+	
+</PLANETS>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <CODE>
+ <!--Insert new record here -->
+  <!--Example#011 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="011-Simple-collapsable-navbar-bootstrap.html"&gt;011-Simple-collapsable-navbar-bootstrap.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / CSS</CATEGORY>
+	<DESC>Simple Collapsable  centered dropdown menu  and website header</DESC>
+  </EXAMPLE>
+ <!--Example#010 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="010-Simple-collapsable-navbar.html"&gt;010-Simple-collapsable-navbar.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / CSS</CATEGORY>
+	<DESC>Simple Collapsable dropdown menu..</DESC>
+  </EXAMPLE>
+ <!--Example#009 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="009-Simple-dropdown-menu-with-submenu.html"&gt;009-Simple-dropdown-menu-with-submenu.html&lt;a&gt;</LINK>
+    <CATEGORY>JavaScript</CATEGORY>
+	<DESC>Simple dropdown menu with submenu</DESC>
+  </EXAMPLE>
+  <!--Example#008 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="008-amazon-dropdown-with-submenu.html"&gt;008-amazon-dropdown-with-submenu.html&lt;a&gt;</LINK>
+    <CATEGORY>Case-Study</CATEGORY>
+	<DESC>Amazon dropdown with sub menu</DESC>
+  </EXAMPLE>
+ <!--Example#007 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="007-How-to-display-HTML-code.html"&gt;007-How-to-display-HTML-code.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / CSS</CATEGORY>
+	<DESC>How to display Code in a web page</DESC>
+  </EXAMPLE>
+ <!--Example#006 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="006-Call-one-html-from-another.html"&gt;006-Call-one-html-from-another.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / CSS</CATEGORY>
+	<DESC>How to call one HTML from another HTML</DESC>
+  </EXAMPLE>
+  <!--Example#005 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="005-Page-Template-spanned-columns-mixed.html"&gt;005-Page-Template-spanned-columns-mixed.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / CSS</CATEGORY>
+	<DESC>Page Template with Spanned columns  mixed, spanning different number of columns</DESC>
+  </EXAMPLE>
+  <!--Example#004 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="004-Page-Template-4-columns-spanned-column.html"&gt;004-Page-Template-4-columns-spanned-column.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / CSS</CATEGORY>
+	<DESC>Page Template with 4 columns  and spanned column</DESC>
+  </EXAMPLE>
+  <!--Example#003 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="003-Page-Template-2-columns-2-content-divs.html"&gt;003-Page-Template-2-columns-2-content-divs.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / CSS</CATEGORY>
+	<DESC>Page Template with 2 columns  and 2 content divs</DESC>
+  </EXAMPLE>
+  <!--Example#002 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="002-Page-Template-2-columns-left-nav-bar.html"&gt;002-Page-Template-2-columns-left-nav-bar.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / CSS</CATEGORY>
+	<DESC>Page Template with 2 columns with left nav bar</DESC>
+  </EXAMPLE>
+  <!--Example#001 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="001-Page-Template-2-columns-right-nav-bar.html"&gt;001-Page-Template-2-columns-right-nav-bar.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / CSS</CATEGORY>
+	<DESC>Page Template with 2 columns with right nav bar</DESC>
+  </EXAMPLE>
+</CODE>

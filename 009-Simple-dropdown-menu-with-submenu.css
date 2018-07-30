@@ -1,0 +1,227 @@
+.amazonmenu ul {
+	font: normal 22px Verdana;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+
+}
+#grad1 {
+    height: 200px;
+     
+     background-image: repeating-linear-gradient(red, white 50%, blue);
+}
+
+#mountain{
+	border: 1px solid green;
+    background-image: url(https://www.w3schools.com/cssref/mountain.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#chill{
+	 background: linear-gradient(to right, yellow, pink);
+    
+}
+
+#tree{
+    background-image: url(https://www.w3schools.com/cssref/img_tree.gif); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#w3{
+    background-image: url(https://www.w3schools.com/cssref/w3css.gif); 
+    background-repeat: no-repeat;
+    background-position:  50% 50%; 
+}
+
+#kitty{
+	background-color: pink;
+	background-image: url(images/009-kitty.png); 
+	background-repeat: no-repeat;
+ }
+ 
+ #flower{
+	background-color: pink;
+	background-image: url(images/009-flower.png); 
+	background-repeat: no-repeat;
+	background-size: cover;
+ }
+
+
+.amazonmenu ul li {
+	position: static; /* menu li items should have position set to static */
+}
+
+.amazonmenu > ul {
+	background: yellow;
+	border: 1px solid #808080;
+	border-radius: 5px;
+	width: 100%; /* width of main menu */
+	height: 400px; /* height of main menu */
+	position: relative;
+	z-index: 9999;
+}
+
+.amazonmenu > ul:first-child {
+	width: 300px;
+	height: auto; /* height of sub menu */
+	min-height: 425px;
+	background: yellow;
+	font-weight: bold;
+}
+
+.amazonmenu ul li.hassub.selected > a { /* style of hover and selected menu item links */
+	color: #0039ff;
+	font-weight: bold;
+}
+
+.amazonmenu ul:first-child > li:first-child > a {
+	color: #fff;
+}
+
+.amazonmenu > ul li a {
+	color: #000;
+	display: block;
+	overflow: auto;
+	padding: 7px 0;
+	padding-left: 3px;
+	position: relative;
+	text-decoration: none;
+}
+
+.amazonmenu > ul li.hassub > a::after { /* Arrow to indicate this item has sub menu (LI elements with sub menus have a ".hassub" class). */
+	border: 5px solid transparent;
+	border-left-color: #D7D7D7; /* Default color of arrow */
+	content: '';
+	height: 0;
+	position: absolute;
+	right: 5px;
+	top: 35%;
+	width: 0;
+}
+
+.amazonmenu ul li > div, .amazonmenu ul li > ul { /* Sub menus (Could be a DIV or UL wrapper) style */
+	background: #fff;
+	border: 1px solid #D7D7D7;
+	border-radius: 0 8px 8px 0;
+	display: none;
+	font-weight: normal;
+	width: 300px;
+	height: auto; /* height of sub menu */
+	min-height: 425px;
+	font-size: 11px;
+	left: 100%;
+	position: absolute;
+	top: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	z-index: 1000;
+}
+
+/* ###### CSS Media queries ###### */
+
+@media (max-width:1280px) and (min-width:1024px) {
+	.amazonmenu ul li > div, .amazonmenu ul li > ul {
+		left: 125px; /* Stack the sub menus so they take up less space */
+	}
+
+	.amazonmenu > ul li.hassub.selected::after { /* Add "veil" to parent menus */
+		content: '';
+		height: 100%;
+		left: 0;
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+}
+
+@media (max-width:1024px) and (min-width:768px) {
+	.amazonmenu ul li > div, .amazonmenu ul li > ul{
+		left: 100px; /* Stack the sub menus so they take up less space */
+	}
+
+	.amazonmenu > ul li.hassub.selected::after { /* Add "veil" to parent menus */
+		content: '';
+		height: 100%;
+		left: 0;
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+
+	.amazonmenu ul:first-child > li:first-child > a {
+		font-size: 0.9em;
+	}
+}
+
+@media (max-width:768px) and (min-width:640px) {
+	.amazonmenu ul li > div, .amazonmenu ul li > ul {
+		left: 75px; /* Stack the sub menus so they take up less space */
+	}
+
+	.amazonmenu > ul li.hassub.selected::after { /* Add "veil" to parent menus */
+		content: '';
+		height: 100%;
+		left: 0;
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+
+	.amazonmenu ul:first-child > li:first-child > a {
+		font-size: 0.9em;
+	}
+}
+
+@media (max-width:640px) and (min-width:480px) {
+	.amazonmenu ul li > div, .amazonmenu ul li > ul {
+		left: 50px; /* Stack the sub menus so they take up less space */
+	}
+
+	.amazonmenu > ul li.hassub.selected::after { /* Add "veil" to parent menus */
+		content: '';
+		height: 100%;
+		left: 0;
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+
+	.amazonmenu ul:first-child > li:first-child > a {
+		font-size: 1em;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.amazonmenu ul li > div, .amazonmenu ul li > ul {
+		left: 25px; /* Stack the sub menus so they take up less space */
+	}
+
+	.amazonmenu > ul li.hassub.selected::after { /* Add "veil" to parent menus */
+		content: '';
+		height: 100%;
+		left: 0;
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+
+	.amazonmenu ul:first-child > li:first-child > a {
+		font-size: 1em;
+	}
+}

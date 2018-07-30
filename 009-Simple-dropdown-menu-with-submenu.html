@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Amazon-like Multi Level Responsive Dropdown Menu Demo</title>
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  
+		<link rel="stylesheet" type="text/css" href="009-Simple-dropdown-menu-with-submenu.css" />
+	</head>
+	<body>
+	 <div class="w3-container">
+  <h2>Dropdown Button</h2>
+  <p>Move the mouse over the button to open the dropdown content.The dropdown also has a background image</p> 
+  <div class="w3-dropdown-hover">
+     <button>Hover Over Me!</button>
+     
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+       <div style="width: 150px;">
+			<div id="my_menu" class="amazonmenu"> 
+			 
+				<ul>
+					<li>
+						<a href="#">Browse</a>  
+					 
+						<ul>
+							<li>
+								<a href="#">Kitty</a>
+								<ul id="kitty">
+									<li>
+									  <a  href="#">Travel and fun</a> 
+										&nbsp;<i>Scenic Trail</i>
+										<ul id="chill">
+											<li>
+												<a href="#">Level 3 Link 1</a>
+												<ul id="kitty">
+													<li>
+														<a href="#">Level 4 Link 1</a>
+													</li>
+													<li>
+														<a href="#">Level 4 Link 2</a>
+													</li>
+													<li>
+														<a href="#">Level 4 Link 3</a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Level 2 Link 2</a>
+									</li>
+									
+								</ul>
+							</li>
+							<li>
+								<a href="#">Abstract</a>
+								<ul id="flower">
+									<li>
+										<a href="#">Level 2 Link 1</a>
+									</li>
+									<li>
+										<a href="#">Level 2 Link 2</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Nature</a>
+								<ul id="tree">
+									<li>
+										<a href="#">Level 3 Link 1</a>
+									</li>
+									<li>
+										<a href="#">Level 3 Link 2</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+    </div>
+   
+   
+</div>
+ 
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="009-Simple-dropdown-menu-with-submenu.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				amazonmenu.init({
+					menuid: 'my_menu'
+				});
+			});
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				amazonmenu.init({
+					menuid: 'my_menu1'
+				});
+			});
+		</script>
+	</body>
+</html>
