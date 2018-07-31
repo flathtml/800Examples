@@ -1,6 +1,246 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#051 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="051-mergexml.php"&gt;051-mergexml.php&lt;a&gt;</LINK>
+    <CATEGORY>PHP/XML/JavaScript</CATEGORY>
+	<DESC>Example : Merge two XML files into third XML file</DESC>
+  </EXAMPLE>
+ <!--Example#050 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="050-copyxml.php"&gt;050-copyxml.php&lt;a&gt;</LINK>
+    <CATEGORY>PHP/XML/JavaScript</CATEGORY>
+	<DESC>Example : Read an Input XML File, process it and write the output in another XML file. Also display the output in tabular format using a JavaScript</DESC>
+  </EXAMPLE>
+ <!--Example#049 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="049-writexml.php"target=_blank"&gt;049-writexml.php&lt;a&gt;</LINK>
+    <CATEGORY>PHP/XML</CATEGORY>
+	<DESC>Example : Write content to an external XML file</DESC>
+  </EXAMPLE>
+ <!--Example#048 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="048-javascript-showxml.html"&gt;048-javascript-showxml.html&lt;a&gt;</LINK>
+    <CATEGORY>PHP/XML/JavaScript</CATEGORY>
+	<DESC>Example : Display XML Content of external XML file using JavaScript</DESC>
+  </EXAMPLE>
+ <!--Example#047 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="047-appendxml.php"target=_blank"&gt;047-appendxml.php&lt;a&gt;</LINK>
+    <CATEGORY>PHP/XML/XSL</CATEGORY>
+	<DESC>Example : Append a record to XML File and display the XML file. It also showcases how one can display attribute of a particular xml element.</DESC>
+  </EXAMPLE>
+ <!--Example#046 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="046-tryit.php"&gt;046-tryit.php&lt;a&gt;</LINK>
+    <CATEGORY>PHP</CATEGORY>
+	<DESC>Example : Use JavaScript and PHP to display dropdown content. Also showcases how this can be portrayed via tryit php</DESC>
+  </EXAMPLE>
+ <!--Example#045 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="045-merge-xmls-into-one-table.php"target=_blank"&gt;045-merge-xmls-into-one-table.php&lt;a&gt;</LINK>
+    <CATEGORY>PHP</CATEGORY>
+	<DESC>Example - Merging output of 2 XML files into 1 table</DESC>
+  </EXAMPLE>
+ <!--Example#044 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="044-xslt-with-javascript.xml"target=_blank"&gt;044-xslt-with-javascript.xml&lt;a&gt;</LINK>
+    <CATEGORY>JavaScript/XSLT</CATEGORY>
+	<DESC>Example XSLT with JavaScript</DESC>
+  </EXAMPLE>
+ <!--Example#043 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="043-display-text.xml"target=_blank"&gt;043-display-text.xml&lt;a&gt;</LINK>
+    <CATEGORY>XSLT</CATEGORY>
+	<DESC>Example XSLT displays text</DESC>
+  </EXAMPLE>
+ <!--Example#042 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="042-cdcatalog-sort-multi-col.xml"target=_blank"&gt;042-cdcatalog-sort-multi-col.xml&lt;a&gt;</LINK>
+    <CATEGORY>XSLT</CATEGORY>
+	<DESC>Example XSLT Sorts on  multiple column</DESC>
+  </EXAMPLE>
+ <!--Example#041 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="041-cdcatalog-sort-specific-col.xml"target=_blank"&gt;041-cdcatalog-sort-specific-col.xml&lt;a&gt;</LINK>
+    <CATEGORY>XSLT</CATEGORY>
+	<DESC>Example XSLT Sorts on a particular column</DESC>
+  </EXAMPLE>
+ <!--Example#040 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="040-cdcatalog-sort.xml"target=_blank"&gt;040-cdcatalog-sort.xml&lt;a&gt;</LINK>
+    <CATEGORY>XSLT</CATEGORY>
+	<DESC>Example XSLT that uses Sort</DESC>
+  </EXAMPLE>
+ <!--Example#039 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="039-xslt-match.xml"target=_blank"&gt;039-xslt-match.xml&lt;a&gt;</LINK>
+    <CATEGORY>XSLT</CATEGORY>
+	<DESC>Example XSLT that uses match</DESC>
+  </EXAMPLE>
+ <!--Example#038 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="038-xslt-if-when-choose.html"&gt;038-xslt-if-when-choose.html&lt;a&gt;</LINK>
+    <CATEGORY>XSLT</CATEGORY>
+	<DESC>Example XSLT If-when-choose</DESC>
+  </EXAMPLE>
+ <!--Example#037 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="037-Example-xml-xsl-andJavascript-together.html"&gt;037-Example-xml-xsl-andJavascript-together.html&lt;a&gt;</LINK>
+    <CATEGORY>XSL/XML/JavaScript</CATEGORY>
+	<DESC>Example - XSL , XML and JavaScript Together</DESC>
+  </EXAMPLE>
+ <!--Example#036 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="036-xsl-example.xml"target=_blank&gt;036-xsl-example.xml&lt;a&gt;</LINK>
+    <CATEGORY>XSL</CATEGORY>
+	<DESC>Display XML content using XSL</DESC>
+  </EXAMPLE>
+ <!--Example#035 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="035-xslt-transform-xml-into-html-table.html"&gt;035-xslt-transform-xml-into-html-table.html&lt;a&gt;</LINK>
+    <CATEGORY>XSLT</CATEGORY>
+	<DESC>XSLT transform XML into HTML table</DESC>
+  </EXAMPLE>
+ <!--Example#034 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="034-query-xml-one-record-at-a-time.html"&gt;034-query-xml-one-record-at-a-time.html&lt;a&gt;</LINK>
+    <CATEGORY>XML</CATEGORY>
+	<DESC>Query XML one record at a time</DESC>
+  </EXAMPLE>
+ <!--Example#033 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="033-query-xml-display-in-webpage.html"&gt;033-query-xml-display-in-webpage.html&lt;a&gt;</LINK>
+    <CATEGORY>XML</CATEGORY>
+	<DESC>Query XML file and display in a web page</DESC>
+  </EXAMPLE>
+ <!--Example#032 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="032-javascript-Image-Rotation.html"&gt;032-javascript-Image-Rotation.html&lt;a&gt;</LINK>
+    <CATEGORY>Fun</CATEGORY>
+	<DESC>JavaScript Image rotation</DESC>
+  </EXAMPLE>
+ <!--Example#031 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="031-javascript-Fidget-Spinner.html"&gt;031-javascript-Fidget-Spinner.html&lt;a&gt;</LINK>
+    <CATEGORY>Fun</CATEGORY>
+	<DESC>JavaScript Fidget Spinner</DESC>
+  </EXAMPLE>
+ <!--Example#030 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="030-javascript-Animation.html"&gt;030-javascript-Animation.html&lt;a&gt;</LINK>
+    <CATEGORY>Fun</CATEGORY>
+	<DESC>JavaScript Animation</DESC>
+  </EXAMPLE>
+  <!--Example#029 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="029-javascript-TODO-list-app.html"&gt;029-javascript-TODO-list-app.html&lt;a&gt;</LINK>
+    <CATEGORY>Fun</CATEGORY>
+	<DESC>JavaScript TODO App (Showcases how we can add display content on screen without a database)</DESC>
+  </EXAMPLE>
+ <!--Example#028 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="028-javascript-basic-DOM.html"&gt;028-javascript-basic-DOM.html&lt;a&gt;</LINK>
+    <CATEGORY>Fun</CATEGORY>
+	<DESC>JavaScript Basic DOM</DESC>
+  </EXAMPLE>
+ <!--Example#027 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="027-javascript-game-tic-tac-toe.html"&gt;027-javascript-game-tic-tac-toe.html&lt;a&gt;</LINK>
+    <CATEGORY>Fun</CATEGORY>
+	<DESC>JavaScript Game - Tic Tac Toe</DESC>
+  </EXAMPLE>
+  <!--Example#026 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="026-javascript-game-shift-the-box.html"&gt;026-javascript-game-shift-the-box.html&lt;a&gt;</LINK>
+    <CATEGORY>Fun</CATEGORY>
+	<DESC>Javascript  Game - shift the box</DESC>
+  </EXAMPLE>
+ <!--Example#025 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="025-javascript-animation-move-the-box.html"&gt;025-javascript-animation-move-the-box.html&lt;a&gt;</LINK>
+    <CATEGORY>Fun</CATEGORY>
+	<DESC>Javascript  Move the box</DESC>
+  </EXAMPLE>
+ <!--Example#024 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="024-javascript-clock.html"&gt;024-javascript-clock.html&lt;a&gt;</LINK>
+    <CATEGORY>Fun</CATEGORY>
+	<DESC>Javascript Clock</DESC>
+  </EXAMPLE>
+ <!--Example#023 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="023-javascript-scientific-calculator.html"&gt;023-javascript-scientific-calculator.html&lt;a&gt;</LINK>
+    <CATEGORY>Fun</CATEGORY>
+	<DESC>Javascript  scientific calculator</DESC>
+  </EXAMPLE>
+ <!--Example#022 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="022-javascript-calculates-age.html"&gt;022-javascript-calculates-age.html&lt;a&gt;</LINK>
+    <CATEGORY>Fun</CATEGORY>
+	<DESC>Javascript program that calculates the age in days</DESC>
+  </EXAMPLE>
+ <!--Example#021 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="021-Table-Sortable.html"&gt;021-Table-Sortable.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML/CSS</CATEGORY>
+	<DESC>Sortable Table</DESC>
+  </EXAMPLE>
+ <!--Example#020 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="020-Table-Hoverable.html"&gt;020-Table-Hoverable.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML/CSS</CATEGORY>
+	<DESC>Hoverable Table</DESC>
+  </EXAMPLE>
+ <!--Example#019 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="019-Page-Template-span-with-multiple-divs.html"&gt;019-Page-Template-span-with-multiple-divs.html&lt;a&gt;</LINK>
+    <CATEGORY>BOOTSTRAP</CATEGORY>
+	<DESC>Page with span and multiple divs</DESC>
+  </EXAMPLE>
+ <!--Example#018 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="018-Page-Template-Plain-Vanilla-content-page.html"&gt;018-Page-Template-Plain-Vanilla-content-page.html&lt;a&gt;</LINK>
+    <CATEGORY>BOOTSTRAP</CATEGORY>
+	<DESC>Page Template Plain Vanilla content page</DESC>
+  </EXAMPLE>
+ <!--Example#017 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="017-Page-Template-box-theme.html"&gt;017-Page-Template-box-theme.html&lt;a&gt;</LINK>
+    <CATEGORY>BOOTSTRAP</CATEGORY>
+	<DESC>Page Template Box theme</DESC>
+  </EXAMPLE>
+ <!--Example#016 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="016-tryit-software-editor.html"&gt;016-tryit-software-editor.html&lt;a&gt;</LINK>
+    <CATEGORY>TOOL</CATEGORY>
+	<DESC>Tryit Software</DESC>
+  </EXAMPLE>
+ <!--Example#015 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="015-carousel-text.html"&gt;015-carousel-text.html&lt;a&gt;</LINK>
+    <CATEGORY>BOOTSTRAP</CATEGORY>
+	<DESC>Carousel with text</DESC>
+  </EXAMPLE>
+ <!--Example#014 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="014-carousel-images.html"&gt;014-carousel-images.html&lt;a&gt;</LINK>
+    <CATEGORY>BOOTSTRAP</CATEGORY>
+	<DESC>Carousel with images</DESC>
+  </EXAMPLE>
+ <!--Example#013 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="013-JSON-if-statement.html"&gt;013-JSON-if-statement.html&lt;a&gt;</LINK>
+    <CATEGORY>JSON</CATEGORY>
+	<DESC>JSON validating with if statement</DESC>
+  </EXAMPLE>
+ <!--Example#012 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="012-JSON-for-loop.html"&gt;012-JSON-for-loop.html&lt;a&gt;</LINK>
+    <CATEGORY>JSON</CATEGORY>
+	<DESC>JSON with for loop</DESC>
+  </EXAMPLE>
   <!--Example#011 -->
   <EXAMPLE>
     <LINK>&lt;a href="011-Simple-collapsable-navbar-bootstrap.html"&gt;011-Simple-collapsable-navbar-bootstrap.html&lt;a&gt;</LINK>
@@ -15,7 +255,7 @@
   </EXAMPLE>
  <!--Example#009 -->
   <EXAMPLE>
-    <LINK>&lt;a href="009-Simple-dropdown-menu-with-submenu.html"&gt;009-Simple-dropdown-menu-with-submenu.html&lt;a&gt;</LINK>
+    <LINK>&lt;a href="009-Simple-dropdown-menu-with-submenu.html"target=_blank"&gt;009-Simple-dropdown-menu-with-submenu.html&lt;a&gt;</LINK>
     <CATEGORY>JavaScript</CATEGORY>
 	<DESC>Simple dropdown menu with submenu</DESC>
   </EXAMPLE>

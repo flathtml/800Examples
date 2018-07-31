@@ -149,6 +149,8 @@ th,td {
  
 
 <script>
+
+
 function loadXMLDoc() {
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
@@ -168,8 +170,17 @@ function myFunction(xml) {
   j = (x.length) + 1;
   for (i = 0; i <x.length; i++) {
     j = j-1;  
+	
+	function zeroPad(num, places) {
+	var zero = places - num.toString().length + 1;
+	return Array(+(zero > 0 && zero)).join("0") + num;
+	}
+ 
+	var a = zeroPad(j, 3); 
+	
+	
     table += "<tr><td style='text-align: center'>" +
-     j +
+     a +
     "</td><td>"+
 	x[i].getElementsByTagName("LINK")[0].childNodes[0].nodeValue +
 	"</td><td>"+
@@ -180,6 +191,9 @@ function myFunction(xml) {
   }
   document.getElementById("demo").innerHTML = table;
 }
+
+ 
+
 </script>
 
 </body>

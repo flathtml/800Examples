@@ -13,7 +13,7 @@ th, td {
 </style>
 </head>
 <body>
-<h2>My CD Collection</h2>
+<h2>Output of 046-CD1.xml (first 2 records) and 045-CD2.xml (Next 2 records)</h2>
 <table id="mytable1" style="width:40%">
  
 <tr bgcolor="#9acd32">

@@ -234,12 +234,4 @@
     <YEAR>1985</YEAR>
     <PRICEPOINT>Expensive</PRICEPOINT>
   </CD>
-  <CD>
-    <TITLE>dummy</TITLE>
-    <ARTIST>dummy</ARTIST>
-    <COUNTRY>dummy</COUNTRY>
-    <COMPANY>dummy</COMPANY>
-    <PRICE>dummy</PRICE>
-    <YEAR>dummy</YEAR>
-  </CD>
 </CATALOG>

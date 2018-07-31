@@ -1,7 +1,7 @@
 <?php
-//This Example Merges the output of 2 XML files into 1 Table.
-//NOTE : If transformToXML does not work, then ensure that php.ini in the php folder of your Xamp installation
-// has the following dll uncommented extension=php_xsl.dll
+echo 'This Example Merges the output of 2 XML files into 1 Table';
+echo ' NOTE : If transformToXML does not work, then ensure that php.ini in the php folder of your Xamp installation';
+echo 'has the following dll uncommented extension=php_xsl.dll';
 
 // Load XML file#1
 $xml = new DOMDocument;

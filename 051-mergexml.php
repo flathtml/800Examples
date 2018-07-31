@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Read the input XML file, process the input XML and copy the input XML file to an output XML file</title>
+<title>Merge XML files : Read two XML files , merge them to create a third output XML file</title>
 <head>
 <!-- This code Reads the input XML file, processes the input XML and copies the input XML file to an output XML file-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -134,9 +134,10 @@ th,td {
 <div class="row">
 	<div class="col-md-3">&nbsp; </div>
 	<div  align="center" class="col-md-6 shadow p-4 mb-4 border border-primary" style="background-color:pink">
-		<h2>Read an Input XML file , Process it and copy the processed file into an output XML file</h2>
-		<a href="050-CD-input.xml"target=_blank">Input File : 050-CD-input.xml</a> &nbsp;&nbsp;
-		<a href="050-CD-output.xml"target=_blank">Output File : 050-CD-output.xml</a>
+		<h2>Read two XML files , merge them to create a third output XML file</h2>
+		<a href="051-CD1.xml"target=_blank">Input File#1 : 051-CD1.xml</a> &nbsp;&nbsp;
+		<a href="051-CD2.xml"target=_blank">Input File#2 : 051-CD2.xml</a> <br>
+		<a href="051-output.xml"target=_blank">Output File : 051-output.xml</a>
 </div>
 	<div class="col-md-3">&nbsp; </div>      
 </div>  
@@ -152,8 +153,8 @@ $dom = new DOMDocument;
 $dom->loadXML($xmlString);
 
 //Save XML as a file
-$dom->save('050-CD-output.xml');
-echo '<p>1. Output File  050-CD-output.xml created root node added</p>';
+$dom->save('051-output.xml');
+echo '<p>1. Output File  051-output.xml created and root node added</p>';
 ?>
 
 <!-- STEP-2 JavaScript to display the Input File after its processed-->
@@ -166,23 +167,17 @@ function loadXMLDoc() {
       myFunction(this);
     }
   };
-  xmlhttp.open("GET", "050-CD-input.xml", true);
+  xmlhttp.open("GET", "051-output.xml", true);
   xmlhttp.send();
 }
 function myFunction(xml) {
   var i;
   var xmlDoc = xml.responseXML;
-  var table="<tr><th>Title</th><th>Artist</th><th>Country</th><th>Company</th><th>Price</th><th>Year</th><th>Price Point</th></tr>";
+  var table="<tr><th>Title</th><th>Artist</th><th>Country</th><th>Company</th><th>Price</th><th>Year</th></tr>";
   var x = xmlDoc.getElementsByTagName("CD");
   for (i = 0; i <x.length; i++) { 
   
-  var check = x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue;
-  
-  if (check < 10) {
-		check = "Cheap";
-	} else {
-		check = "Expensive";
-	}
+ 
 	
     table += "<tr><td>" +
     x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
@@ -196,8 +191,6 @@ function myFunction(xml) {
 	x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue +
     "</td><td>" +
 	x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue +
-    "</td><td>" +
-    check +
     "</td></tr>";
   }
   document.getElementById("demo").innerHTML = table;
@@ -206,9 +199,9 @@ function myFunction(xml) {
 
 <?php
 
-//STEP-3 : Append the Output file with the data of input file and the processing logic
+//STEP-3 : Append the Output file with the data of input file#1
 
-    $cdinput = simplexml_load_file('050-CD-input.xml');
+    $cdinput = simplexml_load_file('051-CD1.xml');
 	
 	foreach ($cdinput as $cdoutput):
 	
@@ -219,17 +212,12 @@ function myFunction(xml) {
 		$price=$cdoutput->PRICE;
 		$year=$cdoutput->YEAR;
 		
-		$pricepoint = "Expensive";
-		
-		if ($price < 10) {
-           $pricepoint = "Cheap";
-        }  
 		
 		$xmldoc = new DomDocument( '1.0' );
 		$xmldoc->preserveWhiteSpace = false;
 		$xmldoc->formatOutput = true;
 
-		if( $xml = file_get_contents( '050-CD-output.xml') ) {
+		if( $xml = file_get_contents( '051-output.xml') ) {
 		
 		$xmldoc->loadXML( $xml, LIBXML_NOBLANKS );
 	 
@@ -275,22 +263,87 @@ function myFunction(xml) {
 		$yearText = $xmldoc->createTextNode($year);
 		$yearElement->appendChild($yearText);
 		
-		$pricepointElement = $xmldoc->createElement('PRICEPOINT');
-		$CD->appendChild($pricepointElement);
-		$pricepointText = $xmldoc->createTextNode($pricepoint);
-		$pricepointElement->appendChild($pricepointText);
-	
-		$xmldoc->save('050-CD-output.xml');
+		$xmldoc->save('051-output.xml');
 	 	
 	}
 		
 	endforeach;
 	 
-	 
-?>
-<p>2. Details of my CD collection are updated to XML file &nbsp;<a href="050-CD-output.xml"target=_blank">Output File : 050-CD-output.xml</a></p>
+	//STEP-4 : Append the Output file with the data of input file#2
 
-<button type="button" onclick="loadXMLDoc()">Display the processed input file in Tabular Format</button>
+    $cdinput = simplexml_load_file('051-CD2.xml');
+	
+	foreach ($cdinput as $cdoutput):
+	
+        $title=$cdoutput->TITLE;
+		$artist=$cdoutput->ARTIST;
+        $country=$cdoutput->COUNTRY;
+		$company=$cdoutput->COMPANY;
+		$price=$cdoutput->PRICE;
+		$year=$cdoutput->YEAR;
+		
+		
+		$xmldoc = new DomDocument( '1.0' );
+		$xmldoc->preserveWhiteSpace = false;
+		$xmldoc->formatOutput = true;
+
+		if( $xml = file_get_contents( '051-output.xml') ) {
+		
+		$xmldoc->loadXML( $xml, LIBXML_NOBLANKS );
+	 
+		// find the CATALOG tag
+		$root = $xmldoc->getElementsByTagName('CATALOG')->item(0);
+	
+		
+		// create the <CD> tag
+		$CD = $xmldoc->createElement('CD');
+	
+		// add the CD tag before the first element in the <CATALOG> tag
+		$root->insertBefore( $CD, $root->firstChild );
+	
+		// create other elements and add it to the <CD> tag.
+    
+		$titleElement = $xmldoc->createElement('TITLE');
+		$CD->appendChild($titleElement);
+		$titleText = $xmldoc->createTextNode($title);
+		$titleElement->appendChild($titleText);
+	
+		$artistElement = $xmldoc->createElement('ARTIST');
+		$CD->appendChild($artistElement);
+		$artistText = $xmldoc->createTextNode($artist);
+		$artistElement->appendChild($artistText);
+	
+		$countryElement = $xmldoc->createElement('COUNTRY');
+		$CD->appendChild($countryElement);
+		$countryText = $xmldoc->createTextNode($country);
+		$countryElement->appendChild($countryText);
+	
+		$companyElement = $xmldoc->createElement('COMPANY');
+		$CD->appendChild($companyElement);
+		$companyText = $xmldoc->createTextNode($company);
+		$companyElement->appendChild($companyText);
+	
+		$priceElement = $xmldoc->createElement('PRICE');
+		$CD->appendChild($priceElement);
+		$priceText = $xmldoc->createTextNode($price);
+		$priceElement->appendChild($priceText);
+	
+		$yearElement = $xmldoc->createElement('YEAR');
+		$CD->appendChild($yearElement);
+		$yearText = $xmldoc->createTextNode($year);
+		$yearElement->appendChild($yearText);
+		
+		$xmldoc->save('051-output.xml');
+	 	
+	}
+		
+	endforeach;
+	 
+ 
+?>
+<p>2. Details of my CD collection are updated to XML file &nbsp;<a href="051-output.xml"target=_blank">Output File : 051-output.xml</a></p>
+
+<button type="button" onclick="loadXMLDoc()">Display the output file in Tabular Format</button>
 <br><br>
 <table id="demo"></table>
 </body>
