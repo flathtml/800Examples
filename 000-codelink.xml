@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#054 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="054-suggest-utility.html"&gt;054-suggest-utility.html&lt;a&gt;</LINK>
+    <CATEGORY>JavaScript/PHP</CATEGORY>
+	<DESC>Utility that displays suggestions while user types a search term</DESC>
+  </EXAMPLE>
+ <!--Example#053 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="053-convert-excel-to-json.html"&gt;053-convert-excel-to-json.html&lt;a&gt;</LINK>
+    <CATEGORY>Tool-External</CATEGORY>
+	<DESC>Convert Excel to JSON</DESC>
+  </EXAMPLE>
+ <!--Example#052 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="052-read-external-json-file.html"&gt;052-read-external-json-file.html&lt;a&gt;</LINK>
+    <CATEGORY>JSON/JavaScript</CATEGORY>
+	<DESC>Example : Read External JSON File and display the output</DESC>
+  </EXAMPLE>
  <!--Example#051 -->
   <EXAMPLE>
     <LINK>&lt;a href="051-mergexml.php"&gt;051-mergexml.php&lt;a&gt;</LINK>
