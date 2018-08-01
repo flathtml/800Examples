@@ -1,0 +1,10 @@
+document.write('<div class="top">'
+        + '<a class="w3schools-logo" href="index.html">&nbsp;FlatHTML<span class="dotcom">.com</span></a>'
+        + '<div  class="w3-right  toptext "><span class="w3-wide"><b>References :</b></span>'
+		+ '&nbsp;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference"target=_blank">JavaScript</a>'
+		+ '&nbsp;<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference"target=_blank">HTML</a>'
+		+ '&nbsp;<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference"target=_blank">CSS</a>'
+		+ '&nbsp;<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window"target=_blank">Window API</a>'
+		+ '&nbsp;&nbsp;'
+		+ '</div>'
+       + '</div>');
