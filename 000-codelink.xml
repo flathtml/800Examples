@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
- <!--Example#054 -->
+ <!--Example#056 -->
   <EXAMPLE>
+    <LINK>&lt;a href="056-checkbox-table.html"&gt;056-checkbox-table.html&lt;a&gt;</LINK>
+    <CATEGORY>JavaScript/JSON</CATEGORY>
+	<DESC>Add checkbox to a dynamically created table</DESC>
+  </EXAMPLE>
+ <!--Example#055 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="055-delete-xml-rec.php"&gt;055-delete-xml-rec.php&lt;a&gt;</LINK>
+    <CATEGORY>PHP/XML</CATEGORY>
+	<DESC>Utility that deletes a record from XML file</DESC>
+  </EXAMPLE>
+ <!--Example#054 -->
+   <EXAMPLE>
     <LINK>&lt;a href="054-suggest-utility.html"&gt;054-suggest-utility.html&lt;a&gt;</LINK>
     <CATEGORY>JavaScript/PHP</CATEGORY>
 	<DESC>Utility that displays suggestions while user types a search term</DESC>
