@@ -1,6 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#072 -->
+   <EXAMPLE>
+    <LINK>&lt;a href="072-table-sort-plugin3-best.html"&gt;072-table-sort-plugin3-best.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript</CATEGORY>
+	<DESC>Javascript Table sort plugin</DESC>
+  </EXAMPLE>
+ <!--Example#071 -->
+   <EXAMPLE>
+    <LINK>&lt;a href="071-table-sort-plugin2.html"&gt;071-table-sort-plugin2.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript</CATEGORY>
+	<DESC>Javascript Table sort plugin</DESC>
+  </EXAMPLE>
+ <!--Example#070 -->
+   <EXAMPLE>
+    <LINK>&lt;a href="070-table-sort-plugin1.html"&gt;070-table-sort-plugin1.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript</CATEGORY>
+	<DESC>Javascript Table sort plugin</DESC>
+  </EXAMPLE>
+ <!--Example#069 -->
+   <EXAMPLE>
+    <LINK>&lt;a href="069-javascript-sort-decimal.html"&gt;069-javascript-sort-decimal.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript</CATEGORY>
+	<DESC>Javascript Sort for decimal numbers</DESC>
+  </EXAMPLE>
+ <!--Example#068 -->
+   <EXAMPLE>
+    <LINK>&lt;a href="068-external-data-sortable-table.html"&gt;068-external-data-sortable-table.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript / XML</CATEGORY>
+	<DESC>Sortable Table that gets data from external source</DESC>
+  </EXAMPLE>
+ <!--Example#067 -->
+   <EXAMPLE>
+    <LINK>&lt;a href="067-display-negetive-in-red.html"&gt;067-display-negetive-in-red.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript</CATEGORY>
+	<DESC>How to display negetive numbers in red using javascript</DESC>
+  </EXAMPLE>
+ <!--Example#066 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="066-pass-parameter-to-javascript-function.html"&gt;066-pass-parameter-to-javascript-function.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript</CATEGORY>
+	<DESC>Example that showcases how to pass parameter to JavaScript Function</DESC>
+  </EXAMPLE>
+  <!--Example#065 -->
+   <EXAMPLE>
+    <LINK>&lt;a href="065-strip-dollar-sign-and-comma.html"&gt;065-stip-dollar-sign-and-comma.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript</CATEGORY>
+	<DESC>Strip dollar sign or any other currency sign and comma and display the output</DESC>
+  </EXAMPLE>
+ <!--Example#064 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="064-query-xml-display-stockdata.html"target=_blank&gt;064-query-xml-display-stockdata.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript/ XML</CATEGORY>
+	<DESC>Query large XML file and display output in table</DESC>
+  </EXAMPLE>
+ <!--Example#063 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="063-valuation-data.xml"target=_blank&gt;063-valuation-data.xml&lt;a&gt;</LINK>
+    <CATEGORY>XML/XSL</CATEGORY>
+	<DESC>Display valuation data from XML</DESC>
+  </EXAMPLE>
+   <!--Example#062 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="062-html-table-to-excel.html"target=_blank&gt;062-html-table-to-excel.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript</CATEGORY>
+	<DESC>Copy HTML Table to Excel File</DESC>
+  </EXAMPLE>
+ <!--Example#061 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="061-web-scrap-stock-data.php"&gt;061-web-scrap-stock-data.php&lt;a&gt;</LINK>
+    <CATEGORY>PHP</CATEGORY>
+	<DESC>Web Scraping and getting Market Cap of the stocks from my watchlist</DESC>
+  </EXAMPLE>
+ <!--Example#060 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="060-web-scrap-copy-output.php"&gt;060-web-scrap-copy-output.php&lt;a&gt;</LINK>
+    <CATEGORY>PHP</CATEGORY>
+	<DESC>Web Scraping and copying output to another file</DESC>
+  </EXAMPLE>
+ <!--Example#059 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="059-web-scrap-dow-comp.php"&gt;059-web-scrap-dow-comp.php&lt;a&gt;</LINK>
+    <CATEGORY>PHP</CATEGORY>
+	<DESC>Web Scraping a dynamic website whose content changes constantly</DESC>
+  </EXAMPLE>
+ <!--Example#058 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="058-web-scrap.php"&gt;058-web-scrap.php&lt;a&gt;</LINK>
+    <CATEGORY>PHP</CATEGORY>
+	<DESC>Web Scraping Basics</DESC>
+  </EXAMPLE>
+ <!--Example#057 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="057-column-addition.html"&gt;057-column-addition.html&lt;a&gt;</LINK>
+    <CATEGORY>JavaScript</CATEGORY>
+	<DESC>Calculate the sum of values for a Column and display the sum at the bottom</DESC>
+  </EXAMPLE>
  <!--Example#056 -->
   <EXAMPLE>
     <LINK>&lt;a href="056-checkbox-table.html"&gt;056-checkbox-table.html&lt;a&gt;</LINK>
@@ -64,8 +160,8 @@
  <!--Example#046 -->
   <EXAMPLE>
     <LINK>&lt;a href="046-tryit.php"&gt;046-tryit.php&lt;a&gt;</LINK>
-    <CATEGORY>PHP</CATEGORY>
-	<DESC>Example : Use JavaScript and PHP to display dropdown content. Also showcases how this can be portrayed via tryit php</DESC>
+    <CATEGORY>PHP/JavaScript</CATEGORY>
+	<DESC>Example : Use JavaScript and PHP to display dropdown content by passing a value from Javascript to PHP. Also showcases how this can be portrayed via tryit php</DESC>
   </EXAMPLE>
  <!--Example#045 -->
   <EXAMPLE>
