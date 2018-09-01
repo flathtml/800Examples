@@ -356,56 +356,81 @@
             <div id="textarea">
                <div id="textareawrapper">
          <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
- <html>
+  <html>
 <head>
 <style type="text/css">
-    table {
-      border-collapse: collapse;
-    }
-    th, td {
-      padding: 5px 10px;
-      border: 1px solid #999;
-    }
-    th {
-      background-color: #eee;
-    }
-    th[data-sort]{
-      cursor:pointer;
-    }
-    tr.awesome{
-      color: red;
-    }
-    #msg {
-      color: green;
-    }
+    /*
+ This css is part of the blue/style.css theme, shown as an example
+ To work with the zebra widget, include the .odd and .even color definitions as well
+ as definitions for the "primary", "secondary" and "tertiary" sorts.
+*/
+/* Column Widget - column sort colors */
+table.tablesorter-blue td.primary,
+table.tablesorter-blue tr.odd td.primary {
+  background-color: #99b3e6;
+}
+table.tablesorter-blue tr.even td.primary {
+  background-color: #c2d1f0;
+}
+
+table.tablesorter-blue td.secondary,
+table.tablesorter-blue tr.odd td.secondary {
+  background-color: #c2d1f0;
+}
+table.tablesorter-blue tr.even td.secondary {
+  background-color: #d6e0f5;
+}
+
+table.tablesorter-blue td.tertiary,
+table.tablesorter-blue tr.odd td.tertiary {
+  background-color: #d6e0f5;
+}
+table.tablesorter-blue tr.even td.tertiary {
+  background-color: #ebf0fa;
+}
   </style>
       <!//https://mottie.github.io/tablesorter/css/theme.blue.css!>
       <link rel="stylesheet" href="072-theme.blue.css">
-	 </head>
-<body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <!//https://mottie.github.io/tablesorter/dist/js/jquery.tablesorter.min.js!>
   <script src="072-tablesorter.min.js"></script>
   
-<script>
-$(function() {
+<!//https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.0/js/jquery.tablesorter.widgets.min.js!>
+  <script src="072-tablesorter.widgets.min.js"></script>
+  
+	 </head>
+<body>
+ <script>
+ $(function() {
+
   // call the tablesorter plugin
   $("table").tablesorter({
     theme : 'blue',
 
-    dateFormat : "mmddyyyy", // set the default date format
+    sortList : [[1,0],[2,0],[3,0]],
 
-    // or to change the format for specific columns, add the dateFormat to the headers option:
-    headers: {
-      0: { sorter: "shortDate" } //, dateFormat will parsed as the default above
-      // 1: { sorter: "shortDate", dateFormat: "ddmmyyyy" }, // set day first format; set using class names
-      // 2: { sorter: "shortDate", dateFormat: "yyyymmdd" }  // set year first format; set using data attributes (jQuery data)
+    // header layout template; {icon} needed for some themes
+    headerTemplate : '{content}{icon}',
+
+    // initialize zebra striping and column styling of the table
+    widgets : ["zebra", "columns"],
+
+    widgetOptions : {
+      // change the default column class names
+      // primary is the first column sorted, secondary is the second, etc
+      columns : [ "primary", "secondary", "tertiary" ],
+      // include thead when adding class names
+      columns_thead : true,
+      // include tfoot when adding class names
+      columns_tfoot : true
     }
 
   });
+
 });
-</script>
+</script> 
  
  <a href="https://mottie.github.io/tablesorter/docs/index.html"target=_blank>Click here</a> to access the Table sorting plugin Guide
  <p>
