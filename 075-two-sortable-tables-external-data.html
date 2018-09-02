@@ -356,7 +356,7 @@
             <div id="textarea">
                <div id="textareawrapper">
          <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Page Template with 2 columns with right nav bar</title>
@@ -606,7 +606,7 @@ xmlDoc = xmlhttp.responseXML;
 x = xmlDoc.getElementsByTagName("CD");
 table="<thead><tr><th>Artist</th><th>Title</th><th>Price</th><th>Year</th></tr></thead>";
 for (i = 0; i <x.length; i++) { 
-  table += "<tr onclick='displayCD(" + i + ")'><td>";
+  table += "<tr onclick='displayCD1(" + i + ")'><td>";
   table += x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue;
   table += "</td><td>";
   table +=  x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue;
@@ -618,7 +618,7 @@ for (i = 0; i <x.length; i++) {
 }
 document.getElementById("tablesorter").innerHTML = table;
 
-function displayCD(i) {
+function displayCD1(i) {
   document.getElementById("showCD1").innerHTML =
   "---Artist : " +
   x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
@@ -633,14 +633,14 @@ function displayCD(i) {
 
 
                      </div>
-                     <div class="row">&nbsp;</div>
+                     <div class="row"> </div>
             </div>
             <div class="col-md-3">
                <div class="makeup2" style="background-color:#E7E4E3">
                                      <p>Content Box#2 - Display contents of <a href="075-cd2.xml"target=_blank>075-cd2.xml</a></p>
                                                  <p>1.Click on Header column to sort</p>
 <p>2.Click on a CD to display album information.</p>
- <p id='showCD' style="background-color:pink"></p>
+ <p id='showCD2' style="background-color:pink"></p>
 <table id="tablesorter-demo" class="tablesorter-blue"></table>
 
 <script>
@@ -652,7 +652,7 @@ xmlDoc1 = xmlhttp1.responseXML;
 y = xmlDoc1.getElementsByTagName("CD");
 table="<thead><tr><th>Artist</th><th>Title</th><th>Price</th><th>Year</th></tr></thead>";
 for (j = 0; j <y.length; j++) { 
-  table += "<tr onclick='displayCD(" + j + ")'><td>";
+  table += "<tr onclick='displayCD2(" + j + ")'><td>";
   table += y[j].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue;
   table += "</td><td>";
   table +=  y[j].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue;
@@ -664,8 +664,8 @@ for (j = 0; j <y.length; j++) {
 }
 document.getElementById("tablesorter-demo").innerHTML = table;
 
-function displayCD(j) {
-  document.getElementById("showCD").innerHTML =
+function displayCD2(j) {
+  document.getElementById("showCD2").innerHTML =
   "---Artist : " +
   y[j].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
   "<br>---Title : " +
@@ -678,7 +678,7 @@ function displayCD(j) {
 </script>
 
                </div>
-               <div class="row">&nbsp;</div>
+               <div class="row"> </div>
             </div>
          </div>
       </div>
@@ -688,13 +688,13 @@ function displayCD(j) {
    <div class="row">
       <div class="col-md-12">
          <div class="footer" style="background-color:#E7E4E3"> 
-            <a href="aboutus.html">About Us</a>&nbsp;<a href="contactus.html">Contact Us</a>&nbsp;<a href="termsofservice.html">Terms of Service</a>
+            <a href="aboutus.html">About Us</a> <a href="contactus.html">Contact Us</a> <a href="termsofservice.html">Terms of Service</a>
          </div>
-         <div class="row">&nbsp;</div>
+         <div class="row"> </div>
       </div>
       <div class="col-md-12">
-         <div class="footer">©2018FlatHTML.com</div>
-         <div class="row">&nbsp;</div>
+         <div class="footer">Â©2018FlatHTML.com</div>
+         <div class="row"> </div>
       </div>
    </div>
 </body>
