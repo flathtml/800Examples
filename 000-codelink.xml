@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#075 -->
+   <EXAMPLE>
+    <LINK>&lt;a href="075-two-sortable-tables-external-data.html"&gt;075-two-sortable-tables-external-data.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript</CATEGORY>
+	<DESC>Javascript that displays two different sortable tables referencing external data</DESC>
+  </EXAMPLE>
+ <!--Example#074 -->
+   <EXAMPLE>
+    <LINK>&lt;a href="074-table-sort-external-data.html"&gt;074-table-sort-external-data.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript</CATEGORY>
+	<DESC>Javascript Table sort accessing data from external XML file</DESC>
+  </EXAMPLE>
+ <!--Example#073 -->
+   <EXAMPLE>
+    <LINK>&lt;a href="073-javascript-dynamic-table.html"&gt;073-javascript-dynamic-table.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript</CATEGORY>
+	<DESC>Create dynamic Javascript Table</DESC>
+  </EXAMPLE>
  <!--Example#072 -->
    <EXAMPLE>
     <LINK>&lt;a href="072-table-sort-plugin3-best.html"&gt;072-table-sort-plugin3-best.html&lt;a&gt;</LINK>
