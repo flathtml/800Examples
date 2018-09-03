@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<maincontent>
+  <headercontent>
+    <product num="A227">
+      <name>Capecod chips</name>
+      <category>Snacks</category>
+      <available content="Yes"/>
+    </product>
+    <product num="A335">
+      <name>pepper</name>
+      <category>spices</category>
+      <available content="Yes"/>
+    </product>
+    <product num="A330">
+      <name>coffee</name>
+      <category>beverages</category>
+      <available content="Yes"/>
+    </product>
+    <product num="N099">
+      <name>ginger</name>
+      <category>produce</category>
+      <available content="Yes"/>
+    </product>
+    <product num="A560">
+      <name>pens</name>
+      <category>stationary</category>
+      <available content="Yes"/>
+    </product>
+    <product num="A367">
+      <name>cups</name>
+      <category>kitchen</category>
+      <available content="yes"/>
+    </product>
+    <product num="A244">
+      <name>Tennis racquet</name>
+      <category>sports</category>
+      <available content="No"/>
+    </product>
+    <product num="A322">
+      <name>Bike</name>
+      <category>Sports</category>
+      <available content="Yes"/>
+    </product>
+    <product num="B200">
+      <name>paint</name>
+      <category>hardware</category>
+      <available content="Yes"/>
+    </product>
+    <product num="A221">
+      <name>grapes</name>
+      <category>fruits</category>
+      <available content="Yes"/>
+    </product>
+    <product num="A225">
+      <name>GE Toaster</name>
+      <category>kitchen</category>
+      <available content="No"/>
+    </product>
+    <product num="A010">
+      <name>cutting board</name>
+      <category>kitchen</category>
+      <available content="Yes"/>
+    </product>
+    <product num="A022">
+      <name>Addidas</name>
+      <category>Shoes</category>
+      <available content="Yes"/>
+    </product>
+  </headercontent>
+</maincontent>

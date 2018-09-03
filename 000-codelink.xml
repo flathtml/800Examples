@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#080 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="080-php-mysql-insert-form.php"&gt;080-php-mysql-insert-form.php&lt;a&gt;</LINK>
+    <CATEGORY>MySQL / PHP</CATEGORY>
+	<DESC>Insert a record in a MySQL table via a HTML form</DESC>
+  </EXAMPLE>
+  <!--Example#079 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="079-php-mysql-basic-query.php"&gt;079-php-mysql-basic-query.php&lt;a&gt;</LINK>
+    <CATEGORY>MySQL / PHP</CATEGORY>
+	<DESC>Query MySQL table and display output in a HTML Table</DESC>
+  </EXAMPLE>
+ <!--Example#078 -->
+   <EXAMPLE>
+    <LINK>&lt;a href="078-javascript-create-and-delete-rows.html"&gt;078-javascript-create-and-delete-rows.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript </CATEGORY>
+	<DESC>Javascript to create and delete a row from HTML table</DESC>
+  </EXAMPLE>
+ <!--Example#077 -->
+   <EXAMPLE>
+    <LINK>&lt;a href="077-javascript-calendar-date-picker.html"&gt;077-javascript-calendar-date-picker.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript / JQuery</CATEGORY>
+	<DESC>Date Picker using JQuery Calendar</DESC>
+  </EXAMPLE>
+ <!--Example#076 -->
+   <EXAMPLE>
+    <LINK>&lt;a href="076-appendxml-via-form.html"&gt;076-appendxml-via-form.html&lt;a&gt;</LINK>
+    <CATEGORY>PHP/ HTML / JavaScript / XML</CATEGORY>
+	<DESC>Append a XML file via a Form and display the output</DESC>
+  </EXAMPLE>
  <!--Example#075 -->
    <EXAMPLE>
     <LINK>&lt;a href="075-two-sortable-tables-external-data.html"&gt;075-two-sortable-tables-external-data.html&lt;a&gt;</LINK>
