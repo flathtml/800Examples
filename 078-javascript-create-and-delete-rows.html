@@ -356,7 +356,7 @@
             <div id="textarea">
                <div id="textareawrapper">
          <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
 <style>
@@ -366,6 +366,7 @@ table, td {
 </style>
 </head>
 <body>
+ 
 
 <p>Click the buttons to create and delete row(s) for the table.</p>
 
@@ -373,17 +374,17 @@ table, td {
   <tr>
     <td>Row1 cell1</td>
     <td>Row1 cell2</td>
-     <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+     <td><input type="button" value="Delete" onclick="getConfirmation(this)"></td>
   </tr>
   <tr>
     <td>Row2 cell1</td>
     <td>Row2 cell2</td>
-     <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+     <td><input type="button" value="Delete" onclick="getConfirmation(this)"></td>
   </tr>
   <tr>
     <td>Row3 cell1</td>
     <td>Row3 cell2</td>
-     <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+     <td><input type="button" value="Delete" onclick="getConfirmation(this)"></td>
   </tr>
 </table>
 <br>
@@ -400,7 +401,7 @@ function myCreateFunction() {
     var cell3 = row.insertCell(2);
     cell1.innerHTML = "NEW CELL1";
     cell2.innerHTML = "NEW CELL2";
-    cell3.innerHTML = '<input type="button" value="Delete" onclick="deleteRow(this)">';
+    cell3.innerHTML = '<input type="button" value="Delete" onclick="getConfirmation(this)">';
     
 }
  
@@ -408,13 +409,24 @@ function deleteRow(r) {
     var i = r.parentNode.parentNode.rowIndex;
     document.getElementById("myTable").deleteRow(i);
 }
+
+function getConfirmation(r){
+               var retVal = confirm("Do you want to delete the record");
+               if( retVal == true ){
+                  deleteRow(r);
+                  return true;
+               }
+               else{
+                  
+                  return false;
+               }
+ }
+         
 </script>
  
 
 </body>
 </html>
-
-
 		</textarea>
                </div>
             </div>
