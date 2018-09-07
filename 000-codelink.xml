@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#084 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="084-css-picture-gallery.html"&gt;084-css-picture-gallery.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / CSS</CATEGORY>
+	<DESC>CSS Photo Gallery</DESC>
+  </EXAMPLE>
+ <!--Example#083 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="083-load-file-to-table.html"&gt;083-load-file-to-table.html&lt;a&gt;</LINK>
+    <CATEGORY>MySql / PHP</CATEGORY>
+	<DESC>Load Flat file into MySql Table</DESC>
+  </EXAMPLE>
+ <!--Example#082 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="082-ajax-and-substr.html"&gt;082-ajax-and-substr.html&lt;a&gt;</LINK>
+    <CATEGORY>JavaScript</CATEGORY>
+	<DESC>Use of $.ajax and substring</DESC>
+  </EXAMPLE>
+ <!--Example#081 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="081-index.php"target=_blank&gt;081-index.php&lt;a&gt;</LINK>
+    <CATEGORY>MySQL / PHP</CATEGORY>
+	<DESC>PHP Standard functions - Insert / Update / Delete record from a Table</DESC>
+  </EXAMPLE>
  <!--Example#080 -->
   <EXAMPLE>
     <LINK>&lt;a href="080-php-mysql-insert-form.php"&gt;080-php-mysql-insert-form.php&lt;a&gt;</LINK>
