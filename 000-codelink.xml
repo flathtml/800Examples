@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#085 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="085-image-magnifier.html"&gt;085-image-magnifier.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / CSS / JavaScript</CATEGORY>
+	<DESC>Image magnifier</DESC>
+  </EXAMPLE>
  <!--Example#084 -->
   <EXAMPLE>
     <LINK>&lt;a href="084-css-picture-gallery.html"&gt;084-css-picture-gallery.html&lt;a&gt;</LINK>
