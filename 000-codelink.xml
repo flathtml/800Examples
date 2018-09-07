@@ -131,7 +131,7 @@
   <EXAMPLE>
     <LINK>&lt;a href="064-query-xml-display-stockdata.html"target=_blank&gt;064-query-xml-display-stockdata.html&lt;a&gt;</LINK>
     <CATEGORY>HTML / JavaScript/ XML</CATEGORY>
-	<DESC>Query large XML file and display output in table</DESC>
+	<DESC>Display  html links from the queried XML data</DESC>
   </EXAMPLE>
  <!--Example#063 -->
   <EXAMPLE>

@@ -356,7 +356,7 @@
             <div id="textarea">
                <div id="textareawrapper">
          <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
-<html>
+ <html>
  <title>Query XML file and display in a web page</title>
 <style>
 table {
@@ -403,17 +403,29 @@ function myFunction(xml) {
   
   var i;
   var xmlDoc = xml.responseXML;
-  var table="<tr><th>Stock-id</th><th>Name</th><th>Fair Value($ millions)</th></tr>";
+  var table="<tr><th>Stock-id</th><th>Name</th><th>Ticker</th><th>Fair Value($ millions)</th></tr>";
   var x = xmlDoc.getElementsByTagName("Stock");
+  var b;
+ 
   for (i = 0; i <x.length; i++)
-    
+  
   								{ 
-     
+     b = x[i].getElementsByTagName("Ticker")[0].childNodes[0].nodeValue;
  
     table += "<tr><td>" +
     x[i].getElementsByTagName("STOCK-id")[0].childNodes[0].nodeValue +
     "</td><td>" +
     x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    
+    "<a href='" +
+    b  +
+    "'target=_blank>" +
+    
+    b +
+    
+    "</a>" +  
+    
     "</td><td>" +
     
     x[i].getElementsByTagName("Fair-Equity-Value")[0].childNodes[0].nodeValue +
@@ -431,8 +443,6 @@ function myFunction(xml) {
 
 </body>
 </html>
-
-		
 
 		</textarea>
                </div>
