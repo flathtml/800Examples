@@ -148,7 +148,7 @@ tr:nth-child(even) {background-color: #D8DDD5;}
 <div class="row">
 	<div class="col-md-3">&nbsp; </div>
 	<div  align="center" class="col-md-6 shadow p-4 mb-4 border border-primary" style="background-color:pink">
-	<h6><i>This queries the table 800tunes from the database flathtml</i></h6>
+	<h6><i>This code just queries the table 800tunes from the database flathtml</i></h6>
 		
 </div>
 	<div class="col-md-3">&nbsp; </div>      
@@ -157,10 +157,8 @@ tr:nth-child(even) {background-color: #D8DDD5;}
 
  
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "flathtml";
+// login to database
+require '000-dblogin.php';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

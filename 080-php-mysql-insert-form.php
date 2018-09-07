@@ -152,10 +152,8 @@
 </div>         
 
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "flathtml";
+// login to database
+require '000-dblogin.php';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

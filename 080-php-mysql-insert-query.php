@@ -1,8 +1,6 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "flathtml";
+// login to database
+require '000-dblogin.php';
 
 $productNum = $_POST["productid"];
 $name = $_POST["prodname"];
