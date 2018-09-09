@@ -359,21 +359,15 @@
 
 <html>
  <title>Query XML file and display in a web page</title>
-<style>
-table,th,td {
-  border : 1px solid black;
-  border-collapse: collapse;
-}
-th,td {
-  padding: 5px;
-}
-</style>
+ 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ 
 <body>
-
+<div class="w3-container">
 <button type="button" onclick="loadXMLDoc()">Get my CD collection</button>
 <br><br>
-<table id="demo"></table>
-
+<table id="demo" class="w3-table-all"></table>
+</div>
 <script>
 //If this code does not work Chrome because of CORS issue, then enable the respective extension in Chrome
 // click on this link to enable it https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en-US
@@ -397,7 +391,7 @@ function myFunction(xml) {
   
   var i;
   var xmlDoc = xml.responseXML;
-  var table="<tr><th>Artist</th><th>Price</th><th>Title</th><th>Price Point</th></tr>";
+  var table="<tr class='w3-yellow'><th>Artist</th><th>Price</th><th>Title</th><th>Price Point</th></tr>";
   var x = xmlDoc.getElementsByTagName("CD");
   for (i = 0; i <x.length; i++)
     
@@ -411,7 +405,7 @@ function myFunction(xml) {
 }
     table += "<tr><td>" +
     x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
-    "</td><td>" +
+    "</td><td>" + "$" +
     x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue +
     "</td><td>" +
     
@@ -430,6 +424,8 @@ function myFunction(xml) {
 
 </body>
 </html>
+
+		 
 
 		</textarea>
                </div>
