@@ -1,7 +1,7 @@
  <!DOCTYPE html>
 <html lang="en-US">
    <head>
-      <title>Tryit Software Editor</title>
+      <title>Query XML file and display in a web page</title>
       <meta name="viewport" content="width=device-width">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -356,63 +356,111 @@
             <div id="textarea">
                <div id="textareawrapper">
          <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
- 
-<html>
+   <html>
+  
+ <title>Query XML file and display in a web page</title>
+<style>
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
 <body>
 
-<h2>Strip off Currency sign and commas</h2>
-
-<button onclick="myFunction1()">Strip Dollar and comma</button>
-<button onclick="myFunction2()">Strip other currency and comma</button>
- 
-<p>Original amount</p>
-<p id="demo1"></p>
-
-<p>Stripped amount</p>
-<p id="demo2"></p>
-
-<h2>Add Dollar sign and commas</h2>
-<button onclick="myFunction3()">Put currency and comma</button>
-
-<p>Original amount</p>
-<p id="demo3"></p>
-
-<p>Modified amount</p>
-<p id="demo4"></p>
+<button type="button" onclick="loadXMLDoc()">Get my Stock data</button>
+<br>
+<div style="overflow-x:auto;">
+<table id="demo"></table>
+</div>
 <script>
-//Strips of a field that has dollar and comma
-function myFunction1() {
-    var a = "$148,326.00"; "<br>";
-
-    var b =parseFloat(a.replace(/\$|,/g, '')); "<br>";
-
-    document.getElementById("demo1").innerHTML =  a;
-    document.getElementById("demo2").innerHTML =  b;
+//If this code does not work Chrome because of CORS issue, then enable the respective extension in Chrome
+// click on this link to enable it https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en-US
+function loadXMLDoc() {
+  var xmlhttp;
+  if (window.XMLHttpRequest) {
+    xmlhttp = new XMLHttpRequest();
+  } else {
+    // code for older browsers
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xmlhttp.open("GET", "064-valuation-data.xml", true);
+  xmlhttp.send();
 }
-//Strips of a field that has rupees and comma
-function myFunction2() {
-    //Rupee symbol in HTML is ₹  URL has details https://www.w3schools.com/charsets/ref_utf_currency.asp 
-    var a = "&#8377;3,45,326.00"; "<br>";
-
-    var b =parseFloat(a.replace(/[^0-9.-]+/g, '')); "<br>";
-
-    document.getElementById("demo1").innerHTML =  a;
-    document.getElementById("demo2").innerHTML =  b;
-}
-function myFunction3() {
-var c = 123355633389;
-var d = Number(c).toLocaleString("US", {
+function myFunction(xml) {
+  
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<table id='sum_table'><tr class='titlerow'><th>Stock-id</th><th>Name</th><th>Ticker</th><th>Fair Value($ millions.)</th></tr>";
+  var x = xmlDoc.getElementsByTagName("Stock");
+  var b;
+  var sumval, temp1, temp2;
+  sumval = 0;
+ 
+  for (i = 0; i <x.length; i++)
+  
+  								{ 
+     b = x[i].getElementsByTagName("Ticker")[0].childNodes[0].nodeValue;
+     
+     temp1 = x[i].getElementsByTagName("Fair-Equity-Value")[0].childNodes[0].nodeValue;
+      temp2 =parseFloat(temp1.replace(/[^0-9.-]+/g, ''));
+      sumval = sumval + temp2;
+      
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("STOCK-id")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    
+    "<a href='" +
+    b  +
+    "'target=_blank>" +
+    
+    b +
+    
+    "</a>" +  
+    
+    "</td><td class='rowDataSd'>" +
+    
+    x[i].getElementsByTagName("Fair-Equity-Value")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    
+    
+    "</td></tr>" ;
+ 
+        
+         
+  }
+  
+  var c = Number(sumval).toLocaleString("US", {
   style: "currency",
   currency: "USD"
 });
-    document.getElementById("demo3").innerHTML =  c;
-    document.getElementById("demo4").innerHTML =  d;
+  table += "<tr class='totalColumn'><td> </td><td> </td><td> </td><td class='totalCol'>" + "Total " + c + "</td></tr></table>"; 
+  
+  
+  
+document.getElementById("demo").innerHTML = table;
 }
 </script>
+
  
+</script>
 </body>
 </html>
-
 		</textarea>
                </div>
             </div>
