@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#088 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="088-filterable-table.html"&gt;088-filterable-table.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript / JQuery</CATEGORY>
+	<DESC>Filterable table that allows you to search the contents of the table</DESC>
+  </EXAMPLE>
  <!--Example#087 -->
   <EXAMPLE>
     <LINK>&lt;a href="087-query-xml-checkbox-selection.html"&gt;087-query-xml-checkbox-selection.html&lt;a&gt;</LINK>
