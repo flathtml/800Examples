@@ -356,49 +356,55 @@
             <div id="textarea">
                <div id="textareawrapper">
          <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
-
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
-  <head>
-<title>JSON with for loop</title>
-</head>
 <body>
 
-<p>Looping through an array using a for in loop:</p>
+<p>Example that showcases how to loop through Json</p>
 
 <p id="demo"></p>
 
 <script>
-
-var myObj, i, x = "";
+var myObj, i, j, x = "";
 myObj = {
     "name":"John",
-    "age": ["30"],
-    "cars":[ "Ford", "BMW", "Fiat" ],
+    "age":30,
+    "cars": [
+        {"name":"Ford", "models":["Fiesta", "Focus", "Mustang"]},
+        {"name":"BMW", "models":["320", "X3", "X5"]},
+        {"name":"Fiat", "models":["500", "Panda"] }
+    ],
     
-    "name":["Rob"],
-    "age": ["8"],
-    "cars":[ "Toyota", "Honda", "Buick" ]
-};
-
-for (i in myObj.age) {
-    x += myObj.age[i] + "<br>";
+    "bikes": [
+        {"name":"Yamaha", "models":["StarVenture", "StarLauder"]},
+        {"name":"Harley", "models":["Street Rod", "Street 500", "1200custom"]},
+        {"name":"Kawasaki", "models":["Vulcan2000", "Estrella"] }
+    ]
 }
+ x += "<h1>" + myObj.name + ": Age " + myObj.age + " his cars and bikes are.." + "</h1>";
 
-if (myObj.age > 18) {
-    document.getElementById("demo").innerHTML = "Person is adult and Age is " + x;
-}
-
-else {
-  document.getElementById("demo").innerHTML = "Person is child and Age is " + x;
+for (i in myObj.cars) {
+     
+    x += "<h2>" + myObj.cars[i].name + "</h2>";
+    for (j in myObj.cars[i].models) {
+        x += myObj.cars[i].models[j] + "<br>";
     }
+}
 
- 
+for (i in myObj.bikes) {
+     
+    x += "<h2>" + myObj.bikes[i].name + "</h2>";
+    for (j in myObj.bikes[i].models) {
+        x += myObj.bikes[i].models[j] + "<br>";
+    }
+}
 
+document.getElementById("demo").innerHTML = x;
 </script>
 
 </body>
 </html>
+
 
 		</textarea>
                </div>
