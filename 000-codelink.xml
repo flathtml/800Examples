@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#090 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="090-column-property.html"&gt;090-column-property.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / CSS</CATEGORY>
+	<DESC>CSS Column Property, displays the content into three equal parts.Very useful if you are presenting an article on a web page</DESC>
+  </EXAMPLE>
+ <!--Example#089 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="089-highlight-technique.html"&gt;089-highlight-technique.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JQuery</CATEGORY>
+	<DESC>Simple jquery technique to highlight any part of a web page</DESC>
+  </EXAMPLE>
  <!--Example#088 -->
   <EXAMPLE>
     <LINK>&lt;a href="088-filterable-table.html"&gt;088-filterable-table.html&lt;a&gt;</LINK>
