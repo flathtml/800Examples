@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#093 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="093-customized-google-form-for-website.html"&gt;093-customized-google-form-for-website.html&lt;a&gt;</LINK>
+    <CATEGORY>Google Script / HTML</CATEGORY>
+	<DESC>Customized Google Form that acceses Google Sheets that can be included in any external website</DESC>
+  </EXAMPLE>
  <!--Example#092 -->
   <EXAMPLE>
     <LINK>&lt;a href="092-google-sheets-form.html"&gt;092-google-sheets-form.html&lt;a&gt;</LINK>
     <CATEGORY>Google Script / HTML</CATEGORY>
-	<DESC>Create a Customized Google Form</DESC>
+	<DESC>Create a Customized Google Form to be embedded in Google sites</DESC>
   </EXAMPLE>
  <!--Example#091 -->
   <EXAMPLE>

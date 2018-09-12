@@ -356,26 +356,82 @@
             <div id="textarea">
                <div id="textareawrapper">
          <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
-
-
 <!DOCTYPE html>
-<html>
- <head>
-	<title>Customized Google Form</title>
- </head>
- <body>
+<html lang="en">
+<head>
+  <title>Basic Customized Google Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
 
-  <h3>Google Forms are Pretty handy if one wants to collect some data from users in a quick and fast way without creating any database.</h3>
-  This Example demonstrates how one can create a customized Google Form. The idea was taken from the following 
-  <a href="http://bionicteaching.com/custom-web-form-to-google-sheets/"target=_blank">link</a>.
-  <p>
-  <p><a href="https://script.google.com/macros/s/AKfycbwkoQS_V-6gQ5kw1YBNCBgro7j3_eMTgJUf-WGLz-J97QhRrKOM/exec"target=_blank">Click here</a>&nbsp;to try a customized Google Form.
-  </p>
-  <h3><a href="https://sites.google.com/view/kwicsoft"target=_blank">Click here</a>&nbsp;to view the Form in Google website.Its a better Responsive version.</h3>
+<div class="container">
+ <h4>This is a Customized Google Form</h4>.
+ <div class="col-md-12 shadow p-4 mb-4 border border-primary" style="background-color:pink">
+ <p>&nbsp</p>
+  <h4 align="center">Contact Info</h4>
+  <form name="contact"> 
+    <div class="form-group">
+      <label for="Name">Name</label>
+      <input type="text" name="Name" class="form-control" id="Name" required placeholder="Enter your Name">
+    </div>
+    <div class="form-group">
+      <label for="Email">Email</label>
+      <input type="email" name="Email" class="form-control" id="Email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required placeholder="bond@yahoo.com">
+    </div>
+    <div class="form-group">
+      <label for="Telephone">Tel# (Format 800-777-1234)</label>
+      <input type="text" name="Telephone" class="form-control" id="Telephone" pattern="^\d{3}-\d{3}-\d{4}$" required placeholder="888-777-1234">
+    </div>
+    
+    <div class="form-group">
+      <label for="Meal">Meal : Select One</label>
+      <select class="form-control" name="Meal" id="Meal">
+        <option value="veg-vegan">Veg - Vegan</option>
+        <option value="veg-gen">Veg - eggsok</option>
+        <option value="nonveg-chicken">Non Veg-Only Chicken</option>
+        <option value="nonveg-red-meat">Non Veg-Red Meat</option>
+      </select>
+       
+    </div>
+     <button type="submit">SUBMIT</button>  
+      <p>&nbsp;</p>
+     </form>
+    
+	<script>  
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwbP8ascB1Ee1W3r3DDZFGvh-NEy7UUwu79VB4XWETd8SEReHXX/exec'  
+  const form = document.forms['contact']  
+  form.addEventListener('submit', e => {  
+   e.preventDefault()  
+   fetch(scriptURL, { method: 'POST', body: new FormData(form)})  
+  //  .then(response => console.log('Successmmm!', response))  
+  //  .catch(error => console.error('Error!', error.message))  
+      .then(response => success())  
+      .catch(error => console.error('Error!', error.message))  
+  })  
+  function success() {
+  document.getElementById("status").innerHTML = "Form Submitted to Google sheet." + "<a href='https://docs.google.com/spreadsheets/d/1O2L2yY5LjjY0ADQVUBH2kfoYiGK_s0Oe0nPXOkyPcGE/edit#gid=0'target=_blank'>Click here</a>&nbsp;to access the Google sheet";
  
+  }
+  
+  function clear () {
+  document.contact.email.value='';
+  document.contact.firstName.value='';
+  }
+ </script> 
+ </div>
+ <p>&nbsp;</p>
+  
+<p id="status"></p> 
 
- </body>
+     </div>
+      
+</body>
 </html>
+
 
 		</textarea>
                </div>
