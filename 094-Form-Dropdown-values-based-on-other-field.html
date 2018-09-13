@@ -365,6 +365,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/> 
 </head>
 <body>
 
@@ -373,13 +374,13 @@
  <h6>If you want a similar form then please Email  d_menashi at yahoo.com</h6> 
  <p>
  <div class="col-md-12 shadow p-4 mb-4 border border-primary" style="background-color:pink">
-<p>&nbsp;</p>
-  <h4 align="center">Baby Names Feedback</h4>
+ <p> </p>
+  <h4 align="center">Baby Names Feedback :</h4>
   <form name="contact"> 
     
     <div class="form-group">
       <label for="Gender">Gender : Select One</label>
-      <select class="form-control" name="Gender" id="Gender" onClick="getNames()">
+      <select class="form-control" name="Gender" id="Gender" onchange="getNames()">
       </select>
     </div>
 	
@@ -395,12 +396,12 @@
     </div>
 	
      <button type="submit">SUBMIT</button>  
-      <p>&nbsp;</p>
+      <p> </p>
      </form>
     
 	<script>  
 	 
-$(document).ready(function () {
+function initialize() {
  
 var list1 = document.getElementById('Gender');
  
@@ -408,7 +409,9 @@ list1.options[0] = new Option('--Select--', '');
 list1.options[1] = new Option('Boy', 'Boy');
 list1.options[2] = new Option('Girl', 'Girl');
 list1.options[3] = new Option('Other', 'Other');
-});
+}
+
+initialize();
 
 function getNames(){
  
@@ -483,7 +486,7 @@ function getNames(){
 });
  </script> 
  </div>
- <p>&nbsp;</p>
+ <p> </p>
   
 <p id="status"></p> 
 
@@ -491,6 +494,7 @@ function getNames(){
       
 </body>
 </html>
+ 
  
 		</textarea>
                </div>
