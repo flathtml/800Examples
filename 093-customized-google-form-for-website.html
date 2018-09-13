@@ -356,7 +356,7 @@
             <div id="textarea">
                <div id="textareawrapper">
          <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Basic Customized Google Form</title>
@@ -370,25 +370,25 @@
 
 <div class="container">
  <h4>This is a Customized Google Form <a href="093-instructions-for-customized-google-form.pdf"target=_blank>
- Click here</a> for Instructions  as to how to create this form.</h4>.
+ Click here</a>&nbsp;for Instructions  as to how to create this form.</h4>.
  <p>
  <a href="https://sites.google.com/view/kwicsoft/home"target=_blank>Click here</a>&nbsp;for the web version of the Form.
  <p>
  <div class="col-md-12 shadow p-4 mb-4 border border-primary" style="background-color:pink">
- <p>&nbsp</p>
+ <p>&nbsp;</p>
   <h4 align="center">Contact Info</h4>
   <form name="contact"> 
     <div class="form-group">
       <label for="Name">Name</label>
-      <input type="text" name="Name" class="form-control" id="Name" required placeholder="Enter your Name">
+      <input type="text" name="Name" class="form-control" id="Name" required>
     </div>
     <div class="form-group">
       <label for="Email">Email</label>
-      <input type="email" name="Email" class="form-control" id="Email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required placeholder="bond@yahoo.com">
+      <input type="email" name="Email" class="form-control" id="Email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
     </div>
     <div class="form-group">
       <label for="Telephone">Tel# (Format 800-777-1234)</label>
-      <input type="text" name="Telephone" class="form-control" id="Telephone" pattern="^\d{3}-\d{3}-\d{4}$" required placeholder="888-777-1234">
+      <input type="text" name="Telephone" class="form-control" id="Telephone" pattern="^\d{3}-\d{3}-\d{4}$" required>
     </div>
     
     <div class="form-group">
@@ -417,13 +417,16 @@
       .catch(error => console.error('Error!', error.message))  
   })  
   function success() {
-  document.getElementById("status").innerHTML = "Form Submitted to Google sheet." + "<a href='https://docs.google.com/spreadsheets/d/1gNUmg6ngDUZOMvI-9bN2VwfyNbQE50Sfp-0vG1EcGmo/edit#gid=0'target=_blank'>Click here</a>&nbsp;to access the Google sheet";
+  document.getElementById("status").innerHTML = "Form Submitted to Google sheet." + "<a href='https://docs.google.com/spreadsheets/d/1gNUmg6ngDUZOMvI-9bN2VwfyNbQE50Sfp-0vG1EcGmo/edit#gid=0'target=_blank'>Click here</a> to access the Google sheet";
+  
+   clear();
  
   }
   
   function clear () {
-  document.contact.email.value='';
-  document.contact.firstName.value='';
+  document.contact.Name.value='';
+  document.contact.Email.value='';
+  document.contact.Telephone.value='';
   }
   
   $(document).ready(function(){
@@ -444,7 +447,6 @@
       
 </body>
 </html>
-
 
 		</textarea>
                </div>
