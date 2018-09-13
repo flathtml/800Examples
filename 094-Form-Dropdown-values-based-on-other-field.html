@@ -356,43 +356,53 @@
             <div id="textarea">
                <div id="textareawrapper">
          <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
-
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Page Template with 2 columns with right nav bar</title>
+  <title>Basic Customized Google Form</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=0.9">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+ <h4>This is a Customized Google Form.</h4>
+ <h6>If you want a similar form then please Email  d_menashi at yahoo.com</h6> 
+ <p>
+ <div class="col-md-12 shadow p-4 mb-4 border border-primary" style="background-color:pink">
+<p>&nbsp;</p>
+  <h4 align="center">Baby Names Feedback</h4>
+  <form name="contact"> 
     
- <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Playball|Righteous" rel="stylesheet">
- 
- <body>
-    <div class="col-md-4">
-    <h4>This Example showcases how you can show different values in a dropdown based on the choice of other field</h4>&nbsp;<a href="https://owlcation.com/stem/How-to-control-values-displayed-in-one-HTML-Dropdown-List-with-the-other-using-simple-JavaScript"target=_blank>Click here</a> to read the original article that outlined this code design.
-    <p>
-    Following is the form
-    </p>
-    
-    <form>
-    <h4>Gender</h4>
-    <select class="form-control"  id='firstList' name='firstList' onClick="getFoodItem()">
-    </select>
-     
-    <h4>Name</h4>
-    <select class="form-control"  id='secondList' name='secondList' >
-    </select>
-     
-    </form>
+    <div class="form-group">
+      <label for="Gender">Gender : Select One</label>
+      <select class="form-control" name="Gender" id="Gender" onClick="getNames()">
+      </select>
     </div>
-<script>
+	
+	<div class="form-group">
+      <label for="Names">Name : Select One</label>
+      <select class="form-control" name="Names" id="Names">
+      </select>
+    </div>
+	
+	<div class="form-group">
+      <label for="Notes">Notes</label>
+      <input type="text" name="Notes" class="form-control" id="Notes" required>
+    </div>
+	
+     <button type="submit">SUBMIT</button>  
+      <p>&nbsp;</p>
+     </form>
+    
+	<script>  
+	 
 $(document).ready(function () {
  
-var list1 = document.getElementById('firstList');
+var list1 = document.getElementById('Gender');
  
 list1.options[0] = new Option('--Select--', '');
 list1.options[1] = new Option('Boy', 'Boy');
@@ -400,10 +410,10 @@ list1.options[2] = new Option('Girl', 'Girl');
 list1.options[3] = new Option('Other', 'Other');
 });
 
-function getFoodItem(){
+function getNames(){
  
-            var list1 = document.getElementById('firstList');
-            var list2 = document.getElementById("secondList");
+            var list1 = document.getElementById('Gender');
+            var list2 = document.getElementById("Names");
             var list1SelectedValue = list1.options[list1.selectedIndex].value;
              
             if (list1SelectedValue=='Boy')
@@ -440,10 +450,48 @@ function getFoodItem(){
 }
 
 </script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyJUOqumCrNWJPFlf8xkkOeD6YHcak_3ASqpUzbw6yNA6KqF58/exec'  
+  const form = document.forms['contact']  
+  form.addEventListener('submit', e => {  
+   e.preventDefault()  
+   fetch(scriptURL, { method: 'POST', body: new FormData(form)})  
+  //  .then(response => console.log('Successmmm!', response))  
+  //  .catch(error => console.error('Error!', error.message))  
+      .then(response => success())  
+      .catch(error => console.error('Error!', error.message))  
+  })  
+  function success() {
+  document.getElementById("status").innerHTML = "Form Submitted to Google sheet." + '<a href="https://docs.google.com/spreadsheets/d/1ql8nMcZ7hF-OHTLAbkjT24fCQRKneFWziOwn29sk0YU/edit#gid=0"target=_blank>Click here</a> to access the Google sheet that was updated';
+   clear();
+ 
+  }
+  
+  function clear () {
+  document.contact.Names.value='';
+  document.contact.Gender.value='';
+  document.contact.Notes.value='';
+  }
+  
+  $(document).ready(function(){
+    $("input").focus(function(){
+        $(this).css("background-color", "#cccccc");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "#ffffff");
+    });
+});
+ </script> 
+ </div>
+ <p>&nbsp;</p>
+  
+<p id="status"></p> 
+
+     </div>
+      
 </body>
 </html>
-
-		
+ 
 		</textarea>
                </div>
             </div>
