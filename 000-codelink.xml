@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#094 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="094-Form-Dropdown-values-based-on-other-field.html"&gt;094-Form-Dropdown-values-based-on-other-field.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript</CATEGORY>
+	<DESC>Display dropdown values based on the selection of another field</DESC>
+  </EXAMPLE>
  <!--Example#093 -->
   <EXAMPLE>
     <LINK>&lt;a href="093-customized-google-form-for-website.html"&gt;093-customized-google-form-for-website.html&lt;a&gt;</LINK>
