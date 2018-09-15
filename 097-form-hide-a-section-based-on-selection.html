@@ -373,38 +373,36 @@
  <h4>Example : Display Form Section based on selection.</h4>
  <p>
  <div class="col-md-12 shadow p-4 mb-4 border border-primary" style="background-color:pink">
- <p>&nbsp;</p>
-  <h4 align="center">Our Drinks menu</h4>
-  <form name="contact"> 
+<p>&nbsp;</p>
+  <h4 align="center">Food Menu</h4>
+  <form name="menu"> 
     
     <div class="form-group">
-      <label for="Age">What is your age?</label>
-      <select class="form-control" name="Age" id="Age" onchange="getAge()"> 
-       <option  value="minor">Under 21 years</option>
-        <option value="adult">21 years or above</option>
+      <label for="Choice">What is your meal preference</label>
+      <select class="form-control" name="Choice" id="Choice" onchange="getPrefer()"> 
+       <option  value="veg">Vegetarian</option>
+        <option value="nonveg">Non-Vegetarian</option>
       </select>
     </div>
 	
-	 
-	
-	<div class="form-group">
-      <label for="Soft">Soft Drinks</label>
-      <select type="text" name="Soft" class="form-control" id="Soft" required>
-        <option  value="coke">Coke</option>
-        <option value="sprite">Sprite</option>
-        <option value="pepsi">Pepsi</option>
-        <option value="orange">Orange</option>
-      </select>  
+	 <div id="Optional" class="form-group">
+      <label for="nonvegmenu">Non-Vegetarian Menu</label>
+       <select type="text" name="nonvegmenu" class="form-control" id="nonvegmenu" >
+      <option  value="chicken">Grilled Chicken</option>
+        <option value="meatball">Meat Balls</option>
+        <option value="ham">Ham</option>
+        <option value="fish">Fish</option>
+        </select>
     </div>
     
-    <div id="Alcohol" class="form-group">
-      <label for="Alco">Alcoholic beverages</label>
-       <select type="text" name="Alco" class="form-control" id="Alco" >
-      <option  value="beer">Beer</option>
-        <option value="wine">Wine</option>
-        <option value="whiskey">Whiskey</option>
-        <option value="rum">Rum</option>
-        </select>
+    <div class="form-group">
+      <label for="vegmenu">Vegetarian Menu</label>
+      <select type="text" name="vegmenu" class="form-control" id="vegmenu" required>
+        <option  value="rice">Rice</option>
+        <option value="beans">Beans</option>
+        <option value="fries">Fries</option>
+        <option value="mixveg">Mixed Veg Fry</option>
+      </select>  
     </div>
 	
       
@@ -417,27 +415,27 @@ function initialize() {
  
 
 
-var d = document.getElementById("Alcohol");
+var d = document.getElementById("Optional");
  d.style.display = "none";
 }
 
 initialize();
 
-function getAge(){
+function getPrefer(){
  
             
              
-            if (document.contact.Age.value =='adult')
+            if (document.menu.Choice.value =='nonveg')
             
             {
-                var d = document.getElementById("Alcohol");
+                var d = document.getElementById("Optional");
                 d.style.display = "block";
                 
             }
-            else if (document.contact.Age.value =='minor')
+            else if (document.menu.Choice.value =='veg')
             {
             
-            	var d = document.getElementById("Alcohol");
+            	var d = document.getElementById("Optional");
                 d.style.display = "none";
                  
             }
@@ -459,9 +457,7 @@ function getAge(){
  </script> 
  
 </body>
-</html>
- 
-
+</html>  
 		</textarea>
                </div>
             </div>
