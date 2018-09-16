@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#098 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="098-query-google-sheet.html"&gt;098-query-google-sheet.html&lt;a&gt;</LINK>
+    <CATEGORY> Google / HTML / JavaScript</CATEGORY>
+	<DESC>Query Google sheet and display data in HTML Table</DESC>
+  </EXAMPLE>
  <!--Example#097 -->
   <EXAMPLE>
     <LINK>&lt;a href="097-form-hide-a-section-based-on-selection.html"&gt;097-form-hide-a-section-based-on-selection.html&lt;a&gt;</LINK>
