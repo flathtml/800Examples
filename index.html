@@ -130,17 +130,35 @@ th,td {
 <div>&nbsp;</div>
 <div class="container-fluid">
    <div class="top">
-      <a class="w3schools-logo" href="index.html"> &nbsp;FlatHTML<span class="dotcom">.com</span></a>
-      <div class="w3-right  toptext w3-wide ">Responsive Web Development made easy &nbsp;</div>
+      <a class="w3schools-logo" href="index.html"> &nbsp;FlatHTML<span class="dotcom">.com</span></a> 
+      <div class="w3-right  toptext w3-wide ">&nbsp;&nbsp;Responsive Web Development made easy &nbsp;</div>
    </div>
    
+   <div class="top">
+      <div class="w3-center  toptext">
+	   <a href="016-tryit-software-editor.html">Tryit</a>&nbsp;&nbsp;<a href="javascript:history.go(0)">Click to refresh the page</a>&nbsp;&nbsp;<a href="TODO-list.txt"target=_blank">TODO List</a> 
+	   
+	  </div>
+   </div>
+    
 <div>&nbsp;</div>
 <div class="row">
-	<div class="col-md-1">&nbsp; </div>
+	<div class="col-md-1">&nbsp;</div>
 	<div  align="center" class="col-md-10" >
 		 
- 
- 
+ <script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#demo tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+ <input id="myInput" type="text" size="125" placeholder="Search..">
+  
+ <p>
 <table id="demo"></table>
 </div>
 	<div class="col-md-1">&nbsp; </div>      
