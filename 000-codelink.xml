@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#100 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="100-form-select-option-with-sublevel.html"&gt;100-form-select-option-with-sublevel.html&lt;a&gt;</LINK>
+    <CATEGORY> HTML / JavaScript</CATEGORY>
+	<DESC>Form Select with Sub level selection</DESC>
+  </EXAMPLE>
  <!--Example#099 -->
   <EXAMPLE>
     <LINK>&lt;a href="099-iframe-source-as-variable.html"&gt;099-iframe-source-as-variable.html&lt;a&gt;</LINK>
     <CATEGORY> HTML / JavaScript</CATEGORY>
-	<DESC>Shows how one can access pass iframe source as a variable in JavaScript</DESC>
+	<DESC>Shows how one can access  iframe source as a variable in JavaScript</DESC>
   </EXAMPLE>
  <!--Example#098 -->
   <EXAMPLE>
