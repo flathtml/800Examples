@@ -451,7 +451,10 @@ function myFunction() {
             d = "No";
             e = "No";
             f = "No";
-            
+			
+    //This statement clears out the output table :         
+    document.getElementById("demo").innerHTML = ""; 
+	
     var table="<th colspan='6'>Transformed Table</th><tr class='w3-blue'><th>Student</th><th>Wk-1</th><th>Wk-2</th><th>Wk-3</th><th>Wk-4</th><th>Wk-5</th></tr>";
        
        for (i = 2; i <z; i++) {
