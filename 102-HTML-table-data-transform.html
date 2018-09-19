@@ -356,7 +356,7 @@
             <div id="textarea">
                <div id="textareawrapper">
          <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
- <!DOCTYPE html>
+   <!DOCTYPE html>
 <html>
 <head>
  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -381,7 +381,21 @@ th, td {
 <body>
 
  <p><h3>EXAMPLE : Demonstrate how we can can transform a HTML table based on our needs.</h3>
- <h5>In the below example we have an original table with two columns consisting of student assignments. The assignments are from week 1 thru week 5. This is transformed so that each student just has one record wherein it is listed his assignment status for each week.</h5>
+ <h5>In the below example we have an original table with two columns consisting of student assignments. The assignments are from week 1 thru week 5. This is transformed so that each student just has one record wherein it lists his assignment status for each week.</h5>
+ <p>
+ <b>NOTES :</b> 
+ </p>
+ <p>
+ 1. In the first step of transformation, the original table is sorted by Name so that all the records belonging to same person 
+ are in one order.</p>
+ 
+ <p>
+ 2. In case if there is any duplicate entry, the transformation rule ignores it.
+ </p>
+ 
+ <p>
+ 3. For any week the student has missed the assignment, the cell is highlighted in yellow.
+ </p>
 <table id="demo"></table>
  
 <p id ="demo1"></p>
@@ -392,6 +406,9 @@ th, td {
 <table id = "myTable">
 <tr class='w3-yellow'>
 <td>NAME</td><td>ASSIGNMENT</td> 
+</tr>
+<tr>
+<td>Sam</td><td>wk4</td> 
 </tr>
 <tr>
 <td>John</td><td>wk2</td> 
@@ -405,32 +422,69 @@ th, td {
 <tr>
 <td>John</td><td>wk5</td> 
 </tr>
-<tr>
-<td>Mike</td><td>wk1</td> 
-</tr>
  
 <tr>
-<td>Mike</td><td>wk4</td> 
-</tr>
-<tr>
-<td>Mike</td><td>wk5</td> 
-</tr>
-<tr>
-<td>Sam</td><td>wk1</td> 
+<td>Sam</td><td>wk4</td> 
 </tr>
 <tr>
 <td>Sam</td><td>wk2</td> 
 </tr>
 <tr>
-<td>Sam</td><td>wk3</td> 
+<td>Mike</td><td>wk4</td> 
 </tr>
 <tr>
-<td>Sam</td><td>wk4</td> 
+<td>Sam</td><td>wk5</td> 
+</tr>
+<tr>
+<td>Mike</td><td>wk1</td> 
+</tr>
+<tr>
+<td>Sam</td><td>wk3</td> 
+</tr>
+ <tr>
+<td>Mike</td><td>wk3</td> 
 </tr>
 </table>
 
 <script>
+
+function sortTable() {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("myTable");
+  switching = true;
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[0];
+      y = rows[i + 1].getElementsByTagName("TD")[0];
+      //check if the two rows should switch place:
+      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+        //if so, mark as a switch and break the loop:
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+
 function myFunction() {
+    sortTable();
     var list = document.getElementsByTagName("td");
  
      // Number of rows
@@ -444,7 +498,7 @@ function myFunction() {
     var i;
     var temp;
     
-    var a,b,c,d,e,f;
+    var a,b,c,d,e,f,b1,c1,d1,e1,f1;
     
             b = "No";
             c = "No";
@@ -479,7 +533,42 @@ function myFunction() {
             
             else {
             
-            table += "<tr><td>" + temp + "</td><td>" + b + "</td><td>" + c + "   </td><td>" + d + "</td><td>" + e + "</td><td>" + f + "</td></tr>";
+            	if (b== 'No') {
+             		b1 = "</td><td bgcolor='yellow'>";
+            	}
+            		else {
+            	    b1 = "</td><td>"
+            	}
+            
+               if (c== 'No') {
+             		c1 = "</td><td bgcolor='yellow'>";
+            	}
+            		else {
+            	    c1 = "</td><td>"
+            	}
+                
+                if (d== 'No') {
+             		d1 = "</td><td bgcolor='yellow'>";
+            	}
+            		else {
+            	    d1 = "</td><td>"
+            	}
+                
+                if (e== 'No') {
+             		e1 = "</td><td bgcolor='yellow'>";
+            	}
+            		else {
+            	    e1 = "</td><td>"
+            	}
+                
+                if (f== 'No') {
+             		f1 = "</td><td bgcolor='yellow'>";
+            	}
+            		else {
+            	    f1 = "</td><td>"
+            	}
+            
+            table += "<tr><td>" + temp + b1 + b + c1 + c + d1 + d + e1 + e + f1 + f + "</td></tr>";
       
             b = "No";
             c = "No";
@@ -513,14 +602,45 @@ function myFunction() {
            
   			}
             
-             
-            
-             
-                
-       
+        
        }
+       
+       			if (b== 'No') {
+             		b1 = "</td><td bgcolor='yellow'>";
+            	}
+            		else {
+            	    b1 = "</td><td>"
+            	}
       
-      table += "<tr><td>" + temp + "</td><td>" + b + "</td><td>" + c + "      </td><td>" + d + "</td><td>" + e + "</td><td>" + f + "</td></tr>";
+                if (c== 'No') {
+             		c1 = "</td><td bgcolor='yellow'>";
+            	}
+            		else {
+            	    c1 = "</td><td>"
+            	}
+                
+                if (d== 'No') {
+             		d1 = "</td><td bgcolor='yellow'>";
+            	}
+            		else {
+            	    d1 = "</td><td>"
+            	}
+                
+                if (e== 'No') {
+             		e1 = "</td><td bgcolor='yellow'>";
+            	}
+            		else {
+            	    e1 = "</td><td>"
+            	}
+                
+                if (f== 'No') {
+             		f1 = "</td><td bgcolor='yellow'>";
+            	}
+            		else {
+            	    f1 = "</td><td>"
+            	}
+            
+      table += "<tr><td>" + temp + b1 + b + c1 + c + d1 + d + e1 + e + f1 + f + "</td></tr>";
       
        
       document.getElementById("demo").innerHTML = table;
@@ -531,6 +651,8 @@ function myFunction() {
 
 </body>
 </html>
+
+		
 
 		</textarea>
                </div>
