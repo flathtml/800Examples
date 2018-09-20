@@ -360,6 +360,10 @@
 <html>
 <head>
  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 <style>
 table, td, th {
     border: 1px solid black;
@@ -379,9 +383,16 @@ th, td {
 </head>
 
 <body>
+<p>&nbsp;</p>
+<div class="container-fluid">
+<div class="row">
+   <div class="col-md-12">
 
- <p><h3>EXAMPLE : Demonstrate how we can can transform a HTML table based on our needs.</h3>
- <h5>In the below example we have an original table with two columns consisting of student assignments. The assignments are from week 1 thru week 5. This is transformed so that each student just has one record wherein it lists his assignment status for each week.</h5>
+        <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+         
+
+ <h3> EXAMPLE : Demonstrate how we can can transform a HTML table based on our needs. </h3>
+ <p>In the below example we have an original table with two columns consisting of student assignments. The assignments are from week 1 thru week 5. This is transformed so that each student just has one record wherein it lists his assignment status for each week.</p>
  <p>
  <b>NOTES :</b> 
  </p>
@@ -396,6 +407,10 @@ th, td {
  <p>
  3. For any week the student has missed the assignment, the cell is highlighted in yellow.
  </p>
+ </div> 
+ </div> 
+  </div>
+ 
 <table id="demo"></table>
  
 <p id ="demo1"></p>
@@ -648,12 +663,10 @@ function myFunction() {
     
 }
 </script>
-
+ 
 </body>
 </html>
-
-		
-
+  
 		</textarea>
                </div>
             </div>
