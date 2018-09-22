@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+  <!--Example#110 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="110-rock-paper-sicssors-game.html"target=_blank&gt;110-rock-paper-sicssors-game.html&lt;a&gt;</LINK>
+    <CATEGORY>Fun</CATEGORY>
+	<DESC>Rock Paper Scissors Game</DESC>
+  </EXAMPLE>
   <!--Example#109 -->
   <EXAMPLE>
     <LINK>&lt;a href="109-checkbox-choice-selector-advanced2.html"&gt;109-checkbox-choice-selector-advanced2.html&lt;a&gt;</LINK>
