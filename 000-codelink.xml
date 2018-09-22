@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+  <!--Example#109 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="109-checkbox-choice-selector-advanced2.html"&gt;109-checkbox-choice-selector-advanced2.html&lt;a&gt;</LINK>
+    <CATEGORY> HTML / JavaScript / JQuery</CATEGORY>
+	<DESC>Checkbox Choice Selector - Advanced2 - This also disables the corresponding checkboxes.</DESC>
+  </EXAMPLE>
  <!--Example#108 -->
   <EXAMPLE>
     <LINK>&lt;a href="108-checkbox-enable-disable.html"&gt;108-checkbox-enable-disable.html&lt;a&gt;</LINK>
