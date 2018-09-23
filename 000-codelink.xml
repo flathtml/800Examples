@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+  <!--Example#113 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="113-form-input-masking.html"target=_blank&gt;113-form-input-masking.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / CSS / JavaScript</CATEGORY>
+	<DESC>Form Input Masking</DESC>
+  </EXAMPLE>
  <!--Example#112 -->
   <EXAMPLE>
     <LINK>&lt;a href="112-jquery-slot-machine.html"target=_blank&gt;112-jquery-slot-machine.html&lt;a&gt;</LINK>
