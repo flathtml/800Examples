@@ -13,7 +13,7 @@
 <div align="center"><b>PLAY Rock Paper Scissors with Computer</b></div><p>
 <div class="col-md-12 shadow p-4 mb-4 border border-primary" style="background-color:lightgreen">
  <div>&nbsp;</div>
- <div>
+ <div align="center">
   &nbsp;<i>Select your Choice :</i>
   
 <form>
@@ -82,7 +82,7 @@ function onSubmit() {
           scoreHuman.innerHTML = parseInt(scoreHuman.innerHTML)+1; 
         } else {
           if (computerGuess === "Paper") {
-            document.getElementById("result").innerHTML = "YOU LOSE"
+            document.getElementById("result").innerHTML = "YOU LOOSE"
             scoreComputer.innerHTML = parseInt(scoreComputer.innerHTML)+1;
           }
         }
@@ -93,7 +93,7 @@ function onSubmit() {
           scoreHuman.innerHTML = parseInt(scoreHuman.innerHTML)+1; 
         } else {
           if (computerGuess === "Rock") {
-            document.getElementById("result").innerHTML = "YOU LOSE"
+            document.getElementById("result").innerHTML = "YOU LOOSE"
              scoreComputer.innerHTML = parseInt(scoreComputer.innerHTML)+1;
           }
         }
@@ -105,7 +105,7 @@ function onSubmit() {
           scoreHuman.innerHTML = parseInt(scoreHuman.innerHTML)+1; 
         } else {
           if (computerGuess === "Scissors") {
-            document.getElementById("result").innerHTML = "YOU LOSE"
+            document.getElementById("result").innerHTML = "YOU LOOSE"
              scoreComputer.innerHTML = parseInt(scoreComputer.innerHTML)+1;
              a = parseInt(scoreComputer.innerHTML)+1;
           }
