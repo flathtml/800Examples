@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#112 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="112-jquery-slot-machine.html"target=_blank&gt;112-jquery-slot-machine.html&lt;a&gt;</LINK>
+    <CATEGORY>Fun</CATEGORY>
+	<DESC>JQuery Slot Machine</DESC>
+  </EXAMPLE>
+  <!--Example#111 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="111-Limit-Number-of-checkboxes-checked.html"target=_blank&gt;111-Limit-Number-of-checkboxes-checked.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript</CATEGORY>
+	<DESC>Limit number of checkboxes checked</DESC>
+  </EXAMPLE>
   <!--Example#110 -->
   <EXAMPLE>
     <LINK>&lt;a href="110-rock-paper-sicssors-game.html"target=_blank&gt;110-rock-paper-sicssors-game.html&lt;a&gt;</LINK>
