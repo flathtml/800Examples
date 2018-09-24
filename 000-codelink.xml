@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#117 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="117-checkbox-required-multichoice2.html"&gt;117-checkbox-required-multichoice2.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript / JQuery </CATEGORY>
+	<DESC> Checkbox Choice Selector - Advanced3 : Forces User to Select atleast one checkbox before clicking on SUBMIT</DESC>
+  </EXAMPLE>
  <!--Example#116 -->
   <EXAMPLE>
     <LINK>&lt;a href="116-checkbox-required-multichoice.html"&gt;116-checkbox-required-multichoice.html&lt;a&gt;</LINK>
