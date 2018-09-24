@@ -356,18 +356,27 @@
             <div id="textarea">
                <div id="textareawrapper">
          <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
-<!DOCTYPE html>
-<html>
+ <!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Page Title</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
+  <title>Checkbox Selector - Modified version</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+ <style>
+ .table th {
+   text-align: center;   
+   background-color: lightpink;
+}
+ </style>
 </head>
 <body>
- 
 
-
-<div>
+<div class="container">
 <h2>Checkbox Selector - Modified version</h2>
 <p>
 1. This is the modified version of the Choice Selector. In the <a href="106-checkbox-choice-selector-basic.html"target=_blank>previous version</a> if you selected any fruit as your First favorite, then you could select the same fruit as your second favorite. 
@@ -375,25 +384,62 @@
 <p>
 2.In this version, the logic is improved.If you select any fruit as your first favorite, then you cannot select the same fruit as your second favorite
 </p>
-<h3>My Favorite Fruits</h3>
-  <h4 style="color:red">First Favorite</h4>
-  <label>
-    <input type="checkbox" class="radio" value="gp[1][]" name="fooby[1][]"/>Kiwi</label>
-  <label>
-    <input type="checkbox" class="radio" value="gp[2][]" name="fooby[1][]"/>Jackfruit</label>
-  <label>
-    <input type="checkbox" class="radio" value="gp[3][]" name="fooby[1][]"/>Mango</label>
+<p>
+3. If you are looking for a still advanced version where other checkboxes are disabled, then <a href="109-checkbox-choice-selector-advanced2.html"target=_blank>click here</a>.
+</p>
+   
+   
+  <form>
+  <table class="table table-bordered" >
+  <tr style="text-align:right">
+    <th colspan="5">MY FAVORITE SNACKS</th></tr>
+  <tr><td>Pizza</td><td> 
+    <label class="checkbox-inline">
+    <input type="checkbox" class="radio" value="gp[1][]" name="fooby[1][]"/>#1</label></td><td>
+   <label class="checkbox-inline">
+    <input type="checkbox" class="radio" value="gp[2][]" name="fooby[1][]"/>#2</label></td><td>
+   <label class="checkbox-inline">
+    <input type="checkbox" class="radio" value="gp[3][]" name="fooby[1][]"/>#3</label></td><td>
+     <label class="checkbox-inline">
+    <input type="checkbox" class="radio" value="gp[4][]" name="fooby[1][]"/>#4</label>
+    </td></tr>
+ 
+    <tr><td>Pretzels</td><td>
+    <label class="checkbox-inline">
+    <input type="checkbox" class="radio" value="gp[1][]" name="fooby[2][]"/>#1</label></td><td>
+    <label class="checkbox-inline">
+    <input type="checkbox" class="radio" value="gp[2][]" name="fooby[2][]"/>#2</label></td><td>
+    <label class="checkbox-inline">
+    <input type="checkbox" class="radio" value="gp[3][]" name="fooby[2][]"/>#3</label></td><td>
+    <label class="checkbox-inline">
+    <input type="checkbox" class="radio" value="gp[4][]" name="fooby[2][]"/>#4</label>
+    </td></tr>
+    
+    <tr><td>Ice-Cream</td><td> 
+     <label class="checkbox-inline">
+    <input type="checkbox" class="radio" value="gp[1][]" name="fooby[3][]"/>#1</label></td><td>
+    <label class="checkbox-inline">
+    <input type="checkbox" class="radio" value="gp[2][]" name="fooby[3][]"/>#2</label></td><td>
+    <label class="checkbox-inline">
+    <input type="checkbox" class="radio" value="gp[3][]" name="fooby[3][]"/>#3</label></td><td>
+    <label class="checkbox-inline">
+    <input type="checkbox" class="radio" value="gp[4][]" name="fooby[3][]"/>#4</label>
+    </td></tr>
+ 
+    <tr><td>Cookies</td><td>
+    <label class="checkbox-inline">
+    <input type="checkbox" class="radio" value="gp[1][]" name="fooby[4][]"/>#1</label></td><td>
+    <label class="checkbox-inline">
+    <input type="checkbox" class="radio" value="gp[2][]" name="fooby[4][]"/>#2</label></td><td>
+    <label class="checkbox-inline">
+    <input type="checkbox" class="radio" value="gp[3][]" name="fooby[4][]"/>#3</label></td><td>
+     <label class="checkbox-inline">
+    <input type="checkbox" class="radio" value="gp[4][]" name="fooby[4][]"/>#4</label>
+    </td></tr>
+    </table>
+    
+  </form>
 </div>
-<div>
-  <h4 style="color:green">Second Favorite</h4>
-  <label>
-    <input type="checkbox" class="radio" value="gp[1][]" name="fooby[2][]"/>Kiwi</label>
-  <label>
-    <input type="checkbox" class="radio" value="gp[2][]" name="fooby[2][]"/>Jackfruit</label>
-  <label>
-    <input type="checkbox" class="radio" value="gp[3][]" name="fooby[2][]"/>Mango</label>
-</div>
-
 <script>
 // the selector will match all input controls of type :checkbox
 // and attach a click event handler 
@@ -433,14 +479,8 @@ $("input:checkbox").on('click', function() {
 
 </script>
 
-</div>
- 
 </body>
 </html>
-
-
- 
-
 
 		</textarea>
                </div>
