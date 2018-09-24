@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#116 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="116-checkbox-required-multichoice.html"&gt;116-checkbox-required-multichoice.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript / JQuery </CATEGORY>
+	<DESC>For Multichoice Checkbox, ensure that atleast one checkbox is selected before clicking on SUBMIT</DESC>
+  </EXAMPLE>
+ <!--Example#115 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="115-convert-dropdown-to-checkboxes.html"&gt;115-convert-dropdown-to-checkboxes.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript / JQuery </CATEGORY>
+	<DESC>Convert dropdown field to checkboxes</DESC>
+  </EXAMPLE>
+ <!--Example#114 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="114-embed-video.html"target=_blank&gt;114-embed-video.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML </CATEGORY>
+	<DESC>Embed a Youtube Video</DESC>
+  </EXAMPLE>
   <!--Example#113 -->
   <EXAMPLE>
     <LINK>&lt;a href="113-form-input-masking.html"target=_blank&gt;113-form-input-masking.html&lt;a&gt;</LINK>
