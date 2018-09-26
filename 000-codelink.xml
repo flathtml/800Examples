@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+  <!--Example#119 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="119-bookinfo-google-customized-form-grid-text.html"&gt;119-bookinfo-google-customized-form-grid-text.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / Google Forms / JavaScript / JQuery </CATEGORY>
+	<DESC> Google Customized Form : Grid with Text Responses</DESC>
+  </EXAMPLE>
+ <!--Example#118 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="118-snackinfo-google-customized-form.html"&gt;118-snackinfo-google-customized-form.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / Google Forms / JavaScript / JQuery </CATEGORY>
+	<DESC> Google Customized Form : Multichoice Checkboxes with all validations</DESC>
+  </EXAMPLE>
  <!--Example#117 -->
   <EXAMPLE>
     <LINK>&lt;a href="117-checkbox-required-multichoice2.html"&gt;117-checkbox-required-multichoice2.html&lt;a&gt;</LINK>
