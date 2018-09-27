@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#121 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="121-Read-Google-Sheet-Data-via-JavaScript.html"&gt;121-Read-Google-Sheet-Data-via-JavaScript.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / Google / JavaScript /</CATEGORY>
+	<DESC>Read Google Sheet Data via JavaScript</DESC>
+  </EXAMPLE>
+ <!--Example#120 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="120-HTML-table-data-transform2.html"&gt;120-HTML-table-data-transform2.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript /</CATEGORY>
+	<DESC> Transform a table so that the key record has all its data in one row</DESC>
+  </EXAMPLE>
   <!--Example#119 -->
   <EXAMPLE>
     <LINK>&lt;a href="119-bookinfo-google-customized-form-grid-text.html"&gt;119-bookinfo-google-customized-form-grid-text.html&lt;a&gt;</LINK>
