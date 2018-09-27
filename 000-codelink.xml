@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#124 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="124-JavaScript-choice-eliminator.html"&gt;124-JavaScript-choice-eliminator.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / Google / JavaScript / JQuery</CATEGORY>
+	<DESC>Choice Eliminator Form for Customized Google Form</DESC>
+  </EXAMPLE>
  <!--Example#123 -->
   <EXAMPLE>
     <LINK>&lt;a href="123-JavaScript-add-to-array-and-validate.html"&gt;123-JavaScript-add-to-array-and-validate.html&lt;a&gt;</LINK>
