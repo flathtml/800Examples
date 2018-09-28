@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#126 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="126-Update-cells-of-Google-sheet-without-oauth.html"&gt;126-Update-cells-of-Google-sheet-without-oauth.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / Google / JavaScript </CATEGORY>
+	<DESC>Simple and Efficient way to update particular Cells of a Google Sheet.No OAuth necessary, just used JavaScript</DESC>
+  </EXAMPLE>
  <!--Example#125 -->
   <EXAMPLE>
     <LINK>&lt;a href="125-Update-cells-of-Google-sheet.html"&gt;125-Update-cells-of-Google-sheet.html&lt;a&gt;</LINK>
-    <CATEGORY>HTML / Google / JavaScript / Rest API</CATEGORY>
-	<DESC>Rest API via JavaScript to update particular Cells of a Google Sheet.</DESC>
+    <CATEGORY>HTML / Google OAuth/ JavaScript / Rest API</CATEGORY>
+	<DESC>Rest API via JavaScript to update particular Cells of a Google Sheet Using OAuth</DESC>
   </EXAMPLE>
  <!--Example#124 -->
   <EXAMPLE>
