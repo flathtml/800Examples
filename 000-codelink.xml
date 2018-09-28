@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#125 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="125-Update-cells-of-Google-sheet.html"&gt;125-Update-cells-of-Google-sheet.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / Google / JavaScript / Rest API</CATEGORY>
+	<DESC>Rest API via JavaScript to update particular Cells of a Google Sheet.</DESC>
+  </EXAMPLE>
  <!--Example#124 -->
   <EXAMPLE>
     <LINK>&lt;a href="124-JavaScript-choice-eliminator.html"&gt;124-JavaScript-choice-eliminator.html&lt;a&gt;</LINK>
