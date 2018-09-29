@@ -3,9 +3,9 @@
  <!--Insert new record here -->
  <!--Example#126 -->
   <EXAMPLE>
-    <LINK>&lt;a href="126-Update-cells-of-Google-sheet-without-oauth.html"&gt;126-Update-cells-of-Google-sheet-without-oauth.html&lt;a&gt;</LINK>
+    <LINK>&lt;a href="126-Update-cells-delete-row-of-Google-sheet-without-oauth.html"&gt;126-Update-cells-delete-row-of-Google-sheet-without-oauth.html&lt;a&gt;</LINK>
     <CATEGORY>HTML / Google / JavaScript </CATEGORY>
-	<DESC>Simple and Efficient way to update particular Cells of a Google Sheet.No OAuth necessary, just used JavaScript</DESC>
+	<DESC>Simple and Efficient way to update particular Cells of a Google Sheet.Or delete a particular row of the Google sheet.No OAuth necessary, just used JavaScript</DESC>
   </EXAMPLE>
  <!--Example#125 -->
   <EXAMPLE>
