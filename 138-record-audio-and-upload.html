@@ -356,7 +356,7 @@
             <div id="textarea">
                <div id="textareawrapper">
          <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
- <!DOCTYPE html>
+   <!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -448,16 +448,23 @@ div.a {
 
       $.ajax({
       type: "POST",
-      url: "138-uploadWav.php",
+      url: "138-uploadWav1.php",
       data: { 
           wavBase64: dataURL
+       },
+       success: function(data){
+     //   alert(data);
+        document.getElementById("status").innerHTML = "File successfully   uploaded  : ";
+     var text = "click here for uploaded file";
+  	 $('<a href="'+ data +'"target=_blank>'+text+'</a>').appendTo($('.info'));
+        
        }
     }).done(function(o) {
       console.log('saved'); 
-      document.getElementById("status").innerHTML = "File successfully uploaded";
+   
 
       });
-
+ 
     }    
   </script>
 
@@ -465,8 +472,7 @@ div.a {
  <div class="recorder">
  <h3>Record Audio and upload it</h3>
  <p>The code was reused from following sources</p>
- <p><a href="https://stackoverflow.com/questions/27220859/record-audio-from-user-and-save-to-server"target=_blank>Stackoverflow</a>
- &nbsp;&nbsp;<a href="https://github.com/rajivepandey/MP3RecorderJS/tree/master/js"target=_blank>Corresponding GitHub</a>
+ <p><a href="https://stackoverflow.com/questions/27220859/record-audio-from-user-and-save-to-server"target=_blank>Stackoverflow</a>&nbsp;&nbsp;<a href="https://github.com/rajivepandey/MP3RecorderJS/tree/master/js"target=_blank>Corresponding GitHub</a>
  </p>
   <input type="button" class="start"  value="Record" />
   <input type="button" class="stop" value="Stop" />
@@ -476,7 +482,7 @@ div.a {
  <div><button onclick="upload()">Upload</button></div>
  
  <div>&nbsp;</div>
- <div class="a" id="status"></div>
+ <div class="info" id="status"></div>
  <div>&nbsp;</div>
  
  <div id="playerContainer"></div>
@@ -487,6 +493,7 @@ div.a {
 
  </body>
  </html> 
+		 
 		 
 		</textarea>
                </div>
