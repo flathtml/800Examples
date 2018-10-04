@@ -364,6 +364,10 @@
 
       // Code goes here - Please Note that if you are providing Blob then it should be available in local storage.
       var audioFileUrl = 'blob:http://localhost/b8e43b99-5360-4a2b-b07b-52f1a92646a5';
+	  
+	  //You can get the Blob by recording a new audio using any audio recorder.Once you play it then three dots are seen at the bottom right
+	  //of the player.There right click , hover down in the menu and select Copy audio address. After this if you paste it then 
+	  //you can see a new Blob address that you can use. This Blob will be gone once the audio recorder is refreshed.
 
       window.onload = function() {
 
@@ -425,7 +429,7 @@
   </head>
 
   <body>
-  <h3>Example : How to run an audio file and create donload option</h3>
+  <h3>Example : How to run an audio file and create download option</h3>
   NOTE : The input audio file is given at the top of the code and one can also provide a blob.
   <p>
     <button id="download">Run Example</button>
