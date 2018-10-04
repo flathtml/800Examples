@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+  <!--Example#137 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="137-javascript-video-recorder.html"&gt;137-javascript-video-recorder.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript</CATEGORY>
+	<DESC>JavaScript Video Recorder. </DESC>
+  </EXAMPLE>
  <!--Example#136 -->
   <EXAMPLE>
     <LINK>&lt;a href="136-call-php-pass-variable-create-output-file.html"&gt;136-call-php-pass-variable-create-output-file.html&lt;a&gt;</LINK>
