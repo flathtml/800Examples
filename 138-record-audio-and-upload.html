@@ -356,7 +356,7 @@
             <div id="textarea">
                <div id="textareawrapper">
          <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
-    <!DOCTYPE html>
+        <!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -462,9 +462,20 @@ background-color:lightblue
        },
        success: function(data){
      //   alert(data);
+         document.getElementById("status").innerHTML = "";
         document.getElementById("status").innerHTML = "File successfully   uploaded  : ";
-     var text = "click here for uploaded file";
-  	 $('<a href="'+ data +'"target=_blank>'+text+'</a>').appendTo($('.info'));
+      
+  	 $('<a href="'+ data +'"target=_blank>'+data+'</a>').appendTo($('#status'));
+        
+               
+  
+  var mydiv = document.getElementById("audio");
+  var div = document.createElement("div");
+  mydiv.appendChild(div);
+  div.className ="dynamicDiv";
+ 
+  div.innerHTML = "<input type='text' name='mytext' onfocus = 'this.select()' onmouseup = 'return false' value=" + data + " />";
+   document.getElementById("aud").disabled = true;
         
        }
     }).done(function(o) {
@@ -474,25 +485,34 @@ background-color:lightblue
       });
  
     }    
+    
+   
   </script>
+  
+   
 
 <div class="container">
  <div class="recorder">
  <h3 align="center">Record Audio and upload it</h3>
- <p><i>The code was reused from following sources &nbsp;&nbsp;<a href="https://stackoverflow.com/questions/27220859/record-audio-from-user-and-save-to-server"target=_blank>Stackoverflow</a>&nbsp;&nbsp;<a href="https://github.com/rajivepandey/MP3RecorderJS/tree/master/js"target=_blank>Corresponding GitHub</a></i>
+ <p><i>The code was reused from following sources <a href="https://stackoverflow.com/questions/27220859/record-audio-from-user-and-save-to-server"target=_blank>Stackoverflow</a>&nbsp;&nbsp;<a href="https://github.com/rajivepandey/MP3RecorderJS/tree/master/js"target=_blank>Corresponding GitHub</a></i>
  </p>
   <input type="button" class="start"  value="Record" />
   <input type="button" class="stop" value="Stop" />
-  <p>&nbsp;&nbsp;</p>
+  <p>&nbsp;</p>
   <pre class="status"></pre>
  </div>
 <div>&nbsp;</div>
- <div><button onclick="upload()">Upload</button></div>
+ <div><button id ="aud" onclick="upload()">Upload</button></div>
  
  <div>&nbsp;</div>
- <div class="info" id="status"></div>
- <div>&nbsp;</div>
+ <div id="status"></div>
  
+ <div id ="audio" class="info">
+  
+ </div>
+  <div>&nbsp;</div>
+  
+ <div>&nbsp;</div>
  <div id="playerContainer"></div>
 
  <div id="dataUrlcontainer" hidden></div>
@@ -502,7 +522,6 @@ background-color:lightblue
 </div>
  </body>
  </html> 
-		 
 		</textarea>
                </div>
             </div>
