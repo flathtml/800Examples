@@ -356,7 +356,7 @@
             <div id="textarea">
                <div id="textareawrapper">
          <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
-   <!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -367,7 +367,14 @@ div.a {
     color: blue;
 }
 
+div.container {
+background-color:lightblue
+}
+
  </style>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body id="index" onload="">
 
@@ -392,8 +399,9 @@ div.a {
     window.URL = window.URL || window.webkitURL;
 
     var audio_context = new AudioContext;
-    __log('Audio context set up.');
-    __log('navigator.getUserMedia ' + (navigator.getUserMedia ? 'available.' : 'not  present!'));
+    //uncomment the below code if you want to test the Audio context setup
+//    __log('Audio context set up.');
+//    __log('navigator.getUserMedia ' + (navigator.getUserMedia ? 'available.' : 'not  present!'));
   } catch (e) {
     alert('No web audio support in this browser!');
   }
@@ -468,17 +476,17 @@ div.a {
     }    
   </script>
 
-
+<div class="container">
  <div class="recorder">
- <h3>Record Audio and upload it</h3>
- <p>The code was reused from following sources</p>
- <p><a href="https://stackoverflow.com/questions/27220859/record-audio-from-user-and-save-to-server"target=_blank>Stackoverflow</a>&nbsp;&nbsp;<a href="https://github.com/rajivepandey/MP3RecorderJS/tree/master/js"target=_blank>Corresponding GitHub</a>
+ <h3 align="center">Record Audio and upload it</h3>
+ <p><i>The code was reused from following sources &nbsp;&nbsp;<a href="https://stackoverflow.com/questions/27220859/record-audio-from-user-and-save-to-server"target=_blank>Stackoverflow</a>&nbsp;&nbsp;<a href="https://github.com/rajivepandey/MP3RecorderJS/tree/master/js"target=_blank>Corresponding GitHub</a></i>
  </p>
   <input type="button" class="start"  value="Record" />
   <input type="button" class="stop" value="Stop" />
+  <p>&nbsp;&nbsp;</p>
   <pre class="status"></pre>
  </div>
-
+<div>&nbsp;</div>
  <div><button onclick="upload()">Upload</button></div>
  
  <div>&nbsp;</div>
@@ -491,9 +499,9 @@ div.a {
 
  <pre id="log"></pre>
 
+</div>
  </body>
  </html> 
-		 
 		 
 		</textarea>
                </div>
