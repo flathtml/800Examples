@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Simple JavaScript Audio recorder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	 <style>
+div.main {
+
+padding: 25px;
+ 
+ 
+}
+
+div.title {
+background-color:pink;
+  
+padding: 25px;
+ 
+ 
+}
+ 
+div.formats {
+display : none;
+}
+
+button {
+  
+  background: #71FC45;
+  padding: 10px;
+   
+  font-size: 15px;
+  
+}
+button:hover, button:focus {
+  outline: none;
+  background: #c72d1c;
+}
+ 
+button:disabled {
+  pointer-events: none;
+  background: #D5D8DC;
+}
+button:first-child {
+  margin-left: 0;
+}
+
+ </style>
+  </head>
+  <body>
+    <div class="col-md-12">
+  <div align="center"><h5>NOTE : Please make sure that uploads folder is present where this file is being executed. This is needed
+	  by the php module to upload the audio file</h5></div>
+  <div class="container">
+  <div class="title">
+     
+    <h3  align="center">Simple Audio Recorder</h3>
+	<div  align="center"><i>Record any audio and share instantly!!!</i></div>
+  </div>
+  
+  <div>&nbsp;</div>
+   <div class="main">
+   <div> 
+       <div id="controls">
+  	 <button id="recordButton">Record</button>
+  	 <button id="pauseButton" disabled>Pause</button>
+  	 <button id="stopButton" disabled>Stop</button>
+    </div>
+    <div id="formats" class="formats"></div>
+  	 <div>&nbsp;</div>
+  	<div id="record"><ol id="recordingsList"></ol></div>
+	<div>&nbsp;</div>
+	<div id="demo" class="status"></div>
+	<div>&nbsp;</div>
+	<div id ="audio" class="info"></div>
+	<div>&nbsp;</div>
+ </div>
+ </div>
+ </div>
+    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+  	 <!-- <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>--->
+     <script src="141-simplerecorder2.js"></script>
+	 <script src="141-simplerecorder1.js"></script>
+	 
+	 
+    
+  </body>
+</html>
