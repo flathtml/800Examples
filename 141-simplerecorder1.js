@@ -1,4 +1,3 @@
- 
 //webkitURL is deprecated but nevertheless
 URL = window.URL || window.webkitURL;
 
@@ -70,10 +69,15 @@ function startRecording() {
 
 		//start the recording process
 		rec.record()
+		 
+		timer();
+        console.log("timer started");
 
-		console.log("Recording started");
-		document.getElementById("demo").innerHTML = "<b>" + "Recording Started.." + "</b>";
-
+		console.log("Recording started...");
+        document.getElementById("demo").innerHTML = "<b>" + "Recording Started.." + "</b>";
+		
+	 
+		
 	}).catch(function(err) {
 	  	//enable the record button if getUserMedia() fails
     	recordButton.disabled = false;
@@ -84,7 +88,14 @@ function startRecording() {
 
 function pauseRecording(){
 	console.log("pauseButton clicked rec.recording=",rec.recording );
+	
+	//stop the timer
+	 
+    clearTimeout(t);
+   
+	
 	document.getElementById("demo").innerHTML = "<b>" + "Recording paused.." + "</b>";
+	
 	if (rec.recording){
 		//pause
 		rec.stop();
@@ -93,12 +104,15 @@ function pauseRecording(){
 		//resume
 		rec.record()
 		pauseButton.innerHTML="Pause";
-
+		
+		timer();
+		 
 	}
 }
 
 function stopRecording() {
 	console.log("stopButton clicked");
+	 
 
 	//disable the stop button, enable the record too allow for new recordings
 	stopButton.disabled = true;
@@ -111,6 +125,12 @@ function stopRecording() {
 	//tell the recorder to stop the recording
 	rec.stop();
     document.getElementById("demo").innerHTML = "<b>" + "Recording Stopped.." + "</b>";
+	
+	//stop the timer
+	 
+    clearTimeout(t);
+   
+	
 	//stop microphone access
 	gumStream.getAudioTracks()[0].stop();
 
@@ -119,10 +139,8 @@ function stopRecording() {
 }
 
 function createDownloadLink(blob) {
- 
+	
 	var url = URL.createObjectURL(blob);
-	var pl = document.createElement("div");
- 	
 	var au = document.createElement('audio');
 	var li = document.createElement('li');
 	var link = document.createElement('a');
@@ -140,11 +158,9 @@ function createDownloadLink(blob) {
 	link.innerHTML = "Save to disk";
 
 	//add the new audio element to li
-	au.appendChild(pl);
 	li.appendChild(au);
 	
 	//add the filename to the li
-	li.appendChild(document.createElement("p"))
 	li.appendChild(document.createTextNode(filename+".wav "))
 
 	//add the save to disk link to li
@@ -152,15 +168,16 @@ function createDownloadLink(blob) {
 	
 	//upload link
 	var upload = document.createElement('a');
-	
 	upload.href="#";
-	upload.innerHTML = "Share";
+	upload.innerHTML = "Upload";
 	upload.addEventListener("click", function(event){
 		  var xhr=new XMLHttpRequest();
 		  xhr.onload=function(e) {
 		      if(this.readyState === 4) {
 		          console.log("Server returned: ",e.target.responseText);
-				         var js_fileout = e.target.responseText;
+				  
+				  //Get Info from php - start
+				   var js_fileout = e.target.responseText;
 						// Get File name created by PHP
 						 
 						var audiourl = "https://www.formrecorder.com/" + js_fileout;
@@ -174,16 +191,17 @@ function createDownloadLink(blob) {
  
   div.innerHTML = urlinfo + "<p>" + "<input type='text'  name='mytext' onfocus = 'this.select()' onmouseup = 'return false' value=" + audiourl +" />"
                    + "<p>" + "<i>Click on the above text box to select the Audio URL and feel free to share it!!!</i>" + "<p>";
-						 
+		
+				  
+				  
+				  //Get info from php - ends
+				  
 		      }
 		  };
-		   
-		 
 		  var fd=new FormData();
 		  fd.append("audio_data",blob, filename);
-		  xhr.open("POST","141-simplerecorder.php?",true);
+		  xhr.open("POST","simplerecorder.php",true);
 		  xhr.send(fd);
-		  
 	})
 	li.appendChild(document.createTextNode (" "))//add a space in between
 	li.appendChild(upload)//add the upload link to li
@@ -191,3 +209,33 @@ function createDownloadLink(blob) {
 	//add the li element to the ol
 	recordingsList.appendChild(li);
 }
+
+//Timer code - starts
+
+var h1 = document.getElementsByTagName('h4')[0],
+     
+    seconds = 0, minutes = 0, hours = 0,
+    t;
+
+function add() {
+    seconds++;
+    if (seconds >= 60) {
+        seconds = 0;
+        minutes++;
+        if (minutes >= 60) {
+            minutes = 0;
+            hours++;
+        }
+    }
+    
+    h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+
+    timer();
+}
+function timer() {
+    t = setTimeout(add, 1000);
+}
+ 
+//Timer code - ends
+
+ 
