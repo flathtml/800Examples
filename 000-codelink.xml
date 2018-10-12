@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#143 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="143-contact-form.html"target=_blank&gt;143-contact-form.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / PHP </CATEGORY>
+	<DESC>Contact form , when submitted sends form contents to an e-mail</DESC>
+  </EXAMPLE>
+ <!--Example#142 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="142-stopwatch-timer.html"&gt;142-stopwatch-timer.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript </CATEGORY>
+	<DESC>This is a Javascript Stopwatch / Timer</DESC>
+  </EXAMPLE>
  <!--Example#141 -->
   <EXAMPLE>
     <LINK>&lt;a href="141-simplerecorder.html"target=_blank&gt;141-simplerecorder.html&lt;a&gt;</LINK>
