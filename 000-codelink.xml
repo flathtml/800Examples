@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
- <!--Example#144 -->
+ <!--Example#145 -->
   <EXAMPLE>
+    <LINK>&lt;a href="145-share-button.html"&gt;145-share-button.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / Javascript </CATEGORY>
+	<DESC>Share Button - Third party plugin : Website users can share the link via E-mail / Social Media</DESC>
+  </EXAMPLE>
+ <!--Example#144 -->
+   <EXAMPLE>
     <LINK>&lt;a href="144-audioplayer.html"&gt;144-audioplayer.html&lt;a&gt;</LINK>
     <CATEGORY>HTML / Javascript </CATEGORY>
-	<DESC>Contact form , when submitted sends form contents to an e-mail</DESC>
+	<DESC>Simple Audio Player</DESC>
   </EXAMPLE>
  <!--Example#143 -->
   <EXAMPLE>
