@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#147 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="147-dynamically-create-button-with-copy-text.html"&gt;147-dynamically-create-button-with-copy-text.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / Javascript </CATEGORY>
+	<DESC>Dynamically create button with copy/text functionality</DESC>
+  </EXAMPLE>
+ <!--Example#146 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="146-display-textbox-with-copy-button-in-popup.html"&gt;146-display-textbox-with-copy-button-in-popup.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / Javascript </CATEGORY>
+	<DESC>Display Text Box with Copy Button in a Popup box</DESC>
+  </EXAMPLE>
  <!--Example#145 -->
   <EXAMPLE>
     <LINK>&lt;a href="145-share-button.html"&gt;145-share-button.html&lt;a&gt;</LINK>
