@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#149 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="149-phpmailer-send-email.html"&gt;149-phpmailer-send-email.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / PHP </CATEGORY>
+	<DESC>PHPMailer Demo , send a Welcome E-mail to the user once he submits his name and E-mail (This works for all leading E-mail providers like Yahoo and Google)</DESC>
+  </EXAMPLE>
  <!--Example#148 -->
   <EXAMPLE>
     <LINK>&lt;a href="148-stock-chart.html"&gt;148-stock-chart.html&lt;a&gt;</LINK>
