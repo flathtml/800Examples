@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#148 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="148-stock-chart.html"&gt;148-stock-chart.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / Javascript </CATEGORY>
+	<DESC>Display Stock Chart with Quick valuation</DESC>
+  </EXAMPLE>
  <!--Example#147 -->
   <EXAMPLE>
     <LINK>&lt;a href="147-dynamically-create-button-with-copy-text.html"&gt;147-dynamically-create-button-with-copy-text.html&lt;a&gt;</LINK>
