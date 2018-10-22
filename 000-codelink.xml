@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#150 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="150-bootstrap-column-align-center.html"&gt;150-bootstrap-column-align-center.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript / BootStrap</CATEGORY>
+	<DESC>Bootstrap column - Align in the center</DESC>
+  </EXAMPLE>
  <!--Example#149 -->
   <EXAMPLE>
     <LINK>&lt;a href="149-phpmailer-send-email.html"&gt;149-phpmailer-send-email.html&lt;a&gt;</LINK>
