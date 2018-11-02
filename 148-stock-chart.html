@@ -419,7 +419,7 @@ td:hover {background-color:#f5f5f5;}
 
 <div class="container-fluid">
 
-  <div class="row">&nbsp;</div>
+  <div class="row"> </div>
 
   <div class="center" style="background-color:#E7E4E3"> 
            
@@ -429,32 +429,40 @@ td:hover {background-color:#f5f5f5;}
   </div> 
   
 <!-- Start of Stock Widget -->
-<div class="row">&nbsp;</div>
+<div class="row"> </div>
 
 <div class="row">
    <div class="col-md-12">
       <div class="col-md-12 shadow p-4 mb-4 border border-primary">
       <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>-->
-            <script type="text/javascript" src="148-stock-chart.js"></script>
-            <script type="text/javascript">
-              new TradingView.widget({
-             "width": 400,
-             "height": 300,
-             "symbol": "JBHT",
-             "interval": "M",
-             "timezone": "Etc/UTC",
-             "theme": "Light",
-             "style": "3",
-             "locale": "en",
-             "toolbar_bg": "#F7EF07",
-             "enable_publishing": false,
-             "hide_top_toolbar": false,
-             "save_image": false,
-             "hideideas": false
-            });
-           </script>
-         <!-- TradingView Widget END --> 
-         <div>&nbsp;</div>
+              <div id="tv-medium-widget1"></div>
+   <script type="text/javascript" src="152-stock-chart1.js"></script>
+   
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget1",
+  "symbols": [
+    [
+      "Stock",
+      "JBHT"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->
+   </div>	
+         <div> </div>
          <h5 align="center" style = "color:blue">JBHT Quick val :$5,671 millions, $52/ share          </h5>  
          <h6 align="center"><i>Valuation Date : 8/28/2018</i>
         </div>
@@ -462,42 +470,7 @@ td:hover {background-color:#f5f5f5;}
  </div>
 <!-- End of Stock Widget -->
 
-<!-- Start of Stock Widget -->
-<div class="row">&nbsp;</div>
-<div class="row">
-   <div class="col-md-12">
-      <div class="col-md-12 shadow p-4 mb-4 border border-primary">
-         <!-- TradingView Widget BEGIN -->
-        <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>-->
-            <script type="text/javascript" src="148-stock-chart.js"></script>
-            <script type="text/javascript">
-              new TradingView.widget({
-             "width": 400,
-             "height": 300,
-             "symbol": "ODFL",
-             "interval": "M",
-             "timezone": "Etc/UTC",
-             "theme": "Light",
-             "style": "3",
-             "locale": "en",
-             "toolbar_bg": "#F7EF07",
-             "enable_publishing": false,
-             "hide_top_toolbar": false,
-             "save_image": false,
-             "hideideas": false
-            });
-           </script>
-         <!-- TradingView Widget END --> 
-         <div>&nbsp;</div>
-         <h5 align="center" style = "color:blue">ODFL Quick val :$7,819 millions, $95/ share          </h5>  
-         <h6 align="center"><i>Valuation Date : 8/28/2018</i>
-        </div>
-   </div>
- </div>
-<!-- End of Stock Widget -->
-
- 
-    <div class="row">&nbsp;</div>
+    <div class="row"> </div>
 </div>
 </body>
 </html>
