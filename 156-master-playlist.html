@@ -1,0 +1,1190 @@
+ <!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <title>Tryit Software Editor</title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!//http://www.w3schools.com/w3css/4/w3.css !>
+      <link rel="stylesheet" href="references/w3.css"> 
+      
+	  <!//http://www.w3schools.com/lib/codemirror.css !>
+      <link rel="stylesheet" href="references/codemirror.css">
+	  
+      <!//http://www.w3schools.com/lib/codemirror.js !>
+	  <script src="references/codemirror.js"></script>
+	  
+	  <!//https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css !>
+      <link rel="stylesheet" href="references/bootstrap.min.css">
+   
+      <!//https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js !>
+	  <script src="references/bootstrap.min.js"></script>
+	  
+	  <!//https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js !>
+	  <script src="references/jquery.min.js"></script>
+	 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Playball|Righteous" rel="stylesheet">
+	  
+      <Style>
+         .navbar .navbar-nav {
+         display: inline-block;
+         float: none;
+         }
+         .navbar .navbar-collapse {
+         text-align: left;
+         }
+         .makeup1 {
+         font-weight: bold;
+         color: #000000;
+         border: 1px solid green;
+         }
+         .makeup2 {
+         border: 1px solid green;
+         }
+         .footer {
+         text-align: center;
+         }
+         .padding {
+         padding-left: 3%;
+         padding-right: 3%;
+         padding-top: 3%;
+         padding-bottom: 3%;
+         text-align: justify;
+         }
+         .top {
+         position: relative;
+         background-color: #ffffff;
+         height: 68px;
+         padding-top: 20px;
+         line-height: 50px;
+         overflow: hidden;
+         z-index: 1;
+         }
+         .w3-right {
+         float: right!important}
+         .w3-wide {
+         letter-spacing: 2px}
+         .w3schools-logo {
+         font-family: Righteous;
+         text-decoration: none;
+         line-height: 1;
+         -webkit-font-smoothing: antialiased;
+         -moz-osx-font-smoothing: grayscale;
+         font-size: 37px;
+         letter-spacing: 3px;
+         color: #555555;
+         display: block;
+         position: absolute;
+         top: 17px;
+         padding-left: 2px;
+         }
+         .w3schools-logo .dotcom {
+         color: #2196F3!important;
+         }
+         .w3schools-logo:hover {
+         color: #555555;
+         text-decoration: none;
+         }
+         @media (max-width: 992px) {
+         .top {
+         height: 100px;
+         }
+         .top .w3schools-logo {
+         position: relative;
+         top: 0;
+         width: 100%;
+         text-align: center;
+         margin: auto;
+         }
+         .toptext {
+         width: 100%;
+         text-align: center;
+         }
+         }
+         @media screen and (max-width: 600px) {
+         .top {
+         height: 68px;
+         }
+         .toptext {
+         display: none;
+         }
+         }
+         .center {
+         text-align: center;
+         font-weight: bold;
+         background-color : yellow;
+         border: 1px solid green;
+         }
+         div.ex1 {
+         width:90%;
+         margin: auto;
+         background-color : yellow;
+         border: 1px solid #73AD21;
+         }
+         div.ex2 {
+         width:90%;
+         margin: auto;
+         color : red;
+         }
+         .footer {
+         text-align: center;
+         }
+         * {
+         -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+         box-sizing: border-box;
+         }
+         body {
+         color:#000000;
+         margin:0px;
+         font-size:100%;
+         }
+         .trytopnav {
+         height:40px;
+         overflow:hidden;
+         min-width:380px;
+         position:absolute;
+         width:100%;
+         top:99px;
+         }
+         .w3-bar .w3-bar-item:hover {
+         color:#757575 !important;
+         }
+         a.w3schoolslink {
+         padding:0 !important;
+         display:inline !important;
+         }
+         a.w3schoolslink:hover,a.w3schoolslink:active {
+         text-decoration:underline !important;
+         background-color:transparent !important;
+         }
+         #dragbar{
+         position:absolute;
+         cursor: col-resize;
+         z-index:3;
+         padding:5px;
+         }
+         #shield {
+         display:none;
+         top:0;
+         left:0;
+         width:100%;
+         position:absolute;
+         height:100%;
+         z-index:4;
+         }
+         #framesize span {
+         font-family:Consolas, monospace;
+         }
+         #container {
+         background-color:#f1f1f1;
+         width:100%;
+         overflow:auto;
+         position:absolute;
+         top:120px;
+         bottom:0;
+         height:auto;
+         }
+         #textareacontainer, #iframecontainer {
+         float:left;
+         height:100%;
+         width:50%;
+         }
+         #textarea, #iframe {
+         height:100%;
+         width:100%;
+         padding-bottom:10px;
+         padding-top:1px;
+         }
+         #textarea {
+         padding-left:10px;
+         padding-right:5px;  
+         }
+         #iframe {
+         padding-left:5px;
+         padding-right:10px;  
+         }
+         #textareawrapper {
+         width:100%;
+         height:100%;
+         background-color: #ffffff;
+         position:relative;
+         box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+         }
+         #iframewrapper {
+         width:100%;
+         height:100%;
+         -webkit-overflow-scrolling: touch;
+         background-color: #ffffff;
+         box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+         }
+         #textareaCode {
+         background-color: #ffffff;
+         font-family: consolas,"courier new",monospace;
+         font-size:15px;
+         height:100%;
+         width:100%;
+         padding:8px;
+         resize: none;
+         border:none;
+         line-height:normal;    
+         }
+         .CodeMirror.cm-s-default {
+         line-height:normal;
+         padding: 4px;
+         height:100%;
+         width:100%;
+         }
+         #iframeResult, #iframeSource {
+         background-color: #ffffff;
+         height:100%;
+         width:100%;  
+         }
+         #stackV {background-color:#999999;}
+         #stackV:hover {background-color:#BBBBBB !important;}
+         #stackV.horizontal {background-color:transparent;}
+         #stackV.horizontal:hover {background-color:#BBBBBB !important;}
+         #stackH.horizontal {background-color:#999999;}
+         #stackH.horizontal:hover {background-color:#999999 !important;}
+         #textareacontainer.horizontal,#iframecontainer.horizontal{
+         height:50%;
+         float:none;
+         width:100%;
+         }
+         #textarea.horizontal{
+         height:100%;
+         padding-left:10px;
+         padding-right:10px;
+         }
+         #iframe.horizontal{
+         height:100%;
+         padding-right:10px;
+         padding-bottom:10px;
+         padding-left:10px;  
+         }
+         #container.horizontal{
+         min-height:200px;
+         margin-left:0;
+         }
+         #tryitLeaderboard {
+         overflow:hidden;
+         text-align:center;
+         margin-top:5px;
+         height:90px;
+         }
+         .w3-dropdown-content {width:350px}
+         @media screen and (max-width: 992px) {
+         .trytopnav {top:70px;}
+         #container {top:160px;}
+         }
+         @media screen and (max-width: 600px) {
+         .trytopnav {top:60px;}
+         #container {top:120px;}
+         .w3-dropdown-content {width:100%}
+         }
+         @media only screen and (max-device-width: 768px) {
+         #iframewrapper {overflow: auto;}
+         #container     {min-width:320px;}
+         .stack         {display:none;}
+         #tryhome       {display:block;}
+         }
+         @font-face {
+         font-family: 'fontawesome';
+         src:url('../lib/fonts/fontawesome.eot?14663396');
+         src:url('../lib/fonts/fontawesome.eot?14663396#iefix') format('embedded-opentype'),
+         url('../lib/fonts/fontawesome.woff?14663396') format('woff'),
+         url('../lib/fonts/fontawesome.ttf?14663396') format('truetype'),
+         url('../lib/fonts/fontawesome.svg?14663396#fontawesome') format('svg');
+         font-weight:normal;
+         font-style:normal;
+         }
+         .fa {
+         display:inline-block;
+         font:normal normal normal 14px/1 FontAwesome;
+         font-size:inherit;
+         text-rendering:auto;
+         -webkit-font-smoothing:antialiased;
+         -moz-osx-font-smoothing:grayscale;
+         transform:translate(0,0);
+         }
+         .fa-2x {
+         font-size:2em;
+         }
+         .fa-home:before {content: '\e800'; }
+         .fa-save:before {content: '\e804'; }
+         .fa-rotate:before {content: '\e813'; }
+         .fa-menu:before { content: '\f0c9'; }
+         .loader {
+         border: 6px solid #f3f3f3; /* Light grey */
+         border-top: 6px solid #3498db; /* Blue */
+         border-radius: 50%;
+         width: 60px;
+         height: 60px;
+         animation: spin 2s linear infinite;
+         }
+         #saveLoader {
+         margin:20px;
+         }
+         @keyframes spin {
+         0% { transform: rotate(0deg); }
+         100% { transform: rotate(360deg); }
+         }
+         #iframewrapper {
+         }
+         #controlbar{
+         padding-left:10px;
+         padding-right:10px;
+         }
+      </style>
+   </head>
+   <body>
+      <script src="references/header-tryit.js"></script>
+	  
+      <div id="controlbar">
+         <div class="w3-light-grey" style="border-top:1px solid #f1f1f1;overflow:auto">
+            <button class="w3-button w3-bar-item w3-blue w3-hover-white " onclick="restack(currentStack)">Change Orientation</button>
+            <button class="w3-button w3-bar-item w3-blue w3-hover-white " onclick="submitTryit(1)">Run &raquo;</button>
+			 <span class="w3-right w3-hide-small" style="padding:8px 0;display:block;float:right;"><span id="framesize"></span></span>
+         </div>
+      </div>
+      <div id="shield"></div>
+	  
+      <a href="javascript:void(0)" id="dragbar"></a>
+      <div id="container">
+         <div id="textareacontainer">
+            <div id="textarea">
+               <div id="textareawrapper">
+         <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
+<html>
+
+<head>
+    
+    <script type="text/javascript">
+        var people, asc1 = 1,
+                    asc2 = 1,
+                    asc3 = 1;
+        window.onload = function () {
+            people = document.getElementById("people");
+        }
+
+        function sort_table(tbody, col, asc) {
+            var rows = tbody.rows,
+                rlen = rows.length,
+                arr = new Array(),
+                i, j, cells, clen;
+            // fill the array with values from the table
+            for (i = 0; i < rlen; i++) {
+                cells = rows[i].cells;
+                clen = cells.length;
+                arr[i] = new Array();
+                for (j = 0; j < clen; j++) {
+                    arr[i][j] = cells[j].innerHTML;
+                }
+            }
+            // sort the array by the specified column number (col) and order (asc)
+            arr.sort(function (a, b) {
+                return (a[col] == b[col]) ? 0 : ((a[col] > b[col]) ? asc : -1 * asc);
+            });
+            // replace existing rows with new rows created from the sorted array
+            for (i = 0; i < rlen; i++) {
+                rows[i].innerHTML = "<td>" + arr[i].join("</td><td>") + "</td>";
+            }
+        }
+    </script>
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+            border: none;
+        }
+        th,
+        td {
+            border: 1px solid black;
+            padding: 4px 4px;
+            font-family: Times New Roman;
+            font-size: 16px;
+            text-align: left;
+        }
+        th {
+            background-color: #99FD8D;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+<h2 style="text-align:center">Master Playlist</h2>
+&nbsp;PLEASE NOTE : 
+<i> Click on any Column header to sort by Song, Artist or Category. If you click on any song then it opens a new window
+and you can watch a Youtube video of that song.<font color="red"><b>The video and song content's rights are as per Youtube's website's terms and Conditions.</b></font>If you have any questions then please E-mail me at d_menashi@yahoo.com</i>
+<p>
+    <table>
+        <thead>
+<tr>
+                <th onclick="sort_table(people, 0, asc1); asc1 *= -1; asc2 = 1; asc3 = 1;">Song</th>
+                <th onclick="sort_table(people, 1, asc2); asc2 *= -1; asc3 = 1; asc1 = 1;">Artist</th>
+                <th onclick="sort_table(people, 2, asc3); asc3 *= -1; asc1 = 1; asc2 = 1;">Category</th>
+            </tr>
+</thead>
+        <tbody id="people">
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Tom%27s+Diner+Susanne+vega" target="_blank">Tom's Diner</a></td> <td> Susanne vega </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Rude+Magic" target="_blank">Rude</a></td> <td> Magic </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Genie+in+a+bottle+Christina+Aguilera" target="_blank"> Genie in a bottle </a></td> <td> Christina Aguilera </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=The+way+you+love+me+Faith%20Hill" target="_blank"> The way you love me </a></td> <td> Faith Hill </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Somebody+I+used+to+know+Gotye" target="_blank"> Somebody I used to know </a></td> <td> Gotye </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Rythm+of+love+Plain+white" target="_blank"> Rythm of love </a></td> <td> Plain white </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Some+day+sugarray" target="_blank"> Some day </a></td> <td> Sugarray </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Fur%20elise%20piano%20beethoven" target="_blank"> Fur elise piano </a></td> <td> Beethoven </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Stars%20are%20Blind%20Paris%20Hilton" target="_blank"> Stars are Blind </a></td> <td> Paris Hilton </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Stereo%20love%20Edward%20Maya" target="_blank"> Stereo love </a></td> <td> Edward Maya </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Just%20the%20two%20of%20us%20Bill%20Withers" target="_blank"> Just the two of us </a></td> <td> Bill Withers  </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Billionaire%20Travie%20McCoy" target="_blank"> Billionaire </a></td> <td> Travie McCoy  </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Red%20Red%20wine%20Bob%20Marley" target="_blank"> Red Red wine </a></td> <td> Bob Marley  </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=As%20I%20lay%20me%20down%20Sophie%20Hawkins" target="_blank"> As I lay me down </a></td> <td> Sophie Hawkins  </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=In%20the%20air%20tonight%20Phil%20Collins" target="_blank"> In the air tonight </a></td> <td> Phil Collins  </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=I%27m%20Yours%20Jason%20Miraz" target="_blank"> I'mYours </a></td> <td> Jason Miraz  </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Like%20a%20Virgin%20Maddona" target="_blank"> Like a Virgin </a></td> <td> Maddona  </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=I%20dont%20want%20to%20wait%20Dawson%27s%20Creek" target="_blank"> I dont want to wait </a></td> <td> Dawson's Creek  </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Layla%20Eric%20Clapton" target="_blank"> Layla </a></td> <td> Eric Clapton  </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=I%20think%20were%20alone%20now%20Tiffany" target="_blank"> I think were alone now </a></td> <td> Tiffany </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Father%20figure%20George%20Michael" target="_blank"> Father figure </a></td> <td> George Michael </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Blame%20it%20on%20the%20rain%20Milli%20Vanilli" target="_blank"> Blame it on the rain </a></td> <td> Milli Vanilli </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Daniel%20Elton%20John" target="_blank"> Daniel </a></td> <td> Elton John </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Brother%20Louie%20Modern%20Talking" target="_blank"> Brother Louie </a></td> <td> Modern Talking </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Top%20of%20the%20world%20Carpenters" target="_blank"> Top of the world </a></td> <td> Carpenters </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Collide%20Howie%20Day" target="_blank"> Collide </a></td> <td> Howie Day </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Thank%20You%20Dido" target="_blank"> Thank You </a></td> <td> Dido  </td> <td> Chill </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Remember%20when%20Alan%20Jackson" target="_blank"> Remember when </a></td> <td> Alan Jackson </td> <td> Country </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Down%20Jay%20Sean" target="_blank"> Down </a></td> <td> Jay Sean </td> <td> Dance </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Believe%20Cher" target="_blank"> Believe </a></td> <td> Cher </td> <td> Dance </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Everybody%20Dance%20Now%20C+C%20Music%20Factory" target="_blank"> Everybody Dance Now </a></td> <td> C+C Music Factory </td> <td> Dance </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=La%20bamba%20Ritchie%20Valens" target="_blank"> La bamba </a></td> <td> Ritchie Valens  </td> <td> Dance </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Sexualhealing%20Marvin%20Gaye" target="_blank"> Sexualhealing </a></td> <td> Marvin Gaye  </td> <td> Dance </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Gimmie%20Gimmie%20ABBA" target="_blank"> Gimmie Gimmie </a></td> <td> ABBA  </td> <td> Dance </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Dancing%20queen%20ABBA" target="_blank"> Dancing queen </a></td> <td> ABBA  </td> <td> Dance </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Brown%20eyed%20Girl%20Van%20Morrison" target="_blank"> Brown eyed Girl </a></td> <td> Van Morrison </td> <td> Dance-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=She%20drives%20me%20crazy%20Fine%20young%20canibals" target="_blank"> She drives me crazy </a></td> <td> Fine young canibals </td> <td> Dance-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Lady%20In%20Red%20Chris%20DeBurgh" target="_blank"> Lady In Red </a></td> <td> Chris DeBurgh  </td> <td> Dance-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Maneater%20Daryll%20Hall%20and%20John%20Oats" target="_blank"> Maneater </a></td> <td> Daryll Hall and John Oats </td> <td> Dance-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Bye%20Bye%20Bye%20N%20sync" target="_blank"> Bye Bye Bye </a></td> <td> N'sync  </td> <td> Dance-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Hollaback%20Girl%20Gwen%20Stefani" target="_blank"> Hollaback Girl </a></td> <td> Gwen Stefani </td> <td> Dance-Drunk </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Girls%20just%20want%20to%20have%20fun%20Cyndi%20Lauper" target="_blank"> Girls just want to have fun </a></td> <td> Cyndi Lauper </td> <td> Dance-Drunk </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=I%20get%20knocked%20down%20Chumbawamba" target="_blank"> I get knocked down </a></td> <td> Chumbawamba   </td> <td> Dance-Drunk </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Its%20a%20fine%20day%20Miss%20jane" target="_blank"> Its a fine day </a></td> <td> Miss jane  </td> <td> Dance-EDM </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Axel%20F%20Harold%20Faltermeyer" target="_blank"> Axel F </a></td> <td> Harold Faltermeyer </td> <td> Dance-EDM </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Roses%20are%20red%20Aqua" target="_blank"> Roses are red </a></td> <td> Aqua </td> <td> Dance-EDM </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Unchained%20Melody%20Righteous%20Brothers" target="_blank"> Unchained Melody </a></td> <td> Righteous Brothers  </td> <td> Dance-slow </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=I%20will%20be%20there%20Mariah%20Carey" target="_blank"> I will be there </a></td> <td> Mariah Carey  </td> <td> Dance-slow </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Wonderful%20Tonight%20Eric%20Clapton" target="_blank"> Wonderful Tonight </a></td> <td> Eric Clapton </td> <td> Dance-slow </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Twist%20and%20shout%20Beatles" target="_blank"> Twist and shout </a></td> <td> Beatles </td> <td> Dance-Twist </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Stacy%20mon%20Fountain%20of%20Wayne" target="_blank"> Stacy's mon </a></td> <td> Fountain of Wayne </td> <td> Funny </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=How%20Deep%20is%20your%20love%20Calvin%20Harris" target="_blank"> How Deep is your love </a></td> <td> Calvin Harris </td> <td> Party </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=This%20is%20how%20we%20do%20it%20Montell%20Jordan" target="_blank"> This is how we do it </a></td> <td> Montell Jordan </td> <td> Party </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=This%20is%20the%20rhythm%20of%20the%20night%20Corona" target="_blank"> This is the rhythm of the night </a></td> <td> Corona </td> <td> Party </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Blame%20it%20on%20the%20night%20Calvin%20harris" target="_blank"> Blame it on the night </a></td> <td> Calvin harris </td> <td> Party </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Come%20undone%20Duran%20Duran" target="_blank"> Come undone </a></td> <td> Duran Duran </td> <td> Party </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=West%20end%20girls%20Petshop%20boys" target="_blank"> West end girls </a></td> <td> Petshop boys </td> <td> Party </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Push%20It%20Salt-N-Pepa" target="_blank"> Push It </a></td> <td> Salt-N-Pepa </td> <td> Party </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Where%20do%20you%20go%20No%20Mercy" target="_blank"> Where do you go </a></td> <td> No Mercy </td> <td> Party </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Coco%20Jambo%20Mr.President" target="_blank"> Coco Jambo </a></td> <td> Mr.President  </td> <td> Party </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=What%20You%20Got%20ft%20Akon%20Colby%20O%27Donnis" target="_blank"> What You Got ft Akon </a></td> <td> Colby O'Donnis  </td> <td> Party </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Rivers%20of%20Babylon%20BoneyM" target="_blank"> Rivers of Babylon </a></td> <td> BoneyM  </td> <td> Party </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Umbrella%20Rhiana" target="_blank"> Umbrella </a></td> <td> Rhiana </td> <td> Party </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Straight%20up%20Paula%20Abdul" target="_blank"> Straight up </a></td> <td> Paula Abdul </td> <td> Party </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Desert%20Rose%20Sting" target="_blank"> Desert Rose </a></td> <td> Sting  </td> <td> Party </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Its%20my%20life%20Dr.%20Alban" target="_blank"> Its my life </a></td> <td> Dr. Alban  </td> <td> Party </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=What%20is%20love%20Haddaway" target="_blank"> What is love </a></td> <td> Haddaway </td> <td> Party </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Saturday%20Night%20Wighfield" target="_blank"> Saturday Night </a></td> <td> Wighfield </td> <td> Party </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Yeah%20Usher" target="_blank"> Yeah </a></td> <td> Usher </td> <td> Party </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Barbie%20girl%20Aqua" target="_blank"> Barbie girl </a></td> <td> Aqua </td> <td> Party </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Tarzon%20Boy%20Baltimore" target="_blank"> Tarzon Boy </a></td> <td> Baltimore  </td> <td> Party </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=All%20that%20she%20wants%20Ace%20of%20the%20base" target="_blank"> All that she wants </a></td> <td> Ace of the base </td> <td> Party </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Beautiful%20day%20U2" target="_blank"> Beautiful day </a></td> <td> U2 </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Can%20you%20feel%20the%20love%20tonight%20Elton%20John" target="_blank"> Can you feel the love tonight </a></td> <td> Elton John </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=River%20Sarah%20Mclachlin" target="_blank"> River </a></td> <td> Sarah Mclachlin </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Good%20life%20One%20republic" target="_blank"> Good life </a></td> <td> One republic </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Turn%20the%20page%20Bob%20Seager" target="_blank"> Turn the page </a></td> <td> Bob Seager </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Where%20did%20you%20go%20fort%20minor" target="_blank"> Where did you go </a></td> <td> Fort minor </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Time%20of%20your%20life%20Green%20day" target="_blank"> Time of your life </a></td> <td> Green day </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=In%20the%20arms%20of%20the%20angel%20Sarah%20Mclachlan" target="_blank"> In the arms of the angel </a></td> <td> Sarah Mclachlan </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=One%20thing%20Finger%20Eleven" target="_blank"> One thing </a></td> <td> Finger Eleven </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Somewhere%20Over%20The%20Rainbow%20Israel%20Kamakawiwo" target="_blank"> Somewhere Over The Rainbow </a></td> <td> Israel Kamakawiwo'Ole </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Tide%20is%20High%20Blondie%20%20Atomic%20Kitten" target="_blank"> Tide is High </a></td> <td> Blondie / Atomic Kitten  </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Can%20you%20feel%20the%20love%20tonight%20Elton%20John" target="_blank"> Can you feel the love tonight </a></td> <td> Elton John  </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=You%20raise%20me%20up%20Josh%20Groban" target="_blank"> You raise me up </a></td> <td> Josh Groban </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=I%20swear%20All4one" target="_blank"> I swear </a></td> <td> All4one  </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Aint%20no%20Sunshine%20Bill%20Withers" target="_blank"> Aint no Sunshine </a></td> <td> Bill Withers  </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Frozen%20Maddona" target="_blank"> Frozen </a></td> <td> Maddona  </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=WildWorld%20Cat%20Stevens" target="_blank"> WildWorld </a></td> <td> Cat Stevens  </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Forever%20Young%20Rod%20Stewart" target="_blank"> Forever Young </a></td> <td> Rod Stewart  </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Blessed%20Elton%20John" target="_blank"> Blessed </a></td> <td> Elton John  </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Pocketful%20of%20sunshine%20Natasha%20Bedingfield" target="_blank"> Pocketful of sunshine </a></td> <td> Natasha Bedingfield  </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Sound%20of%20silence%20Simon%20and%20Garfunkel" target="_blank"> Sound of silence </a></td> <td> Simon and Garfunkel  </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Wake%20me%20up%20when%20september%20ends%20Green%20Day" target="_blank"> Wake me up when september ends </a></td> <td> Green Day  </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=You%20want%20to%20make%20a%20memory%20Bon%20Jovi" target="_blank"> You want to make a memory </a></td> <td> Bon Jovi </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Imagine%20John%20Lennon" target="_blank"> Imagine </a></td> <td> John Lennon </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Landslide%20Fleetwood%20Mac" target="_blank"> Landslide </a></td> <td> Fleetwood Mac  </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Fast%20Car%20Tracy%20Chapman" target="_blank"> Fast Car </a></td> <td> Tracy Chapman </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Show%20me%20the%20meaning%20of%20being%20lonely%20Backstreet%20Boys" target="_blank"> Show me the meaning of being lonely </a></td> <td> Backstreet Boys  </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Walking%20in%20Memphis%20Marc%20Cohn" target="_blank"> Walking in Memphis </a></td> <td> Marc Cohn </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Circle%20of%20life%20Elton%20John" target="_blank"> Circle of life </a></td> <td> Elton John </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=If%20Everyone%20cared%20Nickelback" target="_blank"> If Everyone cared </a></td> <td> Nickelback </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=I%20can%20see%20clearly%20now%20Jonny%20Nash" target="_blank"> I can see clearly now </a></td> <td> Jonny Nash </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Suddenly%20I%20see%20KT%20Tunstall" target="_blank"> Suddenly I see </a></td> <td> KT Tunstall </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Mrs%20Robinson%20Simon%20and%20Garfunkel" target="_blank"> Mrs Robinson </a></td> <td> Simon and Garfunkel </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Another%20Day%20in%20Paradise%20Phil%20Collins" target="_blank"> Another Day in Paradise </a></td> <td> Phil Collins </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=What%20a%20wonderful%20world%20Louis%20Armstrong" target="_blank"> What a wonderful world </a></td> <td> Louis Armstrong  </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Hotel%20california%20Eagles" target="_blank"> Hotel california </a></td> <td> Eagles </td> <td> Philosophical </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=I%20love%20you%20to%20want%20me%20Lobo" target="_blank"> I'd love you to want me </a></td> <td> Lobo </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Stuck%20on%20you%20Lionel%20Ritchie" target="_blank"> Stuck on you </a></td> <td> Lionel Ritchie  </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Crazy%20Pasty%20Cline" target="_blank"> Crazy </a></td> <td> Pasty Cline </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Fly%20me%20to%20the%20moon%20Frank%20Sinatra" target="_blank"> Fly me to the moon </a></td> <td> Frank Sinatra </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Crazy%20Willie%20Nelson" target="_blank"> Crazy </a></td> <td> Willie Nelson </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Fernando%20ABBA" target="_blank"> Fernando </a></td> <td> ABBA </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Hello%20Lionel%20Richie" target="_blank"> Hello </a></td> <td> Lionel Richie </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=I%20Will%20Remember%20You%20Sarah%20McLachlan" target="_blank"> I Will Remember You </a></td> <td> Sarah McLachlan  </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=I%20wish%20it%20would%20rain%20down%20Phil%20Collins" target="_blank"> I wish it would rain down </a></td> <td> Phil Collins </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Lovefool%20The%20Cardigans" target="_blank"> Lovefool </a></td> <td> The Cardigans </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Truly%20madly%20deeply%20Savage%20Garden" target="_blank"> Truly madly deeply </a></td> <td> Savage Garden  </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Reason%20to%20believe%20Rod%20Stewart" target="_blank"> Reason to believe </a></td> <td> Rod Stewart </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=First%20cut%20is%20the%20deepest%20Sheryl%20crow" target="_blank"> First cut is the deepest </a></td> <td> Sheryl crow </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Hard%20to%20say%20i%27m%20sorry%20Chicago" target="_blank"> Hard to say i'm sorry </a></td> <td> Chicago </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Kiss%20from%20a%20rose%20Seal" target="_blank"> Kiss from a rose </a></td> <td> Seal   </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Dont%20speak%20No%20Doubt" target="_blank"> Dont speak </a></td> <td> No Doubt </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Hero%20Mariah%20Carey" target="_blank"> Hero </a></td> <td> Mariah Carey </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Lucky%20Jason%20mraz%20colbie%20caillat" target="_blank"> Lucky </a></td> <td> Jason mraz colbie caillat </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=With%20or%20without%20you%20U2" target="_blank"> With or without you </a></td> <td> U2 </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Groovy%20kind%20of%20Love%20Phil%20Collins" target="_blank"> Groovy kind of Love </a></td> <td> Phil Collins </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Time%20after%20time%20Cyndi%20Lauper" target="_blank"> Time after time </a></td> <td> Cyndi Lauper  </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=I%20just%20called%20to%20say%20I%20love%20you%20Stevie%20Wonder" target="_blank"> I just called to say I love you </a></td> <td> Stevie Wonder  </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Only%20you%20The%20Platters" target="_blank"> Only you </a></td> <td> The Platters   </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Youre%20still%20the%20one%20shania%20twain" target="_blank"> Youre still the one </a></td> <td> Shania twain  </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=When%20will%20I%20see%20you%20again%20The%20Three%20Degrees" target="_blank"> When will I see you again </a></td> <td> The Three Degrees  </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=You%20are%20stuckin%20my%20heart%20c21" target="_blank"> You are stuckin my heart </a></td> <td> C21 </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Part%20time%20lover%20stevie%20wonder" target="_blank"> Part time lover </a></td> <td> Stevie wonder </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Youve%20got%20a%20friend%20James%20Taylor" target="_blank"> Youve got a friend </a></td> <td> James Taylor  </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Have%20you%20ever%20really%20loved%20a%20woman%20Bryan%20Adams" target="_blank"> Have you ever really loved a woman </a></td> <td> Bryan Adams </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=My%20heart%20will%20go%20on%20Titanic%20MOVIE" target="_blank"> My heart will go on </a></td> <td> Titanic MOVIE  </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=She%27s%20like%20the%20wind%20Patrick%20Swayze" target="_blank"> She's like the wind </a></td> <td> Patrick Swayze </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Listen%20to%20your%20heart%20Roxette" target="_blank"> Listen to your heart </a></td> <td> Roxette  </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Chiquitita%20ABBA" target="_blank"> Chiquitita </a></td> <td> ABBA </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Love%20Divine%20Seal" target="_blank"> Love's Divine </a></td> <td> Seal </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=That%27s%20the%20way%20it%20is%20Celine%20Dion" target="_blank"> That's the way it is </a></td> <td> Celine Dion </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=You%27ll%20think%20of%20me%20Keith%20Urban" target="_blank"> You'll think of me </a></td> <td> Keith Urban </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Youre%20Beautiful%20James%20Blunt" target="_blank"> Youre Beautiful </a></td> <td> James Blunt  </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Careless%20Whisper%20George%20Michael" target="_blank"> Careless Whisper </a></td> <td> George Michael </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Shape%20of%20my%20heart%20Backstreet%20Boys" target="_blank"> Shape of my heart </a></td> <td> Backstreet Boys </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Wicked%20Game%20Chris%20Isaak" target="_blank"> Wicked Game </a></td> <td> Chris Isaak </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Every%20breath%20you%20take%20Police" target="_blank"> Every breath you take </a></td> <td> Police  </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Everything%20I%20do%20I%20do%20it%20for%20you%20Bryan%20Adams" target="_blank"> Everything I do I do it for you </a></td> <td> Bryan Adams  </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Quit%20Playing%20games%20with%20my%20heart%20Backstreet%20Boys" target="_blank"> Quit Playing games with my heart </a></td> <td> Backstreet Boys  </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Nothing%20Gonna%20change%20my%20love%20Glen%20Meridos" target="_blank"> Nothing Gonna change my love </a></td> <td> Glen Meridos </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Sacrifice%20Elton%20John" target="_blank"> Sacrifice </a></td> <td> Elton John </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Unbreak%20my%20heart%20Toni%20Braxton" target="_blank"> Unbreak my heart </a></td> <td> Toni Braxton </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=I%20knew%20I%20loved%20you%20Savage%20Garden" target="_blank"> I knew I loved you </a></td> <td> Savage Garden </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Your%20Body%20is%20wonderland%20John%20Mayer" target="_blank"> Your Body is wonderland </a></td> <td> John Mayer  </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Right%20here%20waiting%20for%20you%20Richard%20Marx" target="_blank"> Right here waiting for you </a></td> <td> Richard Marx  </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=You%20sang%20to%20me%20Marc%20Anthony" target="_blank"> You sang to me </a></td> <td> Marc Anthony </td> <td> Romantic-Classic </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Let%20me%20love%20you%20Justin%20bieber%20dj%20snake" target="_blank"> Let me love you </a></td> <td> Justin bieber dj snake </td> <td> Romantic-Crazy </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=El%20Perd%C3%B3n%20Forgiveness%20Enrique%20Iglesias%20%20Nicky%20Jam" target="_blank"> El Perdón (Forgiveness) </a></td> <td> Enrique Iglesias &amp; Nicky Jam  </td> <td> Romantic-Crazy </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Problem%20Ariana%20Grande" target="_blank"> Problem </a></td> <td> Ariana Grande </td> <td> Romantic-Crazy </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Come%20%20get%20it%20Selena%20Gomez" target="_blank"> Come &amp; get it </a></td> <td> Selena Gomez </td> <td> Romantic-Crazy </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=If%20You%20Could%20Only%20See%20Tonic" target="_blank"> If You Could Only See </a></td> <td> Tonic </td> <td> Romantic-Crazy </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Paparazzi%20Lady%20Gaga" target="_blank"> Paparazzi </a></td> <td> Lady Gaga </td> <td> Romantic-Crazy </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Alejandro%20Lady%20GaGa" target="_blank"> Alejandro </a></td> <td> Lady GaGa  </td> <td> Romantic-Crazy </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=It%20feels%20so%20good%20Sonique" target="_blank"> It feels so good </a></td> <td> Sonique </td> <td> Romantic-Crazy </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Just%20a%20Dream%20Nelly" target="_blank"> Just a Dream </a></td> <td> Nelly </td> <td> Romantic-Crazy </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Airplanes%20Hayley%20Williams" target="_blank"> Airplanes </a></td> <td> Hayley Williams </td> <td> Romantic-Crazy </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Kiss%20me%20thru%20the%20phone%20Soulja%20Boy%20Tell%20em" target="_blank"> Kiss me thru the phone </a></td> <td> Soulja Boy Tell'em </td> <td> Romantic-Crazy </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Please%20dont%20leave%20me%20Pink" target="_blank"> Please dont leave me </a></td> <td> Pink </td> <td> Romantic-Crazy </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Take%20me%20on%20the%20floor%20Veronicas" target="_blank"> Take me on the floor </a></td> <td> Veronicas  </td> <td> Romantic-Crazy </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Better%20in%20time%20Leona%20Lewis" target="_blank">  Better in time </a></td> <td> Leona Lewis  </td> <td> Romantic-Crazy </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Bleeding%20Love%20Leona%20Lewis" target="_blank"> Bleeding Love </a></td> <td> Leona Lewis  </td> <td> Romantic-Crazy </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Cry%20for%20you%20September" target="_blank"> Cry for you </a></td> <td> September  </td> <td> Romantic-Crazy </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=T-shirt%20Shontelle" target="_blank"> T-shirt </a></td> <td> Shontelle  </td> <td> Romantic-Crazy </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Big%20Girls%20dont%20cry%20Fergie" target="_blank"> Big Girls dont cry </a></td> <td> Fergie  </td> <td> Romantic-Crazy </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=No%20one%20Alicia%20Keys" target="_blank"> No one </a></td> <td> Alicia Keys </td> <td> Romantic-Crazy </td>
+</tr>
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Here%20without%20you%203%20Doors%20down" target="_blank"> Here without you </a></td> <td> 3 Doors down  </td> <td> Romantic-Crazy </td>
+</tr>
+
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Despacito Luis Fonci"target=_blank">Despacito </a></td> <td> Luis Fonci </td> <td> Chill </td>
+</tr>  
+
+<tr>           
+<td> <a href="https://www.youtube.com/results?search_query=Havana Camila Cabello"target=_blank">Havana </a></td> <td> Camila Cabello </td> <td> Chill </td>
+</tr>  
+
+</tbody>
+    </table>
+</body>
+
+</html>
+		</textarea>
+               </div>
+            </div>
+         </div>
+		 
+         <div id="iframecontainer">
+            <div id="iframe">
+               <div id="iframewrapper"></div>
+            </div>
+         </div>
+      </div>
+      
+	  <script>
+         submitTryit();
+          
+          
+         function submitTryit(n) {
+           if (window.editor) {
+             window.editor.save();
+           }
+           var text = document.getElementById("textareaCode").value;
+           var ifr = document.createElement("iframe");
+           ifr.setAttribute("frameborder", "0");
+           ifr.setAttribute("id", "iframeResult");
+           ifr.setAttribute("name", "iframeResult");  
+           document.getElementById("iframewrapper").innerHTML = "";
+           document.getElementById("iframewrapper").appendChild(ifr);
+           
+            
+             var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+             ifrw.document.open();
+             ifrw.document.write(text);  
+             ifrw.document.close();
+             //23.02.2016: contentEditable is set to true, to fix text-selection (bug) in firefox.
+             //(and back to false to prevent the content from being editable)
+             //(To reproduce the error: Select text in the result window with, and without, the contentEditable statements below.)  
+             if (ifrw.document.body && !ifrw.document.body.isContentEditable) {
+               ifrw.document.body.contentEditable = true;
+               ifrw.document.body.contentEditable = false;
+             
+           }
+         }
+         
+         var currentStack=true;
+         if ((window.screen.availWidth <= 768 && window.innerHeight > window.innerWidth) || "" == " horizontal") {restack(true);}
+         function restack(horizontal) {
+             var tc, ic, t, i, c, f, sv, sh, d, height, flt, width;
+             tc = document.getElementById("textareacontainer");
+             ic = document.getElementById("iframecontainer");
+             t = document.getElementById("textarea");
+             i = document.getElementById("iframe");
+             c = document.getElementById("container");    
+             sv = document.getElementById("stackV");
+             sh = document.getElementById("stackH");
+             tc.className = tc.className.replace("horizontal", "");
+             ic.className = ic.className.replace("horizontal", "");        
+             t.className = t.className.replace("horizontal", "");        
+             i.className = i.className.replace("horizontal", "");        
+             c.className = c.className.replace("horizontal", "");                        
+             if (sv) {sv.className = sv.className.replace("horizontal", "")};
+             if (sv) {sh.className = sh.className.replace("horizontal", "")};
+             stack = "";
+             if (horizontal) {
+                 tc.className = tc.className + " horizontal";
+                 ic.className = ic.className + " horizontal";        
+                 t.className = t.className + " horizontal";        
+                 i.className = i.className + " horizontal";                
+                 c.className = c.className + " horizontal";                
+                 if (sv) {sv.className = sv.className + " horizontal"};
+                 if (sv) {sh.className = sh.className + " horizontal"};
+                 stack = " horizontal";
+                 document.getElementById("textareacontainer").style.height = "50%";
+                 document.getElementById("iframecontainer").style.height = "50%";
+                 document.getElementById("textareacontainer").style.width = "100%";
+                 document.getElementById("iframecontainer").style.width = "100%";
+                 currentStack=false;
+             } else {
+                 document.getElementById("textareacontainer").style.height = "100%";
+                 document.getElementById("iframecontainer").style.height = "100%";
+                 document.getElementById("textareacontainer").style.width = "50%";
+                 document.getElementById("iframecontainer").style.width = "50%";
+                 currentStack=true;        
+             }
+             fixDragBtn();
+             showFrameSize();
+         }
+		 
+         function showFrameSize() {
+           var t;
+           var width, height;
+           width = Number(w3_getStyleValue(document.getElementById("iframeResult"), "width").replace("px", "")).toFixed();
+           height = Number(w3_getStyleValue(document.getElementById("iframeResult"), "height").replace("px", "")).toFixed();
+           document.getElementById("framesize").innerHTML = "Result Size: <span>" + width + " x " + height + "</span>";
+         }
+         
+         var dragging = false;
+         var stack;
+         
+         function fixDragBtn() {
+           var textareawidth, leftpadding, dragleft, containertop, buttonwidth
+           var containertop = Number(w3_getStyleValue(document.getElementById("container"), "top").replace("px", ""));
+           if (stack != " horizontal") {
+             document.getElementById("dragbar").style.width = "5px";    
+             textareasize = Number(w3_getStyleValue(document.getElementById("textareawrapper"), "width").replace("px", ""));
+             leftpadding = Number(w3_getStyleValue(document.getElementById("textarea"), "padding-left").replace("px", ""));
+             buttonwidth = Number(w3_getStyleValue(document.getElementById("dragbar"), "width").replace("px", ""));
+             textareaheight = w3_getStyleValue(document.getElementById("textareawrapper"), "height");
+             dragleft = textareasize + leftpadding + (leftpadding / 2) - (buttonwidth / 2);
+             document.getElementById("dragbar").style.top = containertop + "px";
+             document.getElementById("dragbar").style.left = dragleft + "px";
+             document.getElementById("dragbar").style.height = textareaheight;
+             document.getElementById("dragbar").style.cursor = "col-resize";
+             
+           } else {
+             document.getElementById("dragbar").style.height = "5px";
+             if (window.getComputedStyle) {
+                 textareawidth = window.getComputedStyle(document.getElementById("textareawrapper"),null).getPropertyValue("height");
+                 textareaheight = window.getComputedStyle(document.getElementById("textareawrapper"),null).getPropertyValue("width");
+                 leftpadding = window.getComputedStyle(document.getElementById("textarea"),null).getPropertyValue("padding-top");
+                 buttonwidth = window.getComputedStyle(document.getElementById("dragbar"),null).getPropertyValue("height");
+             } else {
+                 dragleft = document.getElementById("textareawrapper").currentStyle["width"];
+             }
+             textareawidth = Number(textareawidth.replace("px", ""));
+             leftpadding = Number(leftpadding .replace("px", ""));
+             buttonwidth = Number(buttonwidth .replace("px", ""));
+             dragleft = containertop + textareawidth + leftpadding + (leftpadding / 2);
+             document.getElementById("dragbar").style.top = dragleft + "px";
+             document.getElementById("dragbar").style.left = "5px";
+             document.getElementById("dragbar").style.width = textareaheight;
+             document.getElementById("dragbar").style.cursor = "row-resize";        
+           }
+         }
+         
+         function dragstart(e) {
+           e.preventDefault();
+           dragging = true;
+           var main = document.getElementById("iframecontainer");
+         }
+         
+         function dragmove(e) {
+           if (dragging) 
+           {
+             document.getElementById("shield").style.display = "block";        
+             if (stack != " horizontal") {
+               var percentage = (e.pageX / window.innerWidth) * 100;
+               if (percentage > 5 && percentage < 98) {
+                 var mainPercentage = 100-percentage;
+                 document.getElementById("textareacontainer").style.width = percentage + "%";
+                 document.getElementById("iframecontainer").style.width = mainPercentage + "%";
+                 fixDragBtn();
+               }
+             } else {
+               var containertop = Number(w3_getStyleValue(document.getElementById("container"), "top").replace("px", ""));
+               var percentage = ((e.pageY - containertop + 20) / (window.innerHeight - containertop + 20)) * 100;
+               if (percentage > 5 && percentage < 98) {
+                 var mainPercentage = 100-percentage;
+                 document.getElementById("textareacontainer").style.height = percentage + "%";
+                 document.getElementById("iframecontainer").style.height = mainPercentage + "%";
+                 fixDragBtn();
+               }
+             }
+             showFrameSize();    
+           }
+         }
+		 
+         function dragend() {
+           document.getElementById("shield").style.display = "none";
+           dragging = false;
+           if (window.editor) {
+             window.editor.refresh();
+           }
+         }
+         if (window.addEventListener) {              
+           document.getElementById("dragbar").addEventListener("mousedown", function(e) {dragstart(e);});
+           document.getElementById("dragbar").addEventListener("touchstart", function(e) {dragstart(e);});
+           window.addEventListener("mousemove", function(e) {dragmove(e);});
+           window.addEventListener("touchmove", function(e) {dragmove(e);});
+           window.addEventListener("mouseup", dragend);
+           window.addEventListener("touchend", dragend);
+           window.addEventListener("load", fixDragBtn);
+           window.addEventListener("load", showFrameSize);
+         }
+          
+         function colorcoding() {
+           var ua = navigator.userAgent;
+           //Opera Mini refreshes the page when trying to edit the textarea.
+           if (ua && ua.toUpperCase().indexOf("OPERA MINI") > -1) { return false; }
+           window.editor = CodeMirror.fromTextArea(document.getElementById("textareaCode"), {
+             mode: "text/html",
+             htmlMode: true,
+             lineWrapping: true,
+             smartIndent: false,
+             addModeClass: true
+           });
+         //  window.editor.on("change", function () {window.editor.save();});
+         }
+         colorcoding();
+         
+         function w3_getStyleValue(elmnt,style) {
+             if (window.getComputedStyle) {
+                 return window.getComputedStyle(elmnt,null).getPropertyValue(style);
+             } else {
+                 return elmnt.currentStyle[style];
+             }
+         }
+           
+         
+          
+         
+      </script>
+   </body>
+</html>
