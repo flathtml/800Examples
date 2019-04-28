@@ -1,0 +1,176 @@
+<html>
+
+<head>
+    
+    <script type="text/javascript">
+        var people, asc1 = 1,
+                    asc2 = 1,
+                    asc3 = 1;
+        window.onload = function () {
+            people = document.getElementById("people");
+        }
+
+        function sort_table(tbody, col, asc) {
+            var rows = tbody.rows,
+                rlen = rows.length,
+                arr = new Array(),
+                i, j, cells, clen;
+            // fill the array with values from the table
+            for (i = 0; i < rlen; i++) {
+                cells = rows[i].cells;
+                clen = cells.length;
+                arr[i] = new Array();
+                for (j = 0; j < clen; j++) {
+                    arr[i][j] = cells[j].innerHTML;
+                }
+            }
+            // sort the array by the specified column number (col) and order (asc)
+            arr.sort(function (a, b) {
+                return (a[col] == b[col]) ? 0 : ((a[col] > b[col]) ? asc : -1 * asc);
+            });
+            // replace existing rows with new rows created from the sorted array
+            for (i = 0; i < rlen; i++) {
+                rows[i].innerHTML = "<td>" + arr[i].join("</td><td>") + "</td>";
+            }
+        }
+    </script>
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+            border: none;
+        }
+        th,
+        td {
+            border: 1px solid black;
+            padding: 4px 4px;
+            font-family: Times New Roman;
+            font-size: 16px;
+            text-align: left;
+        }
+        th {
+            background-color: #99FD8D;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+<h2 style="text-align:center">Alice's Wedding Songs - Master Playlist</h2>
+  
+<p><i>  If you click on any song then it opens a new window
+and you can watch a Youtube video of that song.
+ 
+<p>
+    <table>
+        <thead>
+<tr>
+                <th onclick="sort_table(people, 0, asc1); asc1 *= -1; asc2 = 1; asc3 = 1;">Song</th>
+                <th onclick="sort_table(people, 1, asc2); asc2 *= -1; asc3 = 1; asc1 = 1;">Artist</th>
+                <th onclick="sort_table(people, 2, asc3); asc3 *= -1; asc1 = 1; asc2 = 1;">Category</th>
+            </tr>
+</thead>
+        <tbody id="people">
+<!Song#1        
+<tr>           
+<td> <a href="https://www.youtube.com/watch?v=-xbqe_GajtQ" target="_blank">I believe in you</a></td> <td>Don Williams</td> <td> Dance </td>
+</tr>
+
+<!Song#2
+<tr>           
+<td> <a href="https://www.youtube.com/watch?v=iebwn1L4lyM" target="_blank">Faded, Fated, faithful, fatal</a></td> <td> Marylin Manson </td> <td>Dance</td>
+</tr>
+
+<!Song#3  
+ <tr>           
+<td> <a href="https://www.youtube.com/watch?v=cwPg8gJq_Kw" target="_blank">Wherever I may roam</a></td> <td> Metallica </td> <td>Dance</td>
+</tr>
+
+<!Song#4
+<tr>           
+<td> <a href="https://www.youtube.com/watch?v=dlJew-Dw87I" target="_blank">wicked game</a></td> <td>Chris izac</td> <td>Dance</td>
+</tr>
+
+<!Song#5
+<tr>           
+<td> <a href="https://www.youtube.com/watch?v=xzQvGz6_fvA" target="_blank">I'm on fire</a></td> <td>Bruce springstein</td> <td>Dance</td>
+</tr>
+
+<!Song#6
+<tr>           
+<td> <a href="https://www.youtube.com/watch?v=DBNXS_XBaR8" target="_blank">fast as you</a></td> <td>dwight yoakam</td> <td>Dance</td>
+</tr>
+
+<!Song#7
+<tr>           
+<td> <a href="https://www.youtube.com/watch?v=BKLVpDTZOPQ" target="_blank">sit next to me</a></td> <td>foster the people</td> <td>Dance</td>
+</tr>
+
+<!Song#8
+<tr>           
+<td> <a href="https://www.youtube.com/watch?v=o0Pt7M0weUI" target="_blank">wish i knew you</a></td> <td>revivalists</td> <td>Dance</td>
+</tr>
+
+<!Song#9
+<tr>           
+<td> <a href="https://www.youtube.com/watch?v=xYtsL9znopI" target="_blank">love lies</a></td> <td>khalid nirmani</td> <td>Dance</td>
+</tr>
+
+<!Song#10
+<tr>           
+<td> <a href="https://www.youtube.com/watch?v=aJOTlE1K90k" target="_blank">girls like you</a></td> <td>maroon 5</td> <td>Dance</td>
+</tr>
+
+<!Song#11
+<tr>           
+<td> <a href="https://www.youtube.com/watch?v=qr1-WpWOUk8" target="_blank">broken</a></td> <td>lovely the band</td> <td>Dance</td>
+</tr>
+
+<!Song#12
+<tr>           
+<td> <a href="https://www.youtube.com/watch?v=dRX0wDNK6S4" target="_blank">heaven</a></td> <td>Kane Brown</td> <td>Dinner - Chill</td>
+</tr>
+
+<!Song#13
+<tr>           
+<td> <a href="https://www.youtube.com/watch?v=yBwNF9E8gVA" target="_blank">hebrew version - creator of Universe - Boreolam</a></td> <td>searit hadad</td> <td>Dance</td>
+</tr>
+
+<!Song#14
+<tr>           
+<td> <a href="https://www.youtube.com/watch?v=bUvu3VZHBAY" target="_blank">Wedding video</a></td> <td>Baskal</td> <td>Dance</td>
+</tr>
+
+<!Song#15
+<tr>           
+<td> <a href="https://www.youtube.com/watch?v=ChV5BZ8SmS0" target="_blank">matisyahu</a></td> <td>king without crown</td> <td>Dance</td>
+</tr>
+
+<!Song#16
+<tr>           
+<td> <a href="https://www.youtube.com/watch?v=9DkcQ09h2Vo" target="_blank">guitars cadillacs</a></td> <td>dwight yoakam</td> <td>Dance</td>
+</tr>
+
+<!Song#17
+<tr>           
+<td> <a href="https://www.youtube.com/watch?v=ZaWCepCWDyY" target="_blank">mamas dont let your babys to be cowboys</a></td> <td>willie nelson</td> <td>Dance</td>
+</tr>
+
+<!Song#18
+<tr>           
+<td> <a href="https://www.youtube.com/watch?v=jbs66c4bS40" target="_blank">the way I want to touch you</a></td> <td>captain and teniel</td> <td>Dance</td>
+</tr>
+
+<!Song#19
+<tr>           
+<td> <a href="https://www.youtube.com/watch?v=w2CELiObPeQ" target="_blank">Die a happy man</a></td> <td>thomas rehett</td> <td>Dinner - Chill</td>
+</tr>
+
+<!Song#20
+<tr>           
+<td> <a href="https://www.youtube.com/watch?v=h9ZGKALMMuc" target="_blank">The way you look tonight</a></td> <td>Frank Sinatra</td> <td>Dinner - Chill</td>
+</tr>
+
+</tbody>
+    </table>
+</body>
+</html>
