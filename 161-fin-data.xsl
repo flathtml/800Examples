@@ -1,20 +1,28 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 <xsl:template match="/">
 <style>
+table, td, th {  
+ 
+  text-align: left;
+  border: 1px solid black;
+}
+
 table {
   border-collapse: collapse;
   width: 70%;
-  align: center;
+   
 }
+th {
+background-color: #72D82C;
+}
+tr:nth-child(odd) {background-color: #B0FF7A;}
 
 th, td {
-  text-align: left;
-  padding: 8px;
+  padding: 10px;
 }
-
-tr:nth-child(even) {background-color: #f2f2f2;}
+ 
 </style>
-<h2>10 Year Financial Data -</h2><i>All Figures in $ millions Except Diluted EPS</i>
+<h2>10 Year Financial Data :</h2><i>All Figures in $ millions Except Diluted EPS</i>
 <table align="center">
 <tr bgcolor="#9acd32">
 <th style="text-align:left">Income Stmt</th>
