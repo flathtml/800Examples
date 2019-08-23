@@ -14,7 +14,7 @@ th, td {
 
 tr:nth-child(even) {background-color: #f2f2f2;}
 </style>
-<h2>10 Year Financial Data</h2><i>All Figures in $ millions Except Diluted EPS</i>
+<h2>10 Year Financial Data  :</h2><i>All Figures in $ millions Except Diluted EPS</i>
 <table border="1">
 <tr bgcolor="#9acd32">
 <th style="text-align:left">Income Stmt</th>
