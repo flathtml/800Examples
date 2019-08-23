@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Stock Price with Financial Data </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+.center {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    color: #000000;
+    border: 1px solid green;
+}
+
+.center1 {
+    text-align: center;
+     
+     
+}
+
+.footer {
+    text-align: center;
+    font-size: small; 
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+ 
+</style>
+<body>
+ 
+
+
+<div class="container-fluid">
+
+  <div class="row"> </div>
+
+  <div class="center" style="background-color:#E7E4E3"> 
+           
+     <h2>Stock Price / Financial Data Widget</h2> 
+           
+  </div> 
+  <div class="row"> </div>
+
+  <div class="center"> 
+           
+      
+       <h6>Please use <b>153-convert-google-sheet-to-xml.html</b> to get the XML Data to be used to generate Financial data</h6>
+     
+          
+  </div>
+<!-- Start of Stock Widget -->
+<div class="row"> </div>
+
+<div class="row">
+   <div class="col-md-12">
+      <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+      <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>-->
+              <div id="tv-medium-widget1"></div>
+   <script type="text/javascript" src="152-stock-chart1.js"></script>
+   
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget1",
+  "symbols": [
+    [
+      "Stock",
+      "CBS"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->
+   </div>	
+         <div> </div>
+          
+        </div>
+   </div>
+ </div>
+<!-- End of Stock Widget -->
+
+    <div class="row"> 
+    
+    </div>
+</div>
+
+<script>
+function loadXMLDoc(filename)
+{
+if (window.ActiveXObject)
+  {
+  xhttp = new ActiveXObject("Msxml2.XMLHTTP");
+  }
+else 
+  {
+  xhttp = new XMLHttpRequest();
+  }
+xhttp.open("GET", filename, false);
+try {xhttp.responseType = "msxml-document"} catch(err) {} // Helping IE11
+xhttp.send("");
+return xhttp.responseXML;
+}
+
+function displayResult()
+{
+xml = loadXMLDoc("161-fin-data.xml");
+xsl = loadXMLDoc("161-fin-data.xsl");
+// code for IE
+if (window.ActiveXObject || xhttp.responseType == "msxml-document")
+  {
+  ex = xml.transformNode(xsl);
+  document.getElementById("example").innerHTML = ex;
+  }
+// code for Chrome, Firefox, Opera, etc.
+else if (document.implementation && document.implementation.createDocument)
+  {
+  xsltProcessor = new XSLTProcessor();
+  xsltProcessor.importStylesheet(xsl);
+  resultDocument = xsltProcessor.transformToFragment(xml, document);
+  document.getElementById("example").appendChild(resultDocument);
+  }
+}
+</script>
+</head>
+<body onload="displayResult()">
+ <div class="center1">  
+   <div id="example" />
+   </div>
+ </div>
+</body>
+</html>
