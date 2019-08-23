@@ -1,5 +1,18 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 <xsl:template match="/">
+<style>
+table {
+  border-collapse: collapse;
+  width: 70%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
 <h2>10 Year Financial Data</h2><i>All Figures in $ millions Except Diluted EPS</i>
 <table border="1">
 <tr bgcolor="#9acd32">
