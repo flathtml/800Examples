@@ -23,7 +23,7 @@ th, td {
  
 </style>
 <h2>10 Year Financial Data :</h2><i>All Figures in $ millions Except Diluted EPS :</i>
-<h6>&nbsp;</h6>
+ 
 <table align="center">
 <tr bgcolor="#9acd32">
 <th style="text-align:left">Income Stmt</th>
@@ -76,7 +76,5 @@ th, td {
 </tr>
 </xsl:for-each>
 </table>
-<h6>&nbsp;</h6>
-
 </xsl:template>
 </xsl:stylesheet>
