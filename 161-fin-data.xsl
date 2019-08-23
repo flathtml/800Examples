@@ -21,34 +21,34 @@
 <xsl:value-of select="INCOME"/>
 </td>
 <td>
-<xsl:value-of select="2018"/>
+<xsl:value-of select="YR2018"/>
 </td>
 <td>
-<xsl:value-of select="2017"/>
+<xsl:value-of select="YR2017"/>
 </td>
 <td>
-<xsl:value-of select="2016"/>
+<xsl:value-of select="YR2016"/>
 </td>
 <td>
-<xsl:value-of select="2015"/>
+<xsl:value-of select="YR2015"/>
 </td>
 <td>
-<xsl:value-of select="2014"/>
+<xsl:value-of select="YR2014"/>
 </td>
 <td>
-<xsl:value-of select="2013"/>
+<xsl:value-of select="YR2013"/>
 </td>
 <td>
-<xsl:value-of select="2012"/>
+<xsl:value-of select="YR2012"/>
 </td>
 <td>
-<xsl:value-of select="2011"/>
+<xsl:value-of select="YR2011"/>
 </td>
 <td>
-<xsl:value-of select="2010"/>
+<xsl:value-of select="YR2010"/>
 </td>
 <td>
-<xsl:value-of select="2009"/>
+<xsl:value-of select="YR2009"/>
 </td>
 </tr>
 </xsl:for-each>
