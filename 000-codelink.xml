@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#161 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="161-stock-chart-with-fin-data.html"&gt;161-stock-chart-with-fin-data.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript / Finance</CATEGORY>
+	<DESC>Stock Chart with Financial Data</DESC>
+  </EXAMPLE>
  <!--Example#160 -->
   <EXAMPLE>
     <LINK>&lt;a href="160-Alice-wedding.html"&gt;160-Alice-wedding.html&lt;a&gt;</LINK>
@@ -76,7 +82,7 @@
  <!--Example#148 -->
   <EXAMPLE>
     <LINK>&lt;a href="148-stock-chart.html"&gt;148-stock-chart.html&lt;a&gt;</LINK>
-    <CATEGORY>HTML / Javascript </CATEGORY>
+    <CATEGORY>HTML / Javascript / Finance</CATEGORY>
 	<DESC>Display Stock Chart with Quick valuation</DESC>
   </EXAMPLE>
  <!--Example#147 -->
