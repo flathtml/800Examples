@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Stock Price with Financial Data </title>
@@ -42,14 +42,14 @@ img {
 
 <div class="container-fluid">
 
-  <div class="row"> </div>
+  <div class="row"></div>
 
   <div class="center" style="background-color:#E7E4E3"> 
            
-     <h2>Stock Price / Financial Data Widget:</h2> 
+     <h2>Stock Price / Financial Data Widget</h2> 
            
   </div> 
-  <div class="row"> </div>
+  <div class="row">&nbsp;</div>
 
   <div class="center"> 
            
@@ -92,18 +92,17 @@ img {
  
 <!-- TradingView Widget END -->
    </div>	
-         <div> </div>
+         <div></div>
           
         </div>
    </div>
  </div>
 <!-- End of Stock Widget -->
 
-    <div class="row"> 
+    <div class="row">Â 
     
     </div>
 </div>
-
 <script>
 function loadXMLDoc(filename)
 {
@@ -121,15 +120,15 @@ xhttp.send("");
 return xhttp.responseXML;
 }
 
-function displayResult()
+function displayResult1()
 {
-xml = loadXMLDoc("162-fin-data.xml");
-xsl = loadXMLDoc("162-fin-data.xsl");
+xml = loadXMLDoc("161-fin-data.xml");
+xsl = loadXMLDoc("161-fin-data.xsl");
 // code for IE
 if (window.ActiveXObject || xhttp.responseType == "msxml-document")
   {
   ex = xml.transformNode(xsl);
-  document.getElementById("example").innerHTML = ex;
+  document.getElementById("example1").innerHTML = ex;
   }
 // code for Chrome, Firefox, Opera, etc.
 else if (document.implementation && document.implementation.createDocument)
@@ -137,15 +136,58 @@ else if (document.implementation && document.implementation.createDocument)
   xsltProcessor = new XSLTProcessor();
   xsltProcessor.importStylesheet(xsl);
   resultDocument = xsltProcessor.transformToFragment(xml, document);
-  document.getElementById("example").appendChild(resultDocument);
+  document.getElementById("example1").appendChild(resultDocument);
+  }
+}
+</script>
+<script>
+function loadXMLDoc(filename)
+{
+if (window.ActiveXObject)
+  {
+  xhttp = new ActiveXObject("Msxml2.XMLHTTP");
+  }
+else 
+  {
+  xhttp = new XMLHttpRequest();
+  }
+xhttp.open("GET", filename, false);
+try {xhttp.responseType = "msxml-document"} catch(err) {} // Helping IE11
+xhttp.send("");
+return xhttp.responseXML;
+}
+
+function displayResult2()
+{
+xml = loadXMLDoc("161-stock-data.xml");
+xsl = loadXMLDoc("161-stock-data.xsl");
+// code for IE
+if (window.ActiveXObject || xhttp.responseType == "msxml-document")
+  {
+  ex = xml.transformNode(xsl);
+  document.getElementById("example2").innerHTML = ex;
+  }
+// code for Chrome, Firefox, Opera, etc.
+else if (document.implementation && document.implementation.createDocument)
+  {
+  xsltProcessor = new XSLTProcessor();
+  xsltProcessor.importStylesheet(xsl);
+  resultDocument = xsltProcessor.transformToFragment(xml, document);
+  document.getElementById("example2").appendChild(resultDocument);
   }
 }
 </script>
 </head>
-<body onload="displayResult()">
+<body onload="displayResult1();displayResult2()">
  <div class="center1">  
-   <div id="example" />
+   <div id="example1" />
    </div>
+   &nbsp;
+   <div class="center1">  
+   <div id="example2" />
+   </div>
+   &nbsp;
  </div>
 </body>
 </html>
+		

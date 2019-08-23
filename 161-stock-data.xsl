@@ -22,10 +22,14 @@ th, td {
 }
  
 </style>
-<h2>Investment Simulation Table</h2><i>Assumes you invested $1,000 each year in this stock</i>
-<h6>&nbsp;</h6>
-<table align="center">
+ 
+  
+
+ <table align="center">
 <tr bgcolor="#9acd32">
+<td colspan="5">Investment Simulation Table :<i>Assumes you invested $1,000 each year in this stock</i></td>
+</tr>
+<tr>
 <th style="text-align:left">YEAR</th>
 <th style="text-align:left">STOCK PRICE</th>
 <th style="text-align:left">YOY GROWTH</th>
@@ -47,10 +51,11 @@ th, td {
 <td>
 <xsl:value-of select="AMT"/>
 </td>
+<td>
+<xsl:value-of select="ACCT"/>
+</td>
 </tr>
 </xsl:for-each>
 </table>
-<h6>***</h6>
-
 </xsl:template>
 </xsl:stylesheet>
