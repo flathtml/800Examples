@@ -18,7 +18,7 @@
 <xsl:for-each select="ROOT/line">
 <tr>
 <td>
-<xsl:value-of select="INCOME-STMT"/>
+<xsl:value-of select="INCOME"/>
 </td>
 <td>
 <xsl:value-of select="2018"/>
