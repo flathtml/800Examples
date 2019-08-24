@@ -1,14 +1,29 @@
- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Stock Price with Financial Data </title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-</head>
+<!DOCTYPE html>
+<html>
+<title>My Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <!//http://www.w3schools.com/w3css/4/w3.css !>
+      <link rel="stylesheet" href="references/w3.css"> 
+      
+	  <!//http://www.w3schools.com/lib/codemirror.css !>
+      <link rel="stylesheet" href="references/codemirror.css">
+	  
+      <!//http://www.w3schools.com/lib/codemirror.js !>
+	  <script src="references/codemirror.js"></script>
+	  
+	  <!//https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css !>
+      <link rel="stylesheet" href="references/bootstrap.min.css">
+   
+      <!//https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js !>
+	  <script src="references/bootstrap.min.js"></script>
+	  
+	  <!//https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js !>
+	  <script src="references/jquery.min.js"></script>
+	 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+	  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+ 
 <style>
 .center {
     text-align: center;
@@ -36,38 +51,43 @@ img {
 
  
 </style>
-<body>
+<body onload="displayResult1();displayResult2()" class="w3-container">
  
-
-
-<div class="container-fluid">
-
-  <div class="row"></div>
-
-  <div class="center" style="background-color:#E7E4E3"> 
+ <div class="row">
+      <div class="col-md-12">
+         <div class="row">
+		    
+			<div class="col-md-2">
+               
+                <div class="row">&nbsp;</div>
+            </div>
+			
+            <div class="col-md-8">
+    <div>&nbsp;</div>
+   <div class="col-md-12 shadow p-4 mb-4 border border-primary" style="background-color:#E7E4E3">
+      <div class="center1"  > 
            
-     <h2>Stock Price / Financial Data Widget</h2> 
-           
-  </div> 
-  <div class="row">&nbsp;</div>
-
-  <div class="center"> 
-           
-      
-       <h6>Please use <b>153-convert-google-sheet-to-xml.html</b> to get the XML Data to be used to generate Financial data</h6>
-     
+     <h2>Stock Price / Financial Data Widget</h2>
+       <div> 
+   <h5 style="text-align:center">Please use 153-convert-google-sheet-to-xml.html to get the XML Data to be used to generate Financial data</h5>
+ 
+    
+   </div>
           
-  </div>
-<!-- Start of Stock Widget -->
-<div class="row"> </div>
-
-<div class="row">
-   <div class="col-md-12">
-      <div class="col-md-12 shadow p-4 mb-4 border border-primary">
-      <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>-->
-              <div id="tv-medium-widget1"></div>
+  </div> 
+   </div>	
+   
+     
+  
+    
+    <div>&nbsp;</div>
+   <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+   <!-- TradingView Widget BEGIN src="https://s3.tradingview.com/tv.js"-->
+ 
+  <div id="tv-medium-widget1"></div>
    <script type="text/javascript" src="152-stock-chart1.js"></script>
    
+     
   <script type="text/javascript">
   new TradingView.MediumWidget(
   {
@@ -92,18 +112,10 @@ img {
  
 <!-- TradingView Widget END -->
    </div>	
-         <div></div>
-          
-        </div>
-   </div>
- </div>
-<!-- End of Stock Widget -->
-
-    <div class="row">Â 
+   
     
-    </div>
-</div>
-<script>
+  
+  <script>
 function loadXMLDoc(filename)
 {
 if (window.ActiveXObject)
@@ -177,17 +189,20 @@ else if (document.implementation && document.implementation.createDocument)
   }
 }
 </script>
-</head>
-<body onload="displayResult1();displayResult2()">
+ 
  <div class="center1">  
-   <div id="example1" />
+   <div id="example1" /> </div>
    </div>
-   &nbsp;
+  &nbsp;
    <div class="center1">  
-   <div id="example2" />
+   <div id="example2" /> </div>
    </div>
-   &nbsp;
+  &nbsp;
  </div>
+ 
+   
+</div>
+       
 </body>
 </html>
 		
