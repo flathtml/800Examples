@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#165 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="165-stock-chart-with-fundamentals.html"&gt;165-stock-chart-with-fundamentals.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript / Finance</CATEGORY>
+	<DESC>Stock Chart with Fundamentals</DESC>
+  </EXAMPLE>
  <!--Example#164 -->
   <EXAMPLE>
     <LINK>&lt;a href="164-stock-chart-multi-cos-full-page.html"&gt;164-stock-chart-multi-cos-full-page.html&lt;a&gt;</LINK>
