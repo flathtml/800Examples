@@ -105,8 +105,6 @@ td:hover {background-color:#f5f5f5;}
       </div> 
    </div>	
    
-   
-    <div class="row">&nbsp;</div>
     <div class="col-md-12 shadow p-2 mb-4 border border-primary" style="background-color:pink">
       <div class="center2"  > 
         <b>Value Investing Candidates</b>
@@ -114,23 +112,27 @@ td:hover {background-color:#f5f5f5;}
    </div>
   
     <!-- Start of Stock Widget -->
-<div class="row"> </div>
 
+
+<!-- TradingView Widget#3 BEGIN -->             
+   
+    <div>&nbsp;</div>
+    
 <div class="row">
    <div class="col-md-12">
       <div class="col-md-12 shadow p-4 mb-4 border border-primary">
       <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>-->
-              <div id="tv-medium-widget1"></div>
+              <div id="tv-medium-widget3"></div>
    <script type="text/javascript" src="152-stock-chart1.js"></script>
    
   <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget1",
+  "container_id": "tv-medium-widget3",
   "symbols": [
     [
       "Stock",
-      "ULTA"
+      "MHK"
     ]
   ],
   "greyText": "Quotes by",
@@ -145,35 +147,40 @@ td:hover {background-color:#f5f5f5;}
   );
   </script>
  
-<!-- TradingView Widget END -->
+ 
    </div>	
          <div class="row">&nbsp;</div>
 		 <div class="col-md-12 shadow p-2 mb-4 border border-primary">
             <div> 
-             <h5 align="center" style = "color:blue">Ulta Beauty Valuation :$13.5 billions, $233/ share</h5>  
-		  <h6 align="center"><i>Shares outstanding : 58 million</i>&nbsp;
-              Valuation Date : 9/9/2019</h6>
-	     <h6 align="center"><b>CORE ASSUMPTIONS</b></h6>
-         
-         <p> 
-		 1. Currently the company has around 1,200 stores.In 10 years Ulta Beauty would have 2,000 stores each having sales of around $10 million thus having a net Sales of $20 billion.
-		 </p> 		
-         <p>  
-         2. In 10 years the USA beauty Products industry will grow from the current figure of $86 billion to $140 billion. This is based on the data that the Industry grew from $52 billion in 2009 to $86 billion in 2018.
-		</p> 
-        <p> 
-         3. In 10 years Ulta Beauty would have 15% of the USA beauty products  market. This is based on the data that the company's market share has grown from 2.5% in 2009 to 7.5% in 2018.
-		 </p> 
-        <p>  
-         4. Growth in Sales/store of 5%, growth in number of stores of 6% for next 10 years , Capital Expenditures per new store of $3.19 millions with additional working capital of $0.60 millions.
-		</p> 		 
-        		
-		 <h6 align="center"><a href="152-Valuation-Ulta-Beauty.xlsx">Click here</a>&nbsp;for Valuation Model.</h6>
+            <h5 align="center" style = "color:blue">Mohawk Industries Valuation :$6.41 billions, $89/ share</h5>  
+		  <h6 align="center"><i>Shares outstanding : 72 million</i>&nbsp;
+              Valuation Date : 9/15/2019</h6>
+			  <h6 align="center"><b>CORE ASSUMPTIONS - Based on Past Financial data</b></h6>
+		<p>1. The Company Carries significant amount of debt and is reinvesting all its cash flows to achieve growth.
+		Hence applied a two stage Reinvestment Rate model
+		</p>
+		<p>2. Base Sales is $10 billions, Operating Margin is 12%, ROIC is 9% , Tax Rate is 25%, Discount Rate is 9%
+		</p>
+		
+		<p>3.  Current Debt is $3,2 billions, Net interest rate is 2%.
+		</p>
+		
+		<p>4.  First 10 Years : Reinvestment Rate is 100%, growth in debt is 3%.
+		</p>
+		
+		<p>5.  After 10 Years : Reinvestment Rate is 50%, growth in debt is 1%.
+		</p>
+		
+		<p>6.  Discount rate of 6% for calculating Present value of Terminal debt. It is based on the assumption of an
+		       average growth rate of an index fund.
+		</p>
+		<h6 align="center"><a href="152-Valuation-Mohawk-Ind.xlsx">Click here</a>&nbsp;for Valuation Model.</h6>
             </div>
          </div>
-          
-		 
-        
+       <!-- TradingView Widget#3 END -->
+ 
+	   
+    <!-- TradingView Widget#2 BEGIN -->             
    
     <div>&nbsp;</div>
     
@@ -206,7 +213,7 @@ td:hover {background-color:#f5f5f5;}
   );
   </script>
  
-<!-- TradingView Widget END -->
+ 
    </div>	
          <div class="row">&nbsp;</div>
 		 <div class="col-md-12 shadow p-2 mb-4 border border-primary">
@@ -219,16 +226,74 @@ td:hover {background-color:#f5f5f5;}
 		 for retail companies with Flat Sales that pay dividend.</p>
             </div>
          </div>
-          
+       <!-- TradingView Widget#2 END -->
+
+<!-- TradingView Widget#1 BEGIN -->
+<div class="row">
+   <div class="col-md-12">
+      <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+      <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>-->
+              <div id="tv-medium-widget1"></div>
+   <script type="text/javascript" src="152-stock-chart1.js"></script>
+   
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget1",
+  "symbols": [
+    [
+      "Stock",
+      "ULTA"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+ 
+   </div>	
+   
+         <div class="row">&nbsp;</div>
+		 <div class="col-md-12 shadow p-2 mb-4 border border-primary">
+            <div> 
+             <h5 align="center" style = "color:blue">Ulta Beauty Valuation :$13.5 billions, $233/ share</h5>  
+		  <h6 align="center"><i>Shares outstanding : 58 million</i>&nbsp;
+              Valuation Date : 9/9/2019</h6>
+	     <h6 align="center"><b>CORE ASSUMPTIONS</b></h6>
+         
+         <p> 
+		 1. Currently the company has around 1,200 stores.In 10 years Ulta Beauty would have 2,000 stores each having sales of around $10 million thus having a net Sales of $20 billion.
+		 </p> 		
+         <p>  
+         2. In 10 years the USA beauty Products industry will grow from the current figure of $86 billion to $140 billion. This is based on the data that the Industry grew from $52 billion in 2009 to $86 billion in 2018.
+		</p> 
+        <p> 
+         3. In 10 years Ulta Beauty would have 15% of the USA beauty products  market. This is based on the data that the company's market share has grown from 2.5% in 2009 to 7.5% in 2018.
+		 </p> 
+        <p>  
+         4. Growth in Sales/store of 5%, growth in number of stores of 6% for next 10 years , Capital Expenditures per new store of $3.19 millions with additional working capital of $0.60 millions.
+		</p> 		 
+        		
+		 <h6 align="center"><a href="152-Valuation-Ulta-Beauty.xlsx">Click here</a>&nbsp;for Valuation Model.</h6>
+            </div>
+         </div>
+    <!-- TradingView Widget#1 END -->
+   
+ 
 		 
         </div>
    </div>
  </div>
 <!-- End of Stock Widget -->
-
    
-    <div>&nbsp;</div>
-  
    
 </div>
    </div>
