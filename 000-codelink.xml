@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#168 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="168-form-feeds-google-form.html"&gt;168-form-feeds-google-form.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / JavaScript / embedding</CATEGORY>
+	<DESC>Form that feeds another Google form</DESC>
+  </EXAMPLE>
  <!--Example#167 -->
   <EXAMPLE>
     <LINK>&lt;a href="167-Embed-Audio-Recorder.html"&gt;167-Embed-Audio-Recorder.html&lt;a&gt;</LINK>
