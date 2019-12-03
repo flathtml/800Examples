@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Customized Google Form - Grid with Text Response</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+ <style>
+ .table th {
+   text-align: center;   
+   background-color: lightpink;
+}
+ </style>
+</head>
+<body>
+
+<div class="container">
+ <p>This is a customized Google Form. If you want to create a similar form then please contact Dan at d_menashi@yahoo.com
+ </p>
+ 
+   
+ <h3 align="center">FOOD SHOW LOCATION FORM</h3>
+  <form name ="contact" id="myForm">
+  <div class="form-group">
+      <label for="Vendor-Name">Vendor Name</label>
+      <input type="text" name="Vendor-Name" class="form-control" id="Vendor-Name" required>
+    </div>
+    <p>
+ <table class="table table-bordered" >
+  <tr style="text-align:right">
+    <th>LOCATION</th><th>FULL BOOTH</th><th>HALF BOOTH</th><th>PRICE</th></tr>
+  
+  <tr>
+  <td align="center">Atlantic</td> 
+  <td>
+  <input type="text" name="Fullbooth-Atlantic" class="form-control" id="Fullbooth-Atlantic" required>
+  </td>
+  <td>
+  <input type="text" name="Halfbooth-Atlantic" class="form-control" id="Halfbooth-Atlantic" required>
+  </td>
+   <td>
+  <input type="text" name="Amt-Atlantic" class="form-control" id="Amt-Atlantic" required>
+  </td>
+  </tr>
+  
+   <tr>
+  <td align="center">British Columbia</td> 
+  <td>
+  <input type="text" name="Fullbooth-BC" class="form-control" id="Fullbooth-BC">
+  </td>
+  <td>
+  <input type="text" name="Halfbooth-BC" class="form-control" id="Halfbooth-BC">
+  </td>
+   <td>
+  <input type="text" name="Amt-BC" class="form-control" id="Amt-BC" required>
+  </td>
+  </tr>
+  
+  <tr>
+  <td align="center">Calgary</td> 
+  <td>
+  <input type="text" name="Fullbooth-Calgary" class="form-control" id="Fullbooth-Calgary">
+  </td>
+  <td>
+  <input type="text" name="Halfbooth-Calgary" class="form-control" id="Halfbooth-Calgary">
+  </td>
+   <td>
+  <input type="text" name="Amt-Calgary" class="form-control" id="Amt-Calgary" required>
+  </td>
+  </tr>
+  
+  <tr>
+  <td align="center">Edmonton</td> 
+  <td>
+  <input type="text" name="Fullbooth-Edmonton" class="form-control" id="Fullbooth-Edmonton">
+  </td>
+  <td>
+  <input type="text" name="Halfbooth-Edmonton" class="form-control" id="Halfbooth-Edmonton">
+  </td>
+   <td>
+  <input type="text" name="Amt-Edmonton" class="form-control" id="Amt-Edmonton" required>
+  </td>
+  </tr>
+  
+  <tr>
+  <td align="center">Montreal</td> 
+  <td>
+  <input type="text" name="Fullbooth-Montreal" class="form-control" id="Fullbooth-Montreal">
+  </td>
+  <td>
+  <input type="text" name="Halfbooth-Montreal" class="form-control" id="Halfbooth-Montreal">
+  </td>
+   <td>
+  <input type="text" name="Amt-Montreal" class="form-control" id="Amt-Montreal" required>
+  </td>
+  </tr>
+  
+  <tr>
+  <td align="center">Ontario</td> 
+  <td>
+  <input type="text" name="Fullbooth-Ontario" class="form-control" id="Fullbooth-Ontario">
+  </td>
+  <td>
+  <input type="text" name="Halfbooth-Ontario" class="form-control" id="Halfbooth-Ontario">
+  </td>
+   <td>
+  <input type="text" name="Amt-Ontario" class="form-control" id="Amt-Ontario" required>
+  </td>
+  </tr>
+  
+  <tr>
+  <td align="center">Quebec</td> 
+  <td>
+  <input type="text" name="Fullbooth-Quebec" class="form-control" id="Fullbooth-Quebec">
+  </td>
+  <td>
+  <input type="text" name="Halfbooth-Quebec" class="form-control" id="Halfbooth-Quebec">
+  </td>
+   <td>
+  <input type="text" name="Amt-Quebec" class="form-control" id="Amt-Quebec" required>
+  </td>
+  </tr>
+  
+  <tr>
+  <td align="center">Winnipeg</td> 
+  <td>
+  <input type="text" name="Fullbooth-Winnipeg" class="form-control" id="Fullbooth-Winnipeg">
+  </td>
+  <td>
+  <input type="text" name="Halfbooth-Winnipeg" class="form-control" id="Halfbooth-Winnipeg">
+  </td>
+   <td>
+  <input type="text" name="Amt-Winnipeg" class="form-control" id="Amt-Winnipeg" required>
+  </td>
+  </tr>
+  
+    </table>
+    <p>
+     <input type="submit">
+     <p>
+  </form>
+   <p id="status"></p>
+   <p id="dummy"></p>
+ 
+ 
+ <script>  
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbweHQmZ8lev9lZfyx_PlivIbdwS569XWSdyB2IiHnAS-zHdOPt-/exec'  
+  const form = document.forms['contact']  
+  form.addEventListener('submit', e => {  
+   e.preventDefault()  
+   fetch(scriptURL, { method: 'POST', body: new FormData(form)})  
+  //  .then(response => console.log('Successmmm!', response))  
+  //  .catch(error => console.error('Error!', error.message))  
+      .then(response => success())  
+      .catch(error => console.error('Error!', error.message))  
+  })  
+  function success() {
+  document.getElementById("status").innerHTML = "Form Submitted to Google sheet." + "<a href='https://docs.google.com/spreadsheets/d/e/2PACX-1vQWIIKxCwUGjJHJAKRWH5vuI74FOW_Kg_5zDqM3FOJmpG059xFfW8hTzLkVXpu2ewnMfE8Fh9Wv_WDr/pubhtml'target=_blank'>Click here</a> to access the Google sheet";
+  
+   clear();
+ 
+  }
+  
+ function clear () {
+ 
+  document.getElementById("myForm").reset();
+  }
+   
+   
+  
+  
+  $(document).ready(function(){
+    $("input").focus(function(){
+        $(this).css("background-color", "#cccccc");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "#ffffff");
+    });
+});
+ </script> 
+
+</body>
+</html>
