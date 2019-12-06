@@ -1,0 +1,28 @@
+
+		HOW TO DISPLAY HTML VIA GOOGLE SCRIPT
+		-------------------------------------
+STEP-1 : Create the following in code.gs
+
+Code.gs
+=======
+function doGet() {
+   return HtmlService.createHtmlOutputFromFile('form');
+}
+
+STEP-2 : Click on File in the Script Editor and create a html file
+called form.html (As we have put form as the file name to be rendered in code.gs)
+
+form.html
+=========
+<html>
+<body>
+  
+<iframe src="https://www.formrecorder.com/simplerecorder-embed.html" allow="geolocation; microphone; camera" width="70%" height="800"></iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfGn2OYjZvsIzdQNtur10Wg7-CyYwP1m1ZirIKYl1n5_jff0Q/viewform" allow="geolocation; microphone; camera" width="70%" height="1200"></iframe>
+ 
+</body>
+</html>
+
+STEP-3 : Click publish and Deploy as Wen App
+You will get the following link which would render the HTML from form.html
+https://script.google.com/macros/s/AKfycbyoTzd4Ask0bFBotovR4Rrj8ENmdqzKbp3AGAfFCdai5GDcdmzZ/exec
