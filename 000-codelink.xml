@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#169 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="169-render-html-via-google-script.txt"target=_blank&gt;169-render-html-via-google-script.txt&lt;a&gt;</LINK>
+    <CATEGORY>HTML / Google Script</CATEGORY>
+	<DESC>Render HTML from Google Script</DESC>
+  </EXAMPLE>
  <!--Example#168 -->
   <EXAMPLE>
     <LINK>&lt;a href="168-form-feeds-google-form.html"&gt;168-form-feeds-google-form.html&lt;a&gt;</LINK>
