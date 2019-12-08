@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#170 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="170-disp-content-to-auth-user.html"&gt;170-disp-content-to-auth-user.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / Javascript / XML</CATEGORY>
+	<DESC>Display content to authorized users.Also shows how to pass user input data to Javascript function</DESC>
+  </EXAMPLE>
  <!--Example#169 -->
   <EXAMPLE>
     <LINK>&lt;a href="169-render-html-via-google-script.txt"target=_blank&gt;169-render-html-via-google-script.txt&lt;a&gt;</LINK>
