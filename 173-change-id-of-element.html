@@ -356,7 +356,7 @@
             <div id="textarea">
                <div id="textareawrapper">
          <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
-  <!DOCTYPE html>
+   <!DOCTYPE html>
 <html>
  <head>
  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
@@ -390,29 +390,48 @@ div
     </style>
  </head>
  <body>
+ <h5 align="center">Examples to show how to change id and class of elements using jquery</h5>
+<div class="dvDemo">
+My class is dvDemo.
+</div>
+<br/>
+<input type="button" class="btnChange" value="  Change Class  "/>
+<input type="button" class="btnReset" value="  Reset Class  "/>
+<p>
 <div id="dvDemo">
-My ID is dvDemo.
+My id is dvDemo.
 </div>
 <br/>
 <input type="button" id="btnChange" value="  Change ID  "/>
-<input type="button" id="btnReset" value="  Reset ID  "/>
+<input type="button" id="btnReset" value="  Reset ID "/>
   <script>
   $(document).ready(function() {
     $('#btnChange').click(function() {
         $('#dvDemo').attr('id', 'dvDemoNew');
+        $('#dvDemoNew').html('My id is dvDemoNew.')
          
-        document.getElementById("dvDemoNew").innerHTML = "Div Changed...";
     });
 
     $('#btnReset').click(function() {
         $('#dvDemoNew').attr('id', 'dvDemo');
         $('#dvDemo').html('My ID is dvDemo.')
     });
+    
+     $('.btnChange').click(function() {
+        $('.dvDemo').toggleClass('dvDemo dvDemoNew');
+        $('.dvDemoNew').html('My Class is dvDemoNew.')
+    });
+
+    $('.btnReset').click(function() {
+        $('.dvDemoNew').toggleClass('dvDemoNew dvDemo');
+        $('.dvDemo').html('My Class is dvDemo.')
+    });
 });
   </script>
          
     </body>  
 </html>      
+		      
 		
 
 		</textarea>

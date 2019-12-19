@@ -5,7 +5,7 @@
   <EXAMPLE>
     <LINK>&lt;a href="173-change-id-of-element.html"&gt;173-change-id-of-element.html&lt;a&gt;</LINK>
     <CATEGORY>HTML / Javascript / JQuery</CATEGORY>
-	<DESC>Change id of an element dynamically</DESC>
+	<DESC>Change id and class of an element dynamically</DESC>
   </EXAMPLE>
  <!--Example#172 -->
   <EXAMPLE>
