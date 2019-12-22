@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#175 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="175-Multiple-stopwatch-timer.html"&gt;175-Multiple-stopwatch-timer.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / Javascript </CATEGORY>
+	<DESC>Shows multiple Stopwatch Timers</DESC>
+  </EXAMPLE>
  <!--Example#174 -->
   <EXAMPLE>
     <LINK>&lt;a href="174-reset-just-a-div.html"&gt;174-reset-just-a-div.html&lt;a&gt;</LINK>
