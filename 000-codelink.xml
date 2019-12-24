@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#176 -->
+  <EXAMPLE>
+    <LINK>&lt;a href="176-Call-Google-script-Web-App-from-External-Java-Script.html"&gt;176-Call-Google-script-Web-App-from-External-Java-Script.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / Javascript / Google Script</CATEGORY>
+	<DESC>Shows how to call Google script Web App remotely using Get method.</DESC>
+  </EXAMPLE>
  <!--Example#175 -->
   <EXAMPLE>
     <LINK>&lt;a href="175-Multiple-stopwatch-timer.html"&gt;175-Multiple-stopwatch-timer.html&lt;a&gt;</LINK>
