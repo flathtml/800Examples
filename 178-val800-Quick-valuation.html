@@ -1,0 +1,1103 @@
+<html>
+<title>Quick Valuation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <!//http://www.w3schools.com/w3css/4/w3.css !>
+      <link rel="stylesheet" href="references/w3.css"> 
+      
+	  <!//http://www.w3schools.com/lib/codemirror.css !>
+      <link rel="stylesheet" href="references/codemirror.css">
+	  
+      <!//http://www.w3schools.com/lib/codemirror.js !>
+	  <script src="references/codemirror.js"></script>
+	  
+	  <!//https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css !>
+      <link rel="stylesheet" href="references/bootstrap.min.css">
+   
+      <!//https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js !>
+	  <script src="references/bootstrap.min.js"></script>
+	  
+	  <!//https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js !>
+	  <script src="references/jquery.min.js"></script>
+	 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Playball|Righteous" rel="stylesheet">
+<Style>
+ .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+ .navbar .navbar-collapse {
+    text-align: left;
+}
+.makeup1 {
+    font-weight: bold;
+    color: #000000;
+    border: 1px solid green;
+}
+ .makeup2 {
+    border: 1px solid green;
+}
+ .footer {
+    text-align: center;
+}
+ .padding {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: justify;
+}
+  
+ .top {
+    position: relative;
+    background-color: #EAEDED;
+    height: 68px;
+    padding-top: 20px;
+    line-height: 50px;
+    overflow: hidden;
+    z-index: 1;
+}
+.w3-right {
+    float: right!important}
+.w3-wide {
+    letter-spacing: 4px}
+ .w3schools-logo {
+    font-family: Righteous;
+    text-decoration: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 37px;
+    letter-spacing: 3px;
+    color: #555555;
+    display: block;
+    position: absolute;
+    top: 17px;
+    padding-left: 2px;
+}
+.w3schools-logo .dotcom {
+    color: #2196F3!important;
+}
+.w3schools-logo:hover {
+    color: #555555;
+	text-decoration: none;
+}
+@media (max-width: 992px) {
+    .top {
+    height: 100px;
+}
+ .top .w3schools-logo {
+    position: relative;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+ .toptext {
+    width: 100%;
+    text-align: center;
+}
+ }
+@media screen and (max-width: 600px) {
+    .top {
+    height: 68px;
+}
+ .toptext {
+    display: none;
+}
+ }
+ 
+ table,th,td {
+  border : 1px solid blue;
+  border-collapse: collapse;
+}
+th {
+   
+  text-align: center;
+}
+th,td {
+  padding: 5px;
+}
+</style>
+<body class="w3-container" onload="loadXMLDoc()">
+<div>&nbsp;</div>
+<div class="container-fluid">
+   <div class="top">
+      <a class="w3schools-logo" href="index.html"> &nbsp;Valuation<span class="dotcom">800</span></a> 
+      <div class="w3-right  toptext w3-wide ">&nbsp;&nbsp;Valuation of my Watch List &nbsp;</div>
+   </div>
+   
+    <div class="top">
+      <div class="w3-center  toptext">
+	   <a href="https://www.sec.gov/edgar/searchedgar/companysearch.html"target=_blank>SEC 10K / 10Q Reports</a>
+	    
+	  </div>
+   </div>
+    
+<div>&nbsp;</div>
+<div class="row">
+	<div class="col-md-1">&nbsp;</div>
+	<div  align="center" class="col-md-10" >
+		 
+ <script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#demo tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+ <input id="myInput" type="text"  placeholder="Search..">
+  
+ <div>&nbsp;</div>
+<table id="demo">
+<tr><th colspan='4' style='background-color:#F5B7B1'><i>QUICK VALUATION</i></th></tr><tr style='background-color:#FADBD8'><th>S.NO</th>
+ <th>Market Value</th><th>Fair Value / share</th><th>Total Fair Value</th></tr>
+
+ <!-- STOCK#1 BEGIN -->
+<tr><td align="center">Amazon.</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "AMZN",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$1,613</td align="center">
+<td align="center">$800 billions</td align="center">
+</tr>
+<!-- STOCK#1 END -->
+
+<!-- STOCK#2 BEGIN -->
+<tr><td align="center">Apple</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "AAPL",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$225</td align="center">
+<td align="center">$1,000 billions</td align="center">
+</tr>
+<!-- STOCK#2 END -->
+
+<!-- STOCK#3 BEGIN -->
+<tr><td align="center">Microsoft</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "MSFT",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$98</td align="center">
+<td align="center">$750 billions</td align="center">
+</tr>
+<!-- STOCK#3 END -->
+
+<!-- STOCK#4 BEGIN -->
+<tr><td align="center">Google</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "GOOG",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$870</td align="center">
+<td align="center">$600 billions</td align="center">
+</tr>
+<!-- STOCK#4 END -->
+
+<!-- STOCK#5 BEGIN -->
+<tr><td align="center">Facebook</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "FB",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$140</td align="center">
+<td align="center">$400 billions</td align="center">
+</tr>
+<!-- STOCK#5 END -->
+
+<!-- STOCK#6 BEGIN -->
+<tr><td align="center">Home Depot</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "HD",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$232</td align="center">
+<td align="center">$253 billions</td align="center">
+</tr>
+<!-- STOCK#6 END -->
+
+<!-- STOCK#7 BEGIN -->
+<tr><td align="center">Lowes</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "LOW",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$130</td align="center">
+<td align="center">$100 billions</td align="center">
+</tr>
+<!-- STOCK#7 END -->
+
+<!-- STOCK#8 BEGIN -->
+<tr><td align="center">Walmart</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "WMT",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$141</td align="center">
+<td align="center">$400 billions</td align="center">
+</tr>
+<!-- STOCK#8 END -->
+
+
+<!-- STOCK#9 BEGIN -->
+<tr><td align="center">Target</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "TGT",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$119</td align="center">
+<td align="center">$60 billions</td align="center">
+</tr>
+<!-- STOCK#9 END -->
+
+<!-- STOCK#10 BEGIN -->
+<tr><td align="center">Costco</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "COST",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$152</td align="center">
+<td align="center">$67 billions</td align="center">
+</tr>
+<!-- STOCK#10 END -->
+
+<!-- STOCK#11 BEGIN -->
+<tr><td align="center">Dollar General</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "DG",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$118</td align="center">
+<td align="center">$30 billions</td align="center">
+</tr>
+<!-- STOCK#11 END -->
+
+<!-- STOCK#12 BEGIN -->
+<tr><td align="center">Dollar Tree</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "DLTR",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center" style='background-color:yellow'>$114 <br><i>Jan-2020, bought@ $94</i></td align="center">
+<td align="center">$27 billions</td align="center">
+</tr>
+<!-- STOCK#12 END -->
+
+<!-- STOCK#13 BEGIN -->
+<tr><td align="center">Ross Stores</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "ROST",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$84</td align="center">
+<td align="center">$30 billions</td align="center">
+</tr>
+<!-- STOCK#13 END -->
+
+<!-- STOCK#14 BEGIN -->
+<tr><td align="center">TJ Max</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "TJX",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$40</td align="center">
+<td align="center">$48 billions</td align="center">
+</tr>
+<!-- STOCK#14 END -->
+
+<!-- STOCK#15 BEGIN -->
+<tr><td align="center">Kohls</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "KSS",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center" style='background-color:yellow'>$103 <br><i>Jan-2020, bought@ $51</i></td align="center">
+<td align="center">$16 billions</td align="center">
+</tr>
+<!-- STOCK#15 END -->
+
+<!-- STOCK#16 BEGIN -->
+<tr><td align="center">Tractor Supply</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "TSCO",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$85</td align="center">
+<td align="center">$10 billions</td align="center">
+</tr>
+<!-- STOCK#16 END -->
+
+<!-- STOCK#17 BEGIN -->
+<tr><td align="center">Ulta Beauty</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "ULTA",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center" style='background-color:yellow'>$316 <br><i>Jan-2020, bought@ $250</i></td align="center">
+<td align="center">$18 billions</td align="center">
+</tr>
+<!-- STOCK#17 END -->
+
+<!-- STOCK#18 BEGIN -->
+<tr><td align="center">Autozone</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "AZO",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$1,000</td align="center">
+<td align="center">$24 billions</td align="center">
+</tr>
+<!-- STOCK#18 END -->
+
+<!-- STOCK#19 BEGIN -->
+<tr><td align="center">Advance Auto</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "AAP",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$174</td align="center">
+<td align="center">$12 billions</td align="center">
+</tr>
+<!-- STOCK#19 END -->
+
+<!-- STOCK#20 BEGIN -->
+<tr><td align="center">Oreily</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "ORLY",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$267</td align="center">
+<td align="center">$20 billions</td align="center">
+</tr>
+<!-- STOCK#20 END -->
+
+<!-- STOCK#21 BEGIN -->
+<tr><td align="center">Genuine Parts co</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "GPC",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$97</td align="center">
+<td align="center">$14 billions</td align="center">
+</tr>
+<!-- STOCK#21 END -->
+
+<!-- STOCK#22 BEGIN -->
+<tr><td align="center">Kroger</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "KR",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$19</td align="center">
+<td align="center">$15 billions</td align="center">
+</tr>
+<!-- STOCK#22 END -->
+
+<!-- STOCK#23 BEGIN -->
+<tr><td align="center">Best Buy</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "BBY",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$93</td align="center">
+<td align="center">$24 billions</td align="center">
+</tr>
+<!-- STOCK#23 END -->
+
+<!-- STOCK#24 BEGIN -->
+<tr><td align="center">BJs</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "BJ",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$22</td align="center">
+<td align="center">$3 billions</td align="center">
+</tr>
+<!-- STOCK#24 END -->
+
+<!-- STOCK#25 BEGIN -->
+<tr><td align="center">Dicks Sporting</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "DKS",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center" style='background-color:yellow'>$81 <br><i>Jan-2020, bought@ $47</i></td align="center">
+<td align="center">$7 billions</td align="center">
+</tr>
+<!-- STOCK#25 END -->
+
+<!-- STOCK#26 BEGIN -->
+<tr><td align="center">Foot Locker</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "FL",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$58</td align="center">
+<td align="center">$6 billions</td align="center">
+</tr>
+<!-- STOCK#26 END -->
+
+<!-- STOCK#27 BEGIN -->
+<tr><td align="center">McDonnalds</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "MCD",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$117</td align="center">
+<td align="center">$88 billions</td align="center">
+</tr>
+<!-- STOCK#27 END -->
+
+<!-- STOCK#28 BEGIN -->
+<tr><td align="center">Starbucks</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "SBUX",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$51</td align="center">
+<td align="center">$61 billions</td align="center">
+</tr>
+<!-- STOCK#28 END -->
+
+<!-- STOCK#29 BEGIN -->
+<tr><td align="center">Dunkin</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "dnkn",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$49</td align="center">
+<td align="center">$4 billions</td align="center">
+</tr>
+<!-- STOCK#29 END -->
+
+<!-- STOCK#30 BEGIN -->
+<tr><td align="center">Chipotle</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "CMG",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$214</td align="center">
+<td align="center">$6 billions</td align="center">
+</tr>
+<!-- STOCK#30 END -->
+
+<!-- STOCK#31 BEGIN -->
+<tr><td align="center">Darden</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "DRI",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$124</td align="center">
+<td align="center">$15 billions</td align="center">
+</tr>
+<!-- STOCK#31 END -->
+
+<!-- STOCK#32 BEGIN -->
+<tr><td align="center">Dominos</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "DPZ",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$122</td align="center">
+<td align="center">$5 billions</td align="center">
+</tr>
+<!-- STOCK#32 END -->
+
+<!-- STOCK#33 BEGIN -->
+<tr><td align="center">Yum</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "YUM",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$16</td align="center">
+<td align="center">$53 billions</td align="center">
+</tr>
+<!-- STOCK#33 END -->
+
+<!-- STOCK#34 BEGIN -->
+<tr><td align="center">Marriott</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "MAR",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$135</td align="center">
+<td align="center">$44 billions</td align="center">
+</tr>
+<!-- STOCK#34 END -->
+
+<!-- STOCK#35 BEGIN -->
+<tr><td align="center">Hyatt</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "H",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$91</td align="center">
+<td align="center">$6 billions</td align="center">
+</tr>
+<!-- STOCK#35 END -->
+
+<!-- STOCK#36 BEGIN -->
+<tr><td align="center">Choice Hotels</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "CHH",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$73</td align="center">
+<td align="center">$4 billions</td align="center">
+</tr>
+<!-- STOCK#36 END -->
+
+<!-- STOCK#37 BEGIN -->
+<tr><td align="center">Expedia</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "EXPE",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center" style='background-color:yellow'>$132<br><i>Jan-2020 bought@ $108</i></td align="center">
+<td align="center">$20 billions</td align="center">
+</tr>
+<!-- STOCK#37 END -->
+
+<!-- STOCK#38 BEGIN -->
+<tr><td align="center">Booking Holdings</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "BKNG",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$2,143</td align="center">
+<td align="center">$90 billions</td align="center">
+</tr>
+<!-- STOCK#38 END -->
+
+<!-- STOCK#39 BEGIN -->
+<tr><td align="center">Trip Advisor</td align="center">
+ 
+<td align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+   
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "TRIP",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": true,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</td align="center">
+<td align="center">$50</td align="center">
+<td align="center">$7 billions</td align="center">
+</tr>
+<!-- STOCK#39 END -->
+
+</table>
+<div>&nbsp;</div>
+</div>
+	<div class="col-md-1">&nbsp; </div>      
+</div>         
+  
+</body>
+</html> 
