@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html>
+<title>Sample Analysis of Stocks</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <!//http://www.w3schools.com/w3css/4/w3.css !>
+      <link rel="stylesheet" href="references/w3.css"> 
+      
+	  <!//http://www.w3schools.com/lib/codemirror.css !>
+      <link rel="stylesheet" href="references/codemirror.css">
+	  
+      <!//http://www.w3schools.com/lib/codemirror.js !>
+	  <script src="references/codemirror.js"></script>
+	  
+	  <!//https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css !>
+      <link rel="stylesheet" href="references/bootstrap.min.css">
+   
+      <!//https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js !>
+	  <script src="references/bootstrap.min.js"></script>
+	  
+	  <!//https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js !>
+	  <script src="references/jquery.min.js"></script>
+	 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+	  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+      <style>
+.center1 {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    color: #000000;
+  
+}
+
+.center2 {
+    text-align: center;
+   }
+
+.footer {
+    text-align: center;
+    font-size: small; 
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+	border: 1px solid #000;
+}
+
+th {
+    padding: 8px;
+    text-align: center;
+    
+    background-color: #E7E4E3;
+}
+
+td {
+    padding: 8px;
+    text-align: left;
+	border: 1px solid #000; 
+    
+} 
+
+ 
+</style>
+<body class="w3-container">
+ <div class="row">
+      <div class="col-md-12">
+         <div class="row">
+		    
+			<div class="col-md-2">
+               
+                <div class="row">&nbsp;</div>
+            </div>
+			
+            <div class="col-md-8">
+ 
+    
+   <div>&nbsp;</div>
+   <div class="col-md-12 shadow p-4 mb-4 border border-primary" style="background-color:#E7E4E3">
+      <div class="center1"  > 
+           
+     <h2>Sample Analysis of Stocks</h2> 
+	 <h6 align="center"><i>Analysis Date : 1/12/2020</i>
+       
+          
+  </div> 
+   </div>	
+   
+   <div class="row">&nbsp;</div>
+   <div class="col-md-12 shadow p-4 mb-4" style="background-color:#E9FF88">
+	      <div>
+		  <p><b>OBJECTIVE</b> Analyze each stock and figure out if its suitable for Long term Investing. If yes,
+		  then figure out the Fair Value. The basic factors that influence the decision are as follows.  
+          <li> Will there be demand for the business' products / services 10 years down the line?.</li>
+          <li> What is the moat of the business?, larger the moat tougher it is for a competitor to capture market share. </li>
+		  <li> How is the Business Economics? Look at ROIC (Return on Capital Invested), Leverage, margins. </li>
+		  <li> If the business is in the startup hyper-growth , then its ok to be having negative cash flows.
+               The value is estimated based on the business maturing in future and attaining positive cash flow.
+		  </li>
+		  <br>
+     		<p class="text-justify"><i>  Each factor would be scored between 1 (lowest) and 10 (highest).  </i>
+           </div>
+      </div>
+    
+   <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+   <!-- TradingView Widget BEGIN src="https://s3.tradingview.com/tv.js"-->
+ 
+  <div id="tv-medium-widget1"></div>
+   <script type="text/javascript" src="152-stock-chart1.js"></script>
+   
+     
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget1",
+  "symbols": [
+    [
+      "Stock",
+      "TWTR"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->
+   </div>	
+ <div>&nbsp;</div>
+  <table align="center">
+            <tr>
+	    		<th>FACTOR</th>
+		    	<th>SCORE</th>
+			</tr>
+			<tr>
+			  <td>Will there be demand for the business' products / services 10 years down the line?.</td>
+			  <td style ="text-align: center">9</td>
+			</tr> 
+			<tr>
+			  <td> What is the moat of the business?, larger the moat tougher it is for a competitor to capture market share.</td> 
+			  <td style ="text-align: center">8</td>
+			</tr> 
+			<tr>
+			  <td> How is the Business Economics? Look at ROIC (Return on Capital Invested), Leverage, margins. </td>
+			  <td style ="text-align: center">7</td>
+			</tr> 
+        </table>
+  
+ <div>&nbsp;</div>
+   <h5 align="center">TWTR Quick val : $12/ share , $9 billion.         </h5>  
+	 <div style = "text-align: center"><i><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001418091&type=10-&dateb=&owner=exclude&count=40"target=_blank">10-K / 10-Q Reports</a></i>
+     </div>	
+   
+    <div>&nbsp;</div>
+    <div class="col-md-12">
+      <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+      <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>-->
+              <div id="tv-medium-widget2"></div>
+    
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget2",
+  "symbols": [
+    [
+      "Stock",
+      "AMD"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->
+   </div>	
+         <div> </div>
+		 <table align="center">
+            <tr>
+	    		<th>FACTOR</th>
+		    	<th>SCORE</th>
+			</tr>
+			<tr>
+			  <td>Will there be demand for the business' products / services 10 years down the line?.</td>
+			  <td style ="text-align: center">9</td>
+			</tr> 
+			<tr>
+			  <td> What is the moat of the business?, larger the moat tougher it is for a competitor to capture market share.</td> 
+			  <td style ="text-align: center">6</td>
+			</tr> 
+			<tr>
+			  <td> How is the Business Economics? Look at ROIC (Return on Capital Invested), Leverage, margins. </td>
+			  <td style ="text-align: center">5</td>
+			</tr> 
+        </table>
+		  <div>&nbsp;</div>		
+         <h5 align="center" style="color:red"> Not worth Investing</h5>  
+	 <div style = "text-align: center"><i><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000002488&type=10-&dateb=&owner=exclude&count=40"target=_blank">10-K / 10-Q Reports</a></i>
+      <div>&nbsp;</div>	
+	<div class="col-md-12 shadow p-4 mb-4" style="background-color:pink">
+	      <div><p class="text-justify">   <b>Following are couple of major Risk Factors  listed in the company's 10-K Report. They portray
+		  limitations of its moat and Business Economics.</b>
+		  <p class="text-justify"><b>Risk Factor#1</b> 
+	 Intel has substantially greater financial resources than we do and accordingly spends substantially greater amounts on marketing and research and development than we do. We expect Intel to maintain its market position and to continue to invest heavily in marketing, research and development, new manufacturing facilities and other technology companies. To the extent Intel manufactures a significantly larger portion of its microprocessor products using more advanced process technologies, or introduces competitive new products into the market before we do, we may be more vulnerable to Intel’s aggressive marketing and pricing strategies for microprocessor products.
+<p class="text-justify">As long as Intel remains in this dominant position, we may be materially adversely affected by Intel’s. business practices, including rebating and allocation strategies and pricing actions, designed to limit our market share and margins;product mix and introduction schedules.</li>
+ product bundling, marketing and merchandising strategies.
+ exclusivity payments to its current and potential customers, retailers and channel partners.
+
+ de facto control over industry standards, and heavy influence on PC manufacturers and other PC industry participants, 
+including motherboard, memory, chipset and basic input/output system (BIOS) suppliers and software companies as well as 
+the graphics interface for Intel platforms.
+ 
+Marketing and advertising expenditures in support of positioning the Intel brand over the brand of its original equipment manufacturer OEM customers and retailers.
+<p class="text-justify">
+Intel could also take actions that place our discrete GPUs at a competitive disadvantage, including giving one or more of our competitors in the graphics market, such as Nvidia Corporation, preferential access to its proprietary graphics interface or other useful information. Also, Intel recently announced that it is developing their own high-end discrete GPUs. Intel’s position in the microprocessor market and integrated graphics chipset market, its introduction of competitive new products, its existing relationships with top-tier OEMs, and its aggressive marketing and pricing strategies could result in lower unit sales and a lower average selling price for our products, which could have a material adverse effect on us.
+<p class="text-justify"><b>Risk Factor#2</b>
+If we cannot generate sufficient revenue and operating cash flow or obtain external financing, we may face a cash shortfall and be unable to make all of our planned investments in research and development or other strategic investments.
+Our ability to fund research and development expenditures depends on generating sufficient revenue and cash flow from operations and the availability of external financing, if necessary. Our research and development expenditures, together with ongoing operating expenses, will be a substantial drain on our cash flow and may decrease our cash balances. If new competitors, technological advances by existing competitors, or other competitive factors require us to invest significantly greater resources than anticipated in our research and development efforts, our operating expenses would increase. If we are required to invest significantly greater resources than anticipated in research and development efforts without an increase in revenue, our operating results could decline.
+We regularly assess markets for external financing opportunities, including debt and equity financing.
+ Additional debt or equity financing may not be available when needed or, if available, may not be available on satisfactory terms. 
+ The health of the credit markets may adversely impact our ability to obtain financing when needed. 
+ Any downgrades from credit rating agencies such as Moody’s or Standard & Poor’s may adversely impact our 
+ ability to obtain external financing or the terms of such financing.  
+     		  
+           </div>
+     </div>
+	 
+	 
+	 </div>		 
+           <div>&nbsp;</div>
+        </div>
+        
+		
+        <div class="col-md-12">
+      <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+      <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>-->
+              <div id="tv-medium-widget3"></div>
+    
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget3",
+  "symbols": [
+    [
+      "Stock",
+      "BYND"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->
+   </div>	
+         <div> </div>
+		 <table align="center">
+            <tr>
+	    		<th>FACTOR</th>
+		    	<th>SCORE</th>
+			</tr>
+			<tr>
+			  <td>Will there be demand for the business' products / services 10 years down the line?.</td>
+			  <td style ="text-align: center">Cant Say</td>
+			</tr> 
+			<tr>
+			  <td> What is the moat of the business?, larger the moat tougher it is for a competitor to capture market share.</td> 
+			  <td style ="text-align: center">Cant Say</td>
+			</tr> 
+			<tr>
+			  <td> How is the Business Economics? Look at ROIC (Return on Capital Invested), Leverage, margins. </td>
+			  <td style ="text-align: center">N/A as its Early Statge Business</td>
+			</tr> 
+        </table>
+		  <div>&nbsp;</div>		
+        <h5 align="center"> Not ready for Long-term Investing. Need to wait a couple of years more to assess again.</h5>  
+	 <div style = "text-align: center"><i><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001655210&type=10-&dateb=&owner=exclude&count=40"target=_blank">10-K / 10-Q Reports</a></i>
+     </div>		 
+           <div>&nbsp;</div>
+        </div>
+        		
+
+        <div class="col-md-12">
+      <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+      <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>-->
+              <div id="tv-medium-widget4"></div>
+    
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget4",
+  "symbols": [
+    [
+      "Stock",
+      "TSLA"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->
+   </div>	
+          <div> </div>
+		 <table align="center">
+            <tr>
+	    		<th>FACTOR</th>
+		    	<th>SCORE</th>
+			</tr>
+			<tr>
+			  <td>Will there be demand for the business' products / services 10 years down the line?.</td>
+			  <td style ="text-align: center">8</td>
+			</tr> 
+			<tr>
+			  <td> What is the moat of the business?, larger the moat tougher it is for a competitor to capture market share.</td> 
+			  <td style ="text-align: center">8</td>
+			</tr> 
+			<tr>
+			  <td> How is the Business Economics? Look at ROIC (Return on Capital Invested), Leverage, margins. </td>
+			  <td style ="text-align: center">5</td>
+			</tr> 
+        </table>
+		  <div>&nbsp;</div>		
+          <h5 align="center" >Company's Business Economics is tough, is heavily relying on convertible debt for growth
+		  It is progressing in right direction by becoming more efficient in its capital expenditure,but need to wait a year to assess again and 
+		  value it.</h5>   
+	 <div style = "text-align: center"><i><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001318605&type=10-&dateb=&owner=exclude&count=40"target=_blank">10-K / 10-Q Reports</a></i>
+     </div>		 
+           <div>&nbsp;</div>
+        </div>
+        		
+
+        <div class="col-md-12">
+      <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+      <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>-->
+              <div id="tv-medium-widget5"></div>
+    
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget5",
+  "symbols": [
+    [
+      "Stock",
+      "CRWD"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->
+   </div>	
+         <div> </div>
+		 	 <table align="center">
+            <tr>
+	    		<th>FACTOR</th>
+		    	<th>SCORE</th>
+			</tr>
+			<tr>
+			  <td>Will there be demand for the business' products / services 10 years down the line?.</td>
+			  <td style ="text-align: center">Cant Say</td>
+			</tr> 
+			<tr>
+			  <td> What is the moat of the business?, larger the moat tougher it is for a competitor to capture market share.</td> 
+			  <td style ="text-align: center">Cant Say</td>
+			</tr> 
+			<tr>
+			  <td> How is the Business Economics? Look at ROIC (Return on Capital Invested), Leverage, margins. </td>
+			  <td style ="text-align: center">N/A as its Early Statge Business</td>
+			</tr> 
+        </table>
+		  <div>&nbsp;</div>		
+        <h5 align="center"> Not ready for Long-term Investing. Need to wait a couple of years more to assess again.</h5> 
+	 <div style = "text-align: center"><i><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001535527&type=10-&dateb=&owner=exclude&count=40"target=_blank">10-K / 10-Q Reports</a></i>
+     </div>		 
+           <div>&nbsp;</div>
+        </div>
+        				
+
+        <div class="col-md-12">
+      <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+      <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>-->
+              <div id="tv-medium-widget6"></div>
+    
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget6",
+  "symbols": [
+    [
+      "Stock",
+      "DBX"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->
+   </div>	
+          <div> </div>
+		 <table align="center">
+            <tr>
+	    		<th>FACTOR</th>
+		    	<th>SCORE</th>
+			</tr>
+			<tr>
+			  <td>Will there be demand for the business' products / services 10 years down the line?.</td>
+			  <td style ="text-align: center">3</td>
+			</tr> 
+			<tr>
+			  <td> What is the moat of the business?, larger the moat tougher it is for a competitor to capture market share.</td> 
+			  <td style ="text-align: center">3</td>
+			</tr> 
+			<tr>
+			  <td> How is the Business Economics? Look at ROIC (Return on Capital Invested), Leverage, margins. </td>
+			  <td style ="text-align: center">3</td>
+			</tr> 
+        </table>
+		  <div>&nbsp;</div>		
+         <h5 align="center" style="color:red"> Not worth Investing</h5>    
+	 <div style = "text-align: center"><i><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001467623&type=10-&dateb=&owner=exclude&count=40"target=_blank">10-K / 10-Q Reports</a></i>
+     </div>		 
+           <div>&nbsp;</div>
+        </div>
+        
+		<div class="col-md-12 shadow p-4 mb-4" style="background-color:pink">
+	      <div><p class="text-justify">   <b>Following are couple of major Risk Factors  listed in the company's 10-K Report. They portray
+		  issue with the Capital Structure and limit of its moat</b>
+		  <p class="text-justify"><b>Risk Factor#1 - The multi-class structure of our common stock has the effect of concentrating voting control with those stockholders who held our capital stock prior to the completion of our IPO, and it may depress the trading price of our Class A common stock.
+		  </b> Our Class A common stock has one vote per share, our Class B common stock has ten votes per share, and our Class C common stock has no voting rights, except as otherwise required by law. As of December 31, 2018, our directors, executive officers and holders of more than 5% of our common stock, and their respective affiliates, held in the aggregate 87.1% of the voting power of our capital stock, with our Co-Founders holding approximately 53% of the voting power of our capital stock (including the Co-Founder Grants and voting agreements that our co-founders entered into with certain of our stockholders that covered an aggregate of 1.2% of the voting power of our capital stock as of December 31, 2018). We are including the Co-Founder Grants in this calculation since they are legally issued and outstanding shares of our Class A common stock and our co-founders are able to vote these shares prior to their vesting. Because of the ten-to-one voting ratio between our Class B and Class A common stock, the holders of our Class B common stock collectively will continue to control a majority of the combined voting power of our common stock and therefore be able to control all matters submitted to our stockholders for approval so long as the shares of Class B common stock represent at least 9.1% of all outstanding shares of our Class A and Class B common stock. This concentrated control will limit or preclude other stockholders' ability to influence corporate matters for the foreseeable future, including the election of directors, amendments of our organizational documents and any merger, consolidation, sale of all or substantially all of our assets, or other major corporate transaction requiring stockholder approval. In addition, this may prevent or discourage unsolicited acquisition proposals or offers for our capital stock that other stockholders may feel are in their best interests as one of our stockholders.
+
+Future transfers or sales by holders of Class B common stock will generally result in those shares converting to Class A common stock, except for certain transfers described in our amended and restated certificate of incorporation, including transfers effected for estate planning purposes where sole dispositive power and exclusive voting control with respect to the shares of Class B common stock is retained by the transferring holder and transfers between our co-founders. In addition, each outstanding share of Class B common stock held by a stockholder who is a natural person, or held by the permitted entities or permitted transferees of such stockholder (as described in our amended and restated certificate of incorporation), will convert automatically into one share of Class A common stock upon the death of such natural person. In the event of the death or permanent and total disability of a co-founder, shares of Class B common stock held by such co-founder, his permitted entities or permitted transferees will convert to Class A common stock, provided that the conversion will be deferred for nine months, or up to 18 months if approved by a majority of our independent directors, following his death or permanent and total disability. Transfers between our co-founders are permitted transfers and will not result in conversion of the shares of Class B common stock that are transferred; however, upon the death or total and permanent disability of the transferring co-founder, the transferred shares would convert to Class A common stock following the deferral period of nine months, or up to 18 months if approved by a majority of our independent directors. The conversion of Class B common stock to Class A common stock will have the effect, over time, of increasing the relative voting power of those individual holders of Class B common stock who retain their shares in the long term.
+
+In addition, because our Class C common stock carries no voting rights (except as otherwise required by law), if we issue Class C common stock in the future, the holders of Class B common stock may be able to elect all of our directors and to determine the outcome of most matters submitted to a vote of our stockholders for a longer period of time than would be the case if we issued Class A common stock rather than Class C common stock in such transactions.
+<p class="text-justify">
+In addition, in July 2017, FTSE Russell and Standard & Poor’s announced that they would cease to allow most newly public companies utilizing dual or multi-class capital structures to be included in their indices. Affected indices include the Russell 2000 and the S&P 500, S&P MidCap 400, and S&P SmallCap 600, which together make up the S&P Composite 1500. Under the announced policies, our multi-class capital structure likely makes us ineligible for inclusion in any of these indices, and as a result, mutual funds, exchange-traded funds, and other investment vehicles that attempt to passively track these indices will not be investing in our stock. These policies are still new and it is as of yet unclear what effect, if any, they will have on the valuations of publicly traded companies excluded from the indices, but it is possible that they may depress these valuations compared to those of other similar companies that are included.
+		  
+		  <p class="text-justify">
+		   <p class="text-justify"><b>Risk Factor#2 - Our business depends upon the interoperability of our platform across devices, operating systems, and third-party applications that we do not control.</b> 
+		   <p class="text-justify">One of the most important features of our platform is its broad interoperability with a range of diverse devices, operating systems, and third-party applications. Our platform is accessible from the web and from devices running Windows, Mac OS, iOS, Android, WindowsMobile, and Linux. We also have integrations with Microsoft, Adobe, Apple, Salesforce, Atlassian, Slack, IBM, Cisco, VMware, Okta, Symantec, Palo Alto Networks, and a variety of other productivity, collaboration, data management, and security vendors. We are dependent on the accessibility of our platform across these third-party operating systems and applications that we do not control. Several of our competitors own, develop, operate, or distribute operating systems, app stores, third-party datacenter services, and other software, and also have material business relationships with companies that own, develop, operate, or distribute operating systems, applications markets, third-party datacenter services, and other software that our platform requires in order to operate. Moreover, some of these competitors have inherent advantages developing products and services that more tightly integrate with their software and hardware platforms or those of their business partners.
+
+Third-party services and products are constantly evolving, and we may not be able to modify our platform to assure its compatibility with that of other third parties following development changes. In addition, some of our competitors may be able to disrupt the operations or compatibility of our platform with their products or services, or exert strong business influence on our ability to, and terms on which we, operate and distribute our platform. For example, we currently offer products that directly compete with several large technology companies that we rely on to ensure the interoperability of our platform with their products or services. As our respective products evolve, we expect this level of competition to increase. Should any of our competitors modify their products or standards in a manner that degrades the functionality of our platform or gives preferential treatment to competitive products or services, whether to enhance their competitive position or for any other reason, the interoperability of our platform with these products could decrease and our business, results of operations, and financial condition could be harmed.
+
+	</div>
+	</div>		  
+
+        <div class="col-md-12">
+      <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+      <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>-->
+              <div id="tv-medium-widget7"></div>
+    
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget7",
+  "symbols": [
+    [
+      "Stock",
+      "AMZN"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->
+   </div>	
+          <div> </div>
+		 <table align="center">
+            <tr>
+	    		<th>FACTOR</th>
+		    	<th>SCORE</th>
+			</tr>
+			<tr>
+			  <td>Will there be demand for the business' products / services 10 years down the line?.</td>
+			  <td style ="text-align: center">10</td>
+			</tr> 
+			<tr>
+			  <td> What is the moat of the business?, larger the moat tougher it is for a competitor to capture market share.</td> 
+			  <td style ="text-align: center">10</td>
+			</tr> 
+			<tr>
+			  <td> How is the Business Economics? Look at ROIC (Return on Capital Invested), Leverage, margins. </td>
+			  <td style ="text-align: center">6</td>
+			</tr> 
+        </table>
+		  <div>&nbsp;</div>		
+         <h5 align="center"> Quick val : $1,613/ share ,  $800 billion.         </h5>  
+	 <div style = "text-align: center"><i><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001018724&type=10&dateb=&owner=exclude&count=40"target=_blank">10-K / 10-Q Reports</a></i>
+     </div>		 
+           <div>&nbsp;</div>
+        </div>
+
+
+        <div class="col-md-12">
+      <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+      <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>-->
+              <div id="tv-medium-widget8"></div>
+    
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget8",
+  "symbols": [
+    [
+      "Stock",
+      "PYPL"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->
+   </div>	
+          <div> </div>
+		 <table align="center">
+            <tr>
+	    		<th>FACTOR</th>
+		    	<th>SCORE</th>
+			</tr>
+			<tr>
+			  <td>Will there be demand for the business' products / services 10 years down the line?.</td>
+			  <td style ="text-align: center">9</td>
+			</tr> 
+			<tr>
+			  <td> What is the moat of the business?, larger the moat tougher it is for a competitor to capture market share.</td> 
+			  <td style ="text-align: center">8</td>
+			</tr> 
+			<tr>
+			  <td> How is the Business Economics? Look at ROIC (Return on Capital Invested), Leverage, margins. </td>
+			  <td style ="text-align: center">9</td>
+			</tr> 
+        </table>
+		  <div>&nbsp;</div>		
+         <h5 align="center"> Quick val : $45/ share , $53 billion.         </h5>  
+	 <div style = "text-align: center"><i><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001633917&type=10-&dateb=&owner=exclude&count=40"target=_blank">10-K / 10-Q Reports</a></i>
+     </div>		 
+           <div>&nbsp;</div>
+        </div>
+
+		
+        <div class="col-md-12">
+      <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+      <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>-->
+              <div id="tv-medium-widget9"></div>
+    
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget9",
+  "symbols": [
+    [
+      "Stock",
+      "ADBE"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->
+   </div>	
+          <div> </div>
+		 <table align="center">
+            <tr>
+	    		<th>FACTOR</th>
+		    	<th>SCORE</th>
+			</tr>
+			<tr>
+			  <td>Will there be demand for the business' products / services 10 years down the line?.</td>
+			  <td style ="text-align: center">8</td>
+			</tr> 
+			<tr>
+			  <td> What is the moat of the business?, larger the moat tougher it is for a competitor to capture market share.</td> 
+			  <td style ="text-align: center">8</td>
+			</tr> 
+			<tr>
+			  <td> How is the Business Economics? Look at ROIC (Return on Capital Invested), Leverage, margins. </td>
+			  <td style ="text-align: center">7</td>
+			</tr> 
+        </table>
+		  <div>&nbsp;</div>		
+         <h5 align="center"> Quick val : $155/ share , $75 billion.         </h5>  
+	 <div style = "text-align: center"><i><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000796343&type=10-&dateb=&owner=exclude&count=40"target=_blank">10-K / 10-Q Reports</a></i>
+     </div>		 
+           <div>&nbsp;</div>
+        </div>
+        		
+<div class="col-md-12 shadow p-4 mb-4" style="background-color:pink">
+	      <div><p class="text-justify"><b>How does Adobe make money?</b>
+		  <p class="text-justify">Usually people correlate Adobe with just Adobe reader/writer , that helps us create pdf documents.
+		  But the company is way more than that.Following was the breakup of Revenues for last 3 years. 
+		  <p class="text-justify"> 
+		  <i>All Figures in $ billions</i>
+		    <p class="text-justify">
+		  <table align="center">
+            <tr>
+	    		<td style ="text-align: center">YEAR</th>
+		    	<td style ="text-align: center">Digital Media</td>
+				<td style ="text-align: center">Digital Experience</td>
+				<td style ="text-align: center">Publishing</td>
+				<td style ="text-align: center">TOTAL</td>
+			</tr>
+			<tr>
+			  <td style ="text-align: center">2018</th>
+		    	<td style ="text-align: center">$6.32</td>
+				<td style ="text-align: center">$2.44</td>
+				<td style ="text-align: center">$0.26</td>
+				<td style ="text-align: center">$9.03</td>
+			</tr> 
+			<tr>
+			  <td style ="text-align: center">2017</th>
+		    	<td style ="text-align: center">$5.01</td>
+				<td style ="text-align: center">$2.03</td>
+				<td style ="text-align: center">$0.26</td>
+				<td style ="text-align: center">$7.3</td>
+			</tr> 
+			<tr>
+			  <td style ="text-align: center">2016</th>
+		    	<td style ="text-align: center">$3.94</td>
+				<td style ="text-align: center">$1.63</td>
+				<td style ="text-align: center">$0.28</td>
+				<td style ="text-align: center">$5.85</td>
+			</tr> 
+        </table>
+		<br>
+		  <p class="text-justify">Following is an extract from company's 10-k report that provides overview of each of the three
+		  divisions.
+		  <p class="text-justify"><b>Digital Media</b>
+		  The flagship of our Digital Media business is Adobe Creative Cloud—a subscription service that allows members to use Adobe’s creative products integrated with cloud-delivered services across desktop, web and mobile devices. Creative Cloud members can download and access the latest versions of our creative products such as Photoshop, Illustrator, Premiere Pro, Lightroom CC, InDesign, Adobe XD and many more creative applications. To expand our reach and improve the way we serve the needs of our customers, we create different combinations of these services, including our launch of a mobile photography offering that has brought new customers into our franchise and grown the amount of our photography subscriptions. In addition, members can access built-in templates to jumpstart designs and step-by-step tutorials to sharpen skills and get up to speed quickly. Through Creative Cloud, members can access online services to sync, store, and share files across users’ machines, access marketplace, social and community-based features within our Adobe Stock and Behance services, and create apps and websites, all at affordable subscription pricing for cost-sensitive customers.
+		  
+		   <p class="text-justify"><b>Digital Experience</b>
+		   Consumers today increasingly demand compelling experiences in their digital interactions, that are seamless across channels and devices. Enterprises and brands recognize that customers have more choices and lower switching costs than ever before. In this new hyper-connected digital environment, it is the customer experience that differentiates brands and ultimately determines customer loyalty. As a result, businesses must determine how to best attract, engage, acquire and retain customers in a digital world where the reach and quality of experiences directly impact success. Delivering the best experience to a consumer at a given moment requires the right combination of data, insights and content. Executives are increasingly demanding solutions that optimize their consumers’ experiences and deliver the greatest return on marketing and IT spend so they can demonstrate the business impact of their programs using objective metrics.
+		   Our Adobe Experience Cloud business targets this large and growing opportunity by providing comprehensive solutions that include analytics, targeting, advertising optimization, digital experience management, marketing automation and engagement, cross-channel campaign management, content management, asset management, audience management, premium video delivery, digital commerce enablement, order management, predictive intelligence and monetization. These comprehensive solutions enable marketers to measure, personalize and optimize digital experiences across channels for optimal performance.
+		   
+		   <p class="text-justify"><b>Publishing</b>		   
+		   Our Publishing segment contains legacy products and services that address diverse market opportunities including eLearning solutions, technical document publishing, web conferencing, document and forms platform, web application development and high-end printing. Graphics professionals and professional publishers continue to require quality, reliability and efficiency in production printing, and our Adobe PostScript and Adobe PDF printing technologies provide advanced functionality to meet the sophisticated requirements of this marketplace. As high-end printing systems evolve and transition to fully digital, composite workflows, we believe we are well positioned to be a supplier of software and technology based on the Adobe PostScript and Adobe PDF standards for use by this industry.
+We generate revenue by licensing our technology to OEMs that manufacture workflow software, printers and other output devices. In fiscal 2018, we maintained a relatively consistent quarterly revenue run-rate with the mature products we market and license in our Publishing business.
+		  </div>
+		  </div>
+		  
+        <div class="col-md-12">
+      <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+      <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>-->
+              <div id="tv-medium-widget10"></div>
+    
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget10",
+  "symbols": [
+    [
+      "Stock",
+      "FIVE"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->
+   </div>	
+          <div> </div>
+		 <table align="center">
+            <tr>
+	    		<th>FACTOR</th>
+		    	<th>SCORE</th>
+			</tr>
+			<tr>
+			  <td>Will there be demand for the business' products / services 10 years down the line?.</td>
+			  <td style ="text-align: center">9</td>
+			</tr> 
+			<tr>
+			  <td> What is the moat of the business?, larger the moat tougher it is for a competitor to capture market share.</td> 
+			  <td style ="text-align: center">3</td>
+			</tr> 
+			<tr>
+			  <td> How is the Business Economics? Look at ROIC (Return on Capital Invested), Leverage, margins. </td>
+			  <td style ="text-align: center">5</td>
+			</tr> 
+        </table>
+		  <div>&nbsp;</div>		
+         <h5 align="center"> Quick val : $36 / share , $2 billion.         </h5>  
+	 <div style = "text-align: center"><i><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001177609&type=10-&dateb=&owner=exclude&count=40"target=_blank">10-K / 10-Q Reports</a></i>
+     </div>		 
+           <div>&nbsp;</div>
+        </div>
+
+		
+        <div class="col-md-12">
+      <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+      <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>-->
+              <div id="tv-medium-widget11"></div>
+    
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget11",
+  "symbols": [
+    [
+      "Stock",
+      "CRM"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->
+   </div>	
+         <div> </div>
+		 <table align="center">
+            <tr>
+	    		<th>FACTOR</th>
+		    	<th>SCORE</th>
+			</tr>
+			<tr>
+			  <td>Will there be demand for the business' products / services 10 years down the line?.</td>
+			  <td style ="text-align: center">8</td>
+			</tr> 
+			<tr>
+			  <td> What is the moat of the business?, larger the moat tougher it is for a competitor to capture market share.</td> 
+			  <td style ="text-align: center">8</td>
+			</tr> 
+			<tr>
+			  <td> How is the Business Economics? Look at ROIC (Return on Capital Invested), Leverage, margins. </td>
+			  <td style ="text-align: center">7</td>
+			</tr> 
+        </table>
+		  <div>&nbsp;</div>		
+         <h5 align="center"> Quick val : $85 / share ,  $75 billion.         </h5>  
+	 <div style = "text-align: center"><i><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001108524&type=10-&dateb=&owner=exclude&count=40"target=_blank">10-K / 10-Q Reports</a></i>
+     </div>		 
+           <div>&nbsp;</div>
+        </div>
+        		
+
+        <div class="col-md-12">
+      <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+      <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>-->
+              <div id="tv-medium-widget12"></div>
+    
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget12",
+  "symbols": [
+    [
+      "Stock",
+      "DOCU"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->
+   </div>	
+          <div> </div>
+		 <table align="center">
+            <tr>
+	    		<th>FACTOR</th>
+		    	<th>SCORE</th>
+			</tr>
+			<tr>
+			  <td>Will there be demand for the business' products / services 10 years down the line?.</td>
+			  <td style ="text-align: center">8</td>
+			</tr> 
+			<tr>
+			  <td> What is the moat of the business?, larger the moat tougher it is for a competitor to capture market share.</td> 
+			  <td style ="text-align: center">8</td>
+			</tr> 
+			<tr>
+			  <td> How is the Business Economics? Look at ROIC (Return on Capital Invested), Leverage, margins. </td>
+			  <td style ="text-align: center">5</td>
+			</tr> 
+        </table>
+		  <div>&nbsp;</div>		
+         <h5 align="center"> Quick val : $11 / share , $2 billion.         </h5>  
+	 <div style = "text-align: center"><i><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001261333&type=10-&dateb=&owner=exclude&count=40"target=_blank">10-K / 10-Q Reports</a></i>
+     </div>		 
+           <div>&nbsp;</div>
+        </div>
+
+		
+        <div class="col-md-12">
+      <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+      <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>-->
+              <div id="tv-medium-widget13"></div>
+    
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget13",
+  "symbols": [
+    [
+      "Stock",
+      "ETSY"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->
+   </div>	
+          <div> </div>
+		 <table align="center">
+            <tr>
+	    		<th>FACTOR</th>
+		    	<th>SCORE</th>
+			</tr>
+			<tr>
+			  <td>Will there be demand for the business' products / services 10 years down the line?.</td>
+			  <td style ="text-align: center">8</td>
+			</tr> 
+			<tr>
+			  <td> What is the moat of the business?, larger the moat tougher it is for a competitor to capture market share.</td> 
+			  <td style ="text-align: center">7</td>
+			</tr> 
+			<tr>
+			  <td> How is the Business Economics? Look at ROIC (Return on Capital Invested), Leverage, margins. </td>
+			  <td style ="text-align: center">6</td>
+			</tr> 
+        </table>
+		  <div>&nbsp;</div>		
+         <h5 align="center"> Quick val : $34 / share , $4 billion.         </h5>  
+	 <div style = "text-align: center"><i><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001370637&type=10-&dateb=&owner=exclude&count=40"target=_blank">10-K / 10-Q Reports</a></i>
+     </div>		 
+           <div>&nbsp;</div>
+        </div>
+        		
+       <div class="col-md-12">
+      <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+      <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>-->
+              <div id="tv-medium-widget14"></div>
+    
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget14",
+  "symbols": [
+    [
+      "Stock",
+      "TWLO"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->
+   </div>	
+          <div> </div>
+		 <table align="center">
+            <tr>
+	    		<th>FACTOR</th>
+		    	<th>SCORE</th>
+			</tr>
+			<tr>
+			  <td>Will there be demand for the business' products / services 10 years down the line?.</td>
+			  <td style ="text-align: center">5</td>
+			</tr> 
+			<tr>
+			  <td> What is the moat of the business?, larger the moat tougher it is for a competitor to capture market share.</td> 
+			  <td style ="text-align: center">3</td>
+			</tr> 
+			<tr>
+			  <td> How is the Business Economics? Look at ROIC (Return on Capital Invested), Leverage, margins. </td>
+			  <td style ="text-align: center">3</td>
+			</tr> 
+        </table>
+		  <div>&nbsp;</div>		
+         <h5 align="center" style="color:red"> Not worth Investing</h5> 
+	 <div style = "text-align: center"><i><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001447669&type=10-&dateb=&owner=exclude&count=40"target=_blank">10-K / 10-Q Reports</a></i>
+     </div>		 
+           <div>&nbsp;</div>
+        </div>
+		
+		<div class="col-md-12 shadow p-4 mb-4" style="background-color:pink">
+	      <div><p class="text-justify">   <b>Following are couple of major Risk Factors  listed in the company's 10-K Report. They portray
+		  issue with the Capital Structure and limit of its moat</b>
+		  
+		  <p class="text-justify">   <b>The capped call transactions may affect the value of the Notes and our Class A common stock.</b>
+		   In connection with the pricing of the Notes, we entered into privately negotiated capped call transactions with the option counterparties. The capped call transactions are expected generally to reduce the potential dilution to our Class A common stock upon any conversion of the Notes and/or offset any potential cash payments we are required to make in excess of the principal amount of converted Notes, as the case may be, with such reduction and/or offset subject to a cap.
+		   In connection with establishing their initial hedges of the capped call transactions, the option counterparties or their respective affiliates entered into various derivative transactions with respect to our Class A common stock and/or purchased shares of our Class A common stock concurrently with or shortly after the pricing of the Notes.
+
+        In addition, the option counterparties and/or their respective affiliates may modify their hedge positions by entering into or unwinding various derivatives with respect to our Class A common stock and/or purchasing or selling our Class A common stock or other securities of ours in secondary market transactions at any time prior to the maturity of the Notes (and are likely to do so during any observation period related to a conversion of Notes). This activity could cause or avoid an increase or a decrease in the market price of our Class A common stock.
+
+        We do not make any representation or prediction as to the direction or magnitude of any potential effect that the transactions described above may have on the price of the Notes or our Class A common stock. In addition, we do not make any representation that the option counterparties will engage in these transactions or that these transactions, once commenced, will not be discontinued without notice.
+		<p class="text-justify">   <b>If we are unable to effectively process local number and toll-free number portability provisioning in a timely manner or to obtain or retain direct inward dialing numbers and local or toll-free numbers, our business and results of operations may be adversely affected.
+		</b>We support local number and toll-free number portability, which allows our customers to transfer their existing phone numbers to us and thereby retain their existing phone numbers when subscribing to our voice products. Transferring existing numbers is a manual process that can take up to 15 business days or longer to complete. A new customer of our voice products must maintain both our voice product and the customer's existing phone service during the number transferring process. Any delay that we experience in transferring these numbers typically results from the fact that we depend on network service providers to transfer these numbers, a process that we do not control, and these network service providers may refuse or substantially delay the transfer of these numbers to us. Local number portability is considered an important feature by many potential customers, and if we fail to reduce any related delays, then we may experience increased difficulty in acquiring new customers.
+
+        In addition, our future success depends in part on our ability to procure large quantities of local and toll-free direct inward dialing numbers ("DIDs"), in the United States and foreign countries at a reasonable cost and without restrictions. Our ability to procure, distribute and retain DIDs depends on factors outside of our control, such as applicable regulations, the practices of network service providers that provide DIDs, such as offering DIDs with conditional minimum volume call level requirements, the cost of these DIDs and the level of overall competitive demand for new DIDs.
+		
+		  </div>
+		  </div>
+        		
+       <div class="col-md-12">
+      <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+      <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>-->
+              <div id="tv-medium-widget15"></div>
+    
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget15",
+  "symbols": [
+    [
+      "Stock",
+      "DIS"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->
+   </div>	
+         <div> </div>
+		 <table align="center">
+            <tr>
+	    		<th>FACTOR</th>
+		    	<th>SCORE</th>
+			</tr>
+			<tr>
+			  <td>Will there be demand for the business' products / services 10 years down the line?.</td>
+			  <td style ="text-align: center">8</td>
+			</tr> 
+			<tr>
+			  <td> What is the moat of the business?, larger the moat tougher it is for a competitor to capture market share.</td> 
+			  <td style ="text-align: center">8</td>
+			</tr> 
+			<tr>
+			  <td> How is the Business Economics? Look at ROIC (Return on Capital Invested), Leverage, margins. </td>
+			  <td style ="text-align: center">7</td>
+			</tr> 
+        </table>
+		  <div>&nbsp;</div>		
+         <h5 align="center"> Quick val : $98 / share , $176 billion.         </h5>  
+	 <div style = "text-align: center"><i><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001744489&type=10-&dateb=&owner=exclude&count=40"target=_blank">10-K / 10-Q Reports</a></i>
+     </div>		 
+           <div>&nbsp;</div>
+        </div>
+		<div class="col-md-12 shadow p-4 mb-4" style="background-color:pink">
+	      <div><p class="text-justify">   <b>How Disney makes money?</b>
+         <p class="text-justify"> Disney has 4 business divisions : Following extract from 10-K report highlights them and lists their Revenues and Operating Income.
+		  <p class="text-justify"> 1. Media Networks : Includes following media properties :
+		  	
+Disney, ESPN, Freeform, FX and National Geographic branded domestic cable networks.
+
+ABC branded broadcast television network and eight owned domestic television stations.
+
+Television production and distribution.
+
+National Geographic magazines.
+
+A 50% equity investment in A+E Television Networks (A+E)
+
+		   <p class="text-justify"> 2.  Theme parks and resorts  include: Walt Disney World Resort in Florida; Disneyland Resort in California; Disneyland Paris; Hong Kong Disneyland Resort (47% ownership interest); Shanghai Disney Resort (43% ownership interest), all of which are consolidated in our results. Additionally, the Company licenses our intellectual property to a third party to operate Tokyo Disney Resort.
+		   Disney Cruise Line, Disney Vacation Club, National Geographic Expeditions (73% ownership interest), Adventures by Disney and Aulani, a Disney Resort & Spa in Hawaii
+
+		    <p class="text-justify"> 3. Studio : Motion picture production and distribution under the Walt Disney Pictures, Twentieth Century Fox, Marvel, Lucasfilm, Pixar, Fox Searchlight Pictures and Blue Sky Studios banners
+
+			 <p class="text-justify"> 4. Direct to Consumer and International : Branded international television channels, which include Disney, ESPN, Fox, National Geographic and Star (International Channels)
+Direct-to-consumer (DTC) streaming services, which include Disney+, ESPN+, Hotstar and Hulu. Disney+ launched in November 2019 in the U.S. and 4 other countries and further launches planned throughout 2020 and 2021.
+
+Other digital content distribution platforms and services including branded apps and websites, the Disney Movie Club and Disney Digital Network and streaming technology support services
+<p class="text-justify">
+Equity investments:
+
+A 50% ownership interest in Endemol Shine Group, which is a multi-platform content provider with creative operations across the world’s major markets
+
+A 20% ownership interest (49% economic interest) in Seven TV, which operates an advertising-supported, free-to-air Disney Channel in Russia
+
+A 30% effective ownership interest in Tata Sky, which owns and operates a direct-to-home satellite distribution platform in India
+
+An approximate 20% effective ownership interest in Vice Group Holdings, Inc. (Vice), which is a media company that targets millennial audiences. Vice operates Viceland, which is owned 50% by Vice and 50% by A+E.
+			  <p class="text-justify"> 
+		  <i>All Figures in $ billions</i>
+		    <p class="text-justify">
+		  <table align="center">
+            <tr>
+	    		<td>ITEM</th>
+		    	<td style ="text-align: center">2019</td>
+				<td style ="text-align: center">2018</td>
+				<td style ="text-align: center">2017</td>
+				 
+			</tr>
+			<tr>
+			  <td><b>REVENUES</b></th>
+		    	<td style ="text-align: center"></td>
+				<td style ="text-align: center"></td>
+				<td style ="text-align: center"></td>
+				 
+			</tr> 
+			<tr>
+			  <td>Media Networks</th>
+		    	<td style ="text-align: center">$24.82</td>
+				<td style ="text-align: center">$21.92</td>
+				<td style ="text-align: center">$21.29</td>
+				 
+			</tr> 
+			<tr>
+			  <td>Theme Parks</th>
+		    	<td style ="text-align: center">$26.22</td>
+				<td style ="text-align: center">$24.70</td>
+				<td style ="text-align: center">$23.02</td>
+			</tr> 
+			
+			<tr>
+			  <td>Studio Entertainment</th>
+		    	<td style ="text-align: center">$11.12</td>
+				<td style ="text-align: center">$10.06</td>
+				<td style ="text-align: center">$8.35</td>
+			</tr> 
+			<tr>
+			  <td>Direct to Consumer and Intl</th>
+		    	<td style ="text-align: center">$9.34</td>
+				<td style ="text-align: center">$3.41</td>
+				<td style ="text-align: center">$3.07</td>
+				 
+			</tr> 
+			<tr>
+			  <td>TOTAL</th>
+		    	<td style ="text-align: center">$69</td>
+				<td style ="text-align: center">$59</td>
+				<td style ="text-align: center">$55</td>
+			</tr> 
+			<tr>
+			  <td><b>OPERATING INCOME</b></th>
+		    	<td style ="text-align: center"></td>
+				<td style ="text-align: center"></td>
+				<td style ="text-align: center"></td>
+			</tr> 
+			<tr>
+			  <td>Media Networks</th>
+		    	<td style ="text-align: center">$7.47</td>
+				<td style ="text-align: center">$7.33</td>
+				<td style ="text-align: center">$7.19</td>
+				 
+			</tr> 
+			<tr>
+			  <td>Theme Parks</th>
+		    	<td style ="text-align: center">$6.75</td>
+				<td style ="text-align: center">$6.09</td>
+				<td style ="text-align: center">$5.48</td>
+			</tr> 
+			
+			<tr>
+			  <td>Studio Entertainment</th>
+		    	<td style ="text-align: center">$2.68</td>
+				<td style ="text-align: center">$3.01</td>
+				<td style ="text-align: center">$2.36</td>
+			</tr> 
+			<tr>
+			  <td>Direct to Consumer and Intl</th>
+		    	<td style ="text-align: center">($1.81)</td>
+				<td style ="text-align: center">($0.73)</td>
+				<td style ="text-align: center">($0.28)</td>
+				 
+			</tr> 
+			<tr>
+			  <td>TOTAL</th>
+		    	<td style ="text-align: center">$15</td>
+				<td style ="text-align: center">$16</td>
+				<td style ="text-align: center">$15</td>
+			</tr>  
+			<tr>
+			  <td><b>CAPITAL EXPENDITURES</b></th>
+		    	<td style ="text-align: center">$4.87</td>
+				<td style ="text-align: center">$4.46</td>
+				<td style ="text-align: center">$3.62</td>
+				 
+			</tr> 
+        </table>
+		<br> 
+		</div>
+		</div>
+		       <div class="col-md-12">
+      <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+      <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>-->
+              <div id="tv-medium-widget16"></div>
+    
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget16",
+  "symbols": [
+    [
+      "Stock",
+      "UBER"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->
+   </div>	
+          <div> </div>
+		 <table align="center">
+            <tr>
+	    		<th>FACTOR</th>
+		    	<th>SCORE</th>
+			</tr>
+			<tr>
+			  <td>Will there be demand for the business' products / services 10 years down the line?.</td>
+			  <td style ="text-align: center">8</td>
+			</tr> 
+			<tr>
+			  <td> What is the moat of the business?, larger the moat tougher it is for a competitor to capture market share.</td> 
+			  <td style ="text-align: center">8</td>
+			</tr> 
+			<tr>
+			  <td> How is the Business Economics? Look at ROIC (Return on Capital Invested), Leverage, margins. </td>
+			  <td style ="text-align: center">5</td>
+			</tr> 
+        </table>
+		  <div>&nbsp;</div>		
+         <h5 align="center"> Quick val : $12 / share , $20 billion.         </h5>  
+	 <div style = "text-align: center"><i><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001543151&type=10-&dateb=&owner=exclude&count=40"target=_blank">10-K / 10-Q Reports</a></i>
+     </div>		 
+           <div>&nbsp;</div>
+        </div>
+		<div class="col-md-12 shadow p-4 mb-4" style="background-color:pink">
+	      <div><p class="text-justify">   <b>NOTE :</b> Uber is a hyper-growth company disrupting the transportation sector. In 2014
+		  its revenues were under $500 million, in 2018 its revenues were over $11 billion. Its has mostly made loss and in 2018 it turned 
+		  into profit.  
+		  
+		  </div>
+		  </div>
+
+		       <div class="col-md-12">
+      <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+      <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>-->
+              <div id="tv-medium-widget17"></div>
+    
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget17",
+  "symbols": [
+    [
+      "Stock",
+      "LYFT"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->
+   </div>	
+          <div> </div>
+		 <table align="center">
+            <tr>
+	    		<th>FACTOR</th>
+		    	<th>SCORE</th>
+			</tr>
+			<tr>
+			  <td>Will there be demand for the business' products / services 10 years down the line?.</td>
+			  <td style ="text-align: center">8</td>
+			</tr> 
+			<tr>
+			  <td> What is the moat of the business?, larger the moat tougher it is for a competitor to capture market share.</td> 
+			  <td style ="text-align: center">8</td>
+			</tr> 
+			<tr>
+			  <td> How is the Business Economics? Look at ROIC (Return on Capital Invested), Leverage, margins. </td>
+			  <td style ="text-align: center">6</td>
+			</tr> 
+        </table>
+		  <div>&nbsp;</div>		
+         <h5 align="center"> Quick val : $17 / share ,  $5 billion.         </h5>  
+	 <div style = "text-align: center"><i><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001759509&type=10-&dateb=&owner=exclude&count=40"target=_blank">10-K / 10-Q Reports</a></i>
+     </div>	
+	 
+           <div>&nbsp;</div>
+        </div>
+		
+		<div class="col-md-12 shadow p-4 mb-4" style="background-color:pink">
+	      <div><p class="text-justify">   <b>NOTE :</b> Lyft is another example of a  hyper-growth company disrupting the transportation sector. In 2016
+		  its revenues were under $350 million, in 2018 its revenues were over $2.5 billion. Company is yet to turn profit and is mostly making loss.
+		  </div>
+		  </div>
+       <div class="col-md-12">
+      <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+      <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>-->
+              <div id="tv-medium-widget18"></div>
+    
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget18",
+  "symbols": [
+    [
+      "Stock",
+      "V"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->
+   </div>	
+          <div> </div>
+		 <table align="center">
+            <tr>
+	    		<th>FACTOR</th>
+		    	<th>SCORE</th>
+			</tr>
+			<tr>
+			  <td>Will there be demand for the business' products / services 10 years down the line?.</td>
+			  <td style ="text-align: center">8</td>
+			</tr> 
+			<tr>
+			  <td> What is the moat of the business?, larger the moat tougher it is for a competitor to capture market share.</td> 
+			  <td style ="text-align: center">7</td>
+			</tr> 
+			<tr>
+			  <td> How is the Business Economics? Look at ROIC (Return on Capital Invested), Leverage, margins. </td>
+			  <td style ="text-align: center">8</td>
+			</tr> 
+        </table>
+		  <div>&nbsp;</div>		
+         <h5 align="center"> Quick val : $95 / share , $165 billion.         </h5>  
+	 <div style = "text-align: center"><i><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001403161&type=10-&dateb=&owner=exclude&count=40"target=_blank">10-K / 10-Q Reports</a></i>
+     </div>		 
+           <div>&nbsp;</div>
+        </div>
+       <div class="col-md-12">
+      <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+      <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>-->
+              <div id="tv-medium-widget19"></div>
+    
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget19",
+  "symbols": [
+    [
+      "Stock",
+      "CHWY"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->
+   </div>	
+         <div> </div>
+		 <table align="center">
+            <tr>
+	    		<th>FACTOR</th>
+		    	<th>SCORE</th>
+			</tr>
+			<tr>
+			  <td>Will there be demand for the business' products / services 10 years down the line?.</td>
+			  <td style ="text-align: center">8</td>
+			</tr> 
+			<tr>
+			  <td> What is the moat of the business?, larger the moat tougher it is for a competitor to capture market share.</td> 
+			  <td style ="text-align: center">5</td>
+			</tr> 
+			<tr>
+			  <td> How is the Business Economics? Look at ROIC (Return on Capital Invested), Leverage, margins. </td>
+			  <td style ="text-align: center">5</td>
+			</tr> 
+        </table>
+		  <div>&nbsp;</div>		
+         <h5 align="center"> Quick val : $20 / share , $8 billion.         </h5>  
+	 <div style = "text-align: center"><i><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001766502&type=10-&dateb=&owner=exclude&count=40"target=_blank">10-K / 10-Q Reports</a></i>
+     </div>		 
+           <div>&nbsp;</div>
+        </div>
+		
+		<div class="col-md-12 shadow p-4 mb-4" style="background-color:pink">
+	      <div><p class="text-justify">   <b>NOTE :</b> Chewy is another example of a  hyper-growth company in Pet industry,  In 2011
+		  its revenues were under $2 million, in 2018 its revenues were over $3.5 billion. Company is yet to turn profit and is mostly making loss.
+		  </div>
+		  </div>
+
+		       <div class="col-md-12">
+      <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+      <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>-->
+              <div id="tv-medium-widget20"></div>
+    
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget20",
+  "symbols": [
+    [
+      "Stock",
+      "SQ"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->
+   </div>	
+          <div> </div>
+		 <table align="center">
+            <tr>
+	    		<th>FACTOR</th>
+		    	<th>SCORE</th>
+			</tr>
+			<tr>
+			  <td>Will there be demand for the business' products / services 10 years down the line?.</td>
+			  <td style ="text-align: center">8</td>
+			</tr> 
+			<tr>
+			  <td> What is the moat of the business?, larger the moat tougher it is for a competitor to capture market share.</td> 
+			  <td style ="text-align: center">7</td>
+			</tr> 
+			<tr>
+			  <td> How is the Business Economics? Look at ROIC (Return on Capital Invested), Leverage, margins. </td>
+			  <td style ="text-align: center">7</td>
+			</tr> 
+        </table>
+		  <div>&nbsp;</div>		
+         <h5 align="center"> Quick val : $17 / share , $7.5 billion.         </h5>  
+	 <div style = "text-align: center"><i><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001512673&type=10-&dateb=&owner=exclude&count=40"target=_blank">10-K / 10-Q Reports</a></i>
+     </div>		 
+           <div>&nbsp;</div>
+       <div class="col-md-12 shadow p-4 mb-4" style="background-color:pink">
+	      <div><p class="text-justify">   <b>How does Square make money?</b>  
+          <p class="text-justify">
+		   Sellers can onboard to Square in minutes and, once onboarded, accept payments in person via swipe, dip, or tap of a card or online via a stored card on file or payment entry form. Sellers pay a transparent transaction fee which includes next-day settlements (or instant settlement for an additional fee via Instant Deposit), payment dispute management, data security, and PCI compliance.
+		   Its Revenues for 2018,2017,2016 were $3.2 billions, $2.21 billions and $1.70 billions respectively. Its Operating cash flow for these
+		   three years were $295 millions, $127 millions and $23 millions respectively.
+		  </div>
+		  </div>
+   
+   
+      </div>
+    </div>
+   <!-- /End of Content section -->
+</div>   
+</body>
+</html>
