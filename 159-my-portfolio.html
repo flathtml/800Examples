@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>My Portfolio</title>
+<title>Quick Valuation of stocks</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
  <!//http://www.w3schools.com/w3css/4/w3.css !>
       <link rel="stylesheet" href="references/w3.css"> 
@@ -23,7 +23,7 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      
 	  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-<style>
+      <style>
 .center1 {
     text-align: center;
     font-style: italic;
@@ -35,8 +35,41 @@
 .center2 {
     text-align: center;
    }
- 
+
+.footer {
+    text-align: center;
+    font-size: small; 
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    background-color: #E7E4E3;
+}
+
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+td:hover {background-color:#f5f5f5;}
+
 </style>
+
+ 
+
 <body class="w3-container">
  <div class="row">
       <div class="col-md-12">
@@ -50,29 +83,33 @@
             <div class="col-md-8">
     <div>&nbsp;</div>
    <div class="col-md-12 shadow p-4 mb-4 border border-primary" style="background-color:#E7E4E3">
-      <div class="center1"  > 
+      <div class="center1"> 
            
      <h2>My Portfolio</h2>
-       <div><h5 style="text-align:center">OVERALL INVESTMENT : $7,141</h5>
-   <h5 style="text-align:center">NET INVESTMENT VALUE : $7,789<i>(Profit of $648, 9% gain in 5 months)</i></h5>
- 
-    
-   </div>
+	  
           
   </div> 
    </div>	
-   
-     
+   <div>&nbsp;</div>
+    
+    <div class="col-md-12 shadow p-2 mb-4 border border-primary" style="background-color:pink">
+      <div class="center2"> 
+	 
+        <b>Important Links :</b>&nbsp;<a href="https://www.sec.gov/edgar/searchedgar/companysearch.html"target=_blank>SEC 10K / 10Q Reports</a>  
+      </div>
+   </div>
   
     
     <div>&nbsp;</div>
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
    <!-- TradingView Widget BEGIN src="https://s3.tradingview.com/tv.js"-->
- 
+  
+  <div><a name="AMZN"></a></div> 
   <div id="tv-medium-widget1"></div>
+   
+  
    <script type="text/javascript" src="152-stock-chart1.js"></script>
    
-     
   <script type="text/javascript">
   new TradingView.MediumWidget(
   {
@@ -80,7 +117,7 @@
   "symbols": [
     [
       "Stock",
-      "AAPL"
+      "AMZN"
     ]
   ],
   "greyText": "Quotes by",
@@ -97,14 +134,15 @@
  
 <!-- TradingView Widget END -->
    </div>	
-   
-   <div><h5 style="text-align:center">Price Paid : $164.40/share</h5>
-   <h5 style="text-align:center">Selling Price: $187.01/share : 3/27/2019 <i>(14% gain in 4 months)</i></h5>
- 
-   <h5 style="text-align:center"><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000320193&type=10-&dateb=&owner=exclude&count=40"target=_blank">10-K/10-Q reports</a>
-   </h5>
+   <div>
+      <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#FCFC04"> 
+        <b>AMZN Valuation</b> $2,016 / Share , $1,000 billions 
+		<br><i>PURCHASE PRICE :  $1,767/share.</i>
+      </div>
    </div>
-  
+   <div>&nbsp;</div>
+   
+
   <div class="col-md-12 shadow p-4 mb-4 border border-primary">
   <!-- TradingView Widget BEGIN -->
  
@@ -117,7 +155,7 @@
   "symbols": [
     [
       "STOCK",
-      "AMG"
+      "HD"
     ]
   ],
   "greyText": "Quotes by",
@@ -134,12 +172,15 @@
  
 <!-- TradingView Widget END -->    
    </div>	
+    <div>
+      <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#FCFC04"> 
+        <b>HD Valuation</b> $232 / Share , $253 billions 
+		<br><i>PURCHASE PRICE :  $191/share.</i>
+      </div>
+   </div>
    
-   <div><h5 style="text-align:center">Price Paid : $115/share</h5></div>
-   <h5 style="text-align:center">Selling Price: $102.18/share : 3/27/2019 <i>(11% Loss in 4 months)</i></h5>
- 
-   <h5 style="text-align:center"><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001004434&type=10-&dateb=&owner=exclude&count=40"target=_blank">10-K/10-Q reports</a>
-   </h5>
+   <div>&nbsp;</div>
+  
   <div class="col-md-12 shadow p-4 mb-4 border border-primary">
   <!-- TradingView Widget BEGIN -->
  
@@ -148,39 +189,6 @@
   new TradingView.MediumWidget(
   {
   "container_id": "tv-medium-widget3",
-  "symbols": [
-    [
-      "STOCK",
-      "BWA"
-    ]
-  ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
-  "width": "100%",
-  "height": "300px",
-  "locale": "en"
-}
-  );
-  </script>
- 
-<!-- TradingView Widget END -->    
-   </div>	
-   
-   <div><h5 style="text-align:center">Price Paid : $39/share </h5></div>
-   <h5 style="text-align:center">Selling Price: $41.58/share : 2/22/2019 <i>(4% gain in 3 months)</i></h5>
-  <h5 style="text-align:center"><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000908255&type=10-&dateb=&owner=exclude&count=40"target=_blank">10-K/10-Q reports</a>
-   </h5>
-  <div class="col-md-12 shadow p-4 mb-4 border border-primary">
-  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget4"></div>
-     <script type="text/javascript">
-  new TradingView.MediumWidget(
-  {
-  "container_id": "tv-medium-widget4",
   "symbols": [
     [
       "STOCK",
@@ -201,12 +209,52 @@
  
 <!-- TradingView Widget END -->    
    </div>	
+    <div>
+      <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#FCFC04"> 
+        <b>DLTR Valuation</b> $114 / Share , $27 billions 
+		<br><i>PURCHASE PRICE :  $93/share.</i>
+      </div>
+   </div>
    
-   <div><h5 style="text-align:center">Price Paid : $85/share</h5></div>
-   <h5 style="text-align:center">Selling Price: $104.1/share : 3/27/2019 <i>(21% gain in 5 months)</i></h5>
+   <div>&nbsp;</div>
+  
+  <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+  <!-- TradingView Widget BEGIN -->
  
-   <h5 style="text-align:center"><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000935703&type=10-&dateb=&owner=exclude&count=40"target=_blank">10-K/10-Q reports</a>
-   </h5>
+  <div id="tv-medium-widget4"></div>
+     <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget4",
+  "symbols": [
+    [
+      "STOCK",
+      "DKS"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->    
+   </div>	
+    <div>
+      <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#FCFC04"> 
+        <b>DKS Valuation</b> $81 / Share , $7 billions 
+		<br><i>PURCHASE PRICE :  $47/share.</i>
+      </div>
+   </div>
+   
+   <div>&nbsp;</div>
+  
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
   <!-- TradingView Widget BEGIN -->
  
@@ -218,7 +266,7 @@
   "symbols": [
     [
       "STOCK",
-      "MHK"
+      "KSS"
     ]
   ],
   "greyText": "Quotes by",
@@ -235,12 +283,15 @@
  
 <!-- TradingView Widget END -->    
    </div>	
+    <div>
+      <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#FCFC04"> 
+        <b>KSS Valuation</b> $103 / Share , $16 billions 
+		<br><i>PURCHASE PRICE :  $93/share.</i>
+      </div>
+   </div>
    
-   <div><h5 style="text-align:center">Price Paid : $118/share</h5></div>
-   <h5 style="text-align:center">Selling Price: $126.73/share : 3/27/2019 <i>(6.71% gain in 5 months)</i></h5>
- 
-   <h5 style="text-align:center"><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000851968&type=10-&dateb=&owner=exclude&count=40"target=_blank">10-K/10-Q reports</a>
-   </h5>
+   <div>&nbsp;</div>
+   
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
   <!-- TradingView Widget BEGIN -->
  
@@ -252,7 +303,7 @@
   "symbols": [
     [
       "STOCK",
-      "SYF"
+      "ULTA"
     ]
   ],
   "greyText": "Quotes by",
@@ -269,12 +320,196 @@
  
 <!-- TradingView Widget END -->    
    </div>	
-   
-   <div><h5 style="text-align:center">Price Paid : $26/share </h5>
-   <h5 style="text-align:center">Selling Price: $30.92/share : 2/12/2019 <i>(20% gain in 3 months)</i></h5>
+    <div>
+      <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#FCFC04"> 
+        <b>ULTA Valuation</b> $316 / Share , $18 billions 
+		<br><i>PURCHASE PRICE :  $250 /share.</i>
+      </div>
    </div>
-   <h5 style="text-align:center"><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001601712&type=10-&dateb=&owner=exclude&count=40"target=_blank">10-K/10-Q reports</a>
-   </h5>
+   <div>&nbsp;</div>
+   
+   <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+  <!-- TradingView Widget BEGIN -->
+ 
+  <div id="tv-medium-widget7"></div>
+     <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget7",
+  "symbols": [
+    [
+      "STOCK",
+      "BA"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->    
+   </div>	
+    <div>
+      <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#FCFC04"> 
+        <b>BA Valuation</b> $200 / Share , $356 billions 
+		<br><i>PURCHASE PRICE :  $127 /share.</i>
+      </div>
+   </div>
+   
+   <div>&nbsp;</div>
+<div class="col-md-12 shadow p-4 mb-4 border border-primary">
+  <!-- TradingView Widget BEGIN -->
+ 
+  <div id="tv-medium-widget8"></div>
+     <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget8",
+  "symbols": [
+    [
+      "STOCK",
+      "EXPE"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->    
+   </div>	
+    <div>
+      <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#FCFC04"> 
+        <b>EXPE Valuation</b> $132 / Share , $20 billions 
+		<br><i>PURCHASE PRICE :  $108 /share.</i>
+      </div>
+   </div>
+   
+   <div>&nbsp;</div>
+   
+   <div class="col-md-12 shadow p-4 mb-4 border border-primary">
+  <!-- TradingView Widget BEGIN -->
+ 
+  <div id="tv-medium-widget9"></div>
+     <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget9",
+  "symbols": [
+    [
+      "STOCK",
+      "LH"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->    
+   </div>	
+    <div>
+     <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#FCFC04"> 
+        <b>EXPE Valuation</b> $206 / Share , $20 billions 
+		<br><i>PURCHASE PRICE :  $136 /share.</i>
+      </div>
+   </div>
+   <div>&nbsp;</div>
+   
+<div class="col-md-12 shadow p-4 mb-4 border border-primary">
+  <!-- TradingView Widget BEGIN -->
+ 
+  <div id="tv-medium-widget10"></div>
+     <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget10",
+  "symbols": [
+    [
+      "STOCK",
+      "OXY"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->    
+   </div>	
+    <div>
+      <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#FCFC04"> 
+        <b>OXY Valuation</b> $20 / Share , $20 billions  
+		<br><i>PURCHASE PRICE :  $12 /share.</i>
+		<br><i>Based on Carl Icahn's 10% stake as of March-11-2020</i>
+      </div>
+   </div>
+   <div>&nbsp;</div>
+<div class="col-md-12 shadow p-4 mb-4 border border-primary">
+  <!-- TradingView Widget BEGIN -->
+ 
+  <div id="tv-medium-widget11"></div>
+     <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget11",
+  "symbols": [
+    [
+      "STOCK",
+      "HIG"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "rgba(216, 216, 216, 1)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "underLineColor": "rgba(255, 217, 102, 1)",
+  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "width": "100%",
+  "height": "300px",
+  "locale": "en"
+}
+  );
+  </script>
+ 
+<!-- TradingView Widget END -->    
+   </div>	
+    <div>
+      <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#FCFC04"> 
+        <b>HIG Valuation</b> $30 / Share , $15 billions  
+		<br><i>PURCHASE PRICE :  $23 /share.</i>
+      </div>
+   </div>
+   <div>&nbsp;</div>
+
+ 
    
 </div>
    </div>
@@ -282,4 +517,3 @@
 </div>   
 </body>
 </html>
-		
