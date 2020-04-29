@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+  <!--Example#185 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="185-form-field-dynamic-change.html"&gt;185-form-field-dynamic-change.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / Javascript </CATEGORY>
+	<DESC>Dynamically Change Form field to Read only and vice-versa</DESC>
+ </EXAMPLE>
   <!--Example#184 -->
  <EXAMPLE>
     <LINK>&lt;a href="184-commodities.html"&gt;184-commodities.html&lt;a&gt;</LINK>
