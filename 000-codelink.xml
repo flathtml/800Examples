@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#186 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="186-Add-Reactjs.html"&gt;186-Add-Reactjs.html&lt;a&gt;</LINK>
+    <CATEGORY>Javascript /Reactjs</CATEGORY>
+	<DESC>Shows how to add Reactjs to a website</DESC>
+ </EXAMPLE>
   <!--Example#185 -->
  <EXAMPLE>
     <LINK>&lt;a href="185-form-field-dynamic-change.html"&gt;185-form-field-dynamic-change.html&lt;a&gt;</LINK>
