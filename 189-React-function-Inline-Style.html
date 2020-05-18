@@ -375,7 +375,11 @@ based on the time of the day and also does In-Line Styling. -->
 <script type="text/babel">
  
   function App() {
-  const date = new Date(2018, 6, 31, 15)
+  
+  //following code can be used to pass a particular date value.
+  //const date = new Date(2018, 6, 31, 18)
+  
+  const date = new Date()
   const hours = date.getHours()
   let timeOfDay
   const styles = {
