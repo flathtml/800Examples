@@ -374,21 +374,28 @@ based on the time of the day and also does In-Line Styling. -->
 
 <script type="text/babel">
  
- function App() {
-  const date = new Date()
+  function App() {
+  const date = new Date(2018, 6, 31, 15)
   const hours = date.getHours()
   let timeOfDay
+  const styles = {
+    fontSize: 30,
+    backgroundColor: "#6EFE76"
+  }
   
   if (hours < 12) {
     timeOfDay = "morning"
+    styles.color = "#04756F"
   } else if (hours >= 12 && hours < 17) {
     timeOfDay = "afternoon"
+    styles.color = "#8914A3"
   } else {
     timeOfDay = "night"
+    styles.color = "#D90000"
   }
   
   return (
-     <h1 align="center" style={{color: "#210202", backgroundColor: "#6EFE76"}}>Good {timeOfDay}!</h1>
+    <h1 align="center" style={styles}>Good {timeOfDay}!</h1>
   )
 }
  
