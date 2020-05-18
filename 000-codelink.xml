@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
- 
+  <!--Example#188 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="188-React-with-Bootstrap.html"&gt;188-React-with-Bootstrap.html&lt;a&gt;</LINK>
+    <CATEGORY>Javascript /Reactjs/BootStrap</CATEGORY>
+	<DESC>Reactjs with BootStrap</DESC>
+ </EXAMPLE>
  <!--Example#187 -->
  <EXAMPLE>
     <LINK>&lt;a href="187-React-Hello-world.html"&gt;187-React-Hello-world.html&lt;a&gt;</LINK>
