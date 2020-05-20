@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Quick Valuation of stocks</title>
+<title>Roulette Wheel Game</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
  <!//http://www.w3schools.com/w3css/4/w3.css !>
       <link rel="stylesheet" href="references/w3.css"> 
@@ -64,6 +64,7 @@ td {
     border-bottom: 1px solid #ddd;
 }
 
+ 
 td:hover {background-color:#f5f5f5;}
 
 </style>
@@ -83,15 +84,21 @@ td:hover {background-color:#f5f5f5;}
             <div class="col-md-8">
     <div>&nbsp;</div>
    <div class="col-md-12 shadow p-4 mb-4 border border-primary" style="background-color:#E7E4E3">
-      <div class="center1"> 
+      <div> 
 
-  <h1 align="center">Roulette Wheel</h1>
+  <h1>Roulette Wheel</h1>
  
    
-     <h3><input  type="button" value="SPIN" style="float:center; background-color:yellow" id='spin' /></h3>
+     <h3><input  type="button" value="SPIN" style="background-color:yellow" id='spin' /></h3>
  
-<canvas id="canvas" width="500" height="500"></canvas>
+<canvas id="canvas"></canvas>
  <script>
+canvas = document.getElementById('canvas');
+ 
+    // Set canvas dimensions
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
  var options = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19"];
 
 var startAngle = 0;
@@ -232,5 +239,3 @@ drawRouletteWheel();
 </div>   
 </body>
 </html>
-
-		

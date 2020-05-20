@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#196 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="196-React-State-Ex2.html"&gt;196-React-State-Ex2.html&lt;a&gt;</LINK>
+    <CATEGORY>Javascript /Reactjs/</CATEGORY>
+	<DESC>Reactjs with State Example#2 - Boolean Conditional Stmt</DESC>
+ </EXAMPLE>
   <!--Example#195 -->
  <EXAMPLE>
     <LINK>&lt;a href="195-Roulette-wheel.html"&gt;195-Roulette-wheel.html&lt;a&gt;</LINK>
     <CATEGORY>Javascript /Game/</CATEGORY>
-	<DESC>Reactjs Child Component</DESC>
+	<DESC>Roulette Wheel Game</DESC>
  </EXAMPLE>
  <!--Example#194 -->
  <EXAMPLE>
