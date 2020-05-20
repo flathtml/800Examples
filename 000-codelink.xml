@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+  <!--Example#195 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="195-Roulette-wheel.html"&gt;195-Roulette-wheel.html&lt;a&gt;</LINK>
+    <CATEGORY>Javascript /Game/</CATEGORY>
+	<DESC>Reactjs Child Component</DESC>
+ </EXAMPLE>
  <!--Example#194 -->
  <EXAMPLE>
     <LINK>&lt;a href="194-React-Child-Component.html"&gt;194-React-Child-Component.html&lt;a&gt;</LINK>
