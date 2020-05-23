@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#202 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="202-JavaScript-class-inheritance.html"&gt;202-JavaScript-class-inheritance.html&lt;a&gt;</LINK>
+    <CATEGORY>Javascript</CATEGORY>
+	<DESC>JavaScript - Class Extends Example</DESC>
+ </EXAMPLE>
+ <!--Example#201 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="201-PHP-and-React.php"&gt;201-PHP-and-React.php&lt;a&gt;</LINK>
+    <CATEGORY>PHP /Reactjs/</CATEGORY>
+	<DESC>PHP with Reactjs</DESC>
+ </EXAMPLE>
  <!--Example#200 -->
  <EXAMPLE>
     <LINK>&lt;a href="200-React-Hook-Ex1.html"&gt;200-React-Hook-Ex1.html&lt;a&gt;</LINK>
