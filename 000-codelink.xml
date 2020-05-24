@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#203 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="203-javascript-imports.html"&gt;203-javascript-imports.html&lt;a&gt;</LINK>
+    <CATEGORY>Javascript</CATEGORY>
+	<DESC>JavaScript - Export / Import Function</DESC>
+ </EXAMPLE>
  <!--Example#202 -->
  <EXAMPLE>
     <LINK>&lt;a href="202-JavaScript-class-inheritance.html"&gt;202-JavaScript-class-inheritance.html&lt;a&gt;</LINK>
