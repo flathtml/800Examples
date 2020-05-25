@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+  <!--Example#206 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="206-Random-Name-Generator-code.html"&gt;206-Random-Name-Generator-code.html&lt;a&gt;</LINK>
+    <CATEGORY>Javascript/JQuery/Fun</CATEGORY>
+	<DESC>Random Name Generator with code</DESC>
+ </EXAMPLE>
+ <!--Example#205 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="205-Random-Name-Generator.html"&gt;205-Random-Name-Generator.html&lt;a&gt;</LINK>
+    <CATEGORY>Javascript/JQuery/Fun</CATEGORY>
+	<DESC>Random Name Generator</DESC>
+ </EXAMPLE>
  <!--Example#204 -->
  <EXAMPLE>
     <LINK>&lt;a href="204-React-state-ComponentDidUpdate.html"&gt;204-React-state-ComponentDidUpdate.html&lt;a&gt;</LINK>
