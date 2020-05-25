@@ -7,36 +7,35 @@
         </script> 
 	<title>Random Name Generator</title>
     <style>
-    body
-{
-    padding:10px;
-    font-size:12pt;
-    font-family:calibri;
-}
-input 
-{
-   font-size:12pt;
-   font-family:calibri; 
+.center1 {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    color: #000000;
+  
 }
 
-div
-{
-    border : 2px solid red;
-    padding: 10px;
-    width: 250px;
-    color: Green;
-    font-size: 16pt;
-}
-
-    </style>
+.center2 {
+    text-align: center;
+   }
+ 
+</style>
  </head>
- <body>
+ <body class="w3-container">
+ <div class="container">
+ <div>&nbsp;</div>
+ <div class="col-md-12 shadow p-4 mb-4 border border-primary" style="background-color:lightgreen">
+ <div>&nbsp;</div>
+ <div align="center">
  <h1>Random Name Generator : </h1><h3><i>Picks Names from the list of 100 most popular names in USA</i></h3>
  <button>Click to generate new name</button>
   
  <p><b>BOY : </b>&nbsp;<boy></boy>
  <p><b>GIRL : </b>&nbsp;<girl></girl>
-
+   <div>&nbsp;</div>
+ </div>
+ </div>
+  <div>&nbsp;</div>
  <script>
  $('button').click(function() {
     
