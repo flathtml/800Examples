@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ 
+ <script src = 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> 
+        </script> 
+	<title>Random Name Generator</title>
+    <style>
+.center1 {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    color: #000000;
+  
+}
+
+.center2 {
+    text-align: center;
+   }
+ 
+</style>
+ </head>
+ <body class="w3-container">
+ <div class="container">
+ <div>&nbsp;</div>
+ <div class="col-md-12 shadow p-4 mb-4 border border-primary" style="background-color:lightgreen">
+ <div>&nbsp;</div>
+ <div align="center">
+ <h1>Random Name Generator : </h1><h3><i>Picks Names from the list of 100 most popular names in USA</i></h3>
+ <button>Click to generate new name</button>
+  
+ <p><b>BOY : </b>&nbsp;<boy></boy>
+ <p><b>GIRL : </b>&nbsp;<girl></girl>
+   <div>&nbsp;</div>
+ </div>
+ </div>
+  <div>&nbsp;</div>
+ <script>
+ $('button').click(function() {
+    
+    $('boy').text(randomEl(boys));
+    $('girl').text(randomGl(girls));
+    
+});
+
+function randomEl(list) {
+    var i = Math.floor(Math.random() * list.length);
+    return list[i];
+}
+
+function randomGl(list) {
+    var g = Math.floor(Math.random() * list.length);
+    
+    return list[g+1];
+}
+
+function selectElementContents(el) {
+    var range = document.createRange();
+    range.selectNodeContents(el);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+}
+
+ 
+var boys = ["	Liam	",
+"	Noah	",
+"	William	",
+"	James	",
+"	Oliver	",
+"	Benjamin",
+"	Elijah	",
+"	Lucas	",
+"	Mason	",
+"	Logan	",
+"	Alexander",
+"	Ethan	",
+"	Jacob	",
+"	Michael	",
+"	Daniel	",
+"	Henry	",
+"	Jackson	",
+"	Sebastian",
+"	Aiden	",
+"	Matthew	",
+"	Samuel	",
+"	David	",
+"	Joseph	",
+"	Carter	",
+"	Owen	",
+"	Wyatt	",
+"	John	",
+"	Jack	",
+"	Luke	",
+"	Jayden	",
+"	Dylan	",
+"	Grayson	",
+"	Levi	",
+"	Isaac	",
+"	Gabriel	",
+"	Julian	",
+"	Mateo	",
+"	Anthony	",
+"	Jaxon	",
+"	Lincoln	",
+"	Joshua	",
+"	Christopher",
+"	Andrew	",
+"	Theodore",
+"	Caleb	",
+"	Ryan	",
+"	Asher	",
+"	Nathan	",
+"	Thomas	",
+"	Leo	",
+"	Isaiah	",
+"	Charles	",
+"	Josiah	",
+"	Hudson	",
+"	Christian",
+"	Hunter	",
+"	Connor	",
+"	Eli	",
+"	Ezra	",
+"	Aaron	",
+"	Landon	",
+"	Adrian	",
+"	Jonathan",
+"	Nolan	",
+"	Jeremiah",
+"	Easton	",
+"	Elias	",
+"	Colton	",
+"	Cameron	",
+"	Carson	",
+"	Robert	",
+"	Angel	",
+"	Maverick",
+"	Nicholas",
+"	Dominic	",
+"	Jaxson	",
+"	Greyson	",
+"	Adam	",
+"	Ian	",
+"	Austin	",
+"	Santiago",
+"	Jordan	",
+"	Cooper	",
+"	Brayden	",
+"	Roman	",
+"	Evan	",
+"	Ezekiel	",
+"	Xavier	",
+"	Jose	",
+"	Jace	",
+"	Jameson	",
+"	Leonardo",
+"	Bryson	",
+"	Axel	",
+"	Everett	",
+"	Parker	",
+"	Kayden	",
+"	Miles	",
+"	Sawyer	",
+"	Jason	"];
+
+
+var girls = ["	Emma	",
+"	Olivia	",
+"	Ava	",
+"	Isabella	",
+"	Sophia	",
+"	Charlotte ",
+"	Mia	",
+"	Amelia	",
+"	Harper	",
+"	Evelyn	",
+"	Abigail	",
+"	Emily	",
+"	Elizabeth",
+"	Mila	",
+"	Ella	",
+"	Avery	",
+"	Sofia	",
+"	Camila	",
+"	Aria	",
+"	Scarlett",
+"	Victoria",
+"	Madison	",
+"	Luna	",
+"	Grace	",
+"	Chloe	",
+"	Penelope",
+"	Layla	",
+"	Riley	",
+"	Zoey	",
+"	Nora	",
+"	Lily	",
+"	Eleanor	",
+"	Hannah	",
+"	Lillian	",
+"	Addison	",
+"	Aubrey	",
+"	Ellie	",
+"	Stella	",
+"	Natalie	",
+"	Zoe	",
+"	Leah	",
+"	Hazel	",
+"	Violet	",
+"	Aurora	",
+"	Savannah",
+"	Audrey	",
+"	Brooklyn",
+"	Bella	",
+"	Claire	",
+"	Skylar	",
+"	Lucy	",
+"	Paisley	",
+"	Everly	",
+"	Anna	",
+"	Caroline",
+"	Nova	",
+"	Genesis	",
+"	Emilia	",
+"	Kennedy	",
+"	Samantha",
+"	Maya	",
+"	Willow	",
+"	Kinsley	",
+"	Naomi	",
+"	Aaliyah	",
+"	Elena	",
+"	Sarah	",
+"	Ariana	",
+"	Allison	",
+"	Gabriella",
+"	Alice	",
+"	Madelyn	",
+"	Cora	",
+"	Ruby	",
+"	Eva	",
+"	Serenity",
+"	Autumn	",
+"	Adeline	",
+"	Hailey	",
+"	Gianna	",
+"	Valentina",
+"	Isla	",
+"	Eliana	",
+"	Quinn	",
+"	Nevaeh	",
+"	Ivy	",
+"	Sadie	",
+"	Piper	",
+"	Lydia	",
+"	Alexa	",
+"	Josephine",
+"	Emery	",
+"	Julia	",
+"	Delilah	",
+"	Arianna	",
+"	Vivian	",
+"	Kaylee	",
+"	Sophie	",
+"	Brielle	",
+"	Madeline"];
+
+$('button').click();
+</script>
+ 
+    </body>  
+</html>       
+		
