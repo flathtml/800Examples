@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#204 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="204-React-state-ComponentDidUpdate.html"&gt;204-React-state-ComponentDidUpdate.html&lt;a&gt;</LINK>
+    <CATEGORY>Javascript/Reactjs</CATEGORY>
+	<DESC>Reactjs - State - ComponentDidUpdate</DESC>
+ </EXAMPLE>
  <!--Example#203 -->
  <EXAMPLE>
     <LINK>&lt;a href="203-javascript-imports.html"&gt;203-javascript-imports.html&lt;a&gt;</LINK>

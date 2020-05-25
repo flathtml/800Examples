@@ -1,0 +1,649 @@
+ <!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <title>Tryit Software Editor</title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!//http://www.w3schools.com/w3css/4/w3.css !>
+      <link rel="stylesheet" href="references/w3.css"> 
+      
+	  <!//http://www.w3schools.com/lib/codemirror.css !>
+      <link rel="stylesheet" href="references/codemirror.css">
+	  
+      <!//http://www.w3schools.com/lib/codemirror.js !>
+	  <script src="references/codemirror.js"></script>
+	  
+	  <!//https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css !>
+      <link rel="stylesheet" href="references/bootstrap.min.css">
+   
+      <!//https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js !>
+	  <script src="references/bootstrap.min.js"></script>
+	  
+	  <!//https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js !>
+	  <script src="references/jquery.min.js"></script>
+	 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Playball|Righteous" rel="stylesheet">
+	  
+      <Style>
+         .navbar .navbar-nav {
+         display: inline-block;
+         float: none;
+         }
+         .navbar .navbar-collapse {
+         text-align: left;
+         }
+         .makeup1 {
+         font-weight: bold;
+         color: #000000;
+         border: 1px solid green;
+         }
+         .makeup2 {
+         border: 1px solid green;
+         }
+         .footer {
+         text-align: center;
+         }
+         .padding {
+         padding-left: 3%;
+         padding-right: 3%;
+         padding-top: 3%;
+         padding-bottom: 3%;
+         text-align: justify;
+         }
+         .top {
+         position: relative;
+         background-color: #ffffff;
+         height: 68px;
+         padding-top: 20px;
+         line-height: 50px;
+         overflow: hidden;
+         z-index: 1;
+         }
+         .w3-right {
+         float: right!important}
+         .w3-wide {
+         letter-spacing: 2px}
+         .w3schools-logo {
+         font-family: Righteous;
+         text-decoration: none;
+         line-height: 1;
+         -webkit-font-smoothing: antialiased;
+         -moz-osx-font-smoothing: grayscale;
+         font-size: 37px;
+         letter-spacing: 3px;
+         color: #555555;
+         display: block;
+         position: absolute;
+         top: 17px;
+         padding-left: 2px;
+         }
+         .w3schools-logo .dotcom {
+         color: #2196F3!important;
+         }
+         .w3schools-logo:hover {
+         color: #555555;
+         text-decoration: none;
+         }
+         @media (max-width: 992px) {
+         .top {
+         height: 100px;
+         }
+         .top .w3schools-logo {
+         position: relative;
+         top: 0;
+         width: 100%;
+         text-align: center;
+         margin: auto;
+         }
+         .toptext {
+         width: 100%;
+         text-align: center;
+         }
+         }
+         @media screen and (max-width: 600px) {
+         .top {
+         height: 68px;
+         }
+         .toptext {
+         display: none;
+         }
+         }
+         .center {
+         text-align: center;
+         font-weight: bold;
+         background-color : yellow;
+         border: 1px solid green;
+         }
+         div.ex1 {
+         width:90%;
+         margin: auto;
+         background-color : yellow;
+         border: 1px solid #73AD21;
+         }
+         div.ex2 {
+         width:90%;
+         margin: auto;
+         color : red;
+         }
+         .footer {
+         text-align: center;
+         }
+         * {
+         -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+         box-sizing: border-box;
+         }
+         body {
+         color:#000000;
+         margin:0px;
+         font-size:100%;
+         }
+         .trytopnav {
+         height:40px;
+         overflow:hidden;
+         min-width:380px;
+         position:absolute;
+         width:100%;
+         top:99px;
+         }
+         .w3-bar .w3-bar-item:hover {
+         color:#757575 !important;
+         }
+         a.w3schoolslink {
+         padding:0 !important;
+         display:inline !important;
+         }
+         a.w3schoolslink:hover,a.w3schoolslink:active {
+         text-decoration:underline !important;
+         background-color:transparent !important;
+         }
+         #dragbar{
+         position:absolute;
+         cursor: col-resize;
+         z-index:3;
+         padding:5px;
+         }
+         #shield {
+         display:none;
+         top:0;
+         left:0;
+         width:100%;
+         position:absolute;
+         height:100%;
+         z-index:4;
+         }
+         #framesize span {
+         font-family:Consolas, monospace;
+         }
+         #container {
+         background-color:#f1f1f1;
+         width:100%;
+         overflow:auto;
+         position:absolute;
+         top:120px;
+         bottom:0;
+         height:auto;
+         }
+         #textareacontainer, #iframecontainer {
+         float:left;
+         height:100%;
+         width:50%;
+         }
+         #textarea, #iframe {
+         height:100%;
+         width:100%;
+         padding-bottom:10px;
+         padding-top:1px;
+         }
+         #textarea {
+         padding-left:10px;
+         padding-right:5px;  
+         }
+         #iframe {
+         padding-left:5px;
+         padding-right:10px;  
+         }
+         #textareawrapper {
+         width:100%;
+         height:100%;
+         background-color: #ffffff;
+         position:relative;
+         box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+         }
+         #iframewrapper {
+         width:100%;
+         height:100%;
+         -webkit-overflow-scrolling: touch;
+         background-color: #ffffff;
+         box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+         }
+         #textareaCode {
+         background-color: #ffffff;
+         font-family: consolas,"courier new",monospace;
+         font-size:15px;
+         height:100%;
+         width:100%;
+         padding:8px;
+         resize: none;
+         border:none;
+         line-height:normal;    
+         }
+         .CodeMirror.cm-s-default {
+         line-height:normal;
+         padding: 4px;
+         height:100%;
+         width:100%;
+         }
+         #iframeResult, #iframeSource {
+         background-color: #ffffff;
+         height:100%;
+         width:100%;  
+         }
+         #stackV {background-color:#999999;}
+         #stackV:hover {background-color:#BBBBBB !important;}
+         #stackV.horizontal {background-color:transparent;}
+         #stackV.horizontal:hover {background-color:#BBBBBB !important;}
+         #stackH.horizontal {background-color:#999999;}
+         #stackH.horizontal:hover {background-color:#999999 !important;}
+         #textareacontainer.horizontal,#iframecontainer.horizontal{
+         height:50%;
+         float:none;
+         width:100%;
+         }
+         #textarea.horizontal{
+         height:100%;
+         padding-left:10px;
+         padding-right:10px;
+         }
+         #iframe.horizontal{
+         height:100%;
+         padding-right:10px;
+         padding-bottom:10px;
+         padding-left:10px;  
+         }
+         #container.horizontal{
+         min-height:200px;
+         margin-left:0;
+         }
+         #tryitLeaderboard {
+         overflow:hidden;
+         text-align:center;
+         margin-top:5px;
+         height:90px;
+         }
+         .w3-dropdown-content {width:350px}
+         @media screen and (max-width: 992px) {
+         .trytopnav {top:70px;}
+         #container {top:160px;}
+         }
+         @media screen and (max-width: 600px) {
+         .trytopnav {top:60px;}
+         #container {top:120px;}
+         .w3-dropdown-content {width:100%}
+         }
+         @media only screen and (max-device-width: 768px) {
+         #iframewrapper {overflow: auto;}
+         #container     {min-width:320px;}
+         .stack         {display:none;}
+         #tryhome       {display:block;}
+         }
+         @font-face {
+         font-family: 'fontawesome';
+         src:url('../lib/fonts/fontawesome.eot?14663396');
+         src:url('../lib/fonts/fontawesome.eot?14663396#iefix') format('embedded-opentype'),
+         url('../lib/fonts/fontawesome.woff?14663396') format('woff'),
+         url('../lib/fonts/fontawesome.ttf?14663396') format('truetype'),
+         url('../lib/fonts/fontawesome.svg?14663396#fontawesome') format('svg');
+         font-weight:normal;
+         font-style:normal;
+         }
+         .fa {
+         display:inline-block;
+         font:normal normal normal 14px/1 FontAwesome;
+         font-size:inherit;
+         text-rendering:auto;
+         -webkit-font-smoothing:antialiased;
+         -moz-osx-font-smoothing:grayscale;
+         transform:translate(0,0);
+         }
+         .fa-2x {
+         font-size:2em;
+         }
+         .fa-home:before {content: '\e800'; }
+         .fa-save:before {content: '\e804'; }
+         .fa-rotate:before {content: '\e813'; }
+         .fa-menu:before { content: '\f0c9'; }
+         .loader {
+         border: 6px solid #f3f3f3; /* Light grey */
+         border-top: 6px solid #3498db; /* Blue */
+         border-radius: 50%;
+         width: 60px;
+         height: 60px;
+         animation: spin 2s linear infinite;
+         }
+         #saveLoader {
+         margin:20px;
+         }
+         @keyframes spin {
+         0% { transform: rotate(0deg); }
+         100% { transform: rotate(360deg); }
+         }
+         #iframewrapper {
+         }
+         #controlbar{
+         padding-left:10px;
+         padding-right:10px;
+         }
+      </style>
+   </head>
+   <body>
+      <script src="references/header-tryit.js"></script>
+	  
+      <div id="controlbar">
+         <div class="w3-light-grey" style="border-top:1px solid #f1f1f1;overflow:auto">
+            <button class="w3-button w3-bar-item w3-blue w3-hover-white " onclick="restack(currentStack)">Change Orientation</button>
+            <button class="w3-button w3-bar-item w3-blue w3-hover-white " onclick="submitTryit(1)">Run &raquo;</button>
+			 <span class="w3-right w3-hide-small" style="padding:8px 0;display:block;float:right;"><span id="framesize"></span></span>
+         </div>
+      </div>
+      <div id="shield"></div>
+	  
+      <a href="javascript:void(0)" id="dragbar"></a>
+      <div id="container">
+         <div id="textareacontainer">
+            <div id="textarea">
+               <div id="textareawrapper">
+         <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>React State - ComponentDidUpdate</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    </script>
+  </head>
+  <body>
+ 
+
+<!-- Load our React component. -->
+<div id="root"></div>
+
+<script type="text/babel">
+ 
+  class App extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            count: 0,
+            color: 'blue'
+        }
+        this.increment = this.increment.bind(this)
+        this.decrement = this.decrement.bind(this)
+    }
+    
+    increment() {
+        this.setState(prevState => {
+            return {
+                count: prevState.count + 1
+            }
+        })
+    }
+    decrement() {
+        this.setState(prevState => {
+            return {
+                count: prevState.count - 1
+            }
+        })
+    }
+    
+    componentDidUpdate(prevProps, prevState) {
+        if(prevState.count !== this.state.count) {
+            const newColor = 'red'
+            this.setState({color: newColor})
+        }
+    }
+    
+    render() {
+        return (
+            <div>
+                <h1 style={{color: this.state.color}}>{this.state.count}</h1>
+                <button onClick={this.increment}>
+                    Increment!
+                </button>
+                <button onClick={this.decrement}>
+                    Decrement!
+                </button>
+            </div>
+        )
+    }
+}
+
+ 
+ReactDOM.render(
+  <App />,
+ 
+  document.getElementById('root')
+);
+    </script>
+
+  </body>
+</html>
+
+		
+ 		</textarea>
+               </div>
+            </div>
+         </div>
+		 
+         <div id="iframecontainer">
+            <div id="iframe">
+               <div id="iframewrapper"></div>
+            </div>
+         </div>
+      </div>
+      
+	  <script>
+         submitTryit();
+          
+          
+         function submitTryit(n) {
+           if (window.editor) {
+             window.editor.save();
+           }
+           var text = document.getElementById("textareaCode").value;
+           var ifr = document.createElement("iframe");
+           ifr.setAttribute("frameborder", "0");
+           ifr.setAttribute("id", "iframeResult");
+           ifr.setAttribute("name", "iframeResult");  
+           document.getElementById("iframewrapper").innerHTML = "";
+           document.getElementById("iframewrapper").appendChild(ifr);
+           
+            
+             var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+             ifrw.document.open();
+             ifrw.document.write(text);  
+             ifrw.document.close();
+             //23.02.2016: contentEditable is set to true, to fix text-selection (bug) in firefox.
+             //(and back to false to prevent the content from being editable)
+             //(To reproduce the error: Select text in the result window with, and without, the contentEditable statements below.)  
+             if (ifrw.document.body && !ifrw.document.body.isContentEditable) {
+               ifrw.document.body.contentEditable = true;
+               ifrw.document.body.contentEditable = false;
+             
+           }
+         }
+         
+         var currentStack=true;
+         if ((window.screen.availWidth <= 768 && window.innerHeight > window.innerWidth) || "" == " horizontal") {restack(true);}
+         function restack(horizontal) {
+             var tc, ic, t, i, c, f, sv, sh, d, height, flt, width;
+             tc = document.getElementById("textareacontainer");
+             ic = document.getElementById("iframecontainer");
+             t = document.getElementById("textarea");
+             i = document.getElementById("iframe");
+             c = document.getElementById("container");    
+             sv = document.getElementById("stackV");
+             sh = document.getElementById("stackH");
+             tc.className = tc.className.replace("horizontal", "");
+             ic.className = ic.className.replace("horizontal", "");        
+             t.className = t.className.replace("horizontal", "");        
+             i.className = i.className.replace("horizontal", "");        
+             c.className = c.className.replace("horizontal", "");                        
+             if (sv) {sv.className = sv.className.replace("horizontal", "")};
+             if (sv) {sh.className = sh.className.replace("horizontal", "")};
+             stack = "";
+             if (horizontal) {
+                 tc.className = tc.className + " horizontal";
+                 ic.className = ic.className + " horizontal";        
+                 t.className = t.className + " horizontal";        
+                 i.className = i.className + " horizontal";                
+                 c.className = c.className + " horizontal";                
+                 if (sv) {sv.className = sv.className + " horizontal"};
+                 if (sv) {sh.className = sh.className + " horizontal"};
+                 stack = " horizontal";
+                 document.getElementById("textareacontainer").style.height = "50%";
+                 document.getElementById("iframecontainer").style.height = "50%";
+                 document.getElementById("textareacontainer").style.width = "100%";
+                 document.getElementById("iframecontainer").style.width = "100%";
+                 currentStack=false;
+             } else {
+                 document.getElementById("textareacontainer").style.height = "100%";
+                 document.getElementById("iframecontainer").style.height = "100%";
+                 document.getElementById("textareacontainer").style.width = "50%";
+                 document.getElementById("iframecontainer").style.width = "50%";
+                 currentStack=true;        
+             }
+             fixDragBtn();
+             showFrameSize();
+         }
+		 
+         function showFrameSize() {
+           var t;
+           var width, height;
+           width = Number(w3_getStyleValue(document.getElementById("iframeResult"), "width").replace("px", "")).toFixed();
+           height = Number(w3_getStyleValue(document.getElementById("iframeResult"), "height").replace("px", "")).toFixed();
+           document.getElementById("framesize").innerHTML = "Result Size: <span>" + width + " x " + height + "</span>";
+         }
+         
+         var dragging = false;
+         var stack;
+         
+         function fixDragBtn() {
+           var textareawidth, leftpadding, dragleft, containertop, buttonwidth
+           var containertop = Number(w3_getStyleValue(document.getElementById("container"), "top").replace("px", ""));
+           if (stack != " horizontal") {
+             document.getElementById("dragbar").style.width = "5px";    
+             textareasize = Number(w3_getStyleValue(document.getElementById("textareawrapper"), "width").replace("px", ""));
+             leftpadding = Number(w3_getStyleValue(document.getElementById("textarea"), "padding-left").replace("px", ""));
+             buttonwidth = Number(w3_getStyleValue(document.getElementById("dragbar"), "width").replace("px", ""));
+             textareaheight = w3_getStyleValue(document.getElementById("textareawrapper"), "height");
+             dragleft = textareasize + leftpadding + (leftpadding / 2) - (buttonwidth / 2);
+             document.getElementById("dragbar").style.top = containertop + "px";
+             document.getElementById("dragbar").style.left = dragleft + "px";
+             document.getElementById("dragbar").style.height = textareaheight;
+             document.getElementById("dragbar").style.cursor = "col-resize";
+             
+           } else {
+             document.getElementById("dragbar").style.height = "5px";
+             if (window.getComputedStyle) {
+                 textareawidth = window.getComputedStyle(document.getElementById("textareawrapper"),null).getPropertyValue("height");
+                 textareaheight = window.getComputedStyle(document.getElementById("textareawrapper"),null).getPropertyValue("width");
+                 leftpadding = window.getComputedStyle(document.getElementById("textarea"),null).getPropertyValue("padding-top");
+                 buttonwidth = window.getComputedStyle(document.getElementById("dragbar"),null).getPropertyValue("height");
+             } else {
+                 dragleft = document.getElementById("textareawrapper").currentStyle["width"];
+             }
+             textareawidth = Number(textareawidth.replace("px", ""));
+             leftpadding = Number(leftpadding .replace("px", ""));
+             buttonwidth = Number(buttonwidth .replace("px", ""));
+             dragleft = containertop + textareawidth + leftpadding + (leftpadding / 2);
+             document.getElementById("dragbar").style.top = dragleft + "px";
+             document.getElementById("dragbar").style.left = "5px";
+             document.getElementById("dragbar").style.width = textareaheight;
+             document.getElementById("dragbar").style.cursor = "row-resize";        
+           }
+         }
+         
+         function dragstart(e) {
+           e.preventDefault();
+           dragging = true;
+           var main = document.getElementById("iframecontainer");
+         }
+         
+         function dragmove(e) {
+           if (dragging) 
+           {
+             document.getElementById("shield").style.display = "block";        
+             if (stack != " horizontal") {
+               var percentage = (e.pageX / window.innerWidth) * 100;
+               if (percentage > 5 && percentage < 98) {
+                 var mainPercentage = 100-percentage;
+                 document.getElementById("textareacontainer").style.width = percentage + "%";
+                 document.getElementById("iframecontainer").style.width = mainPercentage + "%";
+                 fixDragBtn();
+               }
+             } else {
+               var containertop = Number(w3_getStyleValue(document.getElementById("container"), "top").replace("px", ""));
+               var percentage = ((e.pageY - containertop + 20) / (window.innerHeight - containertop + 20)) * 100;
+               if (percentage > 5 && percentage < 98) {
+                 var mainPercentage = 100-percentage;
+                 document.getElementById("textareacontainer").style.height = percentage + "%";
+                 document.getElementById("iframecontainer").style.height = mainPercentage + "%";
+                 fixDragBtn();
+               }
+             }
+             showFrameSize();    
+           }
+         }
+		 
+         function dragend() {
+           document.getElementById("shield").style.display = "none";
+           dragging = false;
+           if (window.editor) {
+             window.editor.refresh();
+           }
+         }
+         if (window.addEventListener) {              
+           document.getElementById("dragbar").addEventListener("mousedown", function(e) {dragstart(e);});
+           document.getElementById("dragbar").addEventListener("touchstart", function(e) {dragstart(e);});
+           window.addEventListener("mousemove", function(e) {dragmove(e);});
+           window.addEventListener("touchmove", function(e) {dragmove(e);});
+           window.addEventListener("mouseup", dragend);
+           window.addEventListener("touchend", dragend);
+           window.addEventListener("load", fixDragBtn);
+           window.addEventListener("load", showFrameSize);
+         }
+          
+         function colorcoding() {
+           var ua = navigator.userAgent;
+           //Opera Mini refreshes the page when trying to edit the textarea.
+           if (ua && ua.toUpperCase().indexOf("OPERA MINI") > -1) { return false; }
+           window.editor = CodeMirror.fromTextArea(document.getElementById("textareaCode"), {
+             mode: "text/html",
+             htmlMode: true,
+             lineWrapping: true,
+             smartIndent: false,
+             addModeClass: true
+           });
+         //  window.editor.on("change", function () {window.editor.save();});
+         }
+         colorcoding();
+         
+         function w3_getStyleValue(elmnt,style) {
+             if (window.getComputedStyle) {
+                 return window.getComputedStyle(elmnt,null).getPropertyValue(style);
+             } else {
+                 return elmnt.currentStyle[style];
+             }
+         }
+           
+         
+          
+         
+      </script>
+   </body>
+</html>
