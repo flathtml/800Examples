@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#207 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="207-React-Form-code.html"&gt;207-React-Form-code.html&lt;a&gt;</LINK>
+    <CATEGORY>Javascript/Reactjs</CATEGORY>
+	<DESC>Reactjs - Form Demo</DESC>
+ </EXAMPLE>
   <!--Example#206 -->
  <EXAMPLE>
     <LINK>&lt;a href="206-Random-Name-Generator-code.html"&gt;206-Random-Name-Generator-code.html&lt;a&gt;</LINK>
