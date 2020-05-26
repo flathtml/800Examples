@@ -359,42 +359,67 @@
 <!DOCTYPE html>
 <html>
  <head>
- 
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!//http://www.w3schools.com/w3css/4/w3.css !>
+      <link rel="stylesheet" href="references/w3.css"> 
+      
+	  <!//http://www.w3schools.com/lib/codemirror.css !>
+      <link rel="stylesheet" href="references/codemirror.css">
+	  
+      <!//http://www.w3schools.com/lib/codemirror.js !>
+	  <script src="references/codemirror.js"></script>
+	  
+	  <!//https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css !>
+      <link rel="stylesheet" href="references/bootstrap.min.css">
+   
+      <!//https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js !>
+	  <script src="references/bootstrap.min.js"></script>
+	  
+	  <!//https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js !>
+	  <script src="references/jquery.min.js"></script>
+	 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+	  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
  <script src = 
 "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> 
         </script> 
 	<title>Random Name Generator</title>
     <style>
-    body
-{
-    padding:10px;
-    font-size:12pt;
-    font-family:calibri;
-}
-input 
-{
-   font-size:12pt;
-   font-family:calibri; 
-}
-
-div
-{
-    border : 2px solid red;
-    padding: 10px;
-    width: 250px;
-    color: Green;
-    font-size: 16pt;
-}
-
-    </style>
- </head>
- <body>
- <h1>Random Name Generator : </h1><h3><i>Picks Names from the list of 100 most popular names in USA</i></h3>
- <button>Click to generate new name</button>
+.center1 {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    color: #000000;
   
- <p><b>BOY : </b>&nbsp;<boy></boy>
- <p><b>GIRL : </b>&nbsp;<girl></girl>
+}
 
+.center2 {
+    text-align: center;
+   }
+ 
+</style>
+ </head>
+ <body class="w3-container">
+ <div class="container">
+ <div>&nbsp;</div>
+ <div class="col-md-12 shadow p-4 mb-4 border border-primary" style="background-color:lightgreen">
+ <div>&nbsp;</div>
+ <div align="center">
+ <h1>Random Name Generator : </h1><h3><i>Picks Names from the list of 100 most popular names in USA</i></h3>
+    <div>&nbsp;</div>
+ <button><h3>CLICK to generate new name</h3></button>
+  
+   <div>&nbsp;</div>
+   <table class="table table-bordered">
+   <tr><td bgcolor="#8196F9" align="center"><b>BOY :</b>&nbsp;<boy></boy></td><td bgcolor="pink"  align="center"><b>GIRL :</b>&nbsp;<girl></girl></td></tr> 
+    
+   </table>
+    
+   <div>&nbsp;</div>
+ </div>
+ </div>
+  <div>&nbsp;</div>
  <script>
  $('button').click(function() {
     
@@ -632,7 +657,6 @@ $('button').click();
     </body>  
 </html>       
 		 
-
 		</textarea>
                </div>
             </div>
