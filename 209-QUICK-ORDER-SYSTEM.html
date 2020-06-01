@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+   
+	<title>QUICK ORDER SYSTEM</title>
+     
+ </head>
+ <body class="container-fluid" onload="showtime1()">
+  <div class="col-md-8 p-4"> 
+
+  <h2 style="background-color:pink" align="center"><i>QUICK ORDER SYSTEM</i></h2>
+  <table>
+  <form action="209-QUICK-ORDER-SYSTEM.php" method="post">
+  <tr>
+    <td><b>DATE</b></td>
+	<td><input type="text"  name="orderdt" id="orderdt" readonly></td> 
+  </tr> 
+  <tr>
+    <td><b>TIME</b></td>
+	<td><input type="text"  name="ordertime" id="ordertime" readonly></td> 
+  </tr> 
+  <tr>
+    <td>&nbsp;</td>
+  </tr> 
+  <tr>
+    <td><b>ORDER NUMBER</b></td>
+	<td><input type="text"  name="ordernum" id="ordernum" readonly></td> 
+  </tr> 
+  <tr>
+    <td><b>ORDER TOTAL: $</b></td>
+    <td>
+	    <input type="text"  name="orderTotal" id="orderTotal" Size=6 readonly value="0.00" style="background-color:yellow">
+	</td> 
+  </tr>
+   <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr align="center" style="background-color:#d6d6c2">
+        <td>Beverages</td>
+        <td>Price</td>
+        <td>Quantity</td>
+		<td>COST</td>
+  </tr>
+  <tr align="center">
+      <td>&nbsp;</td>
+  </tr>
+  <tr>
+        <td>Cappuccino</td>
+        <td align="center">$3.00</td>
+          <td align="left">
+                <input type="number"  id="quantityCappucino" name="quantityCappuccino" value="0" onchange="calculatePrice()">
+				
+          </td>
+		  <td align="left">
+                <input type="text"  id="costCappucino" name="costCappuccino" Size=6 readonly value="0.00">
+				                        
+          </td>
+   </tr>
+   <tr>
+        <td>Espresso</td>
+          <td align="center">$2.25</td>
+          <td align="center">
+                <input type="number" id="quantityEspresso" name="quantityEspresso" value="0" onchange="calculatePrice()">
+          </td>
+		  <td align="left">
+                <input type="text"  id="costEspresso" name="costEspresso" Size=6 readonly value="0.00">
+          </td>
+   </tr>
+   <tr>
+          <td>Latte</td>
+          <td align="center">$2.50</td>
+          <td align="center">
+                <input type="number" id="quantityLatte" name="quantityLatte" value="0" onchange="calculatePrice()">
+          </td>
+		  <td align="left">
+                <input type="text"  id="costLatte" name="costLatte" Size=6 readonly value="0.00">
+          </td>
+   </tr>
+   <tr>
+            <td>Iced</td>
+            <td align="center">$2.50</td>
+            <td align="center">
+                <input type="number" id="quantityIced" name="quantityIced" value="0" onchange="calculatePrice()">
+                
+            </td>
+			<td align="left">
+                <input type="text"  id="costIced" name="costIced" Size=6 readonly value="0.00">
+            </td>
+			
+    </tr>
+    <tr>
+            <td>
+              &nbsp;
+              </td>
+    </tr>
+    <tr>
+            <td>
+                  
+                <h6 style="background-color:#d6d6c2">&nbsp;Delivery Option</h6>
+ 
+  <label>&nbsp;
+    <input type="checkbox" class="radio" id ="pickup" value="pickup" name="fooby[1][]" onchange="showtime2()"/>&nbsp;Pickup</label>
+  <label>&nbsp;
+    <input type="checkbox" class="radio" id ="delivery" value="delivery" name="fooby[1][]" onchange="showtime2()"/>&nbsp;Home Delivery</label>
+  <label>
+     </td>
+     </tr>
+   <tr>
+		<td><h6 style="background-color:#d6d6c2"><i>Delivery / Pickup Time</i></h6>
+		</td>
+   </tr>
+   <tr>
+		<td id ="time1"></td> 
+		 
+		<td><label>&nbsp;
+	 	    <input type="checkbox" class="radio" name="fooby[2][]" value="time1"/></label></td>
+	</tr>
+    <tr>	
+	<td id ="time2"></td>
+	<td><label>&nbsp;
+		   <input type="checkbox" class="radio"  name="fooby[2][]" value="time2"/></label></td>
+	</tr>
+	<tr>	
+		<td id ="time3"></td>
+		<td><label>&nbsp;
+		   <input type="checkbox" class="radio" name="fooby[2][]" value="time3"/></label></td>
+	</tr>
+    <tr>	
+		<td><div id ="time4"></div></td>
+		<td><label>&nbsp;
+		   <input type="checkbox" class="radio"  name="fooby[2][]" value="time4"/></label></td>
+		
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Customer Name</td>
+		<td><input type="text" id="custname" name="custname" size="30"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+    <tr>
+		<td>Tel#</td>
+		<td><input type="text" id="telnum" name="telnum" size="10"></td>
+     </tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>E-Mail</td>
+		<td><input type="text" id="email" name="email" size="50"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr> 
+	<tr>
+		<td>Street Address</td>
+		<td><input type="text" id="straddr" name="straddr" size="50"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr> 
+	<tr>
+		<td>Apt Num</td>
+		<td><input type="text" id="straddr" name="aptnum" size="10"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>City</td>
+		<td><input type="text" id="city" name="city" size="20"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>State</td>
+		<td><input type="text" id="state" name="state" size="2"</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Zip</td>
+		<td><input type="number" id="zip" name="zip" size="5"</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+       <td ><input type="submit">
+        </td>
+    </tr>
+         
+</table>
+</form>
+</div>
+ <div class="col-md-2 p-4">&nbsp;</div>
+<script>
+ 
+
+$("#orderTotal").click(function () {
+    calculatePrice();
+});
+
+function calculatePrice()
+{
+    //select data
+    var cappuccino = 3.00;
+    var espresso = 2.25;
+    var latte = 2.50;
+    var iced = 2.50;
+
+    var quantityCappuccino = $("#quantityCappucino").val();
+    var quantityEspresso =  $("#quantityEspresso").val();
+    var quantityLatte =  $("#quantityLatte").val();
+    var quantityIced = $("#quantityIced").val();
+
+    //calculate final cost
+    var total = (quantityCappuccino * cappuccino) + (quantityEspresso * espresso) + (quantityLatte * latte) + (quantityIced * iced);
+    var displaytotal = total.toFixed(2);
+	
+	var capacost = (quantityCappuccino * cappuccino);
+	var displaycapacost = capacost.toFixed(2);
+	
+	var esprecost = (quantityEspresso * espresso);
+	var displayesprecost = esprecost.toFixed(2);
+	
+	var lattecost = (quantityLatte * latte);
+	var displaylattecost = lattecost.toFixed(2);
+	
+	var icedcost = (quantityIced * iced);
+	var displayicedcost = icedcost.toFixed(2);
+
+    //console.log(total);
+    //print value to orderTotal
+    $("#orderTotal").val(displaytotal);
+	$("#costCappucino").val(displaycapacost);
+	$("#costEspresso").val(displayesprecost);
+	$("#costLatte").val(displaylattecost);
+	$("#costIced").val(displayicedcost);
+}
+</script>
+<script>
+// the selector will match all input controls of type :checkbox
+// and attach a click event handler 
+$("input:checkbox").on('click', function() {
+  // in the handler, 'this' refers to the box clicked on
+  var $box = $(this);
+  if ($box.is(":checked")) {
+  
+    // the name of the box is retrieved using the .attr() method
+    // as it is assumed and expected to be immutable
+    var group = "input:checkbox[name='" + $box.attr("name") + "']";
+    // the checked state of the group/box on the other hand will change
+    // and the current value is retrieved using .prop() method
+    $(group).prop("checked", false);
+    $box.prop("checked", true);
+  } else {
+    $box.prop("checked", false);
+  }
+  
+  
+   
+    
+});
+</script>
+<script>
+function showtime1() {
+
+ 
+ 
+
+  var d = new Date();
+  
+  var dt1 = d.getMonth()+1  ;// 10
+  var dt2 = d.getDate()     ;// 30
+  var dt3 = d.getFullYear() ;// 2010
+  var dt4 = dt1 + '/' + dt2 + '/' + dt3;
+    var dtime = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+	
+ $("#orderdt").val(dt4);
+ $("#ordertime").val(dtime);
+ 
+  
+  var d1 = d.setMinutes( d.getMinutes() + 15 );
+  var d1time = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+  document.getElementById("time1").innerHTML = d1time;
+  
+  var d2 = d.setMinutes( d.getMinutes() + 15 );
+  var d2time = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+  document.getElementById("time2").innerHTML = d2time;
+  
+  var d3 = d.setMinutes( d.getMinutes() + 15 );
+  var d3time = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+  document.getElementById("time3").innerHTML = d3time;
+  
+  var d4 = d.setMinutes( d.getMinutes() + 15 );
+  var d4time = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+  document.getElementById("time4").innerHTML = d4time;
+  var ordern = Math.random();
+ $("#ordernum").val(ordern);
+ 
+ 
+  
+}
+   
+
+
+function showtime2() {
+  var d = new Date();
+  var dtime = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+  
+  var d1 = d.setMinutes( d.getMinutes() + 15 );
+  var d1time = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+  document.getElementById("time1").innerHTML = d1time;
+  
+  var d2 = d.setMinutes( d.getMinutes() + 15 );
+  var d2time = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+  document.getElementById("time2").innerHTML = d2time;
+  
+  var d3 = d.setMinutes( d.getMinutes() + 15 );
+  var d3time = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+  document.getElementById("time3").innerHTML = d3time;
+  
+  var d4 = d.setMinutes( d.getMinutes() + 15 );
+  var d4time = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+  document.getElementById("time4").innerHTML = d4time;
+   $("#ordertime").val(dtime); 
+}
+</script>
+
+</body>
+
+ </body>
+</html>
+
+		 
+
+ 
