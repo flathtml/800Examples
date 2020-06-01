@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#210 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="210-Add-minutes-display-time.html"&gt;210-Add-minutes-display-time.html&lt;a&gt;</LINK>
+    <CATEGORY>Javascript </CATEGORY>
+	<DESC>JavaScript Add minutes and display time</DESC>
+ </EXAMPLE>
+ <!--Example#209 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="209-QUICK-ORDER-SYSTEM.html"&gt;209-QUICK-ORDER-SYSTEM.html&lt;a&gt;</LINK>
+    <CATEGORY>Javascript </CATEGORY>
+	<DESC>Quick Menu Order System</DESC>
+ </EXAMPLE>
  <!--Example#208 -->
  <EXAMPLE>
     <LINK>&lt;a href="208-coupon.html"&gt;208-coupon.html&lt;a&gt;</LINK>
