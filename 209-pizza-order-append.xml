@@ -1,47 +1,26 @@
 <?xml version="1.0"?>
 <maincontent>
   <headercontent>
-    <ordernum num="0.37308456169323523">
-      <custname>john</custname>
-      <ordertotal>7.75</ordertotal>
+    <orderid num="9959782603040920">
+      <custname></custname>
+      <ordertotal>3.00</ordertotal>
       <orderdate>6/1/2020</orderdate>
-      <ordertime>12:41 AM</ordertime>
-      <cappucino></cappucino>
-      <capcost></capcost>
-      <espresso>1</espresso>
-      <espcost></espcost>
-      <latte>1</latte>
-      <latcost></latcost>
+      <ordertime>03:44 PM</ordertime>
+      <cappucino>1</cappucino>
+      <capcost>3.00</capcost>
+      <espresso>0</espresso>
+      <espcost>0.00</espcost>
+      <latte>0</latte>
+      <latcost>0.00</latcost>
       <iced>0</iced>
-      <icecost></icecost>
+      <icecost>0.00</icecost>
       <tel></tel>
       <email></email>
       <street></street>
-      <apt></apt>
+      <aptnum></aptnum>
       <city></city>
       <state></state>
       <zip></zip>
-    </ordernum>
-    <ordernum num="0.045712845125396306">
-      <custname>Dayanand B Menashi</custname>
-      <ordertotal>12</ordertotal>
-      <orderdate>6/1/2020</orderdate>
-      <ordertime>12:21 AM</ordertime>
-      <cappucino/>
-      <capcost/>
-      <espresso>0</espresso>
-      <espcost/>
-      <latte>1</latte>
-      <latcost/>
-      <iced>0</iced>
-      <icecost/>
-      <tel/>
-      <email>d_menashi@yahoo.com</email>
-      <street/>
-      <apt/>
-      <city>Plantsville</city>
-      <state>CT</state>
-      <zip>06479</zip>
-    </ordernum>
+    </orderid>
   </headercontent>
 </maincontent>

@@ -4,23 +4,23 @@ $xmldoc->preserveWhiteSpace = false;
 $xmldoc->formatOutput = true;
  
 
-$ordernum			= $_POST["ordernum"];
+$orderid			= $_POST["orderid"];
 $custname			= $_POST["custname"];
 $orderdt			= $_POST["orderdt"];
 $ordertime			= $_POST["ordertime"];
 $orderTotal			= $_POST["orderTotal"];
 $quantityCappucino  = $_POST["quantityCappucino"];
-$costCappucino      = $_POST["$costCappucino"];
+$costCappucino      = $_POST["costCappucino"];
 $quantityEspresso	= $_POST["quantityEspresso"];
-$costEspresso       = $_POST["$costEspresso"];
+$costEspresso       = $_POST["costEspresso"];
 $quantityLatte		= $_POST["quantityLatte"];
-$costLatte          = $_POST["$costLatte"];
+$costLatte          = $_POST["costLatte"];
 $quantityIced		= $_POST["quantityIced"];
-$costIced           = $_POST["$costIced"];
+$costIced           = $_POST["costIced"];
 $telnum				= $_POST["telnum"];
 $email				= $_POST["email"];
-$street             = $_POST["street"];
-$apt                = $_POST["apt"];
+$straddr            = $_POST["straddr"];
+$aptnum             = $_POST["aptnum"];
 $city               = $_POST["city"];
 $state              = $_POST["state"];
 $zip                = $_POST["zip"];
@@ -33,9 +33,9 @@ if( $xml = file_get_contents( '209-pizza-order-append.xml') ) {
     $root = $xmldoc->getElementsByTagName('headercontent')->item(0);
 
     // create the <ordernum> tag
-    $order = $xmldoc->createElement('ordernum');
+    $order = $xmldoc->createElement('orderid');
     $numAttribute = $xmldoc->createAttribute("num");
-    $numAttribute->value = $ordernum;
+    $numAttribute->value = $orderid;
     $order->appendChild($numAttribute);
 
     // add the product tag before the first element in the <headercontent> tag
@@ -128,13 +128,13 @@ if( $xml = file_get_contents( '209-pizza-order-append.xml') ) {
 	// create other elements and add it to the <order> tag.
     $nameElement = $xmldoc->createElement('street');
     $order->appendChild($nameElement);
-    $nameText = $xmldoc->createTextNode($street);
+    $nameText = $xmldoc->createTextNode($straddr);
     $nameElement->appendChild($nameText);
 	
 	// create other elements and add it to the <order> tag.
-    $nameElement = $xmldoc->createElement('apt');
+    $nameElement = $xmldoc->createElement('aptnum');
     $order->appendChild($nameElement);
-    $nameText = $xmldoc->createTextNode($apt);
+    $nameText = $xmldoc->createTextNode($aptnum);
     $nameElement->appendChild($nameText);
 	
 	// create other elements and add it to the <order> tag.
@@ -155,9 +155,6 @@ if( $xml = file_get_contents( '209-pizza-order-append.xml') ) {
     $nameText = $xmldoc->createTextNode($zip);
     $nameElement->appendChild($nameText);
 	
-	
-	
-    echo $ordernum;
 
     $xmldoc->save('209-pizza-order-append.xml');
 	header('Location: 209-output-page.html');

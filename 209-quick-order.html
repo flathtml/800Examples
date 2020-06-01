@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+<title>Quick Food Ordering System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <!//http://www.w3schools.com/w3css/4/w3.css !>
+      <link rel="stylesheet" href="references/w3.css"> 
+      
+	  <!//http://www.w3schools.com/lib/codemirror.css !>
+      <link rel="stylesheet" href="references/codemirror.css">
+	  
+      <!//http://www.w3schools.com/lib/codemirror.js !>
+	  <script src="references/codemirror.js"></script>
+	  
+	  <!//https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css !>
+      <link rel="stylesheet" href="references/bootstrap.min.css">
+   
+      <!//https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js !>
+	  <script src="references/bootstrap.min.js"></script>
+	  
+	  <!//https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js !>
+	  <script src="references/jquery.min.js"></script>
+	 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+	  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<Style>
+
+#orderdt {
+	 display: none;
+	 }
+	 
+	 #orderdtdisp {
+	 display: none;
+	 }
+	 
+	  #ordertime {
+	 display: none;
+	 }
+	 
+	 #ordertimedisp {
+	 display: none;
+	 }
+	 
+	 #orderid {
+	 display: none;
+	 }
+	 
+	 
+	 
+ .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+ .navbar .navbar-collapse {
+    text-align: left;
+}
+ 
+
+ .footer {
+    text-align: center;
+}
+
+ .padding {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: justify;
+}
+  
+ .top {
+    position: relative;
+    background-color: #EAEDED;
+	border: 1px solid green;
+    height: 68px;
+    padding-top: 20px;
+    line-height: 50px;
+    overflow: hidden;
+    z-index: 1;
+}
+.w3-right {
+    float: right!important}
+	
+.w3-wide {
+    letter-spacing: 2px;
+	color: #922B21;}
+ .w3schools-logo {
+    font-family: Pacifico;
+    text-decoration: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 37px;
+    letter-spacing: 3px;
+    color: #480BF7;
+    display: block;
+    position: absolute;
+    top: 17px;
+    padding-left: 2px;
+}
+.w3schools-logo .dotcom {
+    color: #F70B2B;
+}
+.w3schools-logo:hover {
+   
+	text-decoration: none;
+}
+
+@media (max-width: 992px) {
+    .top {
+    height: 100px;
+}
+ .top .w3schools-logo {
+    position: relative;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+ .toptext {
+    width: 100%;
+    text-align: center;
+}
+ }
+  
+  
+ 
+ button {
+  padding : 10px;
+  background: #F91506;
+  color:#ffffff;
+  font-weight: bold;
+}
+ 
+button:active {
+ background: #F91506;
+}
+button:disabled {
+  pointer-events: none;
+  background:grey;
+}
+button:first-child {
+  margin-left: 0;
+}
+  
+  button.uploadbut {
+  background: #16FA41;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  color:black;
+}
+
+button.uploadbut:disabled {
+  pointer-events: none;
+  background: #444242;
+  color:#ffffff;
+}
+
+ 
+  
+audio {
+  display: block;
+  width: 100%;
+  margin-top: 0.2rem;
+}
+li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+#formats {
+  margin-top: 0.5rem;
+  font-size: 80%;
+}
+ 
+
+	 
+	
+	h3.title{
+	  background-color:#A6DEF6;
+	}
+	
+	div.timer{
+	  color:#06F915;
+	  background-color:black;
+	  padding : 5px;
+	}
+	
+	div.formats{
+	display:hide;
+	color:lightblue;
+	}
+	
+	
+	</style>
+	<style>
+ 
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 800px;
+    max-width: 100%;
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+     
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #DDDDD6;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid blue;
+    width: 70%;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+  
+  /* don't need to go crazy with z-index here, just sits over .modal-guts */
+  z-index: 1;
+  
+  top: 10px;
+  
+  /* needs to look OK with or without scrollbar */
+  right: 20px;
+  
+  border: 0;
+  background: black;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1.3rem;
+     
+}
+
+ 
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button.copytext {
+  background: green;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  color:white;
+  width: 100px;
+  max-width: 100%;
+  text-align:center;
+}
+
+  #player {
+  background:   url(background-sky.jpg);
+   
+}
+
+.video-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+h3 {
+  letter-spacing: 2px;
+}
+h5 {
+  letter-spacing: 3px;
+}
+
+.responsive {
+  width: 70%;
+  height: 30%;
+}
+ </style>
+
+ 
+	
+<body class="w3-container" onload="showtime1()">
+ <div class="row">
+      <div class="col-md-12">
+         <div class="row">
+		    
+			<div class="col-md-2">
+               
+                <div class="row">&nbsp;</div>
+            </div>
+			
+   <div class="col-md-8">
+    <div class="row">&nbsp;</div>
+   <div class="top">
+     
+      <a class="w3schools-logo" href="index.html">&nbsp;Fresh<span class="dotcom">Coffee&nbsp;</span></a>
+      <div class="w3-right  toptext w3-wide ">Online Food Ordering system&nbsp;&nbsp;</div>
+   </div>
+   
+   <div>&nbsp;</div>
+    
+   <div class="col-md-12 shadow p-4 mb-4" style="background-color:#aaff80">
+   <h2  align="center"><i>YOUR ORDER DETAILS</i></h2>
+  <table>
+  <form action="209-QUICK-ORDER-SYSTEM.php" method="post">
+  <tr>
+    <td name="orderdtdisp" id="orderdtdisp"><b>DATE</b></td>
+	<td><input type="text"  name="orderdt" id="orderdt" readonly></td> 
+  </tr> 
+  <tr>
+    <td name="ordertimedisp" id="ordertimedisp"><b>TIME</b></td>
+	<td><input type="text"  name="ordertime" id="ordertime" readonly></td> 
+  </tr> 
+  <tr>
+    <td>&nbsp;</td>
+  </tr> 
+  <tr>
+     
+	<td><input type="text"  name="orderid" id="orderid" readonly></td> 
+  </tr> 
+  <tr>
+    <td><b>ORDER TOTAL: $</b></td>
+    <td>
+	    <input type="text"  name="orderTotal" id="orderTotal" Size=6 readonly value="0.00" style="background-color:yellow">
+	</td> 
+	<td>
+	  <input type="submit" value="CHECK OUT">
+	</td>
+  </tr>
+   <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr align="center" style="background-color:#4ce600">
+        <td>Beverages</td>
+        <td>Price</td>
+        <td>Quantity</td>
+		<td>COST</td>
+  </tr>
+  <tr align="center">
+      <td>&nbsp;</td>
+  </tr>
+  <tr>
+        <td>Cappuccino</td>
+        <td align="center">$3.00</td>
+          <td align="left">
+                <input type="number"  id="quantityCappucino" name="quantityCappucino" value="0" onchange="calculatePrice()">
+				
+          </td>
+		  <td align="left">
+                <input type="text"  id="costCappucino" name="costCappucino" Size=6 readonly value="0.00">
+				                        
+          </td>
+   </tr>
+   <tr>
+        <td> 
+          <button type="button" class="btn btn-primary btn-sm">Add Qty</button>
+          <button type="button" class="btn btn-secondary btn-sm">Del Qty</button>		
+        </td>
+   </tr>
+   <tr>
+        <td> 
+         &nbsp;		
+        </td>
+   </tr>
+   <tr>
+        <td>Espresso</td>
+          <td align="center">$2.25</td>
+          <td align="center">
+                <input type="number" id="quantityEspresso" name="quantityEspresso" value="0" onchange="calculatePrice()">
+          </td>
+		  <td align="left">
+                <input type="text"  id="costEspresso" name="costEspresso" Size=6 readonly value="0.00">
+          </td>
+   </tr>
+   <tr>
+        <td> 
+          <button type="button" class="btn btn-primary btn-sm">Add Qty</button>
+          <button type="button" class="btn btn-secondary btn-sm">Del Qty</button>		
+        </td>
+   </tr>
+   <tr>
+        <td> 
+         &nbsp;		
+        </td>
+   </tr>
+   <tr>
+          <td>Latte</td>
+          <td align="center">$2.50</td>
+          <td align="center">
+                <input type="number" id="quantityLatte" name="quantityLatte" value="0" onchange="calculatePrice()">
+          </td>
+		  <td align="left">
+                <input type="text"  id="costLatte" name="costLatte" Size=6 readonly value="0.00">
+          </td>
+   </tr>
+   <tr>
+        <td> 
+          <button type="button" class="btn btn-primary btn-sm">Add Qty</button>
+          <button type="button" class="btn btn-secondary btn-sm">Del Qty</button>		
+        </td>
+   </tr>
+   <tr>
+        <td> 
+         &nbsp;		
+        </td>
+   </tr>
+   <tr>
+            <td>Iced</td>
+            <td align="center">$2.50</td>
+            <td align="center">
+                <input type="number" id="quantityIced" name="quantityIced" value="0" onchange="calculatePrice()">
+                
+            </td>
+			<td align="left">
+                <input type="text"  id="costIced" name="costIced" Size=6 readonly value="0.00">
+            </td>
+			
+    </tr>
+	<tr>
+        <td> 
+          <button type="button" class="btn btn-primary btn-sm">Add Qty</button>
+          <button type="button" class="btn btn-secondary btn-sm">Del Qty</button>		
+        </td>
+   </tr>
+   <tr>
+        <td> 
+         &nbsp;		
+        </td>
+   </tr>
+    <tr>
+            <td>
+              &nbsp;
+              </td>
+    </tr>
+    <tr>
+            <td>
+                  
+                <b>DELIVERY OPTION</b>
+ 
+  <label>&nbsp;
+    <input type="checkbox" class="radio" id ="pickup" value="pickup" name="fooby[1][]" onchange="showtime2()"/>&nbsp;Pickup</label>
+  <label>&nbsp;
+    <input type="checkbox" class="radio" id ="delivery" value="delivery" name="fooby[1][]" onchange="showtime2()"/>&nbsp;Home Delivery</label>
+  <label>
+     </td>
+     </tr>
+	 <tr>
+		<td>&nbsp;</b>
+		</td>
+   </tr>
+   <tr class="deliverytime">
+		<td id ="time0"><b>DELIVERY / PICKUP TIME</b>
+		</td>
+   </tr>
+   <tr class="deliverytime">
+		<td id ="time1"></td> 
+		 
+		<td><label>&nbsp;
+	 	    <input type="checkbox" class="radio" name="fooby[2][]" value="time1"/></label></td>
+	</tr>
+    <tr class="deliverytime">	
+	<td id ="time2"></td>
+	<td><label>&nbsp;
+		   <input type="checkbox" class="radio"  name="fooby[2][]" value="time2"/></label></td>
+	</tr>
+	<tr class="deliverytime">	
+		<td id ="time3"></td>
+		<td><label>&nbsp;
+		   <input type="checkbox" class="radio" name="fooby[2][]" value="time3"/></label></td>
+	</tr>
+    <tr class="deliverytime">	
+		<td><div id ="time4"></div></td>
+		<td><label>&nbsp;
+		   <input type="checkbox" class="radio"  name="fooby[2][]" value="time4"/></label></td>
+		
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Customer Name</td>
+		<td><input type="text" id="custname" name="custname" size="30"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+    <tr>
+		<td>Tel#</td>
+		<td><input type="text" id="telnum" name="telnum" size="10"></td>
+     </tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>E-Mail</td>
+		<td><input type="text" id="email" name="email" size="50"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr> 
+	<tr>
+		<td>Street Address</td>
+		<td><input type="text" id="straddr" name="straddr" size="50"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr> 
+	<tr>
+		<td>Apt Num</td>
+		<td><input type="text" id="straddr" name="aptnum" size="10"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>City</td>
+		<td><input type="text" id="city" name="city" size="20"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>State</td>
+		<td><input type="text" id="state" name="state" size="2"</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Zip</td>
+		<td><input type="number" id="zip" name="zip" size="5"</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+    <!-- Do not display this image at the moment
+	<tr>
+       <td ><input type="submit">
+        </td>
+    </tr> 
+	-->
+         
+</table>
+</form>
+</div>
+ <div class="col-md-2 p-4">&nbsp;</div>
+<script>
+ 
+
+$("#orderTotal").click(function () {
+    calculatePrice();
+});
+
+function calculatePrice()
+{
+    //select data
+    var cappuccino = 3.00;
+    var espresso = 2.25;
+    var latte = 2.50;
+    var iced = 2.50;
+
+    var quantityCappuccino = $("#quantityCappucino").val();
+    var quantityEspresso =  $("#quantityEspresso").val();
+    var quantityLatte =  $("#quantityLatte").val();
+    var quantityIced = $("#quantityIced").val();
+
+    //calculate final cost
+    var total = (quantityCappuccino * cappuccino) + (quantityEspresso * espresso) + (quantityLatte * latte) + (quantityIced * iced);
+    var displaytotal = total.toFixed(2);
+	
+	var capacost = (quantityCappuccino * cappuccino);
+	var displaycapacost = capacost.toFixed(2);
+	
+	var esprecost = (quantityEspresso * espresso);
+	var displayesprecost = esprecost.toFixed(2);
+	
+	var lattecost = (quantityLatte * latte);
+	var displaylattecost = lattecost.toFixed(2);
+	
+	var icedcost = (quantityIced * iced);
+	var displayicedcost = icedcost.toFixed(2);
+
+    //console.log(total);
+    //print value to orderTotal
+    $("#orderTotal").val(displaytotal);
+	$("#costCappucino").val(displaycapacost);
+	$("#costEspresso").val(displayesprecost);
+	$("#costLatte").val(displaylattecost);
+	$("#costIced").val(displayicedcost);
+}
+</script>
+<script>
+// the selector will match all input controls of type :checkbox
+// and attach a click event handler 
+$("input:checkbox").on('click', function() {
+  // in the handler, 'this' refers to the box clicked on
+  var $box = $(this);
+  if ($box.is(":checked")) {
+  
+    // the name of the box is retrieved using the .attr() method
+    // as it is assumed and expected to be immutable
+    var group = "input:checkbox[name='" + $box.attr("name") + "']";
+    // the checked state of the group/box on the other hand will change
+    // and the current value is retrieved using .prop() method
+    $(group).prop("checked", false);
+    $box.prop("checked", true);
+  } else {
+    $box.prop("checked", false);
+  }
+  
+  
+   
+    
+});
+</script>
+<script>
+function showtime1() {
+ var d = new Date();
+  
+  var dt1 = d.getMonth()+1  ;// 10
+  var dt2 = d.getDate()     ;// 30
+  var dt3 = d.getFullYear() ;// 2010
+  var dt4 = dt1 + '/' + dt2 + '/' + dt3;
+    var dtime = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+	
+ $("#orderdt").val(dt4);
+ $("#ordertime").val(dtime);
+ 
+  
+  var d1 = d.setMinutes( d.getMinutes() + 15 );
+  var d1time = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+  document.getElementById("time1").innerHTML = d1time;
+  
+  var d2 = d.setMinutes( d.getMinutes() + 15 );
+  var d2time = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+  document.getElementById("time2").innerHTML = d2time;
+  
+  var d3 = d.setMinutes( d.getMinutes() + 15 );
+  var d3time = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+  document.getElementById("time3").innerHTML = d3time;
+  
+  var d4 = d.setMinutes( d.getMinutes() + 15 );
+  var d4time = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+  document.getElementById("time4").innerHTML = d4time;
+  var ordern = Math.floor((Math.random() * 1000000000000000) + 9000000000000000);
+ $("#orderid").val(ordern);
+  
+}
+   
+
+
+function showtime2() {
+  
+  var d = new Date();
+  var dtime = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+  
+  var d1 = d.setMinutes( d.getMinutes() + 15 );
+  var d1time = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+  document.getElementById("time1").innerHTML = d1time;
+  
+  var d2 = d.setMinutes( d.getMinutes() + 15 );
+  var d2time = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+  document.getElementById("time2").innerHTML = d2time;
+  
+  var d3 = d.setMinutes( d.getMinutes() + 15 );
+  var d3time = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+  document.getElementById("time3").innerHTML = d3time;
+  
+  var d4 = d.setMinutes( d.getMinutes() + 15 );
+  var d4time = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+  document.getElementById("time4").innerHTML = d4time;
+   $("#ordertime").val(dtime); 
+}
+</script>
+
+   </div>
+
+          
+	 
+ <div>&nbsp;</div>
+   <div class="col-md-12">
+    
+	 
+	 <div>&nbsp;</div>
+      <div class="col-md-12">
+         <div class="footer">&nbsp;</div>
+         <div class="row">&nbsp;</div>
+      </div>
+   
+</div>
+   </div>
+   <!-- /End of Content section -->
+</div>   
+</body>
+</html>
