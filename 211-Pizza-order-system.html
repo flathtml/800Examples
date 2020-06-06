@@ -1,10 +1,12 @@
-
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Online Pizza Ordering system App</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
@@ -16,9 +18,31 @@
     text-align: center;
     font-style: italic;
     font-weight: bold;
-    color: #00ff00;
+   
     border: 1px solid green;
 }
+
+.addcart {
+    text-align: center;
+     
+}
+
+.mainpic {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+   
+     
+}
+
+.special {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+   
+     
+}
+
  .logo{
  font-family: 'Righteous', cursive;
  font-family: 'Ultra', serif;
@@ -34,6 +58,12 @@
     background-color:#bbff99;
 }
 
+.total {
+    
+    color: white;
+     
+}
+
 .submenu {
     
     color: #000000;
@@ -45,7 +75,7 @@
 .combospecial {
  
     color:  #ffff00;
-    border: 1px solid brown;
+    border: 1px solid green;
      background-color:#b30000;
      
 }
@@ -53,7 +83,7 @@
 .combobox {
  
     color:  #b30000;
-    border: 1px solid brown;
+    border: 1px solid green;
      background-color:#bbff99;
      
 }
@@ -90,107 +120,223 @@ th, td {
   text-align: center;
  
 }
+
+.menudetails.td {
+  background-color: #ebebe0;
+  color: black;
+  text-align: center;
+ 
+}
  
 
 th {
-  background-color: #ffff66;
+  background-color:#bbff99;
   color: black;
   text-align: center;
 }
  
- table, th, td {
-  border: 1px solid black;
+ table, th, td, tr {
+  border: 1px solid green;
 }
 </style>
-<body>
+
+<Style>
+  
+.makeup1 {
+    font-weight: bold;
+    color: #000000;
+    border: 1px solid green;
+}
+ .makeup2 {
+    border: 1px solid green;
+}
+
+ .footer {
+    text-align: center;
+}
+
+ .padding {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: justify;
+}
+  
+ .top {
+    position: relative;
+    background-color: #ffffff;
+    height: 68px;
+    padding-top: 20px;
+    line-height: 50px;
+    overflow: hidden;
+    z-index: 1;
+}
+.w3-right {
+    float: right!important}
+.w3-wide {
+    letter-spacing: 4px}
+ .w3schools-logo {
+    font-family: Righteous;
+    text-decoration: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 37px;
+    letter-spacing: 3px;
+    color: #555555;
+    display: block;
+    position: absolute;
+    top: 17px;
+    padding-left: 2px;
+}
+.w3schools-logo .dotcom {
+    color: #4CAF50;
+}
+.w3schools-logo:hover {
+    color: #555555;
+}
+
+@media (max-width: 992px) {
+    .top {
+    height: 100px;
+}
+ .top .w3schools-logo {
+    position: relative;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+ .toptext {
+    width: 100%;
+    text-align: center;
+}
+ }
+
  
+</style>
+<body class="container-fluid">
 
 
-<div class="container-fluid">
-
-  <div class="row">&nbsp; 
-  </div>
+  <div class="row">&nbsp;</div>
 
   <div class="center"> 
-  <nav class="navbar fixed-top navbar-light bg-warning">
-          <div class="logo"> 
-         <h4><i>Cheezy Pizza</i></h4>
+         <nav class="navbar fixed-top navbar-light bg-warning">
+          <div class="row"> 
+         &nbsp; &nbsp;<h5>TOTAL : </h5>
            </div>
-           <button type="button" class="btn btn-dark"><b>Cart</b>         
+            
+        <!--Shopping Cart Button  ---->
+           <button type="button" class="btn btn-success"><b>Checkout</b>         
           </button>
           
         
            </nav>
   </div>
- 
-  <div class="col-md-12 p-3">&nbsp;</div>
+  <div class="row">&nbsp;</div>
+  <div class="top">
+      <a class="w3schools-logo" href="../default.html">Cheezy<span class="dotcom">Pizza</span></a>
+      <div class="w3-right toptext w3-wide ">Authentic Brick oven Pizza</div>
+  </div>
   
-  <div class="row">
-  
-   <div class="col-md-3">
-      <div class="col-md-12 p-4">
-		 
-		 <!--
-	     <img src="images/build.png" alt="Build Your Pizza" class="responsive" width="200" height="150">
-		 -->
-		 
-          <table align ="center">
+  <!-- /.Start of Content section -->
+   <div class="row">
+      <div class="col-md-12">
+         <div class="row">
+            <div class="col-md-3">
+                     <div class="row">
+					 
+                         
+         <table align ="center">
  <tr>
    <th class="combospecial"> 
-                  <h3 align="center"><i>OUR COMBO SPECIALS</i></h3>
+                  <h3 align="center"><i>OUR SPECIALS</i></h3>
                 </th>
-  
+   
  </table> 
-       </div>
-       <div class="col-md-12 p-4">
-	  <table align ="center">
- <tr>
-   <th class="combobox"> 
-        <h4 align="center"><i>COMBO#1</i></h4> 
-		</th>
-  </tr>
-  <tr>
-  <td>
-	2 Large Pizzas and a 2L Drink for $19.95
-  </td>
-  </tr>  
- </table> 
-     </div>
-	 
-	  <div class="col-md-12 p-4">
-	  <table align ="center">
- <tr>
-   <th class="combobox"> 
-        <h4 align="center"><i>COMBO#2</i></h4> 
-		</th>
-  </tr>
-  <tr>
-  <td>
-	2 Large Pizzas and a 2L Drink for $19.95
-  </td>
-  </tr>  
- </table> 
-     </div>
-	 
-	  <div class="col-md-12 p-4">
-	  <table align ="center">
- <tr>
-   <th class="combobox"> 
-        <h4 align="center"><i>COMBO#3</i></h4> 
-		</th>
-  </tr>
-  <tr>
-  <td>
-	2 Large Pizzas and a 2L Drink for $19.95
-  </td>
-  </tr>  
- </table> 
-     </div>   
-		   
  </div>
-
-   <div class="col-md-9">
-    <div class="col-md-12 p-4">
+  <div class="row">&nbsp;</div>
+   
+  <div class="row">
+		 <table align ="center">
+ <tr>
+   <th class="combobox"> 
+        <h2 align="center"><b>15% OFF</b></h2> 
+        <h4 align="center"><i>Curbside Takeout</i></h4> 
+		</th>
+  </tr>
+  
+  <tr>
+  <td>
+	<h6 align="center"><i>Minimum $40.00</i></h6> 
+    
+    
+  </td>
+  </tr> 
+ <tr>
+  <td align="center">
+	<button type="button" class="btn btn-danger btn-lg">Order Now</button>
+    
+    
+  </td>
+  </tr>   
+ </table> 
+   </div>
+   <div class="row">&nbsp;</div>
+   <div class="row">
+		 <table align ="center">
+ <tr>
+   <th class="combobox"> 
+        <h2>$28<sup>00</sup></h2>
+        <h4 align="center"><i>Family Meal Deal</i></h4> 
+		</th>
+  </tr>
+  <tr>
+  <td>
+	  <h6 align="center"><i>XL 2-Topping Pizza, 10 Wings any Style and a 2-Liter Soda</i></h6>
+ 
+  </td>
+  </tr>  
+   <tr>
+  <td align="center">
+	<button type="button" class="btn btn-danger btn-lg">Order Now</button>
+    
+    
+  </td>
+  </tr>   
+ </table> 
+   </div>
+   <div class="row">&nbsp;</div>
+   <div class="row">
+		 <table align ="center">
+ <tr>
+   <th class="combobox"> 
+        <h2>$21<sup>00</sup></h2>
+        <h4 align="center"><i>Just for Couple</i></h4> 
+		</th>
+  </tr>
+  <tr>
+  <td>
+  <h6 align="center">
+	Medium 2-Topping Pizza, 7 Wings any Style, 2-20oz Sodas</h6>
+  </td>
+  </tr>  
+   <tr>
+  <td align="center">
+	<button type="button" class="btn btn-danger btn-lg">Order Now</button>
+    
+    
+  </td>
+  </tr>   
+ </table> 
+   </div>
+   <div class="row">&nbsp;</div>
+    
+            </div>
+            <div class="col-md-9">
+               <div class="row">
+                   
 		 
 		 <!--
 	     <img src="images/build.png" alt="Build Your Pizza" class="responsive" width="200" height="150">
@@ -199,191 +345,80 @@ th {
           <table align ="center">
  <tr>
    <th class="submenu"> 
-                  <h4 class="logo" align="center"><i>Pizza</i></h4>
+                  <h4 class="logo" align="center"><i>Pizza Menu</i></h4>
                 </th>
   
  </table> 
 
               		 
        </div>
-		   
-		 
-		 <div class="col-md-12 p-4">
-		 
-		 <!--
-	     <img src="images/build.png" alt="Build Your Pizza" class="responsive" width="200" height="150">
-		 -->
-		 
-          <table align ="center">
+       <div class="row">&nbsp;</div>
+ 
+  		
+ <div class="mainpic">
+   <img src="images/main-pizza.png" alt="Build Your Pizza" class="responsive" width="400" height="200">
+    
+ </div>
+  <div class="row">&nbsp;</div>
+        <div class="row">
+       <table align ="center">
  <tr>
-   <th> 
-     <b>Cheese Pizza</b>
+   <th colspan="2"> 
+     <h5>Cheese Pizza</h5>
     </th>
  </tr>
  <tr>
-    <td> 
+    <td colspan="2"> 
      <i>
  Mozzarella with red sauce. 
      </i>
     </td>
  </tr>
  <tr>
-    <td> 
+    <td>  
       Small :	$11.95	
+	   
+     </td>
+	 <td class="addcart">  
+  
+	  <button type="button" class="btn btn-danger btn-sm">Add to Cart</button>
      </td>
  </tr>
   <tr>
-    <td> 
+    <td>  
       Large : $15.95  
     </td>
- </tr>
- </table> 
-
-              		 
-       </div>
-	   
-	   <div class="col-md-12 p-4">
-		 
-		 <!--
-	     <img src="images/build.png" alt="Build Your Pizza" class="responsive" width="200" height="150">
-		 -->
-		 
-          <table align ="center">
- <tr>
-   <th class="submenu"> 
-                  <h4 class="logo" align="center"><i>Appetizers</i></h4>
-                </th>
+	<td class="addcart">   
   
- </table> 
-
-              		 
-       </div>
-	   
-	   
-        
-       <div class="col-md-12  p-4">
-          <table align ="center">
-            <tr>
-               <th> 
-                  <b>Mozarella Sticks</b>
-               </th>
-             </tr>
-             <tr>
-                <td> 
-                    Small : $2.95	
-                </td>
-              </tr>
-              <tr>
-                <td> 
-                   Large : $4.25
-                </td>
-              </tr>
-          </table>
-	      
-		  <p>&nbsp;</p>		
-
-		  <table align ="center">
-            <tr>
-             <th> 
-               <b>French Fries</b>
-            </th>
-           </tr>
-          <tr>
-             <td> 
-                 Small : $2.95		
-              </td>
-          </tr>
-          <tr>
-             <td> 
-                Large : $4.25
-             </td>
-          </tr>
-          </table>
-		  
-		  <p>&nbsp;</p>		
-<table align ="center">
- <tr>
-   <th> 
-     <b>Chicken Wings</b>
-    </th>
- </tr>
-  
- <tr>
-    <td> 
-        6 pc : $7.25		
+	  <button type="button" class="btn btn-danger btn-sm">Add to Cart</button>
      </td>
  </tr>
-  <tr>
-    <td> 
-      12 pc : $10.25
-    </td>
- </tr>
- </table>
-	 
-<p>&nbsp;</p>		
-<table align ="center">
- <tr>
-   <th> 
-     <b>Garlic Bread</b>
-    </th>
- </tr>
-  
- <tr>
-    <td> 
-        Plain : $2.95		
-     </td>
- </tr>
-  <tr>
-    <td> 
-      With Cheese : $3.95
-    </td>
- </tr>
- </table>
-
-<p>&nbsp;</p>		
-<table align ="center">
- <tr>
-   <th> 
-     <b>Garlic knots with Marinara Sauce</b>		
-    </th>
- </tr>
- 
- <tr>
-    <td> 
-        6 pc	: $3.95		
-     </td>
- </tr>
-  <tr>
-    <td> 
-      12 pc   : $7.95
-    </td>
- </tr>
- </table>
- </div>
- 
- <div class="col-md-12 p-4">
-		 
-		 <!--
-	     <img src="images/build.png" alt="Build Your Pizza" class="responsive" width="200" height="150">
-		 -->
-		 
-          <table align ="center">
- <tr>
-   <th class="submenu"> 
-                  <h4 class="logo" align="center"><i>Salads</i></h4>
-                </th>
-  
  </table> 
-
-              		 
-       </div>
- 
- 
-
  </div>
+ <div class="row">&nbsp;</div>
   
- </div>
-</div>
+               </div>
+               <div class="row"> </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- /End of Content section -->
+   <!-- /Footer section -->
+   <div class="row">
+      <div class="col-md-12">
+         <div class="footer" style="background-color:#E7E4E3"> 
+            <a href="aboutus.html">About Us</a>   <a href="contactus.html">Contact Us</a>  <a href="termsofservice.html">Terms of Service</a>
+         </div>
+         <div class="row"> </div>
+      </div>
+      <div class="col-md-12">
+         <div class="footer"> 
+           <i>This system is powered by Pizzaxml</i>
+           <br> © 2020 Pizzaxml.com
+         </div>
+         <div class="row"> </div>
+      </div>
     
  
     
@@ -391,5 +426,3 @@ th {
 
 </body>
 </html>
-
-		 
