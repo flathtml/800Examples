@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#211 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="211-Pizza-order-system.html"&gt;211-Pizza-order-system.html&lt;a&gt;</LINK>
+    <CATEGORY>Javascript / PHP / XML</CATEGORY>
+	<DESC>JavaScript Add minutes and display time</DESC>
+ </EXAMPLE>
  <!--Example#210 -->
  <EXAMPLE>
     <LINK>&lt;a href="210-Add-minutes-display-time.html"&gt;210-Add-minutes-display-time.html&lt;a&gt;</LINK>

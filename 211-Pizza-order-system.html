@@ -1,0 +1,398 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Online Pizza Ordering system App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Ultra&display=swap" rel="stylesheet">
+</head>
+<style>
+.center {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    color: #00ff00;
+    border: 1px solid green;
+}
+ .logo{
+ font-family: 'Righteous', cursive;
+ font-family: 'Ultra', serif;
+ color:#b30000;
+ }
+ 
+  
+
+.mainbox {
+    
+    color: #000000;
+    border: 1px solid green;
+    background-color:#bbff99;
+}
+
+.submenu {
+    
+    color: #000000;
+    border: 1px solid green;
+    background-color:#bbff99;
+	width: 80%;
+}
+
+.combospecial {
+ 
+    color:  #ffff00;
+    border: 1px solid brown;
+     background-color:#b30000;
+     
+}
+
+.combobox {
+ 
+    color:  #b30000;
+    border: 1px solid brown;
+     background-color:#bbff99;
+     
+}
+
+.headertext {
+   
+    background-color:#ffff66;
+ 
+}
+ 
+
+ .respimg {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  
+}
+
+
+th, td {
+   
+  padding: 8px;
+  color: black;
+}
+
+ .submenu.th {
+  background-color: #bbff99;
+  color: black;
+  text-align: center;
+ 
+}
+ 
+
+th {
+  background-color: #ffff66;
+  color: black;
+  text-align: center;
+}
+ 
+ table, th, td {
+  border: 1px solid black;
+}
+</style>
+<body>
+ 
+
+
+<div class="container-fluid">
+
+  <div class="row">&nbsp; 
+  </div>
+
+  <div class="center"> 
+  <nav class="navbar fixed-top navbar-light bg-warning">
+          <div class="logo"> 
+         <h4><i>Cheezy Pizza</i></h4>
+           </div>
+           <button type="button" class="btn btn-dark"><b>Cart</b>         
+          </button>
+          
+        
+           </nav>
+  </div>
+ 
+  <div class="col-md-12 p-3">&nbsp;</div>
+  
+  <div class="row">
+  
+   <div class="col-md-3">
+      <div class="col-md-12 p-4 mb-4">
+		 
+		 <!--
+	     <img src="images/build.png" alt="Build Your Pizza" class="responsive" width="200" height="150">
+		 -->
+		 
+          <table align ="center">
+ <tr>
+   <th class="combospecial"> 
+                  <h3 align="center"><i>OUR COMBO SPECIALS</i></h3>
+                </th>
+  
+ </table> 
+
+              		 
+       </div>
+      
+     <div class="col-md-12 p-4 mb-4">
+	  <table align ="center">
+ <tr>
+   <th class="combobox"> 
+        <h4 align="center"><i>COMBO#1</i></h4> 
+		</th>
+  </tr>
+  <tr>
+  <td>
+	2 Large Pizzas and a 2L Drink for $19.95
+  </td>
+  </tr>  
+ </table> 
+     </div>
+	 
+	  <div class="col-md-12 p-4 mb-4">
+	  <table align ="center">
+ <tr>
+   <th class="combobox"> 
+        <h4 align="center"><i>COMBO#2</i></h4> 
+		</th>
+  </tr>
+  <tr>
+  <td>
+	2 Large Pizzas and a 2L Drink for $19.95
+  </td>
+  </tr>  
+ </table> 
+     </div>
+	 
+	  <div class="col-md-12 p-4 mb-4">
+	  <table align ="center">
+ <tr>
+   <th class="combobox"> 
+        <h4 align="center"><i>COMBO#3</i></h4> 
+		</th>
+  </tr>
+  <tr>
+  <td>
+	2 Large Pizzas and a 2L Drink for $19.95
+  </td>
+  </tr>  
+ </table> 
+     </div>   
+		   
+ </div>
+
+   <div class="col-md-9">
+    <div class="col-md-12 p-4 mb-4">
+		 
+		 <!--
+	     <img src="images/build.png" alt="Build Your Pizza" class="responsive" width="200" height="150">
+		 -->
+		 
+          <table align ="center">
+ <tr>
+   <th class="submenu"> 
+                  <h4 class="logo" align="center"><i>Pizza</i></h4>
+                </th>
+  
+ </table> 
+
+              		 
+       </div>
+		   
+		 
+		 <div class="col-md-12 p-4 mb-4">
+		 
+		 <!--
+	     <img src="images/build.png" alt="Build Your Pizza" class="responsive" width="200" height="150">
+		 -->
+		 
+          <table align ="center">
+ <tr>
+   <th> 
+     <b>Cheese Pizza</b>
+    </th>
+ </tr>
+ <tr>
+    <td> 
+     <i>
+ Mozzarella with red sauce. 
+     </i>
+    </td>
+ </tr>
+ <tr>
+    <td> 
+      Small :	$11.95	
+     </td>
+ </tr>
+  <tr>
+    <td> 
+      Large : $15.95  
+    </td>
+ </tr>
+ </table> 
+
+              		 
+       </div>
+	   
+	   <div class="col-md-12 p-4 mb-4">
+		 
+		 <!--
+	     <img src="images/build.png" alt="Build Your Pizza" class="responsive" width="200" height="150">
+		 -->
+		 
+          <table align ="center">
+ <tr>
+   <th class="submenu"> 
+                  <h4 class="logo" align="center"><i>Appetizers</i></h4>
+                </th>
+  
+ </table> 
+
+              		 
+       </div>
+	   
+	   
+        
+       <div class="col-md-12  p-4 mb-4">
+          <table align ="center">
+            <tr>
+               <th> 
+                  <b>Mozarella Sticks</b>
+               </th>
+             </tr>
+             <tr>
+                <td> 
+                    Small : $2.95	
+                </td>
+              </tr>
+              <tr>
+                <td> 
+                   Large : $4.25
+                </td>
+              </tr>
+          </table>
+	      
+		  <p>&nbsp;</p>		
+
+		  <table align ="center">
+            <tr>
+             <th> 
+               <b>French Fries</b>
+            </th>
+           </tr>
+          <tr>
+             <td> 
+                 Small : $2.95		
+              </td>
+          </tr>
+          <tr>
+             <td> 
+                Large : $4.25
+             </td>
+          </tr>
+          </table>
+		  
+		  <p>&nbsp;</p>		
+<table align ="center">
+ <tr>
+   <th> 
+     <b>Chicken Wings</b>
+    </th>
+ </tr>
+  
+ <tr>
+    <td> 
+        6 pc : $7.25		
+     </td>
+ </tr>
+  <tr>
+    <td> 
+      12 pc : $10.25
+    </td>
+ </tr>
+ </table>
+	 
+<p>&nbsp;</p>		
+<table align ="center">
+ <tr>
+   <th> 
+     <b>Garlic Bread</b>
+    </th>
+ </tr>
+  
+ <tr>
+    <td> 
+        Plain : $2.95		
+     </td>
+ </tr>
+  <tr>
+    <td> 
+      With Cheese : $3.95
+    </td>
+ </tr>
+ </table>
+
+<p>&nbsp;</p>		
+<table align ="center">
+ <tr>
+   <th> 
+     <b>Garlic knots with Marinara Sauce</b>		
+    </th>
+ </tr>
+ 
+ <tr>
+    <td> 
+        6 pc	: $3.95		
+     </td>
+ </tr>
+  <tr>
+    <td> 
+      12 pc   : $7.95
+    </td>
+ </tr>
+ </table>
+ </div>
+ 
+ <div class="col-md-12 p-4 mb-4">
+		 
+		 <!--
+	     <img src="images/build.png" alt="Build Your Pizza" class="responsive" width="200" height="150">
+		 -->
+		 
+          <table align ="center">
+ <tr>
+   <th class="submenu"> 
+                  <h4 class="logo" align="center"><i>Salads</i></h4>
+                </th>
+  
+ </table> 
+
+              		 
+       </div>
+ 
+ 
+
+ </div>
+  
+ </div>
+</div>
+    
+ 
+    
+   
+
+</body>
+</html>
+
+		 
