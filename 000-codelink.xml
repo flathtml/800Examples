@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#212 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="212-Add-Delete-Table-rows-using-javascript.html"&gt;212-Add-Delete-Table-rows-using-javascript.html&lt;a&gt;</LINK>
+    <CATEGORY>Javascript / HTML</CATEGORY>
+	<DESC>Add / Delete Table rows using JavaScript</DESC>
+ </EXAMPLE>
  <!--Example#211 -->
  <EXAMPLE>
     <LINK>&lt;a href="211-Pizza-order-system.html"&gt;211-Pizza-order-system.html&lt;a&gt;</LINK>
