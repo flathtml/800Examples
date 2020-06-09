@@ -356,7 +356,7 @@
             <div id="textarea">
                <div id="textareawrapper">
          <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
-   <!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
  <head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -384,21 +384,43 @@
  <script src = 
 "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> 
         </script> 
-	<title>Random Name Generator</title>
+	<title>Dynamically Add and Delete Form Fields</title>
  
  </head>
  <body>
   <div class="container" >
   <h1>Dynamically Add and Delete Form Fields using JQuery</h1>
   <p>
-  <i>The Add button adds a Pizza and a Topping 
+  <i>The Add button adds a Pizza and three Toppings (Tomato, Onion, Artichoke). 
    <p>
- Delete button next to pizza deletes both pizza and topping. Whereas Delete button next to topping just deletes topping</i>
+ Delete button next to pizza deletes both pizza and toppings. Whereas Delete button next to topping just deletes the particular  topping</i>
+ <p>
+Following are costs :
+<p>
+<table>
+<tr><td>Pizza</td><td>$15.00</td></tr>
+<tr><td>Tomato Topping</td><td>$1.00</td></tr>
+<tr><td>Onion Topping</td><td>$1.00</td></tr>
+<tr><td>Artichoke Topping </td><td>$3.00</td></tr>
+</table>
+<p></p>
+Display the Total Cost of Pizza and update it as each item is deleted
+<p></p>
+  <div id="disptotal"></div>
+   <p>  </p>
  <div class='element' id='div_1'>
  <button><span class='add'>Click to add Pizza and Topping</span></button>
- <p> </p>
-   
+  <p>  </p>
+  <button><span class='addgentop'>Click to add Gen Topping</span></button>
+  <p>  </p>
+  <button><span class='addspectop'>Click to add Spec Topping</span></button>
+  <p>  </p>
  </div>
+ <p>  </p>
+ 
+  <p>  </p>
+   <p>  </p>
+    <p>  </p>
 </div>
  <script>
  $(document).ready(function(){
@@ -421,9 +443,20 @@
    $(".element:last").after("<div class='element' id='div_"+ nextindex +"'></div>");
  
    // Adding element to <div>
-   $("#div_" + nextindex).append("<input type='text' placeholder='Cheese Pizza' id='txt_"+ nextindex +"'> <button><span id='remove_" + nextindex + "' class='remove'>Del Pizza and Topping</span></button>");
+   $("#div_" + nextindex).append("<input type='text' placeholder='Cheese Pizza' id='txt_"+ nextindex +"'> $<span class='totalprice'>15.00</span> <button><span id='remove_" + nextindex + "' class='remove'>Del Pizza and Topping</span></button>");
     
-   $("#div_" + nextindex).append("<div id='top'><input type='text' placeholder='Topping-Tomato' id='txt_"+ nextindex +"'> <button><span id='top_" + nextindex + "' class='top'>Del Topping</span></button></div> ");
+   $("#div_" + nextindex).append("<div id='top1'><input type='text' placeholder='Topping-Tomato' id='txt_"+ nextindex +"'> $<span class='totalprice'>1.00</span>  <button><span id='top1_" + nextindex + "' class='top1'>Del Topping</span></button>");
+   
+   $("#div_" + nextindex).append("<div id='top2'><input type='text' placeholder='Topping-Onions' id='txt_"+ nextindex +"'> $<span class='totalprice'>1.00</span>  <button><span id='top2_" + nextindex + "' class='top2'>Del Topping</span></button> ");
+   
+   $("#div_" + nextindex).append("<div id='top3'><input type='text' placeholder='Topping-Artichoke' id='txt_"+ nextindex +"'> $<span class='totalprice'>3.00</span>  <button><span id='top3_" + nextindex + "' class='top3'>Del Topping</span></button>");
+   
+   var sum = 0;
+$('.totalprice').each(function()
+{
+    sum += parseFloat($(this).text());
+    document.getElementById("disptotal").innerHTML = "TOTAL : $" + sum;
+});
    
    
   }
@@ -440,29 +473,189 @@
   // Remove <div> with id
   $("#div_" + deleteindex).remove();
   
+     
+    document.getElementById("disptotal").innerHTML = "TOTAL: 0";
  
+   
 
  }); 
  
-  // Remove just the Topping
- $('.container').on('click','.top',function(){
+  // Remove just Tomato Topping
+ $('.container').on('click','.top1',function(){
  
   
   // Remove <div> with id
-  $("#top").remove();
+  $("#top1").remove();
+  
+   var sum = 0;
+$('.totalprice').each(function()
+{
+    sum += parseFloat($(this).text());
+    document.getElementById("disptotal").innerHTML = "TOTAL : $" + sum;
+});
+   
   
  
 
  }); 
+ 
+  // Remove just Onion Topping
+ $('.container').on('click','.top2',function(){
+ 
+  
+  // Remove <div> with id
+  $("#top2").remove();
+  
+   var sum = 0;
+$('.totalprice').each(function()
+{
+    sum += parseFloat($(this).text());
+    document.getElementById("disptotal").innerHTML = "TOTAL : $" + sum;
+});
+   
+ 
+
+ }); 
+ 
+  // Remove just Onion Topping
+ $('.container').on('click','.top3',function(){
+ 
+  
+  // Remove <div> with id
+  $("#top3").remove();
+  
+  var sum = 0;
+$('.totalprice').each(function()
+{
+    sum += parseFloat($(this).text());
+    document.getElementById("disptotal").innerHTML = "TOTAL : $" + sum;
+});
+   
+
+ }); 
+ 
+  // Remove just Onion Topping
+ $('.container').on('click','.top4',function(){
+ 
+  
+  // Remove <div> with id
+  $("#top4").remove();
+  
+  var sum = 0;
+$('.totalprice').each(function()
+{
+    sum += parseFloat($(this).text());
+    document.getElementById("disptotal").innerHTML = "TOTAL : $" + sum;
+});
+   
+
+ }); 
+ 
+  // Remove just Onion Topping
+ $('.container').on('click','.top5',function(){
+ 
+  
+  // Remove <div> with id
+  $("#top5").remove();
+  
+  var sum = 0;
+$('.totalprice').each(function()
+{
+    sum += parseFloat($(this).text());
+    document.getElementById("disptotal").innerHTML = "TOTAL : $" + sum;
+});
+   
+
+ }); 
+ 
+ 
+ // Add new element
+ $(".addgentop").click(function(){
+
+  // Finding total number of elements added
+  var total_element = $(".element").length;
+ 
+  // last <div> with element class id
+  var lastid = $(".element:last").attr("id");
+  var split_id = lastid.split("_");
+  var nextindex = Number(split_id[1]) + 1;
+
+  var max = 5;
+  // Check total number elements
+  if(total_element < max ){
+   // Adding new div container after last occurance of element class
+   $(".element:last").after("<div class='element' id='div_"+ nextindex +"'></div>");
+ 
+   // Adding Gen Topping to <div>
+   $("#div_" + nextindex).append("<div id='top4'><input type='text' placeholder='Gen Topping' id='txt_"+ nextindex +"'> $<span class='totalprice'>1.00</span> <button><span id='remove_" + nextindex + "' class='top4'>Del Topping</span></button>");
+    
+    
+   
+  var sum = 0;
+$('.totalprice').each(function()
+{
+    sum += parseFloat($(this).text());
+    document.getElementById("disptotal").innerHTML = "TOTAL : $" + sum;
+});
+
+ 
+   
+   
+   
+  }
+ 
+ });
+
+
+
+ // Add new element
+ $(".addspectop").click(function(){
+
+  // Finding total number of elements added
+  var total_element = $(".element").length;
+ 
+  // last <div> with element class id
+  var lastid = $(".element:last").attr("id");
+  var split_id = lastid.split("_");
+  var nextindex = Number(split_id[1]) + 1;
+
+  var max = 5;
+  // Check total number elements
+  if(total_element < max ){
+   // Adding new div container after last occurance of element class
+   $(".element:last").after("<div class='element' id='div_"+ nextindex +"'></div>");
+ 
+   // Adding Special Topping to <div>
+   $("#div_" + nextindex).append("<div id='top5'><input type='text' placeholder='Special Topping' id='txt_"+ nextindex +"'> $<span class='totalprice'>3.00</span> <button><span id='remove_" + nextindex + "' class='top5'>Del Topping</span></button>");
+    
+    
+   
+  var sum = 0;
+$('.totalprice').each(function()
+{
+    sum += parseFloat($(this).text());
+    document.getElementById("disptotal").innerHTML = "TOTAL : $" + sum;
+});
+
+ 
+   
+   
+   
+  }
+ 
+ });
+
+ 
+ 
+ 
  
  
 });
  </script>
  
     </body>  
-</html>      
-		 
-		
+</html>     
+
 		</textarea>
                </div>
             </div>
