@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+  
+ <!--Example#216 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="216-sample-order-table.html"&gt;216-sample-order-table.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML/Javascript/</CATEGORY>
+	<DESC>Sample Pizza Order Table</DESC>
+ </EXAMPLE>
  <!--Example#215 -->
  <EXAMPLE>
     <LINK>&lt;a href="215-Dynamic-Form.html"&gt;215-Dynamic-Form.html&lt;a&gt;</LINK>

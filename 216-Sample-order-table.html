@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Online Pizza Ordering System App</title>
+  <meta name="description" content="PizzaXML is a platform to develop Online Pizza Ordering System Applications">
+<meta name="keywords" content="Online Pizza Ordering system, FREE Pizza website">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Ultra&display=swap" rel="stylesheet">
+</head>
+<style>
+.center {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+   
+    border: 1px solid green;
+}
+
+.addcart {
+    text-align: center;
+     
+}
+
+.mainpic {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+   
+     
+}
+
+.special {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+   
+     
+}
+
+ .logo{
+ font-family: 'Righteous', cursive;
+ font-family: 'Ultra', serif;
+  
+  
+ }
+ 
+  
+
+.mainbox {
+    
+    color: #000000;
+    border: 1px solid green;
+    background-color:#bbff99;
+}
+
+.total {
+    
+    color: white;
+     
+}
+
+.submenu {
+    
+    color: #000000;
+    border: 1px solid green;
+    background-color:#bbff99;
+	width: 80%;
+}
+
+.combospecial {
+ 
+    color:  #ffff00;
+    border: 1px solid green;
+    background-color:#b30000;
+     
+}
+
+.combobox {
+ 
+    color:  #b30000;
+    border: 1px solid green;
+    background-color:#bbff99;
+     
+}
+
+.headertext {
+   
+    background-color:#ffff66;
+ 
+}
+ 
+
+ .respimg {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  
+}
+
+
+th, td {
+   
+  padding: 8px;
+  color: black;
+}
+
+ .submenu.th {
+  background-color: #bbff99;
+  color: black;
+  text-align: center;
+ 
+}
+
+.menudetails.td {
+  background-color: #ebebe0;
+  color: black;
+  text-align: center;
+ 
+}
+
+.item{
+  background-color: #ebebe0;
+  color: black;
+  text-align: center;
+  padding: 2px;
+ 
+}
+ 
+
+th {
+  background-color:#bbff99;
+  color: black;
+  text-align: center;
+}
+ 
+ table, th, td, tr {
+  border: 1px solid green;
+}
+ 
+.makeup1 {
+    font-weight: bold;
+    color: #000000;
+    border: 1px solid green;
+}
+ .makeup2 {
+    border: 1px solid green;
+}
+
+ .footer {
+    text-align: center;
+}
+
+ .padding {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: justify;
+}
+  
+ .top {
+    position: relative;
+    background-color: #ffffff;
+    height: 68px;
+    padding-top: 20px;
+    line-height: 50px;
+    overflow: hidden;
+    z-index: 1;
+}
+.w3-right {
+    float: right!important}
+.w3-wide {
+    letter-spacing: 4px}
+ .w3schools-logo {
+    font-family: Righteous;
+    text-decoration: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 37px;
+    letter-spacing: 3px;
+    color: #555555;
+    display: block;
+    position: absolute;
+    top: 17px;
+    padding-left: 2px;
+}
+.w3schools-logo .dotcom {
+    color: #4CAF50;
+}
+.w3schools-logo:hover {
+    color: #555555;
+}
+
+
+ img {
+    max-width: 400px;
+    height: auto;
+}
+
+@media (max-width: 992px) {
+    .top {
+    height: 100px;
+}
+ .top .w3schools-logo {
+    position: relative;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+ .toptext {
+    width: 100%;
+    text-align: center;
+}
+
+img {
+    max-width: 300px;
+    height: auto;
+}
+ }
+ 
+ 
+</style>
+<body class="container-fluid">
+<SCRIPT language="javascript">
+		function addRow(tableID) {
+
+			var table = document.getElementById(tableID);
+
+			var rowCount = table.rows.length;
+			var row = table.insertRow(rowCount);
+
+			var cell1 = row.insertCell(0);
+			var element1 = document.createElement("input");
+			element1.type = "checkbox";
+			element1.name="chkbox[]";
+			cell1.appendChild(element1);
+
+			 
+			var cell3 = row.insertCell(1);
+			var element2 = document.createElement("input");
+			element2.type = "text";
+			element2.name = "myInputs[]";
+			cell3.appendChild(element2);
+
+
+		}
+
+		function deleteRow(tableID) {
+			try {
+			var table = document.getElementById(tableID);
+			var rowCount = table.rows.length;
+
+			for(var i=0; i<rowCount; i++) {
+				var row = table.rows[i];
+				var chkbox = row.cells[0].childNodes[0];
+				if(null != chkbox && true == chkbox.checked) {
+					table.deleteRow(i);
+					rowCount--;
+					i--;
+				}
+
+
+			}
+			}catch(e) {
+				alert(e);
+			}
+		}
+
+	</SCRIPT>
+
+  <div class="row">&nbsp;</div>
+
+  <div class="center"> 
+         <nav class="navbar fixed-top navbar-light bg-warning">
+          <div class="row"> 
+         &nbsp; &nbsp;<h5>TOTAL : </h5>
+           </div>
+            
+        <!--Shopping Cart Button  ---->
+           <button type="button" class="btn btn-success"><b>Checkout</b>         
+          </button>
+          
+        
+           </nav>
+  </div>
+  <div class="row">&nbsp;</div>
+  <div class="top">
+      <a class="w3schools-logo" href="../default.html">Cheezy<span class="dotcom">Pizza</span></a>
+      <div class="w3-right toptext w3-wide ">Authentic Brick oven Pizza</div>
+  </div>
+  
+  <!-- /.Start of Content section -->
+   <div class="row">
+      <div class="col-md-12">
+         <div class="row">
+      
+    
+            </div>
+            <div class="col-md-12">
+               <div class="row">
+                   
+		 
+		 <!--
+	     <img src="images/build.png" alt="Build Your Pizza" class="responsive" width="200" height="150">
+		 -->
+		 
+          <table align ="center">
+ <tr>
+   <th class="combospecial"> 
+                  <h3  align="center"><i>PIZZA MENU</i></h3>
+                </th>
+  
+ </table> 
+
+              		 
+       </div>
+       <div class="row">&nbsp;</div>
+ 
+ 
+    <div class="row">&nbsp;</div>
+        <div class="row">
+       <table align ="center">
+ <tr>
+ <td colspan="2" align="center" class="item"> 
+     ITEM#1
+      &nbsp;
+   <button type="button" class="btn btn-dark btn-sm">Delete Item</button>
+    </td>
+    </tr>
+    <tr>
+   <th colspan="2" class="item"> 
+     <h5>Philly Cheese and Garlic.</h5>
+    </th>
+ </tr>
+  <tr>
+    <td>  
+      Item Type
+	   
+     </td>
+	 <td>  
+  Pizza
+	 
+     </td>
+ </tr>
+ <tr>
+    <td>  
+      Size
+	   
+     </td>
+	 <td>  
+  Large
+	 
+     </td>
+ </tr>
+  <tr>
+    <td>  
+      Pizza Price
+    </td>
+	<td>   
+  
+	  $21.00
+     </td>
+ </tr>
+ <tr>
+    <td>  
+      Crust
+    </td>
+	<td>   
+  
+	 Thin
+     </td>
+ </tr>
+ <tr>
+    <td>  
+      Sauce
+    </td>
+	<td>   
+  
+	 White
+     </td>
+ </tr>
+ <tr>
+ <td colspan="2">
+ <INPUT type="button" value="Add Topping" onclick="addRow('dataTable')" />
+&nbsp;
+	<INPUT type="button" value="Delete Topping" onclick="deleteRow('dataTable')" />
+ </td>
+ </tr>
+ </table> 
+ <table id="dataTable" align ="center">
+		<TR>
+			<TD><INPUT type="checkbox" name="chk"/></TD>
+			 
+			<TD> <INPUT type="text" name="myInputs[]"/> </TD>
+		</TR>
+         
+  
+	</table>
+ </div>
+ 
+ 
+ <div class="row">&nbsp;</div>
+  
+               </div>
+               <div class="row"> </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- /End of Content section -->
+   <!-- /Footer section -->
+   <div class="row">
+      <div class="col-md-12">
+         <div class="footer" style="background-color:#E7E4E3"> 
+            <a href="aboutus.html">About Us</a>   <a href="contactus.html">Contact Us</a>  <a href="termsofservice.html">Terms of Service</a>
+         </div>
+         <div class="row"> </div>
+      </div>
+      <div class="col-md-12">
+         <div class="footer"> 
+           <i>This system is powered by Pizzaxml</i>
+           <br> © 2020 Pizzaxml.com
+         </div>
+         <div class="row"> </div>
+      </div>
+    
+ 
+    
+   
+
+</body>
+</html>
+		 
