@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#215 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="215-Dynamic-Form.html"&gt;215-Dynamic-Form.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML/Javascript/PHP</CATEGORY>
+	<DESC>Dynamically add form fields and feed it to a php</DESC>
+ </EXAMPLE>
  <!--Example#214 -->
  <EXAMPLE>
     <LINK>&lt;a href="214-Dynamically-add-del-form-fields.html"&gt;214-Dynamically-add-del-form-fields.html&lt;a&gt;</LINK>
@@ -23,7 +29,7 @@
  <EXAMPLE>
     <LINK>&lt;a href="211-Pizza-order-system.html"&gt;211-Pizza-order-system.html&lt;a&gt;</LINK>
     <CATEGORY>Javascript / PHP / XML</CATEGORY>
-	<DESC>JavaScript Add minutes and display time</DESC>
+	<DESC>Pizza Order System</DESC>
  </EXAMPLE>
  <!--Example#210 -->
  <EXAMPLE>
