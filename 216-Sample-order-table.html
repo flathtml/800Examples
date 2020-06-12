@@ -231,7 +231,7 @@ img {
  
  
 </style>
-<body class="container-fluid">
+<body class="container-fluid" onload="resetitemnum()">
 <SCRIPT language="javascript">
 		function addRow(tableID) {
 
@@ -280,7 +280,21 @@ img {
   function deleteitem(divid) {
   var myobj = document.getElementById(divid);
   myobj.remove();
+  
+  resetitemnum();
+  
+   
+  
 }
+
+function resetitemnum() {
+var x = document.getElementById("orderdetails").querySelectorAll(".itemnum");
+  var i;
+  for (i = 0; i < x.length; i++) {
+    x[i].innerHTML = i+1;
+  }
+  
+  }
 	</SCRIPT>
 
   <div class="row">&nbsp;</div>
@@ -333,11 +347,12 @@ img {
  
  
     <div class="row">&nbsp;</div>
+	<div id="orderdetails">
         <div class="row" id="item1">
        <table align ="center">
  <tr>
- <td colspan="2" class="item"> 
-     ITEM#1
+ <td colspan="2" class="item">  
+     ITEM#<span class="itemnum"></span>
       
     </td>
     </tr>
@@ -423,8 +438,8 @@ img {
  <div class="row" id="item2">
        <table align ="center">
  <tr>
- <td colspan="2" class="item"> 
-     ITEM#2
+ <td colspan="2" class="item">
+     ITEM#<span class="itemnum"></span>
       
     </td>
     </tr>
@@ -501,6 +516,94 @@ img {
 	</table>
  </div>
  
+ 
+  <div class="row">&nbsp;</div>
+ 
+ <div class="row" id="item3">
+       <table align ="center">
+ <tr>
+ <td colspan="2" class="item">
+     ITEM#<span class="itemnum"></span>
+      
+    </td>
+    </tr>
+	 
+    <tr>
+   <td colspan="2" class="item"> 
+     <h5>Veggie Special</h5>
+    </td>
+ </tr>
+ <tr>
+   <td colspan="2" class="item"> 
+     <button type="button" class="btn btn-dark btn-sm" onclick="deleteitem('item3')">Delete Item</button>
+    </td>
+ </tr>
+  <tr>
+    <td>  
+      Item Type
+	   
+     </td>
+	 <td>  
+  Pizza
+	 
+     </td>
+ </tr>
+ <tr>
+    <td>  
+      Size
+	   
+     </td>
+	 <td>  
+    Large
+	
+	 
+     </td>
+ </tr>
+  <tr>
+    <td>  
+      Pizza Price
+    </td>
+	<td>   
+  
+	  $21.00
+     </td>
+ </tr>
+ <tr>
+    <td>  
+      Crust
+    </td>
+	<td>   
+  
+	 Thin
+     </td>
+ </tr>
+ <tr>
+    <td>  
+      Sauce
+    </td>
+	<td>   
+  
+	 White
+     </td>
+ </tr>
+ <tr>
+ <td colspan="2">
+ <button type="button" class="btn btn-success btn-sm" onclick="addRow('dataTable3')">Add Topping</button>&nbsp;
+ <button type="button" class="btn btn-dark btn-sm" onclick="deleteRow('dataTable3')">Delete Topping</button>&nbsp;
+  
+ </td>
+ </tr>
+ </table> 
+ <table id="dataTable3" align ="center">
+		 
+         
+  
+	</table>
+ </div>
+ 
+ 
+ 
+ </div>
  
  <div class="row">&nbsp;</div>
   
