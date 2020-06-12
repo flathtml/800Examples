@@ -356,7 +356,7 @@
             <div id="textarea">
                <div id="textareawrapper">
          <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
 <TITLE> Add/Remove dynamic rows in HTML table </TITLE>
  <head>
@@ -405,6 +405,25 @@
 
 
 			}
+            
+            //This resets the row ids.  
+            rowCount = table.rows.length;
+            var k;
+            if (table.rows[0].childNodes[1].innerHTML == "2"){
+               k = 0;
+              }
+              
+            else{
+              k=1;
+            }
+            
+            for(var j=k; j<rowCount; j++) {
+				row = table.rows[j].childNodes[1];
+            	row.innerHTML = j+1;
+              }
+     
+           //Reset Code Ends
+     
 			}catch(e) {
 				alert(e);
 			}
@@ -422,6 +441,7 @@
 	<INPUT type="button" value="Delete Row" onclick="deleteRow('dataTable')" />
 
 	<TABLE id="dataTable" width="350px" border="1">
+    
 		<TR>
 			<TD><INPUT type="checkbox" name="chk"/></TD>
 			<TD> 1 </TD>
@@ -436,6 +456,7 @@
 </html>
 
 
+		
 		</textarea>
                </div>
             </div>
