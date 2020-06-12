@@ -131,8 +131,7 @@ th, td {
 .item{
   background-color: #ebebe0;
   color: black;
-  text-align: center;
-  padding: 2px;
+  padding: 8px;
  
 }
  
@@ -337,17 +336,24 @@ img {
         <div class="row" id="item1">
        <table align ="center">
  <tr>
- <td colspan="2" align="center" class="item"> 
+ <td colspan="2" class="item"> 
      ITEM#1
       
     </td>
     </tr>
 	 
     <tr>
-   <th colspan="2" class="item"> 
+   <td colspan="2" class="item"> 
      <h5>Philly Cheese and Garlic.</h5>
-    </th>
+    </td>
  </tr>
+ 
+  <tr>
+   <td colspan="2" class="item"> 
+      <button type="button" class="btn btn-dark btn-sm" onclick="deleteitem('item1')">Delete Item</button>
+    </td>
+ </tr>
+ 
   <tr>
     <td>  
       Item Type
@@ -399,7 +405,7 @@ img {
  <td colspan="2">
  <button type="button" class="btn btn-success btn-sm" onclick="addRow('dataTable1')">Add Topping</button>&nbsp;
  <button type="button" class="btn btn-dark btn-sm" onclick="deleteRow('dataTable1')">Delete Topping</button>&nbsp;
- <button type="button" class="btn btn-dark btn-sm" onclick="deleteitem('item1')">Delete Item</button>
+  
  </td>
  </tr>
  </table> 
@@ -420,16 +426,21 @@ img {
  <div class="row" id="item2">
        <table align ="center">
  <tr>
- <td colspan="2" align="center" class="item"> 
+ <td colspan="2" class="item"> 
      ITEM#2
       
     </td>
     </tr>
 	 
     <tr>
-   <th colspan="2" class="item"> 
+   <td colspan="2" class="item"> 
      <h5>Chicken Pesto</h5>
-    </th>
+    </td>
+ </tr>
+ <tr>
+   <td colspan="2" class="item"> 
+     <button type="button" class="btn btn-dark btn-sm" onclick="deleteitem('item2')">Delete Item</button>
+    </td>
  </tr>
   <tr>
     <td>  
@@ -482,7 +493,7 @@ img {
  <td colspan="2">
  <button type="button" class="btn btn-success btn-sm" onclick="addRow('dataTable2')">Add Topping</button>&nbsp;
  <button type="button" class="btn btn-dark btn-sm" onclick="deleteRow('dataTable2')">Delete Topping</button>&nbsp;
- <button type="button" class="btn btn-dark btn-sm" onclick="deleteitem('item2')">Delete Item</button>
+  
  </td>
  </tr>
  </table> 
