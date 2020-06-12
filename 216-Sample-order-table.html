@@ -278,6 +278,10 @@ img {
 			}
 		}
 
+  function deleteitem(divid) {
+  var myobj = document.getElementById(divid);
+  myobj.remove();
+}
 	</SCRIPT>
 
   <div class="row">&nbsp;</div>
@@ -316,7 +320,7 @@ img {
 	     <img src="images/build.png" alt="Build Your Pizza" class="responsive" width="200" height="150">
 		 -->
 		 
-          <table align ="center">
+ <table align ="center">
  <tr>
    <th class="combospecial"> 
                   <h3  align="center"><i>PIZZA MENU</i></h3>
@@ -330,15 +334,15 @@ img {
  
  
     <div class="row">&nbsp;</div>
-        <div class="row">
+        <div class="row" id="item1">
        <table align ="center">
  <tr>
  <td colspan="2" align="center" class="item"> 
      ITEM#1
-      &nbsp;
-   <button type="button" class="btn btn-dark btn-sm">Delete Item</button>
+      
     </td>
     </tr>
+	 
     <tr>
    <th colspan="2" class="item"> 
      <h5>Philly Cheese and Garlic.</h5>
@@ -393,13 +397,96 @@ img {
  </tr>
  <tr>
  <td colspan="2">
- <INPUT type="button" value="Add Topping" onclick="addRow('dataTable')" />
-&nbsp;
-	<INPUT type="button" value="Delete Topping" onclick="deleteRow('dataTable')" />
+ <button type="button" class="btn btn-success btn-sm" onclick="addRow('dataTable1')">Add Topping</button>&nbsp;
+ <button type="button" class="btn btn-dark btn-sm" onclick="deleteRow('dataTable1')">Delete Topping</button>&nbsp;
+ <button type="button" class="btn btn-dark btn-sm" onclick="deleteitem('item1')">Delete Item</button>
  </td>
  </tr>
  </table> 
- <table id="dataTable" align ="center">
+ <table id="dataTable1" align ="center">
+		<TR>
+			<TD><INPUT type="checkbox" name="chk"/></TD>
+			 
+			<TD> <INPUT type="text" name="myInputs[]"/> </TD>
+		</TR>
+         
+  
+	</table>
+ </div>
+ 
+ 
+ <div class="row">&nbsp;</div>
+ 
+ <div class="row" id="item2">
+       <table align ="center">
+ <tr>
+ <td colspan="2" align="center" class="item"> 
+     ITEM#2
+      
+    </td>
+    </tr>
+	 
+    <tr>
+   <th colspan="2" class="item"> 
+     <h5>Chicken Pesto</h5>
+    </th>
+ </tr>
+  <tr>
+    <td>  
+      Item Type
+	   
+     </td>
+	 <td>  
+  Pizza
+	 
+     </td>
+ </tr>
+ <tr>
+    <td>  
+      Size
+	   
+     </td>
+	 <td>  
+  Large
+	 
+     </td>
+ </tr>
+  <tr>
+    <td>  
+      Pizza Price
+    </td>
+	<td>   
+  
+	  $21.00
+     </td>
+ </tr>
+ <tr>
+    <td>  
+      Crust
+    </td>
+	<td>   
+  
+	 Thin
+     </td>
+ </tr>
+ <tr>
+    <td>  
+      Sauce
+    </td>
+	<td>   
+  
+	 White
+     </td>
+ </tr>
+ <tr>
+ <td colspan="2">
+ <button type="button" class="btn btn-success btn-sm" onclick="addRow('dataTable2')">Add Topping</button>&nbsp;
+ <button type="button" class="btn btn-dark btn-sm" onclick="deleteRow('dataTable2')">Delete Topping</button>&nbsp;
+ <button type="button" class="btn btn-dark btn-sm" onclick="deleteitem('item2')">Delete Item</button>
+ </td>
+ </tr>
+ </table> 
+ <table id="dataTable2" align ="center">
 		<TR>
 			<TD><INPUT type="checkbox" name="chk"/></TD>
 			 
