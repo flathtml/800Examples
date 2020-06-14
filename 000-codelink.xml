@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#218 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="218-Responsive-Table.html"&gt;218-Responsive-Table.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML/Javascript/CSS</CATEGORY>
+	<DESC>Responsive Table with Financial Data</DESC>
+ </EXAMPLE>
   <!--Example#217 -->
  <EXAMPLE>
     <LINK>&lt;a href="217-loopthru-divs-with-same-class.html"&gt;217-loopthru-divs-with-same-class.html&lt;a&gt;</LINK>
