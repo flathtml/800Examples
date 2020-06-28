@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#220 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="220-lyrics.html"&gt;220-lyrics.html&lt;a&gt;</LINK>
+    <CATEGORY>Song - Lyrics</CATEGORY>
+	<DESC>BOLLYWOOD : BANE CHAHE DUSHMAN ZAMANA HUMARA</DESC>
+ </EXAMPLE>
  <!--Example#218 -->
  <EXAMPLE>
     <LINK>&lt;a href="218-Responsive-Table.html"&gt;218-Responsive-Table.html&lt;a&gt;</LINK>
