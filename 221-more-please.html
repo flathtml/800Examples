@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ <style>
+ @import "compass/css3";
+
+body{
+   text-align:center;
+   padding:8%;
+   background: pink;
+   font-family: 'Roboto', sans-serif;
+}
+.btn{
+   cursor:pointer;
+   display:inline-block;
+   padding:200px;
+   background: url(https://www.babysignlanguage.com/signs/more.gif);
+   border-radius: 10px;
+   color: black;
+   text-transform:uppercase;
+   line-height:15px;
+   @include transition(box-shadow .25s ease);
+   &:after{
+      content:'';
+      display:inline-block;
+      color: #94a657;
+      background:#fff;
+      font-family: 'FontAwesome';
+      padding:3px;
+      border-radius: 50%;
+      height:200px;
+      width:200px;
+      margin-left:8px;
+      padding-left: 4.5px;
+      padding-right:1.5px;
+   }
+   &.playing{
+       &:after{
+         padding:3px;
+         content:'';
+      }
+   }
+}
+ 
+ </style>
+	<title>Page Title</title>
+ </head>
+ <body>
+
+<audio id="nyan" src="https://www.formrecorder.com/uploads/5f0a5069c3867.wav">
+   Your browser does not support the audio element.
+</audio>
+<a class="btn" id="nyan-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More Please</a>
+<script>
+var nyan = document.getElementById('nyan');
+var nyanBtn = document.getElementById('nyan-btn');
+
+function playPause(song){
+   if (song.paused && song.currentTime >= 0 && !song.ended) {
+      song.play();
+   } else {
+      song.pause();
+   }
+}
+
+function reset(btn, song){
+   if(btn.classList.contains('playing')){
+      btn.classList.toggle('playing');
+   }
+   song.pause();
+   song.currentTime = 0;
+}
+
+function progress(btn, song){
+   setTimeout(function(){
+      var end = song.duration; 
+      var current = song.currentTime;
+      var percent = current/(end/100);
+      //check if song is at the end
+      if(current==end){
+         reset(btn, song);
+      }
+      //set inset box shadow
+      btn.style.boxShadow = "inset " + btn.offsetWidth * (percent/100) + "px 0px 0px 0px rgba(0,0,0,0.125)"
+      //call function again
+      progress(btn, song);     
+   }, 1000);
+}
+
+nyanBtn.addEventListener('click', function(){
+   nyanBtn.classList.toggle('playing');
+   playPause(nyan);
+   progress(nyanBtn, nyan);
+});
+
+
+</script>
+ </body>
+</html>
+
+		
