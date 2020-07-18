@@ -1,0 +1,991 @@
+ <!doctype html>
+<html lang="en">
+  <head>
+ <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+	  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<Style>
+
+object {
+    width: 100%;
+    min-height: 100%;
+}  
+
+ .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+ .navbar .navbar-collapse {
+    text-align: left;
+}
+ 
+
+ .footer {
+    text-align: center;
+}
+
+ .padding {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: justify;
+}
+  
+ .top {
+    position: relative;
+    background-color: #EAEDED;
+	border: 1px solid green;
+    height: 68px;
+    padding-top: 20px;
+    line-height: 50px;
+    overflow: hidden;
+    z-index: 1;
+}
+.w3-right {
+    float: right!important}
+	
+.w3-wide {
+    letter-spacing: 2px;
+	color: #922B21;}
+ .w3schools-logo {
+    font-family: Pacifico;
+    text-decoration: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 37px;
+    letter-spacing: 3px;
+    color: #480BF7;
+    display: block;
+    position: absolute;
+    top: 17px;
+    padding-left: 2px;
+}
+.w3schools-logo .dotcom {
+    color: #F70B2B;
+}
+.w3schools-logo:hover {
+   
+	text-decoration: none;
+}
+
+@media (max-width: 992px) {
+    .top {
+    height: 100px;
+}
+ .top .w3schools-logo {
+    position: relative;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+ .toptext {
+    width: 100%;
+    text-align: center;
+}
+ }
+  
+
+  
+ 
+button:disabled {
+  pointer-events: none;
+  background: #444242;
+  color:#ffffff;
+}
+
+button:active {
+  background: #ff0000;
+ 
+}
+
+.btn.btn-primary:disabled{
+    pointer-events: none;
+  background: #444242;
+  color:#ffffff;
+}
+
+.btn.btn-warning:disabled {
+     pointer-events: none;
+  background: #444242;
+  color:#ffffff;
+}
+
+.btn.btn-danger:disabled {
+    pointer-events: none;
+  background: #444242;
+  color:#ffffff;
+}
+ 
+  
+audio {
+  display: block;
+  width: 100%;
+  margin-top: 0.2rem;
+}
+li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+#formats {
+  margin-top: 0.5rem;
+  font-size: 80%;
+}
+ 
+
+	 
+	
+	h3.title{
+	  background-color:#A6DEF6;
+	}
+	
+	#timer{
+	 color:#1a1aff;
+	 display: none;
+	}
+    
+     
+	
+	#formats{
+	display:none;
+	color:lightblue;
+	}
+    
+	 
+  
+    #showurl10pl1{
+	display:none;
+	 
+	}
+    
+    #showurl10pl2{
+	display:none;
+	 
+	}
+    
+    #showurl10pl3{
+	display:none;
+	 
+	}
+    
+    #timer0pl1{
+	display:none;
+	 
+	}
+    
+     #timer0pl2{
+	display:none;
+	 
+	}
+    
+     #timer0pl3{
+	display:none;
+	 
+	}
+    
+     button.uploadbut0pl1 {
+  background: #16FA41;
+  color:black;
+}
+
+ button.uploadbut0pl2 {
+  background: #16FA41;
+  color:black;
+}
+
+ button.uploadbut0pl3 {
+  background: #16FA41;
+  color:black;
+}
+     
+	
+	</style>
+	<style>
+ 
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 800px;
+    max-width: 100%;
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+     
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #DDDDD6;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid blue;
+    width: 70%;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+  
+  /* don't need to go crazy with z-index here, just sits over .modal-guts */
+  z-index: 1;
+  
+  top: 10px;
+  
+  /* needs to look OK with or without scrollbar */
+  right: 20px;
+  
+  border: 0;
+  background: black;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1.3rem;
+     
+}
+
+ 
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button.copytext {
+  background: green;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  color:white;
+  width: 100px;
+  max-width: 100%;
+  text-align:center;
+}
+
+  #player {
+  background:   url(background-sky.jpg);
+   
+}
+
+.video-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+ 
+
+.responsive {
+  width: 70%;
+  height: 30%;
+}
+ </style>
+  </head>
+ 
+ <body class="container-fluid">
+ 
+ <!--Site Logo Starts--> 
+ <div class="row">
+   <div class="col-md-2"></div>
+   <div class="col-md-8 p-4">
+     <div class="top">
+           
+	      <a class="w3schools-logo" href="https://www.formrecorder.com/"> Form<span class="dotcom">Recorder </span></a>
+      <div class="w3-right  toptext w3-wide ">Record Audio via Google Form  </div>
+     </div>
+   </div>
+   <div class="col-md-2"></div>
+ </div>
+  <!--Site Logo Ends--> 
+  
+  <!--Form Instruction Starts--> 
+ <div class="row">
+   <div class="col-md-2"></div>
+   <div class="col-md-8 p-4">
+     <div id ="row" class="col-md-12 shadow p-4 mb-4" style="background-color:#99ffff">
+     <h4 align="center">Sample Audio Form</h4>
+     <h6 align="center">It feeds the following <a href="https://docs.google.com/forms/d/1B5oAEuS_molutIVSgt6ZrHFyHxzLeBmt6z3UZoLQQvk/viewform"target=_blank>Google Form</a></h6><p>
+         
+         
+     </div>
+   </div>
+   <div class="col-md-2"></div>
+ </div>
+  <!--Form Instruction Ends-->
+  
+   <!--Form Instruction Starts--> 
+ <div class="row">
+   <div class="col-md-2"></div>
+   <div class="col-md-8 p-4">
+     <div id ="row" class="col-md-12 shadow p-4 mb-4" style="background-color:#99ffff">
+     <h4 align="center">How to Fill this Audio Form?</h4><p>
+       <h6><i>1. Please record your answer using the given recorder for the questions using the below steps.</i></h6>
+         <h6><i>2. Click Record button to start recording</i></h6>
+         <h6><i>3. Click pause button if you wish to pause the recording , you will be given a Resume button that you can click to resume recording.</i></h6>
+         <h6><i>4. Click Stop button to stop recording.You will be presented with an audio player, you can review your recording. If you are not happy with your recording, you can click
+                on record button again and record a new recording.</i></h6>
+         <h6><i>5. Once you are satisfied with the recording then click on the green Upload button for the recording that you want to submit
+                as your answer.It will upload your selected audio file to your teacher's Google drive.</i></h6>
+          
+         <h6><i>6. Fill the rest of the fields  of the form and click on SUBMIT button at the bottom of the form </i></h6>
+         
+     </div>
+   </div>
+   <div class="col-md-2"></div>
+ </div>
+  <!--Form Instruction Ends-->
+  
+    <!--Form Header Starts-->   
+ <div class="row">
+   <div class="col-md-2"></div>
+   <div class="col-md-8 p-4">
+     <div id ="row" class="col-md-12 shadow p-4 mb-4" style="background-color:#99ffff">
+         <h2 align="center"><i>Playing Test</i></h2>
+<h6 align="center"><i>Practice your required selection and record it using this form.</i></h6>
+ 
+     
+ 
+<form id="myform" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc9FJ4ZBEGVEnkE8ynaMwWMQELwAiLrCuc7GxAMRR67hSnnWA/formResponse"
+      target="_self"
+      method="POST">
+         
+     </div>
+   </div>
+   <div class="col-md-2"></div>
+ </div>
+  <!--Form Header Ends-->
+  
+ 
+ <!--Audio Player#1 Starts--> 
+ 
+ <div class="row">
+   <div class="col-md-2"></div>
+   <div class="col-md-8 p-4">
+       <div id ="audioplayer0pl1" class="col-md-12 shadow p-4 mb-4" style="background-color:#99ffff">
+        <div id ="r0pl1" align="center">
+          <ol id="recordingsList0pl1"></ol>
+       </div>
+            <div id="controls0pl1" align="center">
+		   <div id ="uploadb0pl1" align="center"></div> 
+          <button type="button" id="recordButton0pl1" class="btn btn-primary btn-sm">
+			  <span class="glyphicon glyphicon-record"></span> Record
+		  </button>
+		<!-- <button id="recordButton">Record</button> -->
+		
+		<button type="button" id="pauseButton0pl1" class="btn  btn-warning btn-sm">
+			  <span class="glyphicon glyphicon-pause"></span> Pause
+		</button>
+		<!-- <button id="pauseButton" disabled>Pause</button> -->
+		
+		<button type="button" id="stopButton0pl1" class="btn  btn-danger btn-sm">
+			  <span class="glyphicon glyphicon-stop"></span> Stop
+		</button>
+         
+		<!-- <button id="stopButton" disabled>Stop</button> -->
+        
+         
+		</div>
+		 
+		   <div> </div>
+        <div id="timer0pl1" class="timer" align="center"> Recording Timer :<div id="t0pl1"><time>00:00:00</time></div> </div> 
+        
+		 <div> </div>
+		 <!-- <ol id="recordingsList0pl1"></ol>--->
+		 <!-- <section class="sound-clips" align="center">--->
+		 <div id="demo0pl1" class="status" align="center"></div>
+		  <div> </div>
+		<div id ="showurl10pl1" align="center"><input type="text" value="---" id="showurl0pl1"></input> 
+	 <button type="button" onclick="copyFunction()" class="copytext">Copy URL</button></div> 
+	  <!-- Field type: "url" name: "entry.12415198" -->
+    <div class="form-group">
+        <label for="entry.627056934"> Please take a moment to provide your thoughts about today's session. Did it meet your expectations? What was your favourite/least favourite part(s)? Do you have worries or concerns about implementation in your organisation? 
+          Audio URL  <span class="text-danger">*</span>
+        </label>
+
+            <input id="entry.627056934" type="url" name="entry.627056934" class="form-control" required>
+    </div>
+		<div id="formats0pl1" class="formats"></div>
+     
+   
+   
+   </div>
+   </div>
+   <div class="col-md-2"></div>
+ </div>    
+ <!--Audio Player#1 Ends-->
+   
+  
+    <!--Rest of the Form Starts-->   
+ <div class="row">
+   <div class="col-md-2"></div>
+   <div class="col-md-8 p-4">
+     <div id ="row" class="col-md-12 shadow p-4 mb-4" style="background-color:#99ffff">
+        
+    </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">SUBMIT</button>
+  </div>
+  <script>
+var GoogleFormsFormParserResultingForm = (function () {
+  var ran;
+  var dateInputs = qsa('input[type="date"]');
+  var timeInputs = qsa('input[type="time"]');
+  var otherOption = qsa('[name$=".other_option_response"]');
+  var likeRadio = qsa('.like-radio');
+  var oneResponsePerRow = qsa('.one-response-per-row');
+
+  function qs (s) {
+    console.log('Looking for ' + s);
+    return document.querySelector(s)
+  }
+  function qsa (s) {
+    console.log('Looking for ' + s);
+    return document.querySelectorAll(s)
+  }
+  function el (el, ev, l) {
+    console.log('Adding ' + ev + ' event listener to ' + el.tagName + ' ' + el.type + ' ' + (el.name || el.getAttribute('data-name')) );
+    return el.addEventListener(ev, l)
+  }
+
+  function run () {
+    ran = true;
+    registerHandlers();
+  }
+
+  function registerHandlers() {
+    dateInputs.forEach(function (element) {
+      el(element, 'change', onDateChange)
+    });
+
+    timeInputs.forEach(function (element) {
+      el(element, 'change', onTimeChange)
+    });
+
+    otherOption.forEach(function (element) {
+      el(element, 'change', onOtherOptionChange);
+      el(element, 'keyup', onOtherOptionChange)
+    });
+
+    likeRadio.forEach(function (element) {
+      el(element, 'change', onLikeRadioChange)
+    });
+
+    oneResponsePerRow.forEach(function (element) {
+      el(element, 'change', onOneResponsePerRowChange)
+    });
+  }
+
+  function onDateChange (event) {
+    var name = event.target.getAttribute('data-name');
+    var value = event.target.value;
+    var c = value.split('-');
+    qs('[name="' + name + '_year"]').value = c[0];
+    qs('[name="' + name + '_month"]').value = c[1];
+    qs('[name="' + name + '_day"]').value = c[2];
+  }
+
+  function onTimeChange (event) {
+    var name = event.target.getAttribute('data-name');
+    var value = event.target.value;
+    var c = value.split(':');
+    qs('[name="' + name + '_hour"]').value = c[0];
+    qs('[name="' + name + '_minute"]').value = c[1];
+  }
+
+  function onOtherOptionChange (event) {
+    var name = event.target.name;
+    var value = event.target.value;
+    var corresponding = name.replace('.other_option_response', '');
+    var correspondingInput = qs('[name="'+corresponding+'"][value="__other_option__"]');
+    var type = correspondingInput.getAttribute('type');
+    if (value !== '') {
+      correspondingInput.checked = true;
+    } else {
+      if (type === 'checkbox') correspondingInput.checked = false;
+    }
+  }
+
+  function onLikeRadioChange (event) {
+    var name = event.target.name;
+    var similar = qsa('[name="' + name + '"]');
+    var clicked = this;
+    similar.forEach(function (element) {
+      if (element !== clicked) element.checked = false
+    });
+  }
+
+  function onOneResponsePerRowChange (event) {
+    var group = event.target.closest('.form-group');
+    var validationContainer = group.querySelector('.validation');
+    var inputs = group.querySelectorAll('input');
+    var inputNames = [];
+    var showValidationMessage = false;
+    inputs.forEach(function (i) {
+      var name = i.getAttribute('name');
+      if (inputNames.indexOf(name) === -1)
+        inputNames.push(name);
+    });
+    inputNames.map(function (name) {
+      var checked = qs('[name="'+name+'"]:checked');
+      if (!checked) showValidationMessage = true;
+    });
+    if (validationContainer) if (showValidationMessage) {
+      validationContainer.innerText = 'This question requires at least one response per row.';
+      validationContainer.style.display = 'inline';
+    } else {
+      validationContainer.style.display = 'none';
+    }
+  }
+
+  return {
+    insureEventHandlerRegistration: function () {
+      if (!ran) {
+        ran = run();
+      }
+    }
+  };
+})();
+
+GoogleFormsFormParserResultingForm.insureEventHandlerRegistration();
+
+  </script>
+</form>
+
+         
+     </div>
+   </div>
+   <div class="col-md-2"></div>
+ </div>
+  <!--Rest of the Form Ends-->
+ 
+ <!--Footer starts--> 
+  <div class="row">
+ <div class="col-md-2"></div>
+   <div class="col-md-8 p-4">
+   
+	       <div class="col-md-12" align="center">©2018 Formrecorder.com <br><a href="https://www.formrecorder.com/privacypolicy.html">Privacy Policy</a>  
+		 <a href="https://www.formrecorder.com/contact.html">Contact us</a>  
+		 <a href="https://www.formrecorder.com/faq.html">FAQ</a></div>
+      
+   </div>
+ <div class="col-md-2"></div>  
+ </div>
+ <!--Footer Ends--> 
+	<!-- <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script> -->
+    <!--- The following audioplayer.js is copy of the above recorder.js --->
+    <script src="https://www.formrecorder.com/audioplayer.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+
+    <!--Script for Player#0pl1 starts-->
+	<script>
+    //webkitURL is deprecated but nevertheless
+var uploadfile;    
+URL = window.URL || window.webkitURL;
+
+var gumStream; 						//stream from getUserMedia()
+var rec; 							//Recorder.js object
+var input; 							//MediaStreamAudioSourceNode we'll be recording
+
+// shim for AudioContext when it's not avb. 
+var AudioContext = window.AudioContext || window.webkitAudioContext;
+var audioContext //audio context to help us record
+
+var recordButton0pl1 = document.getElementById("recordButton0pl1");
+var stopButton0pl1 = document.getElementById("stopButton0pl1");
+var pauseButton0pl1 = document.getElementById("pauseButton0pl1");
+
+var uploadButton0pl1 = document.createElement('button');
+
+ 
+//add events to those 2 buttons
+recordButton0pl1.addEventListener("click", startRecording0pl1);
+stopButton0pl1.addEventListener("click", stopRecording0pl1);
+pauseButton0pl1.addEventListener("click", pauseRecording0pl1);
+
+recordButton0pl1.disabled = false;
+stopButton0pl1.disabled = true;
+pauseButton0pl1.disabled = true;
+
+  
+function startRecording0pl1() {
+	console.log("recordButton clicked");
+     document.getElementById("timer0pl1").style.display = "block";
+      
+	/*
+		Simple constraints object, for more advanced audio features see
+		https://addpipe.com/blog/audio-constraints-getusermedia/
+	*/
+    
+    var constraints = { audio: true, video:false }
+
+ 	/*
+    	Disable the record button until we get a success or fail from getUserMedia() 
+	*/
+
+	recordButton0pl1.disabled = true;
+	stopButton0pl1.disabled = false;
+	pauseButton0pl1.disabled = false
+
+	/*
+    	We're using the standard promise based getUserMedia() 
+    	https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
+	*/
+
+	navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
+		console.log("getUserMedia() success, stream created, initializing Recorder.js ...");
+
+		/*
+			create an audio context after getUserMedia is called
+			sampleRate might change after getUserMedia is called, like it does on macOS when recording through AirPods
+			the sampleRate defaults to the one set in your OS for your playback device
+
+		*/
+		audioContext = new AudioContext();
+
+		//update the format 
+		//document.getElementById("formats0pl1").innerHTML="Format: 1 channel pcm @ "+audioContext.sampleRate/1000+"kHz"
+
+		/*  assign to gumStream for later use  */
+		gumStream = stream;
+		
+		/* use the stream */
+		input = audioContext.createMediaStreamSource(stream);
+
+		/* 
+			Create the Recorder object and configure to record mono sound (1 channel)
+			Recording 2 channels  will double the file size
+		*/
+		rec = new Recorder(input,{numChannels:1})
+
+		//start the recording process
+		rec.record();
+		
+        h0pl1.textContent = "00:00:00";
+        seconds0pl1 = 0; minutes0pl1 = 0; hours0pl1 = 0;
+        timer0pl1();
+        console.log("timer started");
+        
+		console.log("Recording started...");
+        document.getElementById("demo0pl1").innerHTML = "<b>" + "Recording Started.." + "</b>";
+		
+	 
+		
+	}).catch(function(err) {
+	  	//enable the record button if getUserMedia() fails
+    	recordButton0pl1.disabled = false;
+    	stopButton0pl1.disabled = true;
+    	pauseButton0pl1.disabled = true
+	});
+}
+
+function pauseRecording0pl1(){
+	console.log("pauseButton clicked rec.recording=",rec.recording );
+	
+	//stop the timer
+	 clearTimeout(t0pl1);
+	
+	document.getElementById("demo0pl1").innerHTML = "<b>" + "Recording paused.." + "</b>";
+	
+	if (rec.recording){
+		//pause
+		rec.stop();
+		pauseButton0pl1.innerHTML="Resume";
+	}else{
+		//resume
+		rec.record()
+        pauseButton0pl1.innerHTML="Pause";
+			document.getElementById("demo0pl1").innerHTML = "<b>" + "Recording resumed.." + "</b>";
+		timer0pl1();
+         
+		 
+	}
+}
+
+function stopRecording0pl1() {
+	console.log("stopButton clicked");
+	 
+
+	//disable the stop button, enable the record too allow for new recordings
+	stopButton0pl1.disabled = true;
+    recordButton0pl1.disabled = false;
+	pauseButton0pl1.disabled = true;
+
+	//reset button just in case the recording is stopped while paused
+	pauseButton0pl1.innerHTML="Pause";
+	
+	//tell the recorder to stop the recording
+	rec.stop();
+    document.getElementById("demo0pl1").innerHTML = "<b>" + "Recording Stopped :" + "</b>";
+	
+	//stop the timer
+	clearTimeout(t0pl1);
+    console.log("Timer Cleared");
+    
+    
+	//stop microphone access
+	gumStream.getAudioTracks()[0].stop();
+
+	rec.exportWAV(createDownloadLink0pl1);
+}
+
+function createDownloadLink0pl1(blob) {
+       var clipName = 'Audio File';
+	   
+      // var uploadButton0pl1 = document.createElement('button');
+       uploadButton0pl1.className = 'uploadbut0pl1';
+	  
+ 
+	var url0pl1 = URL.createObjectURL(blob);
+	var au0pl1 = document.createElement('audio');
+	var li0pl1 = document.createElement('li');
+	var link0pl1 = document.createElement('a');
+	 
+
+	//name of .wav file to use during upload and download (without extendion)
+	var filename0pl1 = new Date().toISOString();
+
+	//add controls to the <audio> element.
+	au0pl1.controls = true;
+	au0pl1.src = url0pl1;
+   
+    
+
+	//save to device link 
+	link0pl1.href = url0pl1;
+	link0pl1.download = filename0pl1 +".wav"; //download forces the browser to donwload the file using the  filename
+    
+    uploadfile0pl1 = link0pl1.download;
+    console.log(uploadfile0pl1);
+    
+    var blobUrl = URL.createObjectURL(blob);
+
+var xhr = new XMLHttpRequest;
+xhr.responseType = 'blob';
+
+xhr.onload = function() {
+   var recoveredBlob = xhr.response;
+
+   var reader = new FileReader;
+
+   reader.onload = function() {
+     var blobAsDataUrl = reader.result;
+     window.location = blobAsDataUrl;
+   };
+
+   reader.readAsDataURL(recoveredBlob);
+};
+
+console.log(blobUrl);
+
+ 
+
+var xhr = new XMLHttpRequest;
+xhr.responseType = 'blob';
+
+xhr.onload = function() {
+   var recoveredBlob = xhr.response;
+
+   var reader = new FileReader;
+
+   reader.onload = function() {
+     var blobAsDataUrl = reader.result;
+     window.location = blobAsDataUrl;
+   };
+
+   reader.readAsDataURL(recoveredBlob);
+};
+
+
+//document.getElementById("AudioURL").value = blobUrl;	
+ //document.getElementById("AudioURL").value = link.download;	
+  
+     
+	link0pl1.innerHTML = "Save to device";
+
+
+	//add the new audio element to li
+ 
+	li0pl1.appendChild(au0pl1);
+    li0pl1.appendChild(uploadButton0pl1);
+	
+	//add the filename to the li
+	//li.appendChild(saveButton);
+	//li.appendChild(document.createTextNode(clipName + " "));
+	
+	//add the save to disk link to li
+	//li.appendChild(link);
+	 
+	//li.appendChild(link);
+	//li.appendChild(uploadButton);
+	
+	//upload link
+	 
+     document.getElementById("r0pl1").appendChild(li0pl1);
+   // recordingsList0pl1.appendChild(li0pl1);
+	uploadButton0pl1.href="#";
+	uploadButton0pl1.innerHTML = "Upload to Google Drive";
+	uploadButton0pl1.addEventListener("click", function(event){
+          console.log('Uploading Rec#2');
+		  var xhr=new XMLHttpRequest();
+		  xhr.onload=function(e) {
+		      if(this.readyState === 4) {
+		          console.log("Server returned: ",e.target.responseText);
+                   
+				 var uploadstatus = 'File uploading...';
+                    document.getElementById("demo0pl1").innerHTML = uploadstatus;	
+				  //Get Info from php - start
+				   var filid = e.target.responseText; 
+				   var js_fileout1 = filid.trim();
+				   var js_fileout = js_fileout1 + ".wav";
+						// Get File name created by PHP
+                   var uploadurl = "https://www.formrecorder.com/uploadstemp/" + js_fileout;	
+                   var formname = 'dummy';
+                 //  document.getElementById("AudioURL").value = uploadurl;
+                    recordButton0pl1.disabled = true;
+                     
+                  
+                   var xmlhttp;
+  if (window.XMLHttpRequest) {
+    xmlhttp = new XMLHttpRequest();
+  } else {
+    // code for older browsers
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     document.getElementById("entry.627056934").value =  this.responseText;
+      uploadstatus = 'File uploaded.';       
+      document.getElementById("demo0pl1").innerHTML = uploadstatus;	
+    }
+  };
+  //Folder Shared by Carolina
+ // var foldervalue = "1dCZW-tceckzUyI_TWNHtfN56aK4oP4ab";
+    var foldervalue = "1bBQL3cj1OdRWg3yBo_Kfx_wqQ_norGtV";
+  
+  //Test Audio File
+  var urlvalue = "https://www.formrecorder.com/uploads/5e022a8defffe.wav";
+  
+  xmlhttp.open("GET", "https://script.google.com/macros/s/AKfycbxt1txbzUQ9qxOAdMyURYzAZ8Z2p2RhChoqXHVSohy3fkv4Be8/exec?col1="+ foldervalue + "&col2=" + uploadurl, true);
+  xmlhttp.send();
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  //  google.script.run.withSuccessHandler(updateUrl0pl1).upload(uploadurl);
+                  //  google.script.run.withSuccessHandler(formidinfo).forminfo(formname);
+                     
+				   var audiourl = "https://www.formrecorder.com/uploadstemp/" + js_fileout;		 
+					console.log("uploadurl......");	  
+					console.log(uploadurl);
+						var texturl = '<a href="'+ audiourl +'"target=_blank>Audio URL</a>';
+						var urlinfo = "File :" + clipName + "<br>" + "uploaded to "+ texturl;
+					 
+ 				   console.log("calling audio player");	
+				
+				var d= new Date();
+				var dispmm = d.getMonth() + 1;
+				var dispdd = d.getDate();
+				var dispyy = d.getFullYear();
+				var dispmmddyyyy = dispmm + "/" + dispdd + "/" + dispyy;
+				
+				  var filhtml = js_fileout;
+				  var filwav = js_fileout1 + ".wav";
+				//  $.ajax({ url: 'https://www.formrecorder.com/audioplayer.php',
+				//				data: {filwav,filhtml,clipName, dispmmddyyyy},
+				//				type: 'post',
+				//					success: function(output) {
+				//					alert(output);
+				//    				}
+				//	});
+					console.log("Endaudio player");	 
+					//we are doing this to get the last occurence of the button
+					var d1 =  document.getElementsByClassName("uploadbut").length;
+					var e1 = d1-1;
+                    $(".uploadbut0pl1").attr('disabled','true');
+					//document.getElementsByClassName("uploadbut0pl1").disabled = true;
+				
+			//	$.ajax({ url: 'https://www.formrecorder.com/append-upload-xml.php',
+			//					data: {filhtml,clipName, dispmmddyyyy},
+			//					type: 'post',
+			//						success: function(output) {
+			//					alert(output);
+			//	    				}
+			//		});
+			//		console.log("uploaded xml info");	
+					
+				  
+		      }
+		  };
+         
+
+		  var fd=new FormData();
+		  fd.append("audio_data",blob, filename0pl1);
+		  xhr.open("POST","https://www.formrecorder.com/uploadstemp.php",true);
+          //xhr.open("POST","google.script.run.withSuccessHandler(updateUrl).upload(audio_data)",true);
+		  xhr.send(fd);
+          r0pl1.appendChild(li0pl1);
+          
+	})
+	 
+   //  recordingsList0pl1.appendChild(li0pl1);
+}
+
+//Script for Timer0pl1 Begins
+ //Timer code - starts
+
+var h0pl1 = document.getElementById("t0pl1"),
+     
+    seconds0pl1 = 0, minutes0pl1 = 0, hours0pl1 = 0,
+    t0pl1;
+
+function add0pl1() {
+    seconds0pl1++;
+    if (seconds0pl1 >= 60) {
+        seconds0pl1 = 0;
+        minutes0pl1++;
+        if (minutes0pl1 >= 60) {
+            minutes0pl1 = 0;
+            hours0pl1++;
+        }
+    }
+    
+    h0pl1.textContent = (hours0pl1 ? (hours0pl1 > 9 ? hours0pl1 : "0" + hours0pl1) : "00") + ":" + (minutes0pl1 ? (minutes0pl1 > 9 ? minutes0pl1 : "0" + minutes0pl1) : "00") + ":" + (seconds0pl1 > 9 ? seconds0pl1 : "0" + seconds0pl1);
+
+    timer0pl1();
+}
+function timer0pl1() {
+	
+    t0pl1 = setTimeout(add0pl1, 1000);
+}
+ 
+//Timer code - ends 
+//Script for Timer0pl1 Ends
+
+
+ 
+    </script> 	 
+    <!--Script for Player#0pl1 Ends--> 
+  </body>
+</html>
+ 
