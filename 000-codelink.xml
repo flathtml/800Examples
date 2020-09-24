@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#223 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="223-Antiques.html"&gt;223-Antiques.html&lt;a&gt;</LINK>
+    <CATEGORY>Home Page</CATEGORY>
+	<DESC>Simple single page small business home page</DESC>
+ </EXAMPLE>
  <!--Example#222 -->
  <EXAMPLE>
     <LINK>&lt;a href="222-Rental-prop-Tax.html"&gt;222-Rental-prop-Tax.html&lt;a&gt;</LINK>
