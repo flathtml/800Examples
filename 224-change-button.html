@@ -22,7 +22,8 @@ body {
 <button id="bt5" data-text-swap="**SORRY**">5</button>
 &nbsp;&nbsp;
 <button id="bt6" data-text-swap="**YOU WIN**">6</button>
- 
+ <p>
+ <input type="button" value="PLAY AGAIN" onClick="document.location.reload(true)">
   
 <script>
 
@@ -31,6 +32,7 @@ var button1 = document.getElementById("bt1");
 button1.addEventListener(
   "click",
   function () {
+    
     if (button1.getAttribute("data-text-swap") == button1.innerHTML) {
       button1.innerHTML = button1.getAttribute("data-text-original");
     } else {
