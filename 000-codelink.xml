@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#224 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="224-change-button.html"&gt;224-change-button.html&lt;a&gt;</LINK>
+    <CATEGORY>Game</CATEGORY>
+	<DESC>Button Changes value on clicking</DESC>
+ </EXAMPLE>
  <!--Example#223 -->
  <EXAMPLE>
     <LINK>&lt;a href="223-Antiques.html"&gt;223-Antiques.html&lt;a&gt;</LINK>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+body {
+  padding: 20px 10px 10px 10px;
+}
+ 
+</style>
+<body>
+<h2>Click on Any Number</h2>
+<button id="bt1" data-text-swap="**YOU WIN**">1</button>
+&nbsp;&nbsp;
+<button id="bt2" data-text-swap="**SORRY**">2</button>
+&nbsp;&nbsp;
+<button id="bt3" data-text-swap="**YOU WIN**">3</button>
+&nbsp;&nbsp;
+<button id="bt4" data-text-swap="**YOU WIN**">4</button>
+&nbsp;&nbsp;
+<button id="bt5" data-text-swap="**SORRY**">5</button>
+&nbsp;&nbsp;
+<button id="bt6" data-text-swap="**YOU WIN**">6</button>
+ 
+  
+<script>
+
+
+var button1 = document.getElementById("bt1");
+button1.addEventListener(
+  "click",
+  function () {
+    if (button1.getAttribute("data-text-swap") == button1.innerHTML) {
+      button1.innerHTML = button1.getAttribute("data-text-original");
+    } else {
+      button1.setAttribute("data-text-original", button1.innerHTML);
+      button1.innerHTML = button1.getAttribute("data-text-swap");
+    }
+  },
+  false
+); 
+
+var button2 = document.getElementById("bt2");
+button2.addEventListener(
+  "click",
+  function () {
+    if (button2.getAttribute("data-text-swap") == button2.innerHTML) {
+      button2.innerHTML = button2.getAttribute("data-text-original");
+    } else {
+      button2.setAttribute("data-text-original", button2.innerHTML);
+      button2.innerHTML = button2.getAttribute("data-text-swap");
+    }
+  },
+  false
+); 
+
+var button3 = document.getElementById("bt3");
+button3.addEventListener(
+  "click",
+  function () {
+    if (button3.getAttribute("data-text-swap") == button3.innerHTML) {
+      button3.innerHTML = button3.getAttribute("data-text-original");
+    } else {
+      button3.setAttribute("data-text-original", button3.innerHTML);
+      button3.innerHTML = button3.getAttribute("data-text-swap");
+    }
+  },
+  false
+); 
+
+var button4 = document.getElementById("bt4");
+button4.addEventListener(
+  "click",
+  function () {
+    if (button4.getAttribute("data-text-swap") == button4.innerHTML) {
+      button4.innerHTML = button4.getAttribute("data-text-original");
+    } else {
+      button4.setAttribute("data-text-original", button4.innerHTML);
+      button4.innerHTML = button4.getAttribute("data-text-swap");
+    }
+  },
+  false
+); 
+
+var button5 = document.getElementById("bt5");
+button5.addEventListener(
+  "click",
+  function () {
+    if (button5.getAttribute("data-text-swap") == button5.innerHTML) {
+      button5.innerHTML = button5.getAttribute("data-text-original");
+    } else {
+      button5.setAttribute("data-text-original", button5.innerHTML);
+      button5.innerHTML = button5.getAttribute("data-text-swap");
+    }
+  },
+  false
+); 
+
+var button6 = document.getElementById("bt6");
+button6.addEventListener(
+  "click",
+  function () {
+    if (button6.getAttribute("data-text-swap") == button6.innerHTML) {
+      button6.innerHTML = button6.getAttribute("data-text-original");
+    } else {
+      button6.setAttribute("data-text-original", button6.innerHTML);
+      button6.innerHTML = button6.getAttribute("data-text-swap");
+    }
+  },
+  false
+); 
+
+
+</script>
+
+</body>
