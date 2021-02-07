@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#226 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="226-create-quiz.html"&gt;226-create-quiz.html&lt;a&gt;</LINK>
+    <CATEGORY>Javascript</CATEGORY>
+	<DESC>Create a Quiz that scores results and shows right answer.</DESC>
+ </EXAMPLE>
  <!--Example#225 -->
  <EXAMPLE>
     <LINK>&lt;a href="225-show-or-hide.html"&gt;225-show-or-hide.html&lt;a&gt;</LINK>
