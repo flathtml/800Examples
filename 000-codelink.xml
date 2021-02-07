@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#225 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="225-show-or-hide.html"&gt;225-show-or-hide.html&lt;a&gt;</LINK>
+    <CATEGORY>Javascript</CATEGORY>
+	<DESC>Hide or Show content</DESC>
+ </EXAMPLE>
  <!--Example#224 -->
  <EXAMPLE>
     <LINK>&lt;a href="224-change-button.html"&gt;224-change-button.html&lt;a&gt;</LINK>
