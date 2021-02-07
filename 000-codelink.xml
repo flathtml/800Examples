@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#227 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="227-create-quiz-one-question.html"&gt;227-create-quiz-one-question.html&lt;a&gt;</LINK>
+    <CATEGORY>Javascript</CATEGORY>
+	<DESC>Create a Quiz one question at a time</DESC>
+ </EXAMPLE>
  <!--Example#226 -->
  <EXAMPLE>
     <LINK>&lt;a href="226-create-quiz.html"&gt;226-create-quiz.html&lt;a&gt;</LINK>

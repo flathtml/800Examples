@@ -362,219 +362,123 @@
  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<title>Page Title</title>
-    <style>
-    body{
-	font-size: 20px;
-	font-family: sans-serif;
-	color: #333;
-}
-.question{
-	font-weight: 600;
-}
-.answers {
-    margin-bottom: 20px;
-}
-#submit{
-	font-family: sans-serif;
-	font-size: 20px;
-	background-color: #297;
-	color: #fff;
-	border: 0px;
-	border-radius: 3px;
-	padding: 5px;
-	cursor: pointer;
-	margin-bottom: 5px;
-}
-#submit:hover{
-	background-color: #3a8;
-}
-
-#answers {
-	background-color: pink;
-    display : none;
-}
-
-#results {
-	background-color: yellow;
-    display : none;
-}
-    
+     <style>
+        div#test{
+            border:#5AB029 3px solid;
+            padding:10px 40px 40px 40px;
+            background-color:#E5FCE3;
+            width:50%;}
     </style>
  </head>
-<body>
- 
- <div class="row">
-      <div class="col-md-12">
-         <div class="row">
-		    
-			<div class="col-md-2">
-               
-                <div class="row"> </div>
-            </div>
-			
-            <div class="col-md-8">
-             
-<div class="col-md-12 shadow p-4 mb-4 border border-primary">
-  <h1 style = "text-align: center; background-color:#E7E4E3">Quiz Time</h1>
-   <br>
-  <div id="quiz"></div>
- 
-  <button id="submit">Submit your answers</button>
-  <div>&nbsp;</div>
-  <div id="results" class="col-md-12 shadow p-4 mb-4"></div>
-     <div>&nbsp;</div>
-  <div id="answers" class="col-md-12 shadow p-4 mb-4"><b>CORRECT ANSWERS ARE AS FOLLOWS</b>
-  <p>
-  QUESTION-1 : What is 10/2 ?  <br>
-  ANSWER-1 : It is 5. 
+ <body>
+    <h1>Quiz - one question at a time</h1>
+    <h2 id="test_status"></h2>
+    <div id="test"></div>
+    <script>
+    // pos is position of where the user in the test or which question they're up to
+var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0;
+// this is a multidimensional array with 4 inner array elements with 5 elements inside them
+var questions = [
+  {
+      question: "What is 36 + 42",
+      a: "64",
+      b: "78",
+      c: "76",
+      answer: "B"
+    },
+  {
+      question: "What is 7 x 4?",
+      a: "21",
+      b: "27",
+      c: "28",
+      answer: "C"
+    },
+   
+  {
+      question: "What is 8 x 12?",
+      a: "88",
+      b: "112",
+      c: "96",
+      answer: "C"
+    }
+  ];
   
-  <p>
-  QUESTION-2 : What is 30/3 ?  <br>
-  ANSWER-2 : It is 10. 
+   var correctans = [
+  {
+      Correct: "78" 
+    },
+  {
+      Correct: "28" 
+    },
+   
+  {
+     Correct: "96" 
+    }
+  ];
+   
   
-  <p>
-  QUESTION-3 : What is 150/10 ?  <br>
-  ANSWER-3 : It is 15. 
-  </div>
- </div> 
-  <script>
-  var myQuestions = [
-	{
-		question: "Question-1. What is 10/2?",
-		answers: {
-			a: '3', 
-			b: '5',
-			c: '115'
-		},
-		correctAnswer: 'b'
-	},
-	{
-		question: "Question-2. What is 30/3?",
-		answers: {
-			a: '3',
-			b: '5',
-			c: '10'
-		},
-		correctAnswer: 'c'
-	},
-    
-    {
-		question: "Question-3. What is 150/10?",
-		answers: {
-			a: '15',
-			b: '5',
-			c: '10'
-		},
-		correctAnswer: 'a'
-	}
-];
-
-var quizContainer = document.getElementById('quiz');
-var resultsContainer = document.getElementById('results');
-var submitButton = document.getElementById('submit');
-
-generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
-
-function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
-
-	function showQuestions(questions, quizContainer){
-		// we'll need a place to store the output and the answer choices
-		var output = [];
-		var answers;
-
-		// for each question...
-		for(var i=0; i<questions.length; i++){
-			
-			// first reset the list of answers
-			answers = [];
-
-			// for each available answer...
-			for(letter in questions[i].answers){
-
-				// ...add an html radio button
-				answers.push(
-					'<label>'
-						  + '<input type="radio" name="question'+   i+'" value="'+   letter+'">' + ' '    
-						+ letter + ': '   
-						+ questions[i].answers[letter]  
-					      
-                        +    '</label>' + '<br>'
-				);
-			}
-
-			// add this question and its answers to the output
-			output.push(
-				'<div class="question">' + questions[i].question + '</div>'
-				+ '<div class="answers">' + answers.join('') + '</div>'
-			);
-		}
-
-		// finally combine our output list into one string of html and put it on the page
-		quizContainer.innerHTML = output.join('');
-	}
-
-
-	function showResults(questions, quizContainer, resultsContainer){
-		//show the correct answers
-        var x = document.getElementById("answers");
-        x.style.display = "block";
-        
-        var y = document.getElementById("results");
-        y.style.display = "block";
-        
-		// gather answer containers from our quiz
-		var answerContainers = quizContainer.querySelectorAll('.answers');
-		
-		// keep track of user's answers
-		var userAnswer = '';
-		var numCorrect = 0;
-		
-		// for each question...
-		for(var i=0; i<questions.length; i++){
-
-			// find selected answer
-			userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
-			
-			// if answer is correct
-			if(userAnswer===questions[i].correctAnswer){
-				// add to the number of correct answers
-				numCorrect++;
-				
-				// color the answers green
-				answerContainers[i].style.color = 'lightgreen';
-			}
-			// if answer is wrong or blank
-			else{
-				// color the answers red
-				answerContainers[i].style.color = 'red';
-			}
-		}
-
-		// show number of correct answers out of total
-		resultsContainer.innerHTML = 'YOUR SCORE:  ' + numCorrect + ' out of ' + questions.length;
-	}
-
-	// show questions right away
-	showQuestions(questions, quizContainer);
-	
-	// on submit, show results
-	submitButton.onclick = function(){
-		showResults(questions, quizContainer, resultsContainer);
-	}
-
+// this get function is short for the getElementById function  
+function get(x){
+  return document.getElementById(x);
 }
-   
-  </script>
-<div> </div>
+// this function renders a question for display on the page
+function renderQuestion(){
+  test = get("test");
+  if(pos >= questions.length){
+    test.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
+    get("test_status").innerHTML = "Test completed";
+    // resets the variable to allow users to restart the test
+    pos = 0;
+    correct = 0;
+    // stops rest of renderQuestion function running when test is completed
+    return false;
+  }
+  get("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
+  
+  question = questions[pos].question;
+  chA = questions[pos].a;
+  chB = questions[pos].b;
+  chC = questions[pos].c;
+  // display the question
+  test.innerHTML = "<h3>"+question+"</h3>";
+  // display the answer options
+  // the += appends to the data we started on the line above
+  test.innerHTML += "<label> <input type='radio' name='choices' value='A'> "+chA+"</label><br>";
+  test.innerHTML += "<label> <input type='radio' name='choices' value='B'> "+chB+"</label><br>";
+  test.innerHTML += "<label> <input type='radio' name='choices' value='C'> "+chC+"</label><br><br>";
+  test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
+}
+function checkAnswer(){
+  // use getElementsByName because we have an array which it will loop through
+  choices = document.getElementsByName("choices");
+  for(var i=0; i<choices.length; i++){
+    if(choices[i].checked){
+      choice = choices[i].value;
+    }
+  }
+  // checks if answer matches the correct choice
+  if(choice == questions[pos].answer){
+    //each time there is a correct answer this value increases
+    correct++;
+  }
+  // changes position of which character user is on
+  pos++;
+   renderQuestion();
+}
 
+
+ 
+// Add event listener to call renderQuestion on page load event
+window.addEventListener("load", renderQuestion);
     
-   
-      </div>
-    </div>
-   <!-- /End of Content section -->
-</div>   
+    
+    </script>
+    
 </body>
-</html>  
+
+</html>
+
+		 
 		</textarea>
                </div>
             </div>
