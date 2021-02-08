@@ -364,7 +364,7 @@
 	<title>Page Title</title>
     <style>
     body{
-	font-size: 20px;
+ 
 	font-family: sans-serif;
 	color: #333;
 }
@@ -424,7 +424,7 @@
   <div id="results" class="col-md-12 shadow p-4 mb-4"></div>
      <div>&nbsp;</div>
   <div id="answers" class="col-md-12 shadow p-4 mb-4"><b>CORRECT ANSWERS ARE AS FOLLOWS</b>
-  <p>
+  <p>&nbsp;<p>
   QUESTION-1 : What is 10/2 ?  <br>
   ANSWER-1 : It is 5. 
   
@@ -504,7 +504,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
 			// add this question and its answers to the output
 			output.push(
-				'<div class="question">' + questions[i].question + '</div>'
+				'<div class="question">' + questions[i].question  + '<p>' + '</div>'
 				+ '<div class="answers">' + answers.join('') + '</div>'
 			);
 		}
