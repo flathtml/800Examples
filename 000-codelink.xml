@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#229 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="229-sample-finance-table.html"&gt;229-sample-finance-table.html&lt;a&gt;</LINK>
+    <CATEGORY>Javascript</CATEGORY>
+	<DESC>Sample Finance Table</DESC>
+ </EXAMPLE>
  <!--Example#228 -->
  <EXAMPLE>
     <LINK>&lt;a href="228-sliding-scale.html"&gt;228-sliding-scale.html&lt;a&gt;</LINK>
