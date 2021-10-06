@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#230 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="230-Sortable-table.html"&gt;230-Sortable-table.html&lt;a&gt;</LINK>
+    <CATEGORY>Javascript</CATEGORY>
+	<DESC>Sample sortable Table 4 columns</DESC>
+ </EXAMPLE>
  <!--Example#229 -->
  <EXAMPLE>
     <LINK>&lt;a href="229-sample-finance-table.html"&gt;229-sample-finance-table.html&lt;a&gt;</LINK>
