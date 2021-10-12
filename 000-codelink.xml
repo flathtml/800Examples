@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#231 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="231-show-selected-data.html"&gt;231-show-selected-data.html&lt;a&gt;</LINK>
+    <CATEGORY>Javascript/XML</CATEGORY>
+	<DESC>Show selected data and sum up the values from a XML field</DESC>
+ </EXAMPLE>
+ 
  <!--Example#230 -->
  <EXAMPLE>
     <LINK>&lt;a href="230-Sortable-table.html"&gt;230-Sortable-table.html&lt;a&gt;</LINK>
