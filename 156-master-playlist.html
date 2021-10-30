@@ -4,234 +4,99 @@
   <title>Master Playlist app</title>
   <meta name="description" content="Master Playlist app">
 <meta name="keywords" content="Master Playlist app">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Ultra&display=swap" rel="stylesheet">
-</head>
-<style>
-.center {
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<!//http://www.w3schools.com/w3css/4/w3.css !>
+      <link rel="stylesheet" href="references/w3.css"> 
+      
+	  <!//http://www.w3schools.com/lib/codemirror.css !>
+      <link rel="stylesheet" href="references/codemirror.css">
+	  
+      <!//http://www.w3schools.com/lib/codemirror.js !>
+	  <script src="references/codemirror.js"></script>
+	  
+	  <!//https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css !>
+      <link rel="stylesheet" href="references/bootstrap.min.css">
+   
+      <!//https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js !>
+	  <script src="references/bootstrap.min.js"></script>
+	  
+	  <!//https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js !>
+	  <script src="references/jquery.min.js"></script>
+	 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+      <link href="https://fonts.googleapis.com/css?family=Playball|Righteous" rel="stylesheet">
+	   
+      <style>
+.center1 {
     text-align: center;
     font-style: italic;
     font-weight: bold;
-   
-    border: 1px solid green;
-}
-
-.addcart {
-    text-align: center;
-     
-}
-
-.mainpic {
-    text-align: center;
-    font-style: italic;
-    font-weight: bold;
-   
-     
-}
-
-.special {
-    text-align: center;
-    font-style: italic;
-    font-weight: bold;
-   
-     
-}
-
- .logo{
- font-family: 'Righteous', cursive;
- font-family: 'Ultra', serif;
-  
-  
- }
- 
-  
-
-.mainbox {
-    
     color: #000000;
-    border: 1px solid green;
-    background-color:#bbff99;
-}
-
-.total {
-    
-    color: white;
-     
-}
-
-.submenu {
-    
-    color: #000000;
-    border: 1px solid green;
-    background-color:#bbff99;
-	width: 80%;
-}
-
-.combospecial {
- 
-    color:  #ffff00;
-    border: 1px solid green;
-    background-color:#b30000;
-     
-}
-
-.combobox {
- 
-    color:  #b30000;
-    border: 1px solid green;
-    background-color:#bbff99;
-     
-}
-
-.headertext {
-   
-    background-color:#ffff66;
- 
-}
- 
-
- .respimg {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
-}
-
-table {
-  border-collapse: collapse;
-  width: 80%;
   
 }
 
-
-th, td {
-   
-  padding: 8px;
-  color: black;
-}
-
- .submenu.th {
-  background-color: #bbff99;
-  color: black;
-  text-align: center;
- 
-}
-
-.menudetails.td {
-  background-color: #ebebe0;
-  color: black;
-  text-align: center;
- 
-}
-
-.item{
-  background-color: #ebebe0;
-  color: black;
-  padding: 8px;
- 
-}
- 
-
-th {
-  background-color:#bbff99;
-  color: black;
-  text-align: center;
-}
- 
- table, th, td, tr {
-  border: 1px solid green;
-}
- 
-.makeup1 {
-    font-weight: bold;
-    color: #000000;
-    border: 1px solid green;
-}
- .makeup2 {
-    border: 1px solid green;
-}
-
- .footer {
+.center2 {
     text-align: center;
-}
+   }
 
- .padding {
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    text-align: justify;
-}
-  
- .top {
-    position: relative;
-    background-color: #ffffff;
-    height: 68px;
-    padding-top: 20px;
-    line-height: 50px;
-    overflow: hidden;
-    z-index: 1;
-}
-.w3-right {
-    float: right!important}
-.w3-wide {
-    letter-spacing: 4px}
- .w3schools-logo {
-    font-family: Righteous;
-    text-decoration: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 37px;
-    letter-spacing: 3px;
-    color: #555555;
-    display: block;
-    position: absolute;
-    top: 17px;
-    padding-left: 2px;
-}
-.w3schools-logo .dotcom {
-    color: #4CAF50;
-}
-.w3schools-logo:hover {
-    color: #555555;
-}
-
-
- img {
-    max-width: 400px;
-    height: auto;
-}
-
-@media (max-width: 992px) {
-    .top {
-    height: 100px;
-}
- .top .w3schools-logo {
-    position: relative;
-    top: 0;
-    width: 100%;
-    text-align: center;
-    margin: auto;
-}
- .toptext {
-    width: 100%;
-    text-align: center;
-}
+ 
 
 img {
-    max-width: 300px;
-    height: auto;
+  width: auto;
+  max-width: 200px;
+  height: auto;
+  max-height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
- }
+
+.logo {
+    font-family: Righteous;
+     text-align: center;
+    font-size: 37px;
+    letter-spacing: 3px;
+    color: #81F50D;
+    display: block;
+     
+}
+.motto {
+     
+    text-shadow: 2px 2px 4px #0DF330;
+    text-align: center;
+    font-size: 22px;
+	letter-spacing: 2px;
+    display: block;
  
+}
+
+.header {
+  
+     text-align: left;
+    font-size: 25px;
+    display: block;
+     
+}
+
  
-</style>
-<script type="text/javascript">
+.perf {
+  
+     text-align: left;
+    font-size: 20px;    
+    color: $CF3FEF;
+	display: block;
+     
+}
+
+.footer {
+    text-align: center;
+	 
+}
+
+ </style>
+ <script type="text/javascript">
         var people, asc1 = 1,
                     asc2 = 1,
                     asc3 = 1;
@@ -273,40 +138,45 @@ img {
 		
 		 
     </script>
-<body class="container-fluid">
- 
-  <!-- /.Start of Content section -->
-   <div class="row">
-      <div class="col-md-12">
-         <div class="row">
-      
-    
-            </div>
-            <div class="col-md-12">
-            <div>&nbsp;</div>
-               <div class="row">
-           
-		 
+</head>
  
 
-              		 
-       </div>
-       <div class="row">&nbsp;</div>
-  <div class="col-md-12 shadow p-4 mb-4 border border-primary" style="background-color:#E7E4E3">
+<body class="w3-container">
+ <div class="row">
+      <div class="col-md-12">
+         <div class="row">
+		    
+			<div class="col-md-2">
+               
+                <div class="row">&nbsp;</div>
+            </div>
+			
+            <div class="col-md-8">
+    <div>&nbsp;</div>
+     
+ 
+  <div class="col-md-12 shadow p-4 mb-4 border border-success" style="background-color:#BCF5BA">
+      <div> 
   <h2 align="center"><i><b>MY PLAYLIST APP</b></i></h2>
   <br>
 <b>How it works? :</b> 
  Click on any Column header to sort by Song, Artist or Category. If you click on any song then it opens a new window
 and you can watch a Youtube video of that song.The video and song content's rights are as per 
 <a href="https://www.youtube.com/static?gl=GB&template=terms"target=_blank>Youtube terms and Conditions.</a>
- 
-</div>
-<div id ="calc"></div>
-<br> 
- 
-    <table id="MyTable" align="center">
+
+		   
+   </div> 
+   </div>	
+    <div id ="calc"></div>
+   
+   
+	  
+     <div class="col-md-12 p-4 mb-4">
+      <div> 
+       
+    <table class="table table-striped table-bordered" id="MyTable">
         <thead>
-<tr>
+<tr class="table-info">
                 <th onclick="sort_table(people, 0, asc1); asc1 *= -1; asc2 = 1; asc3 = 1;">Song</th>
                 <th onclick="sort_table(people, 1, asc2); asc2 *= -1; asc3 = 1; asc1 = 1;">Artist</th>
                 <th onclick="sort_table(people, 2, asc3); asc3 *= -1; asc1 = 1; asc2 = 1;">Category</th>
@@ -915,28 +785,25 @@ and you can watch a Youtube video of that song.The video and song content's righ
 </tr>
 
 <tr>           
-<td> <a href="https://www.youtube.com/results?search_query=Beautiful mistake Maroon5"target=_blank">Cant help falling in love</a></td> <td> Elvis Presley</td> <td> Romantic-Crazy </td>
+<td> <a href="https://www.youtube.com/results?search_query=Cant help falling in love Elvis"target=_blank">Cant help falling in love</a></td> <td> Elvis Presley</td> <td> Romantic-Crazy </td>
 </tr>
 
 </tbody>
  
     </table>
- 
-     
- 
- 
- </div>
- 
- <div class="row">&nbsp;</div>
-  
-               </div>
-               <div class="row"> </div>
-            </div>
-         </div>
-      </div>
+   
    </div>
-   <!-- /End of Content section -->
+   </div>
+   
+      
+   
+	<div>&nbsp;</div>  
+   
     
-
+   
+   
+   
+   
+</div>   
 </body>
 </html>
