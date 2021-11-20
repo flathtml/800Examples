@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#234 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="234-car-race.html"&gt;234-car-race.html&lt;a&gt;</LINK>
+    <CATEGORY>Javascript/ games</CATEGORY>
+	<DESC>Car race game using JavaScript</DESC>
+ </EXAMPLE>
  <!--Example#233 -->
  <EXAMPLE>
     <LINK>&lt;a href="233-mom-picnic.oct-2021.html"&gt;233-mom-picnic.oct-2021.html&lt;a&gt;</LINK>
