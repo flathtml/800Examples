@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Watch List</title>
+<title>Watch List - Software stocks</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
  <!//http://www.w3schools.com/w3css/4/w3.css !>
       <link rel="stylesheet" href="references/w3.css"> 
@@ -97,33 +97,42 @@ td:hover {background-color:#f5f5f5;}
     
     <div>&nbsp;</div>
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
-   <!-- TradingView Widget BEGIN src="https://s3.tradingview.com/tv.js"-->
- 
-  <div id="tv-medium-widget1"></div>
-   <script type="text/javascript" src="152-stock-chart1.js"></script>
-   
+  <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_CRM"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
   <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget1",
   "symbols": [
     [
-      "Stock",
+     
       "CRM"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_CRM"
 }
   );
   </script>
- 
+</div>
 <!-- TradingView Widget END -->
    </div>	
    <div>
@@ -139,31 +148,41 @@ VALUATION : $100 billions
   
   <div class="col-md-12 shadow p-4 mb-4 border border-primary">
   <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget2"></div>
-    
+<div class="tradingview-widget-container">
+  <div id="tradingview_ADBE"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
   <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget2",
   "symbols": [
     [
-      "STOCK",
+     
       "ADBE"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_ADBE"
 }
   );
   </script>
- 
+</div>
 <!-- TradingView Widget END -->    
    </div>	
    <div>
@@ -178,32 +197,43 @@ VALUATION : $75 billions
    <div>&nbsp;</div>
   
   <div class="col-md-12 shadow p-4 mb-4 border border-primary">
-  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget3"></div>
-     <script type="text/javascript">
+ <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_ORCL"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget3",
   "symbols": [
     [
-      "STOCK",
+     
       "ORCL"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_ORCL"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->  
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -218,31 +248,42 @@ VALUATION : $198 billions
   
   <div class="col-md-12 shadow p-4 mb-4 border border-primary">
   <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget4"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_IBM"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget4",
   "symbols": [
     [
-      "STOCK",
+     
       "IBM"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_IBM"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->  
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -257,31 +298,42 @@ VALUATION : $120 billions
   
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
   <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget5"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_VMW"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget5",
   "symbols": [
     [
-      "STOCK",
+     
       "VMW"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_VMW"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -295,32 +347,43 @@ VALUATION : $54 billions
    <div>&nbsp;</div>
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
-  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget6"></div>
-     <script type="text/javascript">
+ <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_CTXS"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget6",
   "symbols": [
     [
-      "STOCK",
+     
       "CTXS"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_CTXS"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -335,31 +398,42 @@ VALUATION : $15 billions
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
   <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget7"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_EBAY"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget7",
   "symbols": [
     [
-      "STOCK",
+     
       "EBAY"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_EBAY"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -372,32 +446,43 @@ VALUATION : $30 billions
    </div>
    <div>&nbsp;</div>
 <div class="col-md-12 shadow p-4 mb-4 border border-primary">
-  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget8"></div>
-     <script type="text/javascript">
+ <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_GPN"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget8",
   "symbols": [
     [
-      "STOCK",
+     
       "GPN"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_GPN"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->  
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -412,31 +497,42 @@ VALUATION : $12 billions
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
   <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget9"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_WDAY"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget9",
   "symbols": [
     [
-      "STOCK",
+     
       "WDAY"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_WDAY"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END --> 
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -451,31 +547,42 @@ VALUATION : $40 billions
    
 <div class="col-md-12 shadow p-4 mb-4 border border-primary">
   <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget10"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_ANSS"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget10",
   "symbols": [
     [
-      "STOCK",
+     
       "ANSS"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_ANSS"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -489,31 +596,42 @@ VALUATION : $6 billions
    <div>&nbsp;</div>
 <div class="col-md-12 shadow p-4 mb-4 border border-primary">
   <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget11"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_ADSK"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget11",
   "symbols": [
     [
-      "STOCK",
+     
       "ADSK"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_ADSK"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->  
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -526,32 +644,43 @@ VALUATION : $6 billions
    </div>
    <div>&nbsp;</div>
 <div class="col-md-12 shadow p-4 mb-4 border border-primary">
-  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget12"></div>
-     <script type="text/javascript">
+ <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_AKAM"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget12",
   "symbols": [
     [
-      "STOCK",
+     
       "AKAM"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_AKAM"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -564,31 +693,42 @@ VALUATION : $8 billions
    </div>
    <div>&nbsp;</div><div class="col-md-12 shadow p-4 mb-4 border border-primary">
   <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget13"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_VRSN"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget13",
   "symbols": [
     [
-      "STOCK",
+     
       "VRSN"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_VRSN"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -603,31 +743,42 @@ VALUATION : $11 billions
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
   <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget14"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_NTAP"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget14",
   "symbols": [
     [
-      "STOCK",
+     
       "NTAP"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_NTAP"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->  
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -642,32 +793,43 @@ VALUATION : $17 billions
    
     
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
-  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget16"></div>
-     <script type="text/javascript">
+ <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_FTNT"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget16",
   "symbols": [
     [
-      "STOCK",
+     
       "FTNT"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_FTNT"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->  
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -681,32 +843,43 @@ VALUATION : $11 billions
    <div>&nbsp;</div>
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
-  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget17"></div>
-     <script type="text/javascript">
+ <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_NLOK"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget17",
   "symbols": [
     [
-      "STOCK",
+     
       "NLOK"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_NLOK"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->   
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -720,32 +893,43 @@ VALUATION : $16 billions
    <div>&nbsp;</div>
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
-  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget17a"></div>
-     <script type="text/javascript">
+ <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_GIB"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget17a",
   "symbols": [
     [
-      "STOCK",
+     
       "GIB"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_GIB"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->  
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -760,32 +944,43 @@ VALUATION : $18 billions
    
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
-  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget18"></div>
-     <script type="text/javascript">
+ <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_ACN"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget18",
   "symbols": [
     [
-      "STOCK",
+     
       "ACN"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_ACN"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->  
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -800,31 +995,42 @@ VALUATION : $110 billions
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
   <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget19"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_CTSH"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget19",
   "symbols": [
     [
-      "STOCK",
+     
       "CTSH"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_CTSH"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END --> 
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -839,31 +1045,42 @@ VALUATION : $36 billions
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
   <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget20"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_INFY"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget20",
   "symbols": [
     [
-      "STOCK",
+     
       "INFY"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_INFY"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -876,32 +1093,43 @@ VALUATION : $36 billions
    </div>
    <div>&nbsp;</div>
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
-  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget21"></div>
-     <script type="text/javascript">
+ <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_DXC"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget21",
   "symbols": [
     [
-      "STOCK",
+     
       "DXC"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_DXC"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -916,31 +1144,42 @@ VALUATION : $12 billions
   
   <div class="col-md-12 shadow p-4 mb-4 border border-primary">
   <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget21a"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_MFGP"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget21a",
   "symbols": [
     [
-      "STOCK",
+     
       "MFGP"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_MFGP"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->   
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -955,32 +1194,43 @@ VALUATION : $7 billions
   
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
-  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget22"></div>
-     <script type="text/javascript">
+ <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_IT"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget22",
   "symbols": [
     [
-      "STOCK",
+     
       "IT"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_IT"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->  
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -994,32 +1244,43 @@ VALUATION : $8 billions
    <div>&nbsp;</div>
    
     <div class="col-md-12 shadow p-4 mb-4 border border-primary">
-  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget23"></div>
-     <script type="text/javascript">
+ <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_HPE"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget23",
   "symbols": [
     [
-      "STOCK",
+     
       "HPE"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_HPE"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->   
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -1031,32 +1292,43 @@ VALUATION : $8 billions
    <div>&nbsp;</div>
   
   <div class="col-md-12 shadow p-4 mb-4 border border-primary">
-   <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget24"></div>
-     <script type="text/javascript">
+  <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_VZ"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget24",
   "symbols": [
     [
-      "STOCK",
+     
       "VZ"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_VZ"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->   
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -1071,32 +1343,43 @@ VALUATION : $180 billions
    
     <div class="col-md-12 shadow p-4 mb-4 border border-primary">
  
-   <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget25"></div>
-     <script type="text/javascript">
+  <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_T"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget25",
   "symbols": [
     [
-      "STOCK",
+     
       "T"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_T"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -1111,32 +1394,43 @@ VALUATION : $300 billions
    
      <div class="col-md-12 shadow p-4 mb-4 border border-primary">
  
-   <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget25a"></div>
-     <script type="text/javascript">
+  <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_TMUS"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget25a",
   "symbols": [
     [
-      "STOCK",
+     
       "TMUS"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_TMUS"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END --> 
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -1151,32 +1445,43 @@ VALUATION : $45 billions
  
      <div class="col-md-12 shadow p-4 mb-4 border border-primary">
  
-   <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget25c"></div>
-     <script type="text/javascript">
+  <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_USM"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget25c",
   "symbols": [
     [
-      "STOCK",
+     
       "USM"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_USM"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->  
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -1193,31 +1498,42 @@ VALUATION : $7 billions
  <div class="col-md-12 shadow p-4 mb-4 border border-primary">
  
 <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget26"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_AMT"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget26",
   "symbols": [
     [
-      "STOCK",
+     
       "AMT"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_AMT"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->   
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -1232,30 +1548,41 @@ VALUATION : $37.50 billions
  <div class="col-md-12 shadow p-4 mb-4 border border-primary">
  
 <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget27"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_LUMN"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget27",
   "symbols": [
     [
-      "STOCK",
+     
       "LUMN"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_LUMN"
 }
   );
   </script>
- 
+</div>
 <!-- TradingView Widget END -->    
    </div>	
    <div>
@@ -1270,32 +1597,43 @@ VALUATION : $30 billions
    <div>&nbsp;</div>
 
  <div class="col-md-12 shadow p-4 mb-4 border border-primary">
- <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget28"></div>
-     <script type="text/javascript">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_CCI"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget28",
   "symbols": [
     [
-      "STOCK",
+     
       "CCI"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_CCI"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->  
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -1310,31 +1648,42 @@ VALUATION : $15 billions
 
  <div class="col-md-12 shadow p-4 mb-4 border border-primary">
  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget29"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_DLR"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget29",
   "symbols": [
     [
-      "STOCK",
+     
       "DLR"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_DLR"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END --> 
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -1348,32 +1697,43 @@ VALUATION : $9 billions
    <div>&nbsp;</div>
 
 <div class="col-md-12 shadow p-4 mb-4 border border-primary">
- <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget30"></div>
-     <script type="text/javascript">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_EQIX"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget30",
   "symbols": [
     [
-      "STOCK",
+     
       "EQIX"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_EQIX"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END --> 
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -1388,31 +1748,42 @@ VALUATION : $12 billions
  
  <div class="col-md-12 shadow p-4 mb-4 border border-primary">
  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget31"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_SBAC"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget31",
   "symbols": [
     [
-      "STOCK",
+     
       "SBAC"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_SBAC"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END --> 
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -1426,32 +1797,43 @@ VALUATION : $2.40 billions
    <div>&nbsp;</div>
    
  <div class="col-md-12 shadow p-4 mb-4 border border-primary">
- <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget32"></div>
-     <script type="text/javascript">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_TWTR"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget32",
   "symbols": [
     [
-      "STOCK",
+     
       "TWTR"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_TWTR"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->   
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -1467,31 +1849,42 @@ VALUATION : $16 billions
    
  <div class="col-md-12 shadow p-4 mb-4 border border-primary">
  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget32a"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_SNAP"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget32a",
   "symbols": [
     [
-      "STOCK",
+     
       "SNAP"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_SNAP"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -1506,31 +1899,42 @@ VALUATION : $50 billions
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget33"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_PINS"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget33",
   "symbols": [
     [
-      "STOCK",
+     
       "PINS"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_PINS"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -1545,31 +1949,42 @@ VALUATION : $25 billions
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget34"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_ZM"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget34",
   "symbols": [
     [
-      "STOCK",
+     
       "ZM"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_ZM"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -1584,31 +1999,42 @@ VALUATION : $25 billions
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget35"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_WORK"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget35",
   "symbols": [
     [
-      "STOCK",
+     
       "WORK"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_WORK"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -1621,31 +2047,42 @@ VALUATION : $25 billions
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget36"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_DBX"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget36",
   "symbols": [
     [
-      "STOCK",
+     
       "DBX"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_DBX"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->   
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -1660,31 +2097,42 @@ VALUATION : $5 billions
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget37"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_SPLK"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget37",
   "symbols": [
     [
-      "STOCK",
+     
       "SPLK"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_SPLK"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->  
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -1699,31 +2147,42 @@ VALUATION : $25 billions
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget38"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_DOCU"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget38",
   "symbols": [
     [
-      "STOCK",
+     
       "DOCU"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_DOCU"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -1736,72 +2195,46 @@ VALUATION : $12 billions
    </div>
    <div>&nbsp;</div>
    
-   <div class="col-md-12 shadow p-4 mb-4 border border-primary">
- <!-- TradingView Widget BEGIN -->
  
-  <div id="tv-medium-widget39"></div>
-     <script type="text/javascript">
-  new TradingView.MediumWidget(
-  {
-  "container_id": "tv-medium-widget39",
-  "symbols": [
-    [
-      "STOCK",
-      "CLDR"
-    ]
-  ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
-  "width": "100%",
-  "height": "300px",
-  "locale": "en"
-}
-  );
-  </script>
- 
-<!-- TradingView Widget END -->    
-   </div>	
-   <div>
-       <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
-        <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001535379&type=10&dateb=&owner=exclude&count=40&search_text="target=_blank>10-K / 10-Q reports</a>
-		 <p>
-VALUATION : $2 billions
-<br>Shares outstanding : 309 millions
-<br>Fair value / share :$6
-      </div>
-   </div>
-   <div>&nbsp;</div>
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
- <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget40"></div>
-     <script type="text/javascript">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_NOW"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget40",
   "symbols": [
     [
-      "STOCK",
+     
       "NOW"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_NOW"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -1816,31 +2249,42 @@ VALUATION : $20 billions
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget41"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_SNOW"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget41",
   "symbols": [
     [
-      "STOCK",
+     
       "SNOW"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_SNOW"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END --> 
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -1856,31 +2300,42 @@ VALUATION : $150 billions
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget42"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_FROG"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget42",
   "symbols": [
     [
-      "STOCK",
+     
       "FROG"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_FROG"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END --> 
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -1894,32 +2349,43 @@ VALUATION : $150 billions
 
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
- <!-- TradingView Widget BEGIN -->
  
-  <div id="tv-medium-widget42PD"></div>
-     <script type="text/javascript">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_PD"></div>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget42PD",
   "symbols": [
     [
-      "STOCK",
+     
       "PD"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_PD"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -1935,32 +2401,43 @@ VALUATION : $150 billions
 
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
- <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget42GTLB"></div>
-     <script type="text/javascript">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_GTLB"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget42GTLB",
   "symbols": [
     [
-      "STOCK",
+     
       "GTLB"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_GTLB"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -1976,31 +2453,42 @@ VALUATION : $150 billions
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget43"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_MDB"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget43",
   "symbols": [
     [
-      "STOCK",
+     
       "MDB"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_MDB"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->   
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -2014,31 +2502,42 @@ VALUATION : $150 billions
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget44"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_TWLO"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget44",
   "symbols": [
     [
-      "STOCK",
+     
       "TWLO"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_TWLO"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -2054,31 +2553,42 @@ VALUATION : $20 billions
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget45"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_RCI"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget45",
   "symbols": [
     [
-      "STOCK",
+     
       "RCI"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_RCI"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->  
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -2093,32 +2603,43 @@ VALUATION : $18 billions
    <div>&nbsp;</div>
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
- <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget46"></div>
-     <script type="text/javascript">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_FSLY"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget46",
   "symbols": [
     [
-      "STOCK",
+     
       "FSLY"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_FSLY"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -2134,31 +2655,42 @@ VALUATION : $5 billions
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget47"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_FVRR"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget47",
   "symbols": [
     [
-      "STOCK",
+     
       "FVRR"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_FVRR"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->  
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -2173,75 +2705,45 @@ VALUATION : $2.50 billions
    <div>&nbsp;</div>
    
    
-   <div class="col-md-12 shadow p-4 mb-4 border border-primary">
- <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget48"></div>
-     <script type="text/javascript">
-  new TradingView.MediumWidget(
-  {
-  "container_id": "tv-medium-widget48",
-  "symbols": [
-    [
-      "STOCK",
-      "TLND"
-    ]
-  ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
-  "width": "100%",
-  "height": "300px",
-  "locale": "en"
-}
-  );
-  </script>
- 
-<!-- TradingView Widget END -->    
-   </div>	
-   <div>
-       <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
-        <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001668105&type=10&dateb=&owner=exclude&count=40&search_text="target=_blank>10-K / 10-Q</a>
-		 <p>
-VALUATION : $2 billions
-<br>Shares outstanding : 32 millions
-<br>Fair value / share :$63
-
-      </div>
-   </div>
-   <div>&nbsp;</div>
-   
-
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget49"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_GDDY"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget49",
   "symbols": [
     [
-      "STOCK",
+     
       "GDDY"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_GDDY"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->   
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -2254,38 +2756,45 @@ VALUATION : $8 billions
       </div>
    </div>
    <div>&nbsp;</div>    
-   
-   <div>&nbsp;</div>
-   
-
-   
+     
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
- <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget50"></div>
-     <script type="text/javascript">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_UPWK"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget50",
   "symbols": [
     [
-      "STOCK",
+     
       "UPWK"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_UPWK"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -2302,31 +2811,42 @@ VALUATION : $5 billions
 
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget51"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_PATH"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget51",
   "symbols": [
     [
-      "STOCK",
+     
       "PATH"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_PATH"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -2340,32 +2860,43 @@ VALUATION : $5 billions
 
 
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
- <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget52"></div>
-     <script type="text/javascript">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_TTD"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget52",
   "symbols": [
     [
-      "STOCK",
+     
       "TTD"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_TTD"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -2381,31 +2912,42 @@ VALUATION : $12 billions
 
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
  <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widget53"></div>
-     <script type="text/javascript">
+<div class="tradingview-widget-container">
+  <div id="tradingview_BAH"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widget53",
   "symbols": [
     [
-      "STOCK",
+     
       "BAH"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_BAH"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
@@ -2420,32 +2962,43 @@ VALUATION : $9 billions
    
    
    <div class="col-md-12 shadow p-4 mb-4 border border-primary">
- <!-- TradingView Widget BEGIN -->
- 
-  <div id="tv-medium-widgetCDW"></div>
-     <script type="text/javascript">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_CDW"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
   new TradingView.MediumWidget(
   {
-  "container_id": "tv-medium-widgetCDW",
   "symbols": [
     [
-      "STOCK",
+     
       "CDW"
     ]
   ],
-  "greyText": "Quotes by",
-  "gridLineColor": "rgba(216, 216, 216, 1)",
-  "fontColor": "rgba(0, 0, 0, 1)",
-  "underLineColor": "rgba(255, 217, 102, 1)",
-  "trendLineColor": "rgba(255, 0, 0, 1)",
+  "chartOnly": false,
   "width": "100%",
   "height": "300px",
-  "locale": "en"
+  "locale": "en",
+  "colorTheme": "light",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": true,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_CDW"
 }
   );
   </script>
- 
-<!-- TradingView Widget END -->    
+</div>
+<!-- TradingView Widget END -->
    </div>	
    <div>
        <div class="col-md-12 shadow p-2 mb-2 center2" style="background-color:#ffff66"> 
