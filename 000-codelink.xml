@@ -3,13 +3,13 @@
  <!--Insert new record here -->
   <!--Example#236 -->
  <EXAMPLE>
-    <LINK>&lt;a href="236-sample-fin-stmt.html&lt;a&gt;</LINK>
+    <LINK>&lt;a href="236-sample-fin-stmt.html"&gt;236-sample-fin-stmt.html&lt;a&gt;</LINK>
     <CATEGORY>Finance</CATEGORY>
 	<DESC>How to create Financial table</DESC>
  </EXAMPLE>
   <!--Example#235 -->
  <EXAMPLE>
-    <LINK>&lt;a href="235-world-maps-by-continents.html&lt;a&gt;</LINK>
+    <LINK>&lt;a href="235-world-maps-by-continents.html"&gt;235-world-maps-by-continents.html&lt;a&gt;</LINK>
     <CATEGORY>Javascript/ games</CATEGORY>
 	<DESC>World maps by continents</DESC>
  </EXAMPLE>
