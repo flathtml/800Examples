@@ -401,7 +401,13 @@
     <CATEGORY>HTML / Javascript / PHP</CATEGORY>
 	<DESC>Get content from external link and display</DESC>
   </EXAMPLE>
- <!--Example#170 -->
+  <!--Example#170.b -->
+  <EXAMPLE>
+    <LINK>&lt;a href="170-disp-column-to-auth-user.html"&gt;170-disp-column-to-auth-user.html&lt;a&gt;</LINK>
+    <CATEGORY>HTML / Javascript / XML</CATEGORY>
+	<DESC>Display table column to authorized users.</DESC>
+  </EXAMPLE>
+ <!--Example#170.a -->
   <EXAMPLE>
     <LINK>&lt;a href="170-disp-content-to-auth-user.html"&gt;170-disp-content-to-auth-user.html&lt;a&gt;</LINK>
     <CATEGORY>HTML / Javascript / XML</CATEGORY>
