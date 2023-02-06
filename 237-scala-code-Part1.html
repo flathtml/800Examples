@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+<title>Scala Guide - Scala for Data Engineers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <!//http://www.w3schools.com/w3css/4/w3.css !>
+      <link rel="stylesheet" href="references/w3.css"> 
+      
+	  <!//http://www.w3schools.com/lib/codemirror.css !>
+      <link rel="stylesheet" href="references/codemirror.css">
+	  
+      <!//http://www.w3schools.com/lib/codemirror.js !>
+	  <script src="references/codemirror.js"></script>
+	  
+	  <!//https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css !>
+      <link rel="stylesheet" href="references/bootstrap.min.css">
+   
+      <!//https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js !>
+	  <script src="references/bootstrap.min.js"></script>
+	  
+	  <!//https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js !>
+	  <script src="references/jquery.min.js"></script>
+	 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+	  <link href="https://fonts.googleapis.com/css?family=Playball|Righteous" rel="stylesheet">
+      <style>
+.center1 {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+   
+  
+}
+
+.center2 {
+    text-align: center;
+   }
+
+.footer {
+    text-align: center;
+    font-size: small; 
+}
+
+img {
+  width: auto;
+  height: auto;
+  max-width: 300px;
+  max-height: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo {
+    font-family: Righteous;
+     text-align: center;
+    font-size: 37px;
+    letter-spacing: 3px;
+    color: #B6052A;
+    display: block;
+     
+}
+
+.comt {
+    color: #380AF0;
+    display: block;
+     
+}
+
+
+.motto1 {
+     
+ 
+    text-align: center;
+    font-size: 22px;
+	letter-spacing: 2px;
+    display: block;
+ 
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    background-color: #E7E4E3;
+}
+
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+td:hover {background-color:#f5f5f5;}
+
+ 
+
+</style>
+
+ 
+
+<body class="w3-container">
+
+ <div class="row">
+      <div class="col-md-12">
+         <div class="row">
+		    
+			<div class="col-md-2">
+               
+                <div class="row">&nbsp;</div>
+            </div>
+			
+            <div class="col-md-8">
+       
+      
+  <br><br>   
+  <div class="col-md-12 shadow p-2 mb-2 border border-success" style="background-color:#5FA8E2">
+      <div> 
+            
+     
+	  <span class="motto1">Scala Code - Part-1</span>
+       
+	  
+   </div> 
+   </div>
+<br>   
+   <div class="col-md-12 shadow p-2 mb-2 border border-info">
+  <a href="https://docs.scala-lang.org/"target=_blank>Scala documentation</a>
+  </div>
+   <div class="col-md-12  p-4 mb-4">
+      <div> 
+	  
+	   <div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-1 : Hello World</b></span></div>
+          <div class="card-body">
+    <pre>
+	object hello {
+      def main(args: Array[String]) = {
+      println("Hello, World!")
+		}
+	}
+	</pre>
+	<span class="comt">In this code, we defined a method named main, inside a Scala object named hello. An object in Scala is similar to a class, but 
+	defines a singleton instance that you can pass around. main takes an input parameter named args that must be typed as Array[String]
+	</span>
+  </div>
+</div>
+
+ <div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-2 : Take User Input</b></span></div>
+          <div class="card-body">
+    <pre>
+	import scala.io.StdIn.readLine
+	
+	object helloInteractive {
+
+	def main(args: Array[String]) = {
+		println("Please enter your name:")
+		val name = readLine()
+		println("Hello, " + name + "!")
+		}
+
+	}
+	</pre>
+	<span class="comt">In this code we save the result of readLine to a variable called name, we then use the + operator on strings to 
+	join "Hello, " with name and "!", making one single string value.
+	</span>
+  </div>
+</div>
+
+<div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-3 : Pass data as $</b></span></div>
+          <div class="card-body">
+    <pre>
+	object hello {
+
+	def main(args: Array[String]) = {
+		val firstName = "John"
+		val mi = 'C'
+		val lastName = "Doe"
+
+		println(s"Name: $firstName $mi $lastName")   // "Name: John C Doe"
+		}
+	}
+	</pre>
+	<span class="comt">In this code we have combined values from three different variables , joined them and printed.
+	</span>
+  </div>
+</div>
+
+<div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-4 : IF / ELSE</b></span></div>
+          <div class="card-body">
+    <pre>
+	object hello {
+	def main(args: Array[String]) = {
+		val x = 9
+		if (x < 0) {
+			println("Number is negative")
+			} else if (x == 0) {
+		println("Number is zero")
+			} else {
+		println("Number is positive")
+			}
+		}
+
+	}
+	</pre>
+	<span class="comt">Code showcases simple IF / ELSE
+	</span>
+  </div>
+</div>
+
+<div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-5 : IF / ELSE - expression</b></span></div>
+          <div class="card-body">
+    <pre>
+	object hello {
+	def main(args: Array[String]) = {
+		val a = 19
+		val b = 12
+
+		val x = if (a < b) { a } else { b }
+		
+		println("Number is :" + x)
+		}
+	}
+	</pre>
+	<span class="comt">Code showcases  IF / ELSE expression that prints lesses of two numbers.
+	</span>
+  </div>
+</div>
+
+<div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-6 : For Loop</b></span></div>
+          <div class="card-body">
+    <pre>
+	object hello {
+
+	def main(args: Array[String]) = {
+    val ints = List(1, 2, 3, 4, 5)
+
+    for (i <- ints) println(i)
+		}
+	}
+	</pre>
+	<span class="comt">
+	The code i &lt- ints
+	is referred to as a generator, and the code that follows the closing parentheses of the generator is the body of the loop.
+	</span>
+  </div>
+</div>
+
+<div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-7 : Using Guard</b></span></div>
+          <div class="card-body">
+    <pre>
+	object hello {
+		def main(args: Array[String]) = {
+		val ints = List(1, 2, 3, 4, 5)
+		for (i <- ints if i > 2)
+		println(i)
+		}
+	}
+	</pre>
+	<span class="comt">
+	You can also use one or more if expressions inside a for loop. 
+	These are referred to as guards. This example prints all of the numbers in ints that are greater than 2:
+	</span>
+  </div>
+</div>
+
+<div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-8 : Multiple generators and guards</b></span></div>
+          <div class="card-body">
+    <pre>
+	object hello {
+
+		def main(args: Array[String]) = {
+
+		for {
+		i <- 1 to 3
+		j <- 'a' to 'c'
+		if i == 2
+		if j == 'b'
+		}
+			{
+				println(s"i = $i, j = $j")
+			}
+		}
+	}
+	</pre>
+	<span class="comt">
+	You can use multiple generators and guards. This loop iterates over the numbers 1 to 3, and for each number it also 
+	iterates over the characters a to c. However, it also has two guards, so the only time the print statement is called is 
+	when i has the value 2 and j is the character b:
+	</span>
+  </div>
+</div>
+
+<div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-9 : Using Yield</b></span></div>
+          <div class="card-body">
+    <pre>
+	object hello {
+
+	def main(args: Array[String]) = {
+		val ints = List(1, 2, 3, 4, 5)
+		val doubles = for { i <- ints } yield (i * 2)
+		println(s"output is = $doubles")
+		}
+	}
+	</pre>
+	<span class="comt">
+	The for keyword has even more power: When you use the yield keyword instead of do, you create for expressions which are used to calculate and 
+	yield results. This code creates a new list, where the value of each element in the new list is twice the value of the elements in the original list.
+	</span>
+  </div>
+</div>
+
+<div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-10 : Using Capitalize method</b></span></div>
+          <div class="card-body">
+    <pre>
+	object hello {
+
+  def main(args: Array[String]) = {
+    val names = List("ram", "john", "mary")
+    val capNames = for (name <- names) yield name.capitalize
+    println(s"output is = $capNames")
+  }
+}
+	</pre>
+	<span class="comt">
+	Example shows how to capitalize the first character in each string in the list.
+	</span>
+  </div>
+</div>
+
+<div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-11 : Iteration example</b></span></div>
+          <div class="card-body">
+    <pre>
+	object hello {
+		def main(args: Array[String]) = {
+		val fruits = List("apple", "banana", "lime", "orange")
+		val specialfruit =
+			for (f <- fruits if f.length > 5) yield f
+			println(s"fruits are = $fruits")
+			println(s"fruits with length greater than 5 = $specialfruit")
+		}
+	}
+	</pre>
+	<span class="comt">
+	This for expression iterates over a list of strings, and returns the fruit names that have greater than 5 characters:
+	</span>
+  </div>
+</div>
+
+<div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-12 : Match Expressions</b></span></div>
+          <div class="card-body">
+    <pre>
+	object hello {
+		def main(args: Array[String]) = {
+		val fruits = List("apple", "banana", "lime", "orange")
+		val specialfruit =
+			for (f <- fruits if f.length > 5) yield f
+			println(s"fruits are = $fruits")
+			println(s"fruits with length greater than 5 = $specialfruit")
+		}
+	}
+	</pre>
+	<span class="comt">
+	This for expression iterates over a list of strings, and returns the fruit names that have greater than 5 characters:
+	</span>
+  </div>
+</div>
+
+<div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-13 : Match Expressions - case statement</b></span></div>
+          <div class="card-body">
+    <pre>
+	object hello {
+
+  def main(args: Array[String]) = {
+    val i = 1
+    val result = i match {
+      case 1 => "one"
+      case 2 => "two"
+      case _ => "other"
+
+    }
+    println(result)
+    println("$i")
+  }
+	</pre>
+	<span class="comt">
+	This showcases use of case statement 
+	</span>
+  </div>
+</div>
+
+<div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-14 : Match Expressions - with other data type</b></span></div>
+          <div class="card-body">
+    <pre>
+	object hello {
+	
+	def main(args: Array[String]) = {
+    case class Person(str: String)
+    
+	val p = new Person("Fred")
+
+    p match {
+      case Person(name) if name == "Fred" =>
+        println(s"$name says, Yubba dubba doo")
+
+      case Person(name) if name == "Bam Bam" =>
+        println(s"$name says, Bam bam!")
+
+      case _ => println("Watch the Flintstones!")
+    }
+  }
+
+	</pre>
+	<span class="comt">
+	This showcases use of case statement with other data types.
+	</span>
+  </div>
+</div>
+
+<div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-15 : Try / Catch - File missing</b></span></div>
+          <div class="card-body">
+    <pre>
+import java.io.FileReader
+import java.io.FileNotFoundException
+import java.io.IOException
+
+// Creating object
+object hello
+{
+  // Main method
+  def main(args: Array[String])
+  {
+    // Try clause
+    try
+    {
+      // Creating object for FileReader
+      val t = new FileReader("input.txt")
+      // use this to test negetive case, ensure we have people.xml in the project folder
+      // val t = new FileReader("people.xml")
+    }
+
+      // Catch clause
+    catch
+    {
+
+      // Case statement-1
+      case x: FileNotFoundException =>
+      {
+        // Displays this if the file is
+        // missing
+        println("Exception: File missing")
+
+      }
+
+      // Case statement-2
+      case x: IOException   =>
+      {
+
+        // Displays this if input/output
+        // exception is found
+        println("Input/output Exception")
+
+      }
+    }
+  }
+}
+	</pre>
+	<span class="comt">
+	The above example showcases Try / catch and how one can catch a File not found
+	</span>
+  </div>
+</div>
+
+<div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-16 : Financial App - Bond Yield to maturity calculator</b></span></div>
+          <div class="card-body">
+    <pre>
+ import scala.annotation.tailrec
+import scala.math.{pow, round}
+
+object BondExample extends App {
+  val bond = new Bond("BuBa 4Y 8,5%", 100, 6.5, 4)
+  val YTM: Double = round(bond.yieldToMaturity(115, 0.0, 0) * 100.0) / 100.0
+  println("\n----------------------------------------------------")
+  println("The yield to maturity is approximately " + YTM + " %")
+  println("----------------------------------------------------\n")
+}
+
+trait Formulae {
+  def discount(r: Double, t: Long): Double = pow((1 + r / 100), -t)
+
+  def cashFlowsPresentValue(r: Double, cf: Seq[Double]): Double = {
+    val idx = cf.indices.map(_ + 1) // E.g. period numbers
+    val values: Seq[Double] = (cf zip idx) map { case (c, t) =>
+      c * discount(r, t)
+    }
+    values.foldLeft(0.0)(_ + _)
+  }
+}
+
+case class Bond(name: String, principal: Double, coupon: Double, periods: Long) extends Formulae {
+  val cashflows: Seq[Double] = Seq.fill(periods.toInt - 1)(coupon) ++ Seq(coupon + principal)
+  def initialNPV(r: Double): Double = cashFlowsPresentValue(r, cashflows)
+
+  @tailrec final def yieldToMaturity(price: Double, ytm: Double, precision: Long): Double = {
+    println("Trying with ytm = " + ytm)
+    val inpv: Double = initialNPV(ytm)
+    if (price == inpv || precision > 5) {
+      println("This value seems to be OK"); ytm
+    }
+    else {
+      val nprec: Long = (price < inpv) == (precision % 2 == 0) match {
+        case false => precision + 1
+        case (_) => precision
+      }
+      val nytm: Double = (price < inpv) match {
+        case true => round(pow(10, nprec) * (ytm + pow(10, -nprec))) / pow(10, nprec)
+        case (_) => round(pow(10, nprec) * (ytm - pow(10, -nprec))) / pow(10, nprec)
+      }
+      yieldToMaturity(price, nytm, nprec)
+    }
+  }
+} // end of case class Bond
+	</pre>
+	<span class="comt">
+	Financial app that calculates a Bond's Yield to maturity. Showcases how we can use a class to calculate. Also showcases
+	the use of App trait
+	</span>
+  </div>
+</div>
+
+<div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-17 : Read a file and display its contents</b></span></div>
+          <div class="card-body">
+    <pre>
+object Main {
+  def main(args: Array[String]): Unit = {
+    println("**PGM START**")
+    import scala.io.Source
+    var filename = "people.xml"
+    for (line<-Source.fromFile(filename).getLines){
+      println(line)
+    }
+    println("**PGM END**")
+  }
+}
+	</pre>
+	<span class="comt">
+	Read a file and display its contents. Please ensure that people.xml is present in the project folder
+	</span>
+  </div>
+</div>
+
+<div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-18 : Parse a XML file </b></span></div>
+          <div class="card-body">
+    <pre>
+object hello {
+  def main(args: Array[String]) = {
+    println("**PROGRAM BEGIN")
+    import scala.xml._
+
+    def parseXML(xml: String): Unit = {
+      val xmlDoc = XML.loadString(xml)
+
+      val cdElements = xmlDoc \ "CD"
+      println("TITLE" + ","+ "ARTIST" + "," + "COUNTRY" + "," + "COMPANY" + "," + "PRICE" + "," + "YEAR")
+      for (cd &lt;- cdElements) {
+        val title = (cd \ "TITLE").text
+        val artist = (cd \ "ARTIST").text
+        val country = (cd \ "COUNTRY").text
+        val company = (cd \ "COMPANY").text
+        val price = (cd \ "PRICE").text
+        val year = (cd \ "YEAR").text
+
+        println(s"$title"+ "," + s"$artist" + "," + s"$country" + "," + s"$company" + "," + s"$price" + "," + s"$year")
+
+      }
+    }
+
+    val xml = scala.io.Source.fromURL("https://flathtml.github.io/800Examples/033-CD.xml").mkString
+    parseXML(xml)
+
+
+    println("**PROGRAM END")
+
+  }
+}
+	</pre>
+	<span class="comt">
+	The above programs Parses a XML and display its contents in a comma delimited format. Before running this program, please ensure
+	that scala.xml has been downloaded and added as dependent. Please refer to the following 
+	<a href="237-Scala-xml-setup.pdf"target=_blank>document.</a>
+	</span>
+  </div>
+</div>
+  
+
+ 
+      </div>	
+ </body>
+</html>
