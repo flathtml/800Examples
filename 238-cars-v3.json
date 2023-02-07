@@ -1,0 +1,13 @@
+[{
+		"Brand": "toyota",
+		"Model": "corolla",
+		"Type": "4d",
+		"Price": "5000"
+	},
+	{
+		"Brand": "honda",
+		"Model": "acord",
+		"Type": "2d",
+		"Price": "7200"
+	}
+]
