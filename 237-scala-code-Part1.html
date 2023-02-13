@@ -613,6 +613,262 @@ object hello {
 	</span>
   </div>
 </div>
+
+
+ 
+ <div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-19 : Extract value from JSON array </b></span></div>
+          <div class="card-body">
+    <pre>
+import play.api.libs.json._
+
+case class Car(Brand: String, Model: String, Type: String, Price: String)
+
+object JsonParser {
+  implicit val carFormat = Json.format[Car]
+
+  def parseJson(jsonString: String): Seq[Car] = {
+    val json = Json.parse(jsonString)
+    val cars = json.as[Seq[Car]]
+    cars
+  }
+
+  def main(args: Array[String]): Unit = {
+    val jsonString =
+      "[{\"Brand\":\"toyota\",\"Model\":\"corolla\",\"Type\":\"4d\",\"Price\":\"5000\"}," +
+        "{\"Brand\":\"honda\",\"Model\":\"acord\",\"Type\":\"2d\",\"Price\":\"7200\"}]"
+    val cars = parseJson(jsonString)
+    println("BRAND" + "," + "MODEL" + "," + "TYPE" + "," + "PRICE")
+    cars.foreach(car => println(s"${car.Brand}, ${car.Model}, ${car.Type}, ${car.Price}"))
+  }
+}
+
+	</pre>
+	<span class="comt">
+	The above program extracts value from an array and prints the key values in a comma delimited form with each occurrence
+	in a separate line. Also one needs to ensure that the play library is downloaded as dependent in the same way as scala.xml
+	was downloaded as per this
+	<a href="Scala-xml-setup.pdf"target=_blank>document.</a>
+	</span>
+  </div>
+</div>
+
+<div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-20 : Parse JSON File </b></span></div>
+          <div class="card-body">
+    <pre>
+ import scala.io.Source
+import play.api.libs.json._
+case class Car(Brand: String, Model: String, Type: String, Price: String)
+
+object JsonParser {
+
+  implicit val carFormat = Json.format[Car]
+
+  def parseJson(jsonString: String): Seq[Car] = {
+    val json = Json.parse(jsonString)
+    val cars = json.as[Seq[Car]]
+    cars
+  }
+
+  def main(args: Array[String]): Unit = {
+
+    //val myfile = "cars-v2.json"
+    //val filestuff = Source.fromFile(myfile).mkString
+
+    val myfile = "https://flathtml.github.io/800Examples/238-cars-v3.json"
+    val filestuff = Source.fromURL(myfile).mkString
+
+    val rawarray = Json.parse(filestuff)
+    val readydata = rawarray.toString()
+
+    println(rawarray)
+
+    val cars =  parseJson(readydata)
+    println("BRAND" + "," + "MODEL" + "," + "TYPE" + "," + "PRICE")
+    cars.foreach(car => println(s"${car.Brand}, ${car.Model}, ${car.Type}, ${car.Price}"))
+
+  }
+}
+	</pre>
+	<span class="comt">
+	The above program extracts key pair value from JSON file and outputs in the tabular format.
+ 
+	</span>
+  </div>
+</div>
+
+<div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-21 : IF/ELSE - PERFORM METHOD </b></span></div>
+          <div class="card-body">
+    <pre>
+ object hello {
+  def main(args: Array[String]) = {
+    val a = 19
+    val b = 12
+
+    def fruit(): Unit = {
+        println("this is fruit")
+    }
+
+      def veg(): Unit = {
+          println("this is vegetable")
+      }
+      println("**BEGIN**")
+      val x = if (a < b) {fruit} else {veg}
+
+    println("**WE ARE DONE**")
+  }
+}
+	</pre>
+	<span class="comt">
+	The above program performs a method based on the value of IF/ELSE
+ 
+	</span>
+  </div>
+</div>
+ 
+
+<div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-22 : Display Multi Dim Array in table format </b></span></div>
+          <div class="card-body">
+    <pre>
+ object arraydisp {
+   def main(args: Array[String]) = {
+     val products = Array(Array("P01", 2.00), Array("P02", 4.00), Array("P03", 6.00))
+     println("Product ID\tPrice")
+     for (p &lt- products) {
+       println(p(0) + "\t\t" + p(1))
+     }
+  }
+}
+	</pre>
+	<span class="comt">
+	The above program displays the contents of a multi dimensional array in a tabular format
+	</span>
+  </div>
+</div>
+ 
+ <div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-23 : Product Price calculator ver 1 </b></span></div>
+          <div class="card-body">
+    <pre>
+ import scala.io.StdIn.readLine
+object productprice {
+   def main(args: Array[String]) = {
+
+     //Input Parameters
+     println("Please enter Product id P01 /P02 / P03:")
+     val inputproduct = readLine()
+     println("Please enter Quantity in numbers:")
+     val inputqty = readLine()
+
+
+     val qty: Double = inputqty.toDouble
+
+     var unitprice = 0.00
+     var totalprice = 0.00
+
+     //product array - that has productid and Unit price combination
+     val products = Array(Array("P01", 1.22), Array("P02", 4.00), Array("P03", 6.00))
+
+     println("Product ID"+ "," + "Unit Price" + "," + "Qty" + "," + "Total Price")
+
+     for (p &LT- products) {
+       if (p(0) == inputproduct) {
+       unitprice = p(1).asInstanceOf[Double]
+       totalprice = qty * unitprice
+       println(p(0) + "," + unitprice + "," + qty + "," + totalprice)
+       }
+     }
+  }
+}
+
+
+	</pre>
+	<span class="comt">
+	The above program takes in the input Product id and quantity. The Unit cost of the product is obtained by reading multidimensional 
+	product array that has product id and Unit price combinations. The unit cost is multiplied to quantity to give the product price.
+	</span>
+  </div>
+</div>
+ 
+
+
+<div class="col-md-12 shadow p-4 mb-4 border border-primary" style="background-color:#ff99ff">
+      <div> 
+           
+      <h4>imp links</h4>
+	  <pre>
+Scala Language reference
+
+https://scala-lang.org/files/archive/spec/2.13/spec.pdf
+
+Java Language reference
+
+https://docs.oracle.com/javase/specs/jls/se19/jls19.pdf
+
+JVM reference
+
+https://docs.oracle.com/javase/specs/jvms/se19/jvms19.pdf
+
+Martin Odersky –
+https://www.youtube.com/watch?v=ecekSCX3B4Q&t=297s
+
+https://www.youtube.com/watch?v=_ahvzDzKdB0
+
+https://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf
+
+https://www.scala-lang.org/docu/files/ScalaOverview.pdf
+
+http://lampwww.epfl.ch/~odersky/papers/fsttcs2009.pdf
+
+http://lampwww.epfl.ch/~odersky/papers/jmlc06.pdf
+
+http://lampwww.epfl.ch/~odersky/papers/mfcs06.pdf
+
+ 
+
+https://dl.acm.org/doi/pdf/10.1145/2591013
+
+https://www.signifytechnology.com/blog/2018/01/why-scala?source=google.com
+
+https://www.youtube.com/watch?v=ecekSCX3B4Q&t=370s  - what it means that Scala is scalable
+
+Misc
+
+
+https://www.youtube.com/watch?v=A7_Fk2X3C60
+
+https://www.baeldung.com/cs/concurrency-vs-parallelism
+	  
+	  </pre>
+ 
+   </div> 
+   </div>	
+
+
+
+
+<div class="col-md-12 shadow p-4 mb-4 border border-primary" style="background-color:#ff99ff">
+      <div> 
+           
+      <h4>Why Data Engineers should learn Scala ?</h4>
+	  <br>
+1. Scala stands for scalable language: one of the foundational ideas of developing Scala. It is meant to be big data-friendly, allow seamless integration with existing stacks, and grow in a "bazaar" fashion where developers can update its design with time. Moreover, everything in Scala is customizable to the user's programming requirements.
+<br><br>
+2. Due to its functional programming + OOP approach, all data structures are represented by case classes -- making customization extremely approachable.
+<br><br>
+3. Compile-time type inference adds to code brevity and comes immensely handy when dealing with complex pipelines. Moreover, data immutability (as we'll see below) and persistent data structures simplify running tests and help make the app more reliable.
+<br><br>
+4. Tools such as Apache Spark, Spark SQL, Databricks, and Kafka both use Scala under the hood; this has greatly increased Scala's large-scale credibility.
+<br><br>
+5. Combining concepts of conciseness and functional paradigm with OOP and high-level performance, data engineers can use Scala equally for lightweight, user-facing applications and terabyte-level big data pipelines with Spark jobs and distributed systems.
+<br><br>
+6. Niche tools like Quantexa (Links entities between third party data) have their integration pipelines built using Scala. Thus for a company that plans to use tools like Quantexa need Data Engineers with Scala expertise to integrate such tools with their Data Cloud Ecosystem. </div> 
+
+   </div> 
+   </div>	
   
 
  
