@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<title>Scala Guide - Scala for Data Engineers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <!//http://www.w3schools.com/w3css/4/w3.css !>
+      <link rel="stylesheet" href="references/w3.css"> 
+      
+	  <!//http://www.w3schools.com/lib/codemirror.css !>
+      <link rel="stylesheet" href="references/codemirror.css">
+	  
+      <!//http://www.w3schools.com/lib/codemirror.js !>
+	  <script src="references/codemirror.js"></script>
+	  
+	  <!//https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css !>
+      <link rel="stylesheet" href="references/bootstrap.min.css">
+   
+      <!//https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js !>
+	  <script src="references/bootstrap.min.js"></script>
+	  
+	  <!//https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js !>
+	  <script src="references/jquery.min.js"></script>
+	 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+	  <link href="https://fonts.googleapis.com/css?family=Playball|Righteous" rel="stylesheet">
+      <style>
+.center1 {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+   
+  
+}
+
+.center2 {
+    text-align: center;
+   }
+
+.footer {
+    text-align: center;
+    font-size: small; 
+}
+
+img {
+  width: auto;
+  height: auto;
+  max-width: 300px;
+  max-height: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo {
+    font-family: Righteous;
+     text-align: center;
+    font-size: 37px;
+    letter-spacing: 3px;
+    color: #B6052A;
+    display: block;
+     
+}
+
+.comt {
+    color: #380AF0;
+    display: block;
+     
+}
+
+
+.motto1 {
+     
+ 
+    text-align: center;
+    font-size: 22px;
+	letter-spacing: 2px;
+    display: block;
+ 
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    background-color: #E7E4E3;
+}
+
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+td:hover {background-color:#f5f5f5;}
+
+ 
+
+</style>
+
+ 
+
+<body class="w3-container">
+
+ <div class="row">
+      <div class="col-md-12">
+         <div class="row">
+		    
+			<div class="col-md-2">
+               
+                <div class="row">&nbsp;</div>
+            </div>
+			
+            <div class="col-md-8">
+       
+      
+  <br><br>   
+  <div class="col-md-12 shadow p-2 mb-2 border border-success" style="background-color:#5FA8E2">
+      <div> 
+            
+     
+	  <span class="motto1">Scala Code - Part-2</span>
+       
+	  
+   </div> 
+   </div>
+<br>   
+   <div class="col-md-12 shadow p-2 mb-2 border border-info">
+  <a href="https://docs.scala-lang.org/"target=_blank>Scala documentation</a>
+  </div>
+   <div class="col-md-12  p-4 mb-4">
+      <div> 
+	  
+	   
+
+<div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-21 : IF/ELSE - PERFORM METHOD </b></span></div>
+          <div class="card-body">
+    <pre>
+ object hello {
+  def main(args: Array[String]) = {
+    val a = 19
+    val b = 12
+
+    def fruit(): Unit = {
+        println("this is fruit")
+    }
+
+      def veg(): Unit = {
+          println("this is vegetable")
+      }
+      println("**BEGIN**")
+      val x = if (a < b) {fruit} else {veg}
+
+    println("**WE ARE DONE**")
+  }
+}
+	</pre>
+	<span class="comt">
+	The above program performs a method based on the value of IF/ELSE
+ 
+	</span>
+  </div>
+</div>
+ 
+
+<div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-22 : Display Multi Dim Array in table format </b></span></div>
+          <div class="card-body">
+    <pre>
+ object arraydisp {
+   def main(args: Array[String]) = {
+     val products = Array(Array("P01", 2.00), Array("P02", 4.00), Array("P03", 6.00))
+     println("Product ID\tPrice")
+     for (p &lt- products) {
+       println(p(0) + "\t\t" + p(1))
+     }
+  }
+}
+	</pre>
+	<span class="comt">
+	The above program displays the contents of a multi dimensional array in a tabular format
+	</span>
+  </div>
+</div>
+ 
+ <div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-23 : Product Price calculator ver 1 </b></span></div>
+          <div class="card-body">
+    <pre>
+ import scala.io.StdIn.readLine
+object productprice {
+   def main(args: Array[String]) = {
+
+     //Input Parameters
+     println("Please enter Product id P01 /P02 / P03:")
+     val inputproduct = readLine()
+     println("Please enter Quantity in numbers:")
+     val inputqty = readLine()
+
+
+     val qty: Double = inputqty.toDouble
+
+     var unitprice = 0.00
+     var totalprice = 0.00
+
+     //product array - that has productid and Unit price combination
+     val products = Array(Array("P01", 1.22), Array("P02", 4.00), Array("P03", 6.00))
+
+     println("Product ID"+ "," + "Unit Price" + "," + "Qty" + "," + "Total Price")
+
+     for (p &LT- products) {
+       if (p(0) == inputproduct) {
+       unitprice = p(1).asInstanceOf[Double]
+       totalprice = qty * unitprice
+       println(p(0) + "," + unitprice + "," + qty + "," + totalprice)
+       }
+     }
+  }
+}
+
+
+	</pre>
+	<span class="comt">
+	The above program takes in the input Product id and quantity. The Unit cost of the product is obtained by reading multidimensional 
+	product array that has product id and Unit price combinations. The unit cost is multiplied to quantity to give the product price.
+	</span>
+  </div>
+</div>
+
+<div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-24 : Function Basics</b></span></div>
+          <div class="card-body">
+    <pre>
+ object functionbasics {
+   def main(args: Array[String]) = {
+
+     //Basic function
+     def greeting(name: String, age: Int): String =
+       "Hi , my name is " + name + " and I am " + age + " years old"
+
+     println(greeting("John", 21))
+
+     //Recursive function
+     def factorial(n: Int): Int =
+       if (n &lt= 1) 1
+       else n * factorial(n - 1)
+
+     println(factorial(7))
+
+     //Recursive function -Prints the fibonacci number
+     def fibonacci(n: Int): Int =
+       if (n &lt= 2) 1
+       else fibonacci(n - 1) + fibonacci(n - 2)
+
+     println(fibonacci(7))
+
+     //Recursive function Prime number test
+
+     def primecheck(n: Int): Boolean = {
+
+       def primeuntil(t: Int): Boolean =
+         if (t &lt= 1) true
+         else n % t != 0 && primeuntil(t - 1)
+
+       primeuntil(n / 2)
+     }
+       println(primecheck(53))
+       println(primecheck(2001))
+       println(primecheck(605))
+
+   }
+}
+
+	</pre>
+	<span class="comt">
+	The above example showcases basics of functions. Recursive and auxiliary.
+	</span>
+  </div>
+</div>
+ 
+ 
+
+ 
+
+ 
+      </div>	
+ </body>
+</html>
