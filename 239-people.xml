@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<group>
+	<person id="E01">
+		<name>John</name>
+		<age>20</age>
+		<weight>175</weight>
+		<height>70</height>
+	</person>
+	<person id="E02">
+		<name>Mark</name>
+		<age>22</age>
+		<weight>177</weight>
+		<height>71</height>
+	</person>
+</group>

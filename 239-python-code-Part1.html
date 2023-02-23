@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<title>Python for Data Engineers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <!//http://www.w3schools.com/w3css/4/w3.css !>
+      <link rel="stylesheet" href="references/w3.css"> 
+      
+	  <!//http://www.w3schools.com/lib/codemirror.css !>
+      <link rel="stylesheet" href="references/codemirror.css">
+	  
+      <!//http://www.w3schools.com/lib/codemirror.js !>
+	  <script src="references/codemirror.js"></script>
+	  
+	  <!//https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css !>
+      <link rel="stylesheet" href="references/bootstrap.min.css">
+   
+      <!//https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js !>
+	  <script src="references/bootstrap.min.js"></script>
+	  
+	  <!//https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js !>
+	  <script src="references/jquery.min.js"></script>
+	 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+	  <link href="https://fonts.googleapis.com/css?family=Playball|Righteous" rel="stylesheet">
+      <style>
+.center1 {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+   
+  
+}
+
+.center2 {
+    text-align: center;
+   }
+
+.footer {
+    text-align: center;
+    font-size: small; 
+}
+
+img {
+  width: auto;
+  height: auto;
+  max-width: 300px;
+  max-height: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo {
+    font-family: Righteous;
+     text-align: center;
+    font-size: 37px;
+    letter-spacing: 3px;
+    color: #B6052A;
+    display: block;
+     
+}
+
+.comt {
+    color: #380AF0;
+    display: block;
+     
+}
+
+
+.motto1 {
+     
+ 
+    text-align: center;
+    font-size: 22px;
+	letter-spacing: 2px;
+    display: block;
+ 
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    background-color: #E7E4E3;
+}
+
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+td:hover {background-color:#f5f5f5;}
+
+ 
+
+</style>
+
+ 
+
+<body class="w3-container">
+
+ <div class="row">
+      <div class="col-md-12">
+         <div class="row">
+		    
+			<div class="col-md-2">
+               
+                <div class="row">&nbsp;</div>
+            </div>
+			
+            <div class="col-md-8">
+       
+      
+  <br><br>   
+  <div class="col-md-12 shadow p-2 mb-2 border border-success" style="background-color:#5FA8E2">
+      <div> 
+            
+     
+	  <span class="motto1">Python Code - Part-1</span>
+       
+	  
+   </div> 
+   </div>
+<br>   
+   <div class="col-md-12 shadow p-2 mb-2 border border-info">
+  <a href="https://docs.python.org/3/"target=_blank>Python documentation</a>
+  </div>
+   <div class="col-md-12  p-4 mb-4">
+      <div> 
+	  
+	   
+
+<div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-1 : Read from <a href="239-people.xml"target=_blank>XML file</a> </b></span></div>
+          <div class="card-body">
+    <pre>
+ from xml.dom import minidom
+ 
+ 
+# parse an xml file by name
+file = minidom.parse('people.xml')
+
+#use getElementsByTagName() to get tag
+daya1 = file.getElementsByTagName('name')
+
+# all items data
+print('\nAll name data:')
+for elem1 in daya1:
+    print(elem1.firstChild.data)
+
+    #use getElementsByTagName() to get tag
+daya2 = file.getElementsByTagName('person')
+
+# all items data
+print('\nAll person data:')
+for elem2 in daya2:
+    print(elem2.attributes['id'].value)
+
+	</pre>
+	<span class="comt">
+	The above program reads data from XML file and just displays it
+ 
+	</span>
+  </div>
+</div>
+ 
+
+<div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-2 : Read from <a href="239-students.xml"target=_blank>XML file</a> using pandas and display data in CSV format </b></span></div>
+          <div class="card-body">
+    <pre>
+ import pandas as pd
+import xml.etree.ElementTree as et
+print('begin')
+
+xtree = et.parse("students.xml")
+xroot = xtree.getroot()
+
+df_cols = ["name", "email", "grade", "age"]
+rows = []
+
+for node in xroot:
+    s_name = node.attrib.get("name")
+    s_mail = node.find("email").text if node is not None else None
+    s_grade = node.find("grade").text if node is not None else None
+    s_age = node.find("age").text if node is not None else None
+
+    rows.append({"name": s_name, "email": s_mail,
+                 "grade": s_grade, "age": s_age})
+
+out_df = pd.DataFrame(rows, columns = df_cols)
+print (out_df.values)
+
+print('its done')
+
+	</pre>
+	<span class="comt">
+	The above program displays the contents of a XML file and displays in CSV format.
+	</span>
+  </div>
+</div>
+  
+
+ 
+
+ 
+      </div>	
+ </body>
+</html>
