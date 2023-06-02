@@ -206,6 +206,68 @@ print('its done')
 	</span>
   </div>
 </div>
+
+<div class="card bg-light mb-3">
+        <div class="card-header"><span class="motto"><b>EXAMPLE-3 : Create HTML file by reading XML </b></span></div>
+          <div class="card-body">
+    <pre>
+# Creating the HTML file
+file_html = open("demo1.html", "w")
+# Adding the input data to the HTML file
+file_html.write('''<html>
+<head>
+<script>
+function loadXMLDoc(filename)
+{
+if (window.ActiveXObject)
+  {
+  xhttp = new ActiveXObject("Msxml2.XMLHTTP");
+  }
+else 
+  {
+  xhttp = new XMLHttpRequest();
+  }
+xhttp.open("GET", filename, false);
+try {xhttp.responseType = "msxml-document"} catch(err) {} // Helping IE11
+xhttp.send("");
+return xhttp.responseXML;
+}
+
+function displayResult()
+{
+xml = loadXMLDoc("https://flathtml.github.io/800Examples/037-CD.xml");
+xsl = loadXMLDoc("https://flathtml.github.io/800Examples/037-CD.xsl");
+// code for IE
+if (window.ActiveXObject || xhttp.responseType == "msxml-document")
+  {
+  ex = xml.transformNode(xsl);
+  document.getElementById("example").innerHTML = ex;
+  }
+// code for Chrome, Firefox, Opera, etc.
+else if (document.implementation && document.implementation.createDocument)
+  {
+  xsltProcessor = new XSLTProcessor();
+  xsltProcessor.importStylesheet(xsl);
+  resultDocument = xsltProcessor.transformToFragment(xml, document);
+  document.getElementById("example").appendChild(resultDocument);
+  }
+}
+</script>
+</head>
+<body onload="displayResult()">
+<div id="example" />
+</body>
+</html>''')
+# Saving the data into the HTML file
+file_html.close()
+  
+
+	</pre>
+	<span class="comt">
+	The above program writes a html file.
+	</span>
+  </div>
+</div>
   
 
  
