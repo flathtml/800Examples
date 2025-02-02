@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#241 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="241-watchlist.html"&gt;241-watchlist.html&lt;a&gt;</LINK>
+    <CATEGORY>Finance</CATEGORY>
+	<DESC>Watchlist 2025</DESC>
+ </EXAMPLE>
  <!--Example#240 -->
  <EXAMPLE>
     <LINK>&lt;a href="240-Google-API.html"&gt;240-Google-API.html&lt;a&gt;</LINK>
