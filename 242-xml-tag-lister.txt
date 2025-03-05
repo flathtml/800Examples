@@ -1,0 +1,77 @@
+#Python code to read XML file and list the tags
+import xml.etree.ElementTree as ET
+
+def get_tag_hierarchy(xml_file):
+    tree = ET.parse(xml_file)
+    root = tree.getroot()
+    unique_tags = {}
+    
+    def traverse(element, parent_tags):
+        parent_path = '>'.join(parent_tags[:-1]) if parent_tags[:-1] else "Root"
+        if element.tag not in unique_tags:
+            unique_tags[element.tag] = parent_path
+        for child in element:
+            traverse(child, parent_tags + [child.tag])
+    
+    traverse(root, [root.tag])
+    
+    html_content = """
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>XML Tag Hierarchy</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body { background-color: lightblue; }
+            .table { border: 1px solid black; }
+            .table th, .table td { border: 1px solid black; }
+            .table-striped tbody tr:nth-of-type(odd) { background-color: lightgreen; }
+        </style>
+    </head>
+    <body class="container mt-5">
+        <h2 class="text-center">XML Tag Hierarchy</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>S#</th>
+                    <th>PARENT-TAGS</th>
+                    <th>TAG</th>
+                </tr>
+            </thead>
+            <tbody>
+    """
+    
+    count = 1
+    for tag, path in unique_tags.items():
+        html_content += f"<tr><td>{count}</td><td>{path}</td><td>{tag}</td></tr>"
+        count += 1
+    
+    html_content += """
+            </tbody>
+        </table>
+        <button class="btn btn-primary" onclick="copyTable()">Copy It</button>
+        <script>
+            function copyTable() {
+                let range = document.createRange();
+                range.selectNode(document.querySelector("table"));
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(range);
+                document.execCommand("copy");
+                window.getSelection().removeAllRanges();
+                alert("Table copied to clipboard");
+            }
+        </script>
+    </body>
+    </html>
+    """
+    
+    print(html_content)  # Print HTML content to console
+    
+# Example usage
+if __name__ == "__main__":
+    xml_filename =  r"C:\Daya\OptimalSQL\Python-code\sample.xml"
+  # Replace with your XML file path
+    get_tag_hierarchy(xml_filename)
+ 
