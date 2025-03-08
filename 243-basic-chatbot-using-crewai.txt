@@ -1,0 +1,314 @@
+BASIC CHAT BOT USING CREW AI
+-------------------------------------------------------------------------------------------
+has three components :
+1. App.py
+2. templates\index.html
+3. memory.json
+-------------------------------------------------------------------------------------------
+# Path to the memory file - Please update that when reusing code
+# MEMORY_FILE = "C:/Daya/RagFlex-GenAI/Fido-chat-bot/memory.json"
+from flask import Flask, render_template, request, jsonify
+import crewai
+import json
+import os
+
+app = Flask(__name__)
+
+# Path to the memory file
+MEMORY_FILE = "C:/Daya/RagFlex-GenAI/Fido-chat-bot/memory.json"
+
+# Default structure for memory.json if it's missing or malformed
+DEFAULT_MEMORY = {
+    "patterns": [
+        {
+            "pattern": "i enjoy playing",
+            "action": "favorite_sport",
+            "follow_up": "Who is your favorite player in {sport}?"
+        },
+        {
+            "pattern": "i like",
+            "action": "favorite_sport",
+            "follow_up": "Who is your favorite player in {sport}?"
+        },
+        {
+            "pattern": "my favorite sport is",
+            "action": "favorite_sport",
+            "follow_up": "Who is your favorite player in {sport}?"
+        },
+        {
+            "pattern": "my favorite player is",
+            "action": "favorite_player",
+            "follow_up": "Which innings of {player} is your favorite?"
+        },
+        {
+            "pattern": "my favorite innings of",
+            "action": "favorite_innings",
+            "follow_up": "Wow! That was an amazing innings by {player}!"
+        },
+        {
+            "pattern": "who is my favorite player",
+            "action": "favorite_player",
+            "response": "Your favorite player is {favorite_player}."
+        },
+        {
+            "pattern": "what is my favorite innings of",
+            "action": "favorite_innings",
+            "response": "Your favorite innings of {player} is {favorite_innings}."
+        },
+        {
+            "pattern": "my name is",
+            "action": "name",
+            "response": "Your name is {name}."
+        },
+        {
+            "pattern": "what is my name",
+            "action": "name",
+            "response": "Your name is {name}."
+        }
+    ],
+    "data": {
+        "context_complete": False,
+        "favorite_sport": None,
+        "favorite_player": None,
+        "favorite_innings": None,
+        "name": None
+    }
+}
+
+# Load memory or initialize with defaults
+def load_memory():
+    if os.path.exists(MEMORY_FILE):
+        try:
+            with open(MEMORY_FILE, "r") as file:
+                memory = json.load(file)
+                if "patterns" not in memory:
+                    memory["patterns"] = []
+                if "data" not in memory:
+                    memory["data"] = {}
+                return memory
+        except (json.JSONDecodeError, KeyError):
+            return DEFAULT_MEMORY
+    return DEFAULT_MEMORY
+
+# Save memory back to the file
+def save_memory(memory):
+    with open(MEMORY_FILE, "w") as file:
+        json.dump(memory, file, indent=4)
+
+# Initialize the CrewAI agent
+def initialize_agent():
+    memory = load_memory()
+    role = "assistant"
+    goal = "help user with their favorite sports and players"
+    backstory = "This agent was trained to assist users with sports-related questions."
+    return crewai.Agent(role=role, goal=goal, backstory=backstory)
+
+# Process user input
+def process_input(user_input):
+    memory = load_memory()
+    agent = initialize_agent()  
+
+    for pattern in memory["patterns"]:
+        if pattern["pattern"].lower() in user_input.lower():
+            action = pattern.get("action")
+            if action == "favorite_sport":
+                sport = user_input.split("is")[-1].strip() if "is" in user_input else user_input.split("like")[-1].strip()
+                memory["data"]["favorite_sport"] = sport
+                memory["data"]["favorite_player"] = None
+                memory["data"]["favorite_innings"] = None
+                memory["data"]["context_complete"] = False
+                save_memory(memory)
+                return pattern["follow_up"].format(sport=sport)
+
+            elif action == "favorite_player":
+                player = user_input.split("is")[-1].strip()
+                memory["data"]["favorite_player"] = player
+                memory["data"]["favorite_innings"] = None
+                memory["data"]["context_complete"] = False
+                save_memory(memory)
+                return pattern["follow_up"].format(player=player)
+
+            elif action == "favorite_innings":
+                innings = user_input.split("is")[-1].strip()
+                memory["data"]["favorite_innings"] = innings
+                memory["data"]["context_complete"] = True
+                save_memory(memory)
+                return pattern["follow_up"].format(player=user_input.split("of")[-1].strip())
+
+            elif action == "name":
+                name = user_input.split("is")[-1].strip()
+                memory["data"]["name"] = name
+                memory["data"]["context_complete"] = False
+                save_memory(memory)
+                return pattern["response"].format(name=name)
+
+    if "what is my name" in user_input.lower():
+        name = memory["data"].get("name", "I don't know your name yet. Please tell me.")
+        return f"Your name is {name}."
+
+    if memory["data"].get("context_complete", False) and user_input.lower() not in ["what is my name"]:
+        memory["data"]["context_complete"] = False
+        save_memory(memory)
+        return "Oh ok."
+
+    return "Sorry, I didn't quite catch that. Can you please rephrase?"
+
+# Flask routes
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+@app.route("/process_input", methods=["POST"])
+def handle_input():
+    user_input = request.json.get("input", "")
+    response = process_input(user_input)
+    return jsonify({"response": response})
+
+if __name__ == "__main__":
+    app.run(debug=True)
+ --------------------------------------------------------------------------------------------------------
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fido Chatbot</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ADD8E6; /* Light blue background */
+            height: 100vh; /* Make the body full screen */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            width: 80%; /* Container occupies 80% of the page width */
+            max-width: 800px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-message {
+            color: blue;
+            font-weight: bold;
+        }
+        .bot-message {
+            color: green;
+            font-weight: bold;
+        }
+        #chatbox {
+            height: 300px;
+            overflow-y: scroll;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+        }
+        #user_input {
+            width: 80%;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        #send_btn {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Fido Chatbot</h1>
+        <div class="d-flex justify-content-between">
+            <input type="text" id="user_input" class="form-control" placeholder="Ask me something..." autocomplete="off">
+            <button id="send_btn" class="btn btn-primary ms-2">Send</button>
+        </div>
+        <br><br>
+        <div id="chatbox" class="mb-3"></div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        document.getElementById('send_btn').addEventListener('click', function() {
+            var userInput = document.getElementById('user_input').value;
+            if (userInput) {
+                var chatbox = document.getElementById('chatbox');
+                var newMessage = "<p class='user-message'><strong>YOU:</strong> " + userInput + "</p>";
+                
+                // Send user input to backend
+                fetch('/process_input', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ input: userInput })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    var botMessage = "<p class='bot-message'><strong>FIDO:</strong> " + data.response + "</p>";
+                    
+                    // Prepend the latest messages at the top
+                    chatbox.innerHTML = botMessage + newMessage + chatbox.innerHTML;
+                });
+    
+                // Clear input field
+                document.getElementById('user_input').value = '';
+            }
+        });
+    </script>
+    
+</body>
+</html>
+--------------------------------------------------------------------------------------------------------------
+{
+    "patterns": [
+        {
+            "pattern": "i enjoy playing",
+            "action": "favorite_sport",
+            "follow_up": "Who is your favorite player in {sport}?"
+        },
+        {
+            "pattern": "my favorite sport is",
+            "action": "favorite_sport",
+            "follow_up": "Who is your favorite player in {sport}?"
+        },
+        {
+            "pattern": "my favorite player is",
+            "action": "favorite_player",
+            "follow_up": "Which innings of {player} is your favorite?"
+        },
+        {
+            "pattern": "my favorite innings of",
+            "action": "favorite_innings",
+            "follow_up": "Wow! That was an amazing innings by {player}!"
+        },
+        {
+            "pattern": "who is my favorite player",
+            "action": "favorite_player",
+            "response": "Your favorite player is {favorite_player}."
+        },
+        {
+            "pattern": "what is my favorite innings of",
+            "action": "favorite_innings",
+            "response": "Your favorite innings of {player} is {favorite_innings}."
+        },
+        {
+            "pattern": "my name is",
+            "action": "name",
+            "response": "Your name is {name}."
+        }
+    ],
+    "data": {
+        "name": "anthony",
+        "favorite_sport": "cricket",
+        "favorite_player": null,
+        "favorite_innings": null,
+        "context_complete": false
+    }
+}
+-----------------------------------------------------------------------------------------------------------

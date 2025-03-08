@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#243 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="243-basic-chatbot-using-crewai.txt"&gt;243-basic-chatbot-using-crewai&lt;a&gt;</LINK>
+    <CATEGORY>Python/GenAI/crewAI</CATEGORY>
+	<DESC>Basic chatbot using crewai</DESC>
+ </EXAMPLE>
  <!--Example#242 -->
  <EXAMPLE>
     <LINK>&lt;a href="242-xml-tag-lister.txt"&gt;242-xml-tag-lister.txt&lt;a&gt;</LINK>
