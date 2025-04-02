@@ -1,0 +1,234 @@
+/*
+COBOL CODE
+*/
+IDENTIFICATION DIVISION.
+       PROGRAM-ID. EMPLOYEE-PROCESSOR.
+
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+           SELECT EMP-INFILE ASSIGN TO "EMPLOYEE-DATA.TXT"
+               ORGANIZATION IS LINE SEQUENTIAL.
+           SELECT EMP-OUTFILE ASSIGN TO "EMPLOYEE-REPORT.TXT"
+               ORGANIZATION IS LINE SEQUENTIAL.
+
+       DATA DIVISION.
+       FILE SECTION.
+       FD EMP-INFILE.
+       01 EMP-IN-RECORD.
+           05 EMP-ID            PIC X(05).
+           05 EMP-NAME          PIC X(20).
+           05 EMP-DESG          PIC X(15).
+           05 EMP-SALARY        PIC 9(07)V99.
+           05 EMP-BONUS         PIC 9(05)V99.
+
+       FD EMP-OUTFILE.
+       01 EMP-OUT-RECORD.
+           05 EMP-ID-OUT        PIC X(05).
+           05 EMP-NAME-OUT      PIC X(20).
+           05 EMP-GROSS-SALARY  PIC 9(08)V99.
+           05 EMP-GRADE         PIC X(01).
+
+       WORKING-STORAGE SECTION.
+       01 WS-VARIABLES.
+           05 WS-EOF            PIC X(01) VALUE 'N'.
+              88 EOF-REACHED    VALUE 'Y'.
+           05 WS-GROSS-SALARY   PIC 9(08)V99.
+           05 WS-GRADE          PIC X(01).
+
+       PROCEDURE DIVISION.
+       
+       MAIN-PROCEDURE.
+           PERFORM OPEN-FILES.
+           PERFORM READ-INPUT-FILE.
+           PERFORM PROCESS-RECORDS UNTIL EOF-REACHED.
+           PERFORM CLOSE-FILES.
+           STOP RUN.
+
+       OPEN-FILES.
+           OPEN INPUT EMP-INFILE.
+           OPEN OUTPUT EMP-OUTFILE.
+
+       READ-INPUT-FILE.
+           READ EMP-INFILE INTO EMP-IN-RECORD
+               AT END MOVE 'Y' TO WS-EOF.
+
+       PROCESS-RECORDS.
+           PERFORM CALCULATE-GROSS-SALARY.
+           PERFORM DETERMINE-GRADE.
+           PERFORM WRITE-OUTPUT-FILE.
+           PERFORM READ-INPUT-FILE.
+
+       CALCULATE-GROSS-SALARY.
+           COMPUTE WS-GROSS-SALARY = EMP-SALARY + EMP-BONUS.
+
+       DETERMINE-GRADE.
+           IF WS-GROSS-SALARY > 80000
+               MOVE 'A' TO WS-GRADE
+           ELSE IF WS-GROSS-SALARY > 60000
+               MOVE 'B' TO WS-GRADE
+           ELSE
+               MOVE 'C' TO WS-GRADE.
+
+       WRITE-OUTPUT-FILE.
+           MOVE EMP-ID TO EMP-ID-OUT.
+           MOVE EMP-NAME TO EMP-NAME-OUT.
+           MOVE WS-GROSS-SALARY TO EMP-GROSS-SALARY.
+           MOVE WS-GRADE TO EMP-GRADE.
+           WRITE EMP-OUT-RECORD.
+
+       CLOSE-FILES.
+           CLOSE EMP-INFILE.
+           CLOSE EMP-OUTFILE.
+           DISPLAY "PROCESSING COMPLETE. CHECK EMPLOYEE-REPORT.TXT".
+
+-----------------------
+/*EQUIVALENT JAVA CODE
+-----------------------
+import java.io.*;
+import java.util.*;
+import javax.xml.parsers.*;
+import org.w3c.dom.*;
+
+public class EmployeeProcessor {
+    private static final String INPUT_FILE = "C:/Daya/CobLytics-cobol/EMP-DATA.xml";
+    private static final String OUTPUT_FILE = "C:/Daya/CobLytics-cobol/EMPLOYEE-REPORT.TXT";
+
+    public static void main(String[] args) {
+        EmployeeProcessor processor = new EmployeeProcessor();
+        processor.execute();
+    }
+
+    public void execute() {
+        List<Employee> employees = readInputFile();
+        List<EmployeeProcessed> processedEmployees = processRecords(employees);
+        writeOutputFile(processedEmployees);
+        System.out.println("Processing complete. Check " + OUTPUT_FILE);
+    }
+
+    // Read employee records from XML input file
+    private List<Employee> readInputFile() {
+        List<Employee> employees = new ArrayList<>();
+        try {
+            File inputFile = new File(INPUT_FILE);
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            Document doc = dBuilder.parse(inputFile);
+            doc.getDocumentElement().normalize();
+
+            NodeList nodeList = doc.getElementsByTagName("Employee");
+            for (int i = 0; i < nodeList.getLength(); i++) {
+                Node node = nodeList.item(i);
+                if (node.getNodeType() == Node.ELEMENT_NODE) {
+                    Element element = (Element) node;
+                    String empId = element.getElementsByTagName("ID").item(0).getTextContent();
+                    String empName = element.getElementsByTagName("Name").item(0).getTextContent();
+                    String empDesg = element.getElementsByTagName("Designation").item(0).getTextContent();
+                    double empSalary = Double.parseDouble(element.getElementsByTagName("Salary").item(0).getTextContent());
+                    double empBonus = Double.parseDouble(element.getElementsByTagName("Bonus").item(0).getTextContent());
+
+                    employees.add(new Employee(empId, empName, empDesg, empSalary, empBonus));
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("XML file read error: " + e.getMessage());
+        }
+        return employees;
+    }
+
+    // Process each employee record
+    private List<EmployeeProcessed> processRecords(List<Employee> employees) {
+        List<EmployeeProcessed> processedEmployees = new ArrayList<>();
+        for (Employee emp : employees) {
+            double grossSalary = emp.salary + emp.bonus;
+            char grade = determineGrade(grossSalary);
+            processedEmployees.add(new EmployeeProcessed(emp.id, emp.name, grossSalary, grade));
+        }
+        return processedEmployees;
+    }
+
+    // Determine salary grade
+    private char determineGrade(double grossSalary) {
+        if (grossSalary > 80000) return 'A';
+        else if (grossSalary > 60000) return 'B';
+        else return 'C';
+    }
+
+    // Write processed employee records to output file
+    private void writeOutputFile(List<EmployeeProcessed> processedEmployees) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(OUTPUT_FILE))) {
+            for (EmployeeProcessed emp : processedEmployees) {
+                String output = String.format("%-5s%-20s%10.2f %s",
+                        emp.id, emp.name, emp.grossSalary, emp.grade);
+                writer.write(output);
+                writer.newLine();
+            }
+        } catch (IOException e) {
+            System.out.println("File write error: " + e.getMessage());
+        }
+    }
+}
+
+// Employee data class
+class Employee {
+    String id, name, designation;
+    double salary, bonus;
+
+    public Employee(String id, String name, String designation, double salary, double bonus) {
+        this.id = id;
+        this.name = name;
+        this.designation = designation;
+        this.salary = salary;
+        this.bonus = bonus;
+    }
+}
+
+// Processed employee data class
+class EmployeeProcessed {
+    String id, name;
+    double grossSalary;
+    char grade;
+
+    public EmployeeProcessed(String id, String name, double grossSalary, char grade) {
+        this.id = id;
+        this.name = name;
+        this.grossSalary = grossSalary;
+        this.grade = grade;
+    }
+}
+
+
+-------------------
+Input File : EMP-DATA.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Employees>
+    <Employee>
+        <ID>1001</ID>
+        <Name>John Doe</Name>
+        <Designation>Software Engineer</Designation>
+        <Salary>75000</Salary>
+        <Bonus>5000</Bonus>
+    </Employee>
+    <Employee>
+        <ID>1002</ID>
+        <Name>Jane Smith</Name>
+        <Designation>Project Manager</Designation>
+        <Salary>90000</Salary>
+        <Bonus>10000</Bonus>
+    </Employee>
+    <Employee>
+        <ID>1003</ID>
+        <Name>Mike Johnson</Name>
+        <Designation>Business Analyst</Designation>
+        <Salary>65000</Salary>
+        <Bonus>3000</Bonus>
+    </Employee>
+    <Employee>
+        <ID>1004</ID>
+        <Name>Sarah Williams</Name>
+        <Designation>HR Manager</Designation>
+        <Salary>70000</Salary>
+        <Bonus>4000</Bonus>
+    </Employee>
+</Employees>
