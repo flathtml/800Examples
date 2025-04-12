@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#245 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="245-Cheat-sheet-SF-DB-INFA.html"&gt;245-Cheat-sheet-SF-DB-INFA.html&lt;a&gt;</LINK>
+    <CATEGORY>Data Engineering</CATEGORY>
+	<DESC>Data Engg cheat sheet</DESC>
+ </EXAMPLE>
  <!--Example#244 -->
  <EXAMPLE>
     <LINK>&lt;a href="244-basic-cobol-to-java.txt"&gt;244-basic-cobol-to-java&lt;a&gt;</LINK>
