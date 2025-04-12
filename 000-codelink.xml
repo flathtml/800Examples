@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#246 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="246-basic-chatbot"&gt;246-basic-chatbot.txt&lt;a&gt;</LINK>
+    <CATEGORY>AgenticAI / Chatbot</CATEGORY>
+	<DESC>Informatica Chatbot</DESC>
+ </EXAMPLE>
  <!--Example#245 -->
  <EXAMPLE>
     <LINK>&lt;a href="245-Cheat-sheet-SF-DB-INFA.html"&gt;245-Cheat-sheet-SF-DB-INFA.html&lt;a&gt;</LINK>

@@ -1,0 +1,297 @@
+CHATBOT CODE
+------------
+1. ingest_manual.py
+2. main.py
+3. index.html
+4. style.css
+
+-------------------
+1. ingest_manual.py
+-------------------
+from langchain.document_loaders import PyPDFLoader
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.embeddings import HuggingFaceEmbeddings
+from langchain.vectorstores import Chroma
+import os
+
+# Load PDF (Windows path)
+pdf_path = r"C:\Daya\OptimalSQL\Chatbot\CDI_April2025_Mappings_en.pdf"
+loader = PyPDFLoader(pdf_path)
+pages = loader.load()
+
+# Chunk the text
+text_splitter = RecursiveCharacterTextSplitter(
+    chunk_size=500,
+    chunk_overlap=100
+)
+docs = text_splitter.split_documents(pages)
+
+# Optional metadata
+for i, doc in enumerate(docs):
+    doc.metadata["source_doc"] = "CDI_Mappings_2025"
+    doc.metadata["chunk_id"] = i
+
+# Use HuggingFace embeddings (no API key needed)
+embedding_model = HuggingFaceEmbeddings(
+    model_name="sentence-transformers/all-MiniLM-L6-v2"
+)
+
+# Create Chroma vector store
+vectorstore = Chroma.from_documents(docs, embedding_model, persist_directory="cdi_embeddings")
+
+print(f"Successfully ingested {len(docs)} chunks into vector store.")
+
+
+----------
+2. main.py
+----------
+from fastapi import FastAPI, Request
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
+from pydantic import BaseModel
+from langchain.vectorstores import Chroma
+from langchain.embeddings import HuggingFaceEmbeddings
+from langchain.chains import RetrievalQA
+from langchain.llms import HuggingFaceHub
+import os
+
+# === CONFIG ===
+STATIC_PATH = r"C:\Daya\OptimalSQL\Chatbot\static"
+TEMPLATES_PATH = r"C:\Daya\OptimalSQL\Chatbot\templates"
+VECTOR_DB_PATH = "cdi_embeddings"
+HUGGINGFACE_MODEL_ID = "google/flan-t5-large"  # You can change this if needed
+
+# Load Hugging Face API token
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = "hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"  # 🔐 Replace with your key
+											   	
+# FastAPI setup
+app = FastAPI()
+app.mount("/static", StaticFiles(directory=STATIC_PATH), name="static")
+templates = Jinja2Templates(directory=TEMPLATES_PATH)
+
+# Load vector DB and embedding model
+embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+vectorstore = Chroma(persist_directory=VECTOR_DB_PATH, embedding_function=embedding_model)
+
+# Set up HuggingFace LLM (for answering)
+llm = HuggingFaceHub(
+    repo_id=HUGGINGFACE_MODEL_ID,
+    model_kwargs={"temperature": 0.5, "max_length": 512}
+)
+
+qa_chain = RetrievalQA.from_chain_type(
+    llm=llm,
+    retriever=vectorstore.as_retriever(search_type="similarity", k=4),
+    return_source_documents=True
+)
+
+# Serve frontend
+@app.get("/", response_class=HTMLResponse)
+async def serve_ui(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
+
+# Chat API
+class ChatRequest(BaseModel):
+    message: str
+
+@app.post("/chat")
+async def chat(req: ChatRequest):
+    result = qa_chain({"query": req.message})
+    return {
+        "answer": result["result"],
+        "sources": [
+            {
+                "page": doc.metadata.get("page", "N/A"),
+                "excerpt": doc.page_content[:500]
+            } for doc in result["source_documents"]
+        ]
+    }
+
+
+-------------
+3. index.html
+-------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Informatica Chatbot</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Informatica IDMC Chatbot</h2>
+    <div class="border rounded bg-white p-3 chat-box" id="chat-box"></div>
+
+    <form id="chat-form" class="input-group mt-3">
+      <input type="text" id="user-input" class="form-control" placeholder="Ask a question..." required>
+      <button class="btn btn-primary" type="submit">Send</button>
+    </form>
+  </div>
+
+  <script>
+    const chatBox = document.getElementById("chat-box");
+    const form = document.getElementById("chat-form");
+    const input = document.getElementById("user-input");
+
+    const chatHistory = [];
+
+    function renderChat() {
+      chatBox.innerHTML = "";
+      chatHistory.forEach(chat => {
+        chatBox.innerHTML += `<div class='chat-bubble user-msg'><strong>You:</strong> ${chat.question}</div>`;
+        chatBox.innerHTML += `<div class='chat-bubble bot-msg'><strong>Bot:</strong> ${chat.answer}</div>`;
+        if (chat.sources.length) {
+          chatBox.innerHTML += `<div class='source-box'><strong>Sources:</strong><ul>` +
+            chat.sources.map(s => `<li><strong>Page ${s.page}:</strong> ${s.excerpt}...</li>`).join("") +
+            `</ul></div>`;
+        }
+      });
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    form.onsubmit = async (e) => {
+      e.preventDefault();
+      const message = input.value.trim();
+      if (!message) return;
+
+      const userChat = { question: message, answer: "Thinking...", sources: [] };
+      chatHistory.push(userChat);
+      renderChat();
+
+      input.value = "";
+      const res = await fetch("/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message })
+      });
+
+      const data = await res.json();
+      userChat.answer = data.answer;
+      userChat.sources = data.sources;
+      renderChat();
+    };
+  </script>
+</body>
+</html>
+
+-------------
+4. style.css
+------------
+body {
+    background: #f8f9fa;
+  }
+  .chat-box {
+    max-height: 70vh;
+    overflow-y: auto;
+    margin-bottom: 10px;
+  }
+  .chat-bubble {
+    background: #e9ecef;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+  }
+  .user-msg {
+    background: #d1e7dd;
+    text-align: right;
+  }
+  .bot-msg {
+    background: #f8d7da;
+    text-align: left;
+  }
+  .source-box {
+    font-size: 0.9em;
+    color: #6c757d;
+    margin-left: 15px;
+  }
+---------------------------------------
+STEPS TO CREATE INFORMATICA CHATBOT
+---------------------------------------
+STEP-1 : Run ingest_manual.py (It ingests the reference documentation as chunks in Vector database)
+         Refer to Appendix-A for the output.
+
+STEP-2 : Create a Hugging Face token . While creating the token
+         under Inference tab there will be an option "Make calls to Inference providers". Check that option.
+
+STEP-3 : In the main.py module update the below code with the Hugging face token
+		 
+		 # Load Hugging Face API token
+         os.environ["HUGGINGFACEHUB_API_TOKEN"] = "hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"  # 🔐 Replace with your key
+
+STEP-4 : You should have following folder structure for the chatbot folder that will have working code for the Chatbot:
+		chatbot/
+		├── main.py
+		├── templates/
+		│   └── index.html
+		└── static/
+			└── style.css
+			
+STEP-5 :In the command propmpt, go to the folder of the chatbot and run this command as shown below.
+		C:\Daya\OptimalSQL\Chatbot>uvicorn main:app --reload
+		
+		The command prompt will go through some steps and will finally show the below message, this means the chatbot is ready.
+		INFO:     Started server process [18732]
+		INFO:     Waiting for application startup.
+		INFO:     Application startup complete.
+
+STEP-6 : Access the chatbot at http://localhost:8000/
+															   
+-----------------------------
+Appendix-A - Output of Step-1
+-----------------------------
+c:\Daya\OptimalSQL\Chatbot\ingest_manual.py:1: LangChainDeprecationWarning: Importing PyPDFLoader from langchain.document_loaders is deprecated. Please replace deprecated imports:
+
+>> from langchain.document_loaders import PyPDFLoader
+
+with new imports of:
+
+>> from langchain_community.document_loaders import PyPDFLoader
+You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>
+  from langchain.document_loaders import PyPDFLoader
+c:\Daya\OptimalSQL\Chatbot\ingest_manual.py:3: LangChainDeprecationWarning: Importing HuggingFaceEmbeddings from langchain.embeddings is deprecated. Please replace deprecated imports:
+
+>> from langchain.embeddings import HuggingFaceEmbeddings
+
+with new imports of:
+
+>> from langchain_community.embeddings import HuggingFaceEmbeddings
+You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>
+  from langchain.embeddings import HuggingFaceEmbeddings
+c:\Daya\OptimalSQL\Chatbot\ingest_manual.py:4: LangChainDeprecationWarning: Importing Chroma from langchain.vectorstores is deprecated. Please replace deprecated imports:
+
+>> from langchain.vectorstores import Chroma
+
+with new imports of:
+
+>> from langchain_community.vectorstores import Chroma
+You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>
+  from langchain.vectorstores import Chroma
+c:\Daya\OptimalSQL\Chatbot\ingest_manual.py:25: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+  embedding_model = HuggingFaceEmbeddings(
+The cache for model files in Transformers v4.22.0 has been updated. Migrating your old cache. This is a one-time only operation. You can interrupt this and resume the migration later on by calling `transformers.utils.move_cache()`.
+0it [00:00, ?it/s]
+2025-04-12 10:44:28.843707: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-04-12 10:44:35.335005: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From c:\Daya\Python-v312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+modules.json: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 349/349 [00:00<?, ?B/s]
+c:\Daya\Python-v312\Lib\site-packages\huggingface_hub\file_download.py:142: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\dayam\.cache\huggingface\hub\models--sentence-transformers--all-MiniLM-L6-v2. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+config_sentence_transformers.json: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 116/116 [00:00<?, ?B/s]
+README.md: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10.5k/10.5k [00:00<?, ?B/s]
+sentence_bert_config.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 53.0/53.0 [00:00<?, ?B/s]
+config.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 612/612 [00:00<?, ?B/s]
+model.safetensors: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 90.9M/90.9M [00:04<00:00, 18.2MB/s]
+tokenizer_config.json: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 350/350 [00:00<?, ?B/s]
+vocab.txt: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 232k/232k [00:00<00:00, 2.20MB/s]
+tokenizer.json: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 466k/466k [00:00<00:00, 6.67MB/s]
+special_tokens_map.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 112/112 [00:00<?, ?B/s]
+config.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 190/190 [00:00<?, ?B/s]
+Successfully ingested 576 chunks into vector store.
+PS C:\Daya\OptimalSQL\Chatbot> 
+
+
