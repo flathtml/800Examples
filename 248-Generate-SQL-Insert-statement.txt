@@ -1,0 +1,33 @@
+'''
+Generate SQL to handle multiple records in a CSV comma delimted file
+it can handle multiple records in csv.
+It extracts the data and  creates a SQL Insert statement assuming the headers of 
+the CSV file as the column names and the data to be the values to be used in  
+SQL INSERT statement
+'''
+import csv
+
+def csv_to_bulk_sql_insert(csv_file_path, table_name):
+    with open(csv_file_path, newline='', encoding='utf-8') as csvfile:
+        reader = csv.reader(csvfile, delimiter=',')
+        headers = next(reader)
+        columns = ', '.join([col.strip() for col in headers])  # No quotes around column names
+
+        values_list = []
+        for row in reader:
+            cleaned_row = [value.strip().replace("'", "''") for value in row]  # Escape single quotes
+            values = ', '.join([f"'{value}'" for value in cleaned_row])
+            values_list.append(f"({values})")
+
+        all_values = ',\n'.join(values_list)
+        insert_statement = f"INSERT INTO {table_name} ({columns}) VALUES\n{all_values};"
+        return insert_statement
+ 
+# Example usage:
+csv_path = r"C:\Daya\OptimalSQL-PC-folder\Python-code\sql-test-data-Product.csv"
+table = "your_table_name"
+sql_statement = csv_to_bulk_sql_insert(csv_path, table)
+
+# Print the SQL bulk insert statement
+print(sql_statement)
+
