@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+  <!--Example#249 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="249-Generate-SQL-Insert-statement.txt"&gt;249-Generate-SQL-Insert-statement.txt&lt;a&gt;</LINK>
+    <CATEGORY>Python/SQL</CATEGORY>
+	<DESC>Generate SQL Insert statement for comma delimited csv and write it to a file</DESC>
+ </EXAMPLE>
   <!--Example#248 -->
  <EXAMPLE>
     <LINK>&lt;a href="248-Generate-SQL-Insert-statement.txt"&gt;248-Generate-SQL-Insert-statement.txt&lt;a&gt;</LINK>
