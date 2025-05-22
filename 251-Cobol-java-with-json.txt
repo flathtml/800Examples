@@ -1,0 +1,164 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. VALIDATE-DISCOUNT.
+
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+           SELECT PRODUCT-FILE ASSIGN TO 'products.csv'
+               ORGANIZATION IS LINE SEQUENTIAL
+               FILE STATUS IS WS-FILE-STATUS.
+
+       DATA DIVISION.
+       FILE SECTION.
+       FD  PRODUCT-FILE
+           RECORD CONTAINS 80 CHARACTERS
+           DATA RECORD IS PRODUCT-RECORD.
+       01  PRODUCT-RECORD         PIC X(80).
+
+       WORKING-STORAGE SECTION.
+       01  WS-FILE-STATUS         PIC XX.
+       01  WS-EOF                 PIC X     VALUE 'N'.
+
+       * Parsed fields from input record
+       01  WS-PRODUCT-ID          PIC X(10).
+       01  WS-CATEGORY            PIC X(15).
+       01  WS-PROMO-CODE          PIC X(5).
+       01  WS-DISCOUNT-STR        PIC X(5).
+       01  WS-DISCOUNT-NUM        PIC 9(3)V9(2) VALUE 0.
+
+       01  WS-DELIMITER           PIC X     VALUE ','.
+
+       PROCEDURE DIVISION.
+       MAIN-LOGIC.
+           OPEN INPUT PRODUCT-FILE
+
+           PERFORM UNTIL WS-EOF = 'Y'
+               READ PRODUCT-FILE
+                   AT END
+                       MOVE 'Y' TO WS-EOF
+                   NOT AT END
+                       PERFORM PARSE-RECORD
+                       PERFORM VALIDATE-RECORD
+               END-READ
+           END-PERFORM
+
+           CLOSE PRODUCT-FILE
+           STOP RUN.
+
+       PARSE-RECORD.
+           UNSTRING PRODUCT-RECORD
+               DELIMITED BY WS-DELIMITER
+               INTO WS-PRODUCT-ID
+                    WS-CATEGORY
+                    WS-PROMO-CODE
+                    WS-DISCOUNT-STR
+           END-UNSTRING
+
+           MOVE FUNCTION NUMVAL(WS-DISCOUNT-STR) TO WS-DISCOUNT-NUM.
+
+       VALIDATE-RECORD.
+           IF WS-CATEGORY = "FRUITS"
+              AND WS-PROMO-CODE = "A01"
+              AND WS-DISCOUNT-NUM > 10
+               DISPLAY "Fruits discount for Promo-code A01 can't be greater than 10%"
+               DISPLAY "Product ID: " WS-PRODUCT-ID
+               DISPLAY "Discount: " WS-DISCOUNT-STR
+           END-IF.
+***************************************************************************************
+JAVA PROGRAM THAT READS THIS JSON FILE
+
+[
+  { "productId": "P01", "productCategory": "FRUITS", "promoCode": "A01", "discount": 12 },
+  { "productId": "P02", "productCategory": "VEGETABLES", "promoCode": "B01", "discount": 5 }
+]
+
+------------------------------------------
+Plain Java PROGRAM that validates the JSON
+------------------------------------------
+import java.io.*;
+import java.nio.file.*;
+import java.util.*;
+
+public class ProductValidator {
+
+    static class Product {
+        String productId;
+        String productCategory;
+        String promoCode;
+        double discount;
+
+        Product(String pid, String category, String promo, double disc) {
+            productId = pid;
+            productCategory = category;
+            promoCode = promo;
+            discount = disc;
+        }
+    }
+
+    public static void main(String[] args) throws IOException {
+        String jsonFilePath = "C:\\Daya\\CobLytics-cobol\\COBOL-vs-Java-API\\prod.json";
+
+        String json = new String(Files.readAllBytes(Paths.get(jsonFilePath)));
+        List<Product> products = parseSimpleJsonArray(json);
+
+        for (Product p : products) {
+            if ("FRUITS".equalsIgnoreCase(p.productCategory) &&
+                "A01".equalsIgnoreCase(p.promoCode) &&
+                p.discount > 10) {
+                System.out.println("Fruits discount for Promo-code A01 can't be greater than 10%");
+                return;
+            }
+        }
+        System.out.println("All products are valid.");
+    }
+
+    // Very basic manual parser assuming the input JSON is exactly formatted like your example:
+    static List<Product> parseSimpleJsonArray(String json) {
+        List<Product> products = new ArrayList<>();
+
+        json = json.trim();
+        if (!json.startsWith("[") || !json.endsWith("]")) {
+            System.out.println("Invalid JSON format");
+            return products;
+        }
+        json = json.substring(1, json.length() - 1).trim(); // Remove [ and ]
+
+        // Split by "},{" to separate objects (works only if no nested objects inside)
+        String[] items = json.split("\\},\\s*\\{");
+
+        for (String item : items) {
+            item = item.replace("{", "").replace("}", "").trim();
+            String[] fields = item.split(",");
+
+            String pid = "";
+            String category = "";
+            String promo = "";
+            double disc = 0;
+
+            for (String field : fields) {
+                String[] kv = field.split(":");
+                if (kv.length != 2) continue;
+
+                String key = kv[0].trim().replace("\"", "");
+                String val = kv[1].trim().replace("\"", "");
+
+                switch (key) {
+                    case "productId": pid = val; break;
+                    case "productCategory": category = val; break;
+                    case "promoCode": promo = val; break;
+                    case "discount": 
+                        try {
+                            disc = Double.parseDouble(val);
+                        } catch (NumberFormatException e) {
+                            disc = 0;
+                        }
+                        break;
+                }
+            }
+
+            products.add(new Product(pid, category, promo, disc));
+        }
+
+        return products;
+    }
+}

@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+  <!--Example#251 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="251-Cobol-java-with-json.txt"&gt;251-Cobol-java-with-json.txt&lt;a&gt;</LINK>
+    <CATEGORY>COBOL/JAVA</CATEGORY>
+	<DESC>Cobol to Java using JSON</DESC>
+ </EXAMPLE>
+ <!--Insert new record here -->
+  <!--Example#250 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="250-Hosting-DuckDB-on-web.html"&gt;250-Hosting-DuckDB-on-web.html&lt;a&gt;</LINK>
+    <CATEGORY>DuckDB/SQL</CATEGORY>
+	<DESC>Hosting DuckDB on Web</DESC>
+ </EXAMPLE>
+ <!--Insert new record here -->
   <!--Example#249 -->
  <EXAMPLE>
     <LINK>&lt;a href="249-Generate-SQL-Insert-statement.txt"&gt;249-Generate-SQL-Insert-statement.txt&lt;a&gt;</LINK>
