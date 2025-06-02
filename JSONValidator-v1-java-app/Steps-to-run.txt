@@ -1,0 +1,24 @@
+STEP-1 :  BUILD JAVA REST API
+Open the command prompt and run the following
+set PATH=C:\Daya\Maven\apache-maven-3.9.9\bin;%PATH%
+
+cd C:\Daya\JavaSpring\JSONValidator-v1-java-app
+and then type mvn clean package
+
+
+
+STEP-2 : In the command prompt type :
+         cd C:\Daya\JavaSpring\JSONValidator-v1-java-app\target
+         Then when you are in that directory type
+		 java -jar JSONValidator-1.0.0.jar
+ 
+		This should start the the Java Rest API
+
+STEP-3 : Build Java Web app
+         cd C:\Daya\JavaSpring\Java-web-app
+
+STEP-4 : Run the web app. 
+         cd C:\Daya\JavaSpring\Java-web-app\target
+         java -jar jsonvalidator-web-1.0.0.jar
+
+STEP-4 : Open http://localhost:8080/ and execute the app by choosing the JSON file.

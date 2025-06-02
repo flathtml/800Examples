@@ -1,0 +1,11 @@
+com\jsonvalidator\model\Location.class
+com\jsonvalidator\model\PolicyCoverage.class
+com\jsonvalidator\PolicyValidatorSpringApplication.class
+com\jsonvalidator\model\LocationCoverage.class
+com\jsonvalidator\model\InsuredInfo.class
+com\jsonvalidator\model\PolicyLimitDed.class
+com\jsonvalidator\model\Policy.class
+com\jsonvalidator\controller\BusinessRules.class
+com\jsonvalidator\controller\PolicyController.class
+com\jsonvalidator\model\Building.class
+com\jsonvalidator\model\PolicyWrapper.class
