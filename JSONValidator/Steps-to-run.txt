@@ -1,0 +1,19 @@
+STEP-1 :  BUILD JAVA REST API
+Open the command prompt and run the following
+set PATH=C:\Daya\Maven\apache-maven-3.9.9\bin;%PATH%
+
+cd C:\Daya\JavaSpring\JSONValidator
+and then type mvn clean package
+
+
+
+STEP-2 : In the command prompt type :
+         cd C:\Daya\JavaSpring\JSONValidator\target
+         Then when you are in that directory type
+		 java -jar JSONValidator-1.0.0.jar
+ 
+		This should start the the Java Spring Project.
+
+STEP-3 : Open app.py and run it.
+
+STEP-4 : Open http://127.0.0.1:5000/ and execute the app by choosing the JSON file.
