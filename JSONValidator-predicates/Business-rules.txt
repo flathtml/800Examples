@@ -1,0 +1,24 @@
+ side-by-side benchmark of ArrayList vs LinkedList for certain operations.
+ 
+ examples with deeper nested generics or how this works with custom types.
+ 
+ Rule#1 : Location coverage deductible cannot be less than 1000
+ 
+ Rule#2 : If building area is greater than 5000 then Location coverage deductible cannot be less than 2000
+ 
+ The api should provide the output with the error and it should create the flattened structure of the JSON into the table in html css format with bootstrap 
+ and highlight in yellow the rows  that have issue.
+ 
+ The entire API will be triggered via a Python based web app. It will have a html page based on bootstrap with green background.
+ The App will be called JSON Validator. It will have a drop down wherein user can select the JSON file . The dropdown should refer to the 
+ folder  C:\Daya\JavaSpring\jsonfiles and list all the files from it.
+ 
+ The app should have a button that says Validate JSON.
+ Once the button is clicked, the selected JSON file should be fed to the Rest API and the output of the API should be shown in the box below the button.
+ The box will have following types of messages.
+ Message#1 : If the JSON has passed all the business rules then it should display 'JSON is good, all business rules passed'
+ Message#2 : If the JSON has issues, the it should display ' JSON has issues'. It should then list the business rules that 
+ did not pass.
+ 
+ Below this should be another box that will list the flattened structure of the JSON file in table format and the rows that have issues should be highlighted in 
+ yellow. For instance if Location-2 has issues then rows with the issue will be shown in yellow.

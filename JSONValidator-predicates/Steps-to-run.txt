@@ -1,0 +1,12 @@
+STEP-1 : Run the bat file. It will build the Java projects.
+
+STEP-2 : In the command prompt type :
+         cd C:\Daya\JavaSpring\JSONValidator\target>
+         Then when you are in that directory type
+		 java -jar json-validator-1.0.0.jar
+ 
+		This should start the the Java Spring Project.
+
+STEP-3 : Open app.py and run it.
+
+STEP-4 : Open http://127.0.0.1:5000/ and execute the app by choosing the JSON file.
