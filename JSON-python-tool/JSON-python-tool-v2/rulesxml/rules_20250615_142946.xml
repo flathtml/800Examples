@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<validation>
+  <field3>
+    <xpath>/policy/effectiveDate</xpath>
+    <mandatory>Y</mandatory>
+    <acceptedvalues/>
+    <rejecterror>Effective Date needed</rejecterror>
+    <linkedfield/>
+    <linkedfieldvalues/>
+  </field3>
+  <field4>
+    <xpath>/policy/expirationDate</xpath>
+    <mandatory>Y</mandatory>
+    <acceptedvalues/>
+    <rejecterror>exp date needed</rejecterror>
+    <linkedfield/>
+    <linkedfieldvalues/>
+  </field4>
+</validation>

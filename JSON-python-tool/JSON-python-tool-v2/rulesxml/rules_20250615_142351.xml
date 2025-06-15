@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<validation>
+  <field3>
+    <xpath>/policy/effectiveDate</xpath>
+    <mandatory>Y</mandatory>
+    <acceptedvalues/>
+    <rejecterror>need eff date</rejecterror>
+    <linkedfield/>
+    <linkedfieldvalues/>
+  </field3>
+</validation>

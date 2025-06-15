@@ -1,0 +1,87 @@
+{
+  "policy": {
+    "policyNumber": "CIPQ-2025-0001",
+    "effectiveDate": "2025-07-01",
+    "expirationDate": "2026-07-01",
+    "insuredInfo": {
+      "insuredName": "Acme Corporation",
+      "insuredAddress": "123 Business Rd, Metropolis, NY 10001",
+      "contactNumber": "555-123-4567",
+      "email": "insurance@acmecorp.com"
+    },
+    "policyLimitDed": {
+      "totalLimit": 1000000,
+      "totalDeductible": 5000
+    },
+    "policyCoverages": [
+      {
+        "coverageType": "General Liability",
+        "limit": 500000,
+        "deductible": 1000
+      },
+      {
+        "coverageType": "Business Interruption",
+        "limit": 250000,
+        "deductible": 2500
+      }
+    ],
+    "locations": [
+      {
+        "locationNumber": 1,
+        "address": "200 Industrial Ave, Springfield, IL 62701",
+        "buildings": [
+          {
+            "buildingNumber": 1,
+            "buildingDescription": "Manufacturing Plant",
+            "buildingValue": 750000
+          },
+          {
+            "buildingNumber": 2,
+            "buildingDescription": "Warehouse",
+            "buildingValue": 250000
+          }
+        ],
+        "locationCoverages": [
+          {
+            "coverageType": "Property Damage",
+            "limit": 1600000,
+            "deductible": 5000
+          },
+          {
+            "coverageType": "Equipment Breakdown",
+            "limit": 150000,
+            "deductible": 2000
+          }
+        ]
+      },
+      {
+        "locationNumber": 2,
+        "address": "500 Commerce Blvd, Lincoln, NE 68501",
+        "buildings": [
+          {
+            "buildingNumber": 1,
+            "buildingDescription": "Retail Outlet",
+            "buildingValue": 400000
+          }
+        ],
+        "locationCoverages": [
+          {
+            "coverageType": "Property Damage",
+            "limit": 350000,
+            "deductible": 3000
+          },
+          {
+            "coverageType": "Theft",
+            "limit": 50000,
+            "deductible": 4000
+          },
+          {
+            "coverageType": "Flood",
+            "limit": 100000,
+            "deductible": 10000
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+STEPS TO RUN THE TOOL
+---------------------
+1. Open the Python program json_to_pojo.py and run it
+
+2. It reads the model.json file and generates the java files
+
+3. The java files are generated in this directory C:\Daya\JSON-python-tool\javafiles
+
+ 
