@@ -1,0 +1,200 @@
+//Java Program that reads a dat file using COBOL Copybook and generates a JSON output that represents that file
+
+import java.io.*;
+import java.nio.file.*;
+import java.text.DecimalFormat;
+import java.util.*;
+
+public class CopybookDataToJson {
+
+    private static final DecimalFormat twoDecimals = new DecimalFormat("0.00");
+
+    // Fixed field lengths based on your .dat file
+    private static final int LEN_EMP_ID = 5;
+    private static final int LEN_EMP_NAME = 20;
+    private static final int LEN_EMP_DEPT = 10;
+    private static final int LEN_SALARY_TYPE = 1;
+    private static final int LEN_SALARY = 8;
+
+    private static final int DEP_OCCURS = 3;
+    private static final int LEN_DEP_NAME = 15;
+    private static final int LEN_DEP_AGE = 2;
+
+    public static void main(String[] args) throws Exception {
+        if (args.length < 2) {
+            System.out.println("Usage: java CopybookDataToJson <copybook.cpy> <datafile.dat>");
+            return;
+        }
+
+        String dataFile = args[1];
+        List<String> lines = Files.readAllLines(Paths.get(dataFile));
+        List<String> jsonRecords = new ArrayList<>();
+
+        for (String line : lines) {
+            int pos = 0;
+
+            String empId = safeSubstr(line, pos, LEN_EMP_ID).trim();
+            pos += LEN_EMP_ID;
+
+            String empName = safeSubstr(line, pos, LEN_EMP_NAME).trim();
+            pos += LEN_EMP_NAME;
+
+            String empDept = safeSubstr(line, pos, LEN_EMP_DEPT).trim();
+            pos += LEN_EMP_DEPT;
+
+            String salaryType = safeSubstr(line, pos, LEN_SALARY_TYPE);
+            pos += LEN_SALARY_TYPE;
+
+            String salaryRaw = safeSubstr(line, pos, LEN_SALARY).trim();
+            pos += LEN_SALARY;
+
+            double salaryValue = parseSalary(salaryRaw);
+
+            // Parse dependents using fixed-width 15+2
+            int depOffset = pos;
+            List<String[]> dependents = new ArrayList<>();
+            for (int i = 0; i < DEP_OCCURS; i++) {
+                String depField = safeSubstr(line, depOffset, LEN_DEP_NAME + LEN_DEP_AGE);
+                depOffset += LEN_DEP_NAME + LEN_DEP_AGE;
+
+                String depName = depField.substring(0, LEN_DEP_NAME).trim();
+                String depAge = depField.substring(LEN_DEP_NAME).trim();
+
+                dependents.add(new String[]{depName, depAge});
+            }
+
+            // Build JSON object
+            StringBuilder sb = new StringBuilder();
+            sb.append("    {\n");
+            sb.append("      \"EMP-ID\": \"" + escapeJson(empId) + "\",\n");
+            sb.append("      \"EMP-NAME\": \"" + escapeJson(empName) + "\",\n");
+            sb.append("      \"EMP-DEPARTMENT\": \"" + escapeJson(empDept) + "\",\n");
+            sb.append("      \"SALARY\": \"" + twoDecimals.format(salaryValue) + "\",\n");
+            sb.append("      \"DEPENDENTS\": [\n");
+
+            for (int i = 0; i < dependents.size(); i++) {
+                String[] d = dependents.get(i);
+                sb.append("        {\n");
+                sb.append("          \"DEP-NAME\": \"" + escapeJson(d[0]) + "\",\n");
+                sb.append("          \"DEP-AGE\": \"" + escapeJson(d[1]) + "\"\n");
+                sb.append("        }");
+                if (i < dependents.size() - 1) sb.append(",");
+                sb.append("\n");
+            }
+            sb.append("      ]\n");
+            sb.append("    }");
+
+            jsonRecords.add(sb.toString());
+        }
+
+        // Write JSON to file
+        StringBuilder output = new StringBuilder();
+        output.append("{\n");
+        output.append("  \"EMPLOYEES\": [\n");
+        for (int i = 0; i < jsonRecords.size(); i++) {
+            output.append(jsonRecords.get(i));
+            if (i < jsonRecords.size() - 1) output.append(",");
+            output.append("\n");
+        }
+        output.append("  ]\n");
+        output.append("}\n");
+
+        Files.write(Paths.get("output.json"), output.toString().getBytes());
+        System.out.println("✅ Pretty JSON written to output.json");
+    }
+
+    private static double parseSalary(String raw) {
+        if (raw == null || raw.isEmpty()) return 0.0;
+        try {
+            return Double.parseDouble(raw) / 100.0;
+        } catch (NumberFormatException e) {
+            return 0.0;
+        }
+    }
+
+    private static String safeSubstr(String line, int start, int len) {
+        if (line == null) return "";
+        if (start >= line.length()) return "";
+        int end = Math.min(start + len, line.length());
+        return line.substring(start, end);
+    }
+
+    private static String escapeJson(String s) {
+        if (s == null) return "";
+        return s.replace("\\", "\\\\").replace("\"", "\\\"");
+    }
+}
+
+-----------------------------
+employee.cpy
+
+       01  EMP-RECORD.
+           05 EMP-ID             PIC 9(5).
+           05 EMP-NAME           PIC X(20).
+           05 EMP-DEPARTMENT     PIC X(10).
+
+           * Salary Type:
+           * 'S' = Annual Salary stored in SAL-ANNUAL
+           * 'H' = Hourly Wage stored in SAL-HOURLY
+           05 SALARY-TYPE        PIC X.
+
+           05 SAL-ANNUAL         PIC 9(6)V99.
+           05 SAL-HOURLY REDEFINES SAL-ANNUAL PIC 9(3)V99.
+
+           05 DEP-INFO OCCURS 3 TIMES.
+               10 DEP-NAME       PIC X(15).
+               10 DEP-AGE        PIC 99.
+			   
+-----------------------------------
+empinfo.dat
+
+00001John Smith          SALES     S00550075Anna Smith     12Bob Smith      10Cat Smith      08
+00002Mary Johnson        FINANCE   H020500  Sarah Johnson  14Tom Johnson    12Lily Johnson   09
+
+------------------------------------
+output.json
+
+{
+  "EMPLOYEES": [
+    {
+      "EMP-ID": "00001",
+      "EMP-NAME": "John Smith",
+      "EMP-DEPARTMENT": "SALES",
+      "SALARY": "5500.75",
+      "DEPENDENTS": [
+        {
+          "DEP-NAME": "Anna Smith",
+          "DEP-AGE": "12"
+        },
+        {
+          "DEP-NAME": "Bob Smith",
+          "DEP-AGE": "10"
+        },
+        {
+          "DEP-NAME": "Cat Smith",
+          "DEP-AGE": "08"
+        }
+      ]
+    },
+    {
+      "EMP-ID": "00002",
+      "EMP-NAME": "Mary Johnson",
+      "EMP-DEPARTMENT": "FINANCE",
+      "SALARY": "205.00",
+      "DEPENDENTS": [
+        {
+          "DEP-NAME": "Sarah Johnson",
+          "DEP-AGE": "14"
+        },
+        {
+          "DEP-NAME": "Tom Johnson",
+          "DEP-AGE": "12"
+        },
+        {
+          "DEP-NAME": "Lily Johnson",
+          "DEP-AGE": "09"
+        }
+      ]
+    }
+  ]
+}

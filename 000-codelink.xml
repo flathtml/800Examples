@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#253 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="253-Copybook-to-JSON.txt"&gt;253-Copybook-to-JSON.txt&lt;a&gt;</LINK>
+    <CATEGORY>Cobol to Java</CATEGORY>
+	<DESC>Convert cobol data into JSON using the copybook structure</DESC>
+ </EXAMPLE>
  <!--Example#252 -->
  <EXAMPLE>
     <LINK>&lt;a href="252-Javaspring-src.html"&gt;252-Javaspring-src.html&lt;a&gt;</LINK>
