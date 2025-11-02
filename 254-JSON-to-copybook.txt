@@ -1,0 +1,192 @@
+//Java Program that reads a json and generates a dat file as output that represents the copybook
+
+import java.io.*;
+import java.nio.file.*;
+import java.util.*;
+
+public class JsonToDatFixedSafe {
+
+    // Field lengths (match COBOL copybook)
+    private static final int LEN_EMP_ID = 5;
+    private static final int LEN_EMP_NAME = 20;
+    private static final int LEN_EMP_DEPT = 10;
+    private static final int LEN_SALARY_TYPE = 1;
+    private static final int LEN_SALARY = 8;
+
+    private static final int DEP_OCCURS = 3;
+    private static final int LEN_DEP_NAME = 15;
+    private static final int LEN_DEP_AGE = 2;
+
+    public static void main(String[] args) throws Exception {
+        if (args.length < 2) {
+            System.out.println("Usage: java JsonToDatFixedSafe <input.json> <output.dat>");
+            return;
+        }
+
+        String jsonFile = args[0];
+        String datFile = args[1];
+
+        List<String> lines = Files.readAllLines(Paths.get(jsonFile));
+        List<String> outputLines = new ArrayList<>();
+
+        Map<String, Object> currentEmp = null;
+        List<Map<String, String>> currentDeps = null;
+
+        for (String line : lines) {
+            line = line.trim();
+
+            // Start of a new employee
+            if (line.startsWith("\"EMP-ID\"")) {
+                if (currentEmp != null) {
+                    // Write previous employee to DAT
+                    outputLines.add(buildDatLine(currentEmp, currentDeps));
+                }
+                currentEmp = new HashMap<>();
+                currentDeps = new ArrayList<>();
+                currentEmp.put("EMP-ID", extractValue(line));
+            } else if (line.startsWith("\"EMP-NAME\"")) {
+                currentEmp.put("EMP-NAME", extractValue(line));
+            } else if (line.startsWith("\"EMP-DEPARTMENT\"")) {
+                currentEmp.put("EMP-DEPARTMENT", extractValue(line));
+            } else if (line.startsWith("\"SALARY\"")) {
+                currentEmp.put("SALARY", extractValue(line));
+            } else if (line.startsWith("\"DEP-NAME\"")) {
+                Map<String, String> dep = new HashMap<>();
+                dep.put("DEP-NAME", extractValue(line));
+                currentDeps.add(dep);
+            } else if (line.startsWith("\"DEP-AGE\"")) {
+                if (!currentDeps.isEmpty()) {
+                    currentDeps.get(currentDeps.size() - 1).put("DEP-AGE", extractValue(line));
+                }
+            }
+        }
+
+        // Write last employee
+        if (currentEmp != null) {
+            outputLines.add(buildDatLine(currentEmp, currentDeps));
+        }
+
+        Files.write(Paths.get(datFile), outputLines);
+        System.out.println("✅ DAT file written to " + datFile);
+    }
+
+    // Build fixed-width line for one employee
+    private static String buildDatLine(Map<String, Object> emp, List<Map<String, String>> deps) {
+        StringBuilder sb = new StringBuilder();
+
+        sb.append(padRight((String) emp.get("EMP-ID"), LEN_EMP_ID));
+        sb.append(padRight((String) emp.get("EMP-NAME"), LEN_EMP_NAME));
+        sb.append(padRight((String) emp.get("EMP-DEPARTMENT"), LEN_EMP_DEPT));
+
+        sb.append("S"); // default salary type
+
+        double salary = Double.parseDouble((String) emp.get("SALARY"));
+        int salaryInt = (int) Math.round(salary * 100);
+        sb.append(padLeft(String.valueOf(salaryInt), LEN_SALARY, '0'));
+
+        // Write dependents
+        for (int i = 0; i < DEP_OCCURS; i++) {
+            if (i < deps.size()) {
+                Map<String, String> d = deps.get(i);
+                sb.append(padRight(d.get("DEP-NAME"), LEN_DEP_NAME));
+                sb.append(padLeft(d.get("DEP-AGE"), LEN_DEP_AGE, '0'));
+            } else {
+                sb.append(padRight("", LEN_DEP_NAME));
+                sb.append(padLeft("", LEN_DEP_AGE, '0'));
+            }
+        }
+
+        return sb.toString();
+    }
+
+    // Extract value between quotes
+    private static String extractValue(String line) {
+        int firstQuote = line.indexOf('"', line.indexOf(':'));
+        int secondQuote = line.indexOf('"', firstQuote + 1);
+        if (firstQuote >= 0 && secondQuote > firstQuote) {
+            return line.substring(firstQuote + 1, secondQuote);
+        }
+        return "";
+    }
+
+    private static String padRight(String s, int len) {
+        if (s == null) s = "";
+        return String.format("%1$-" + len + "s", s);
+    }
+
+    private static String padLeft(String s, int len, char pad) {
+        if (s == null) s = "";
+        return String.format("%" + len + "s", s).replace(' ', pad);
+    }
+}
+
+------------------------------------------------------------
+{
+  "EMPLOYEES": [
+    {
+      "EMP-ID": "00001",
+      "EMP-NAME": "John Smith",
+      "EMP-DEPARTMENT": "SALES",
+      "SALARY": "5500.75",
+      "DEPENDENTS": [
+        {
+          "DEP-NAME": "Anna Smith",
+          "DEP-AGE": "12"
+        },
+        {
+          "DEP-NAME": "Bob Smith",
+          "DEP-AGE": "10"
+        },
+        {
+          "DEP-NAME": "Cat Smith",
+          "DEP-AGE": "08"
+        }
+      ]
+    },
+    {
+      "EMP-ID": "00002",
+      "EMP-NAME": "Mary Johnson",
+      "EMP-DEPARTMENT": "FINANCE",
+      "SALARY": "205.00",
+      "DEPENDENTS": [
+        {
+          "DEP-NAME": "Sarah Johnson",
+          "DEP-AGE": "14"
+        },
+        {
+          "DEP-NAME": "Tom Johnson",
+          "DEP-AGE": "12"
+        },
+        {
+          "DEP-NAME": "Lily Johnson",
+          "DEP-AGE": "09"
+        }
+      ]
+    }
+  ]
+}
+
+-----------------------------------------------
+employee.cpy
+
+       01  EMP-RECORD.
+           05 EMP-ID             PIC 9(5).
+           05 EMP-NAME           PIC X(20).
+           05 EMP-DEPARTMENT     PIC X(10).
+
+           * Salary Type:
+           * 'S' = Annual Salary stored in SAL-ANNUAL
+           * 'H' = Hourly Wage stored in SAL-HOURLY
+           05 SALARY-TYPE        PIC X.
+
+           05 SAL-ANNUAL         PIC 9(6)V99.
+           05 SAL-HOURLY REDEFINES SAL-ANNUAL PIC 9(3)V99.
+
+           05 DEP-INFO OCCURS 3 TIMES.
+               10 DEP-NAME       PIC X(15).
+               10 DEP-AGE        PIC 99.
+
+---------------------------------------------------
+output.dat
+00001John Smith          SALES     S00550075Anna Smith     12Bob Smith      10Cat Smith      08
+00002Mary Johnson        FINANCE   S00020500Sarah Johnson  14Tom Johnson    12Lily Johnson   09
