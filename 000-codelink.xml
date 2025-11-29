@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#255 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="255-charts.html"&gt;255-charts.html&lt;a&gt;</LINK>
+    <CATEGORY>Charts by Industry</CATEGORY>
+	<DESC>Shows charts of stocks based on industry</DESC>
+ </EXAMPLE>
  <!--Example#254 -->
  <EXAMPLE>
     <LINK>&lt;a href="254-JSON-to-copybook.txt"&gt;254-JSON-to-copybook.txt&lt;a&gt;</LINK>
