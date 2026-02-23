@@ -1,0 +1,232 @@
+<h2>Below is the Python code for extracting table data from pdf file and put it in html file.</h2>
+<br>Input - Page#277 
+<br> https://www.jswsteel.in/sites/default/files/assets/downloads/steel/IR/Financial%20Performance/Annual%20Reports%20Steel/24-25/Integrated-Annual-Report-FY-2024-25.pdf
+<br>Output
+<br>256-output-extracted-data.html
+    
+ 
+import pdfplumber
+import re
+import pandas as pd
+
+# ==========================================================
+# FILE PATHS
+# ==========================================================
+INPUT_PDF = r"C:\Daya\Masala-stocks\JSW-2024-25-original-split-pages.pdf"
+OUTPUT_HTML = r"C:\Daya\Masala-stocks\JSW-2024-25-balsheet-incstmt.html"
+TARGET_PAGE_INDEX = 276  # Page 277 (0-based index)
+
+
+# ==========================================================
+# SMART FINANCIAL COLUMN PARSER
+# ==========================================================
+def extract_columns(line):
+    """
+    Rules:
+    - 3 numbers → Notes, 2025, 2024
+    - 2 numbers → Notes blank, 2025, 2024
+    """
+
+    numbers = re.findall(r'\(?\d[\d,\.]*\)?', line)
+
+    if len(numbers) < 2:
+        return None
+
+    particulars = line
+    for num in numbers:
+        particulars = particulars.replace(num, "")
+
+    particulars = particulars.strip()
+
+    if len(numbers) >= 3:
+        notes = numbers[0]
+        march_2025 = numbers[1]
+        march_2024 = numbers[2]
+    else:  # exactly 2 numbers
+        notes = ""
+        march_2025 = numbers[0]
+        march_2024 = numbers[1]
+
+    return [particulars, notes, march_2025, march_2024]
+
+
+# ==========================================================
+# BUILD CONSOLIDATED BALANCE SHEET (LEFT SIDE)
+# ==========================================================
+def build_balance_sheet(lines):
+
+    rows = []
+    capturing = False
+
+    for line in lines:
+        line = line.strip()
+        upper_line = line.upper()
+
+        # START at ASSETS
+        if "ASSETS" in upper_line:
+            capturing = True
+
+        if not capturing:
+            continue
+
+        if not line:
+            continue
+
+        row = extract_columns(line)
+
+        if row:
+            rows.append(row)
+
+            # STOP at TOTAL – EQUITY AND LIABILITIES (include it)
+            if "TOTAL" in upper_line and "EQUITY" in upper_line and "LIABILITIES" in upper_line:
+                break
+
+    return pd.DataFrame(
+        rows,
+        columns=["Particulars", "Notes", "31 March 2025", "31 March 2024"]
+    )
+
+
+# ==========================================================
+# BUILD CONSOLIDATED STATEMENT OF PROFIT & LOSS (RIGHT SIDE)
+# ==========================================================
+def build_pnl(lines):
+
+    rows = []
+    capturing = False
+
+    for line in lines:
+        line = line.strip()
+        upper_line = line.upper()
+
+        # START at Revenue from operations
+        if "REVENUE FROM OPERATIONS" in upper_line:
+            capturing = True
+
+        if not capturing:
+            continue
+
+        if not line:
+            continue
+
+        row = extract_columns(line)
+
+        if row:
+            rows.append(row)
+
+            # STOP at Diluted (include it)
+            if "DILUTED" in upper_line:
+                break
+
+    return pd.DataFrame(
+        rows,
+        columns=["Particulars", "Notes", "31 March 2025", "31 March 2024"]
+    )
+
+
+# ==========================================================
+# HTML GENERATION
+# ==========================================================
+def generate_html(balance_df, pnl_df):
+
+    html_content = f"""
+<html>
+<head>
+<style>
+body {{
+    font-family: Arial, sans-serif;
+}}
+.container {{
+    display: flex;
+    justify-content: space-between;
+}}
+.table-container {{
+    width: 48%;
+}}
+table {{
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 12px;
+}}
+th, td {{
+    border: 1px solid #ddd;
+    padding: 4px;
+    text-align: right;
+}}
+th:first-child, td:first-child {{
+    text-align: left;
+}}
+h2 {{
+    text-align: center;
+}}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="table-container">
+        <h2>Consolidated Balance Sheet</h2>
+        {balance_df.to_html(index=False, escape=False)}
+    </div>
+    <div class="table-container">
+        <h2>Consolidated Statement of Profit and Loss</h2>
+        {pnl_df.to_html(index=False, escape=False)}
+    </div>
+</div>
+
+</body>
+</html>
+"""
+    return html_content
+
+
+# ==========================================================
+# MAIN EXECUTION
+# ==========================================================
+def main():
+
+    print("Opening PDF...")
+
+    with pdfplumber.open(INPUT_PDF) as pdf:
+
+        if TARGET_PAGE_INDEX >= len(pdf.pages):
+            print("Invalid page index.")
+            return
+
+        page = pdf.pages[TARGET_PAGE_INDEX]
+
+        width = page.width
+        height = page.height
+
+        # Split vertically
+        left_bbox = (0, 0, width / 2, height)
+        right_bbox = (width / 2, 0, width, height)
+
+        left_page = page.within_bbox(left_bbox)
+        right_page = page.within_bbox(right_bbox)
+
+        left_text = left_page.extract_text()
+        right_text = right_page.extract_text()
+
+    left_lines = left_text.split("\n") if left_text else []
+    right_lines = right_text.split("\n") if right_text else []
+
+    print("Building Balance Sheet...")
+    balance_df = build_balance_sheet(left_lines)
+
+    print("Building Profit & Loss...")
+    pnl_df = build_pnl(right_lines)
+
+    print("Generating HTML...")
+
+    html_output = generate_html(balance_df, pnl_df)
+
+    with open(OUTPUT_HTML, "w", encoding="utf-8") as f:
+        f.write(html_output)
+
+    print("Done.")
+    print(f"Output saved to: {OUTPUT_HTML}")
+
+
+if __name__ == "__main__":
+    main()

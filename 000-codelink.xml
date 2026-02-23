@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#256 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="256-extract-table-data-from-pdf.txt"&gt;256-extract-table-data-from-pdf.txt&lt;a&gt;</LINK>
+    <CATEGORY>python</CATEGORY>
+	<DESC>Python Parser - Fin stmt from pdf and puts in html</DESC>
+ </EXAMPLE>
  <!--Example#255 -->
  <EXAMPLE>
     <LINK>&lt;a href="255-charts.html"&gt;255-charts.html&lt;a&gt;</LINK>
