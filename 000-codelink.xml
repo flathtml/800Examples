@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#257 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="257-COBOL-IMS-PART2-ch4.pdf"&gt;257-COBOL-IMS-PART2-ch4.pdf&lt;a&gt;</LINK>
+    <CATEGORY>COBOL-IMS</CATEGORY>
+	<DESC>COBOL IMS SCREEN BASICS</DESC>
+ </EXAMPLE>
  <!--Example#256 -->
  <EXAMPLE>
     <LINK>&lt;a href="256-extract-table-data-from-pdf.txt"&gt;256-extract-table-data-from-pdf.txt&lt;a&gt;</LINK>
