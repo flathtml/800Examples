@@ -1,0 +1,63 @@
+from crewai import Agent, Task
+from mock import MockLLM
+
+# ---------------------------
+# Mock LLM
+# ---------------------------
+mock_llm = MockLLM()
+
+# ---------------------------
+# Define Agents (NO LLM here)
+# ---------------------------
+
+explainer = Agent(
+    role="Technical Explainer",
+    goal="Explain topics in simple terms",
+    backstory="You are great at breaking down complex concepts.",
+    verbose=True
+)
+
+summarizer = Agent(
+    role="Summarizer",
+    goal="Summarize content clearly and concisely",
+    backstory="You specialize in extracting key insights.",
+    verbose=True
+)
+
+# ---------------------------
+# Define Tasks
+# ---------------------------
+
+task1 = Task(
+    description="Explain the concept of CrewAI in simple terms",
+    expected_output="Explanation text",
+    agent=explainer
+)
+
+task2 = Task(
+    description="Summarize the explanation into 5 bullet points",
+    expected_output="Bullet summary",
+    agent=summarizer
+)
+
+# ---------------------------
+# Manual Execution (Mock Flow)
+# ---------------------------
+
+print("# Agent:", explainer.role)
+print("## Task:", task1.description)
+
+output1 = mock_llm.generate(task1.description)
+print("\nOUTPUT:\n", output1)
+
+print("\n---------------------------\n")
+
+print("# Agent:", summarizer.role)
+print("## Task:", task2.description)
+
+# Pass previous output as context
+output2 = mock_llm.generate(task2.description + "\n" + output1)
+print("\n**OUTPUT**:\n", output2)
+
+print("\n===========================")
+print("**FINAL OUTPUT**:\n", output2)

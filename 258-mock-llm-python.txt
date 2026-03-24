@@ -1,0 +1,20 @@
+class MockLLM:
+    def generate(self, prompt):
+        prompt_text = str(prompt)
+
+        if "Explain" in prompt_text:
+            return (
+                "CrewAI is a framework that lets multiple AI agents work together. "
+                "Each agent has a role and completes a task."
+            )
+
+        elif "Summarize" in prompt_text:
+            return (
+                "- Multi-agent collaboration\n"
+                "- Task-based execution\n"
+                "- Role-driven agents\n"
+                "- Sequential workflow\n"
+                "- Modular AI design"
+            )
+
+        return "Mock response"

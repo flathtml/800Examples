@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+ <!--Example#258b -->
+ <EXAMPLE>
+    <LINK>&lt;a href="258-mock-llm-python.txt"&gt;258-mock-llm-python.txt&lt;a&gt;</LINK>
+    <CATEGORY>CrewAI</CATEGORY>
+	<DESC>CrewAI BASICS</DESC>
+ </EXAMPLE>
+ <!--Example#258a -->
+ <EXAMPLE>
+    <LINK>&lt;a href="258-basic-crewai-python.txt"&gt;258-basic-crewai-python.txt&lt;a&gt;</LINK>
+    <CATEGORY>CrewAI</CATEGORY>
+	<DESC>CrewAI BASICS</DESC>
+ </EXAMPLE>
  <!--Example#257 -->
  <EXAMPLE>
     <LINK>&lt;a href="257-COBOL-IMS-PART2-ch4.pdf"&gt;257-COBOL-IMS-PART2-ch4.pdf&lt;a&gt;</LINK>
