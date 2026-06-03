@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woodpecker animation</title>
+    <style>
+        body {
+            background-color: skyblue;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 80vw;
+            height: 80vh;
+            background-color: green;
+            border: 5px solid darkgreen;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        :root {
+    --main-fill-color: #5D5D5D;
+    --crest-color: red;
+    --zoom: 1.5;
+
+    --three-fill-color: #C78962;
+
+    --animation-delay: 500ms;
+}
+
+body {
+    margin: 0;
+}
+
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translate(-100%, 0%);
+}
+
+.woodpecker * {
+    position: absolute;
+}
+
+.woodpecker *:before, .woodpecker *:after {
+    content: '';
+    display: block;
+    position: absolute;
+}
+
+.woodpecker {
+    position: relative;
+    width: calc(100px * var(--zoom));
+}
+
+.head {
+    width: calc(50px * var(--zoom));
+    height: calc(35px * var(--zoom));
+    top: calc(35px * var(--zoom));
+    left: calc(9px * var(--zoom));
+    border-radius: 50% 50% 100% 0/ 50% 50% 50% 0;
+    background-color: var(--main-fill-color);
+    transform: rotate(-20deg);
+    animation: woodpecker-anim var(--animation-delay) alternate infinite;
+}
+
+
+.head:after {
+    border: 0 solid transparent;
+    border-left: calc(65px * var(--zoom)) solid var(--main-fill-color);
+    border-top-width: calc(6px * var(--zoom));
+    border-bottom-width: calc(11px * var(--zoom));
+    left: calc(35px * var(--zoom));
+    transform: rotate(5deg);
+    top: calc(11px * var(--zoom));
+}
+
+.head:before {
+    width: calc(47px * var(--zoom));
+    height: calc(20px * var(--zoom));
+    background: radial-gradient(
+            circle at 115% 60%, transparent calc(14px * var(--zoom)), var(--main-fill-color) calc(14.1px * var(--zoom))
+    );
+    top: calc(22px * var(--zoom))
+}
+
+
+.crest {
+    transform: rotate(-20deg);
+    width: calc(80px * var(--zoom));
+    height: calc(50px * var(--zoom));
+    left: 0;
+    top: 0;
+    background: radial-gradient(ellipse at left bottom, var(--crest-color) 50%, transparent 50.1%);
+    animation: woodpecker-crest-anim var(--animation-delay) alternate infinite;
+}
+
+.crest:before {
+    content: none;
+}
+
+.crest:after {
+    content: none;
+}
+
+.head__details {
+    width: 100%;
+    top: calc(5px * var(--zoom));
+    height: calc(43px * var(--zoom));
+    border-radius: 56%;
+    z-index: 10;
+    transform: rotate(-10deg);
+    border-top: calc(12px * var(--zoom)) solid rgba(255, 255, 255, 0.6);
+}
+
+.head__details:before {
+    width: calc(40px * var(--zoom));
+    top: calc(8px * var(--zoom));
+    left: calc(50px * var(--zoom));
+    z-index: 10;
+    transform: rotate(12deg);
+    border-top: calc(1px * var(--zoom)) solid rgba(0, 0, 0, 0.2);
+}
+
+.head__details:after {
+    width: 64%;
+    left: calc(18px *var(--zoom));
+    top: calc(1px * var( --zoom));
+    height: calc(11px * var( --zoom));
+    border-radius: 55%;
+    z-index: 10;
+    transform: rotate(2deg);
+    opacity: 0.5;
+    border-top: calc(7px * var( --zoom)) solid var(--crest-color);
+}
+
+.eye {
+    width: calc(7px * var(--zoom));
+    height: calc(9px * var(--zoom));
+    top: calc(7px * var(--zoom));
+    left: calc(30px * var(--zoom));
+    border-radius: 50%;
+    background: black;
+    z-index: 10;
+    transform: rotate(-65deg);
+    border: calc(0.5px * var(--zoom)) solid black;
+}
+
+.eye:before {
+    width: 90%;
+    height: 70%;
+    background: black;
+    border-radius: 50%;
+    top: 25%;
+    left: 20%;
+}
+
+.eye:after {
+    width: 45%;
+    height: 45%;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.7), black);
+    border-radius: 50%;
+    top: 15%;
+    left: 40%;
+}
+
+
+.body {
+    width: calc(74px * var(--zoom));
+    height: calc(120px * var(--zoom));
+    border-radius: 45% 49% 50% 50% / 52% 45% 57% 53%;
+    background-color: var(--main-fill-color);
+
+    top: calc(64px * var(--zoom));
+    left: calc(12px * var(--zoom));
+    transform: rotate(-3deg);
+    border-bottom: calc(1px * var(--zoom)) solid black;
+    animation: woodpecker-body-anim var(--animation-delay) alternate infinite;
+
+}
+
+.body:before {
+    transform: rotate(5deg);
+    top: calc(64px * var(--zoom));
+    left: calc(-3.4px * var(--zoom));
+    width: calc(50px * var(--zoom));
+    border: 0 solid transparent;
+    border-top: calc(75px * var(--zoom)) solid var(--main-fill-color);
+    border-left-width: calc(12px * var(--zoom));
+    border-right-width: calc(18px * var(--zoom));
+}
+
+.body:after {
+    width: calc(10px * var(--zoom));
+    height: calc(60px * var(--zoom));
+    background: var(--main-fill-color);
+    top: calc(98px * var(--zoom));
+    border-right: calc(1px * var(--zoom)) solid black;
+    left: calc(5px * var(--zoom));
+    border-radius: 40% 60%;
+}
+
+.wing {
+    width: calc(10px * var(--zoom));
+    height: calc(40px * var(--zoom));
+    background: var(--main-fill-color);
+    border-right: calc(1px * var(--zoom)) solid black;
+    top: calc(112px * var(--zoom));
+    left: calc(18px * var(--zoom));
+    transform: rotate(19deg);
+    border-radius: 40% 60%;
+}
+
+.wing:before {
+    width: calc(10px * var(--zoom));
+    height: calc(50px * var(--zoom));
+    background: var(--main-fill-color);
+    border-right: calc(1px * var(--zoom)) solid black;
+    left: calc(-6px * var(--zoom));
+    transform: rotate(-3deg);
+    border-radius: 40% 60%;
+}
+
+.wing:after {
+    width: calc(35px * var(--zoom));
+    height: calc(110px * var(--zoom));
+    background: var(--main-fill-color);
+    border-right: calc(2px * var(--zoom)) solid black;
+    top: calc(-90px * var(--zoom));
+    left: calc(-25px * var(--zoom));
+    transform: rotate(-6deg);
+    border-radius: 40% 60%;
+}
+
+.wing__details {
+    width: calc(10px * var(--zoom));
+    height: calc(50px * var(--zoom));
+    background: var(--main-fill-color);
+    border-right: calc(1px * var(--zoom)) solid rgb(2, 2, 2);
+    border-bottom: calc(1px * var(--zoom)) solid black;
+    left: calc(-8px * var(--zoom));
+    top: calc(-36px * var(--zoom));
+    transform: rotate(-3deg);
+    border-radius: 40% 60%;
+    z-index: 10;
+}
+
+.wing__details:before {
+    width: calc(10px * var(--zoom));
+    height: calc(60px * var(--zoom));
+    background: var(--main-fill-color);
+    border-right: calc(1px * var(--zoom)) solid black;
+    border-bottom: calc(1px * var(--zoom)) solid black;
+    left: calc(-13px * var(--zoom));
+    top: calc(-30px * var(--zoom));
+    transform: rotate(-20deg);
+    border-radius: 40% 60%;
+    z-index: 10;
+}
+
+.wing__details:after {
+    width: calc(10px * var(--zoom));
+    height: calc(60px * var(--zoom));
+    background: var(--main-fill-color);
+    border-right: calc(1px * var(--zoom)) solid black;
+    border-bottom: calc(1px * var(--zoom)) solid black;
+    left: calc(0px * var(--zoom));
+    top: calc(-40px * var(--zoom));
+    transform: rotate(-10deg);
+    border-radius: 40% 60%;
+    z-index: 10;
+}
+
+.tail {
+    z-index: -1;
+    transform: rotate(5deg);
+    top: calc(148px * var(--zoom));
+    left: calc(22px * var(--zoom));
+    width: calc(45px * var(--zoom));
+    border: 0 solid transparent;
+    border-top: calc(80px * var(--zoom)) solid var(--main-fill-color);
+    border-left-width: calc(12px * var(--zoom));
+    border-right-width: calc(18px * var(--zoom));
+    animation: woodpecker-tail-anim var(--animation-delay) alternate infinite;
+
+}
+
+.tail:before {
+    width: calc(10px * var(--zoom));
+    height: calc(70px * var(--zoom));
+    background: var(--main-fill-color);
+    border-right: calc(1px * var(--zoom)) solid black;
+    border-bottom: calc(1px * var(--zoom)) solid black;
+    left: calc(7px * var(--zoom));
+    top: calc(-39px * var(--zoom));
+    transform: rotate(9deg);
+    border-radius: 40% 60%;
+}
+
+.tail:after {
+    width: calc(10px * var(--zoom));
+    height: calc(50px * var(--zoom));
+    background: var(--main-fill-color);
+    border-right: calc(1px * var(--zoom)) solid black;
+    border-bottom: calc(1px * var(--zoom)) solid black;
+    left: calc(0px * var(--zoom));
+    top: calc(-25px * var(--zoom));
+    transform: rotate(0deg);
+    border-radius: 40% 60%;
+}
+
+.paw1 {
+    top: calc(148px * var(--zoom));
+    left: calc(80px * var(--zoom));
+
+    width: calc(32px * var(--zoom));
+    height: calc(4px * var(--zoom));
+
+    transform: rotate(-9deg) scale(1.25, 1);
+    background: black;
+    z-index: -1;
+}
+
+.paw1:before {
+    top: calc(0px * var(--zoom));
+    left: calc(29px * var(--zoom));
+
+    width: calc(9px * var(--zoom));
+    height: calc(15px * var(--zoom));
+    border-left: calc(3px * var(--zoom)) solid black;
+    border-radius: 50%;
+
+    transform: rotate(-5deg);
+    background: none;
+
+
+}
+
+.paw1:after {
+    top: calc(-17px * var(--zoom));
+    left: calc(31px * var(--zoom));
+    width: calc(11px * var(--zoom));
+    height: calc(25px * var(--zoom));
+    border-left: calc(3px * var(--zoom)) solid black;
+    border-radius: 50%;
+    transform: rotate(20deg);
+    background: none;
+}
+
+.paw1__detail {
+    top: calc(-20px * var(--zoom));
+    left: calc(28px * var(--zoom));
+    width: calc(12px * var(--zoom));
+    height: calc(27px * var(--zoom));
+    border-left: calc(3px * var(--zoom)) solid black;
+    border-radius: 50%;
+    transform: rotate(6deg);
+}
+
+.paw2 {
+    top: calc(129px * var(--zoom));
+    left: calc(75px * var(--zoom));
+    transform: rotate(-15deg);
+    z-index: -1;
+}
+
+.tree {
+    position: absolute;
+    width: calc(100px * var(--zoom));
+    height: 100vh;
+    background-color: var(--three-fill-color);
+    background-image: linear-gradient(to left, #AF7345, var(--three-fill-color), rgba(255, 255, 255, 0.1));
+    left: calc(103px * var(--zoom));
+    z-index: -2;
+}
+
+.tree:before {
+    position: absolute;
+    content: '';
+    display: block;
+    left: calc(95px * var(--zoom));
+    top: calc(90px * var(--zoom));
+    transform: rotate(50deg);
+    width: calc(20px * var(--zoom));
+    height: calc(30px * var(--zoom));
+    background: #AF7345;;
+}
+
+.tree:after {
+    position: absolute;
+    content: '';
+    display: block;
+    left: calc(107px * var(--zoom));
+    top: calc(90px * var(--zoom));
+    transform: rotate(50deg);
+    border-radius: 50%;
+    width: calc(20px * var(--zoom));
+    height: calc(10px * var(--zoom));
+    background: radial-gradient(#F7D990, var(--three-fill-color));
+}
+
+.tree__details {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: repeating-linear-gradient(to right, transparent 9%, #AF7345 9%, #AF7345 10%, transparent 11%, transparent 25%);
+}
+
+.wood-chips {
+    width: calc(2px * var(--zoom));
+    height: calc(2px * var(--zoom));
+    top: calc(45px * var(--zoom));
+    left: calc(26px * var(--zoom));
+    background: #AF7345;
+    position: absolute;
+    transform: scale(0);
+    animation: wood-chips-animation infinite calc(var(--animation-delay) * 1.9);
+    animation-delay: var(--animation-delay);
+}
+
+.wood-chips2 {
+    content: '';
+    display: block;
+    width: calc(1px * var(--zoom));
+    height: calc(2px * var(--zoom));
+    top: calc(45px * var(--zoom));
+    left: calc(20px * var(--zoom));
+    background: #AF7345;
+    position: absolute;
+    transform: scale(0) rotate(-10deg);
+    animation: wood-chips2-animation infinite calc(var(--animation-delay) * 1.9);
+    animation-delay: var(--animation-delay);
+}
+
+.wood-chips3 {
+    content: '';
+    display: block;
+    width: calc(2px * var(--zoom));
+    height: calc(3px * var(--zoom));
+    top: calc(45px * var(--zoom));
+    left: calc(20px * var(--zoom));
+    background: #AF7345;
+    position: absolute;
+    transform: scale(0) rotate(-10deg);
+    animation: wood-chips3-animation infinite calc(var(--animation-delay) * 1.9);
+    animation-delay: var(--animation-delay);
+}
+
+@keyframes woodpecker-anim {
+    from {
+        transform: rotate(-20deg);
+        left: calc(9px * var(--zoom));
+    }
+    to {
+        transform: rotate(-5deg);
+        left: calc(25px * var(--zoom));
+    }
+}
+
+
+@keyframes woodpecker-crest-anim {
+    from {
+        left: calc(0px * var(--zoom));
+        transform: rotate(-20deg);
+    }
+    to {
+        left: calc(20px * var(--zoom));
+        transform: rotate(-10deg);
+    }
+}
+
+
+@keyframes woodpecker-body-anim {
+    from {
+        transform: rotate(-3deg);
+    }
+    to {
+        transform: rotate(11deg);
+    }
+}
+
+
+@keyframes woodpecker-tail-anim {
+    from {
+        transform: rotate(5deg) translate(0, 0);
+    }
+    to {
+        transform: rotate(11deg) translate(-4px, 2px);
+    }
+}
+
+@keyframes wood-chips-animation {
+    from {
+        transform: scale(1) translate(0, 0);
+    }
+    to {
+        transform: scale(2) translate(10px, 20px);
+    }
+}
+
+@keyframes wood-chips2-animation {
+    from {
+        transform: scale(1) translate(0, 0);
+    }
+    to {
+        transform: scale(2) translate(-10px, 20px);
+    }
+}
+
+@keyframes wood-chips3-animation {
+    from {
+        transform: scale(1) translate(0, 0);
+    }
+    to {
+        transform: scale(1.5) translate(0px, -20px);
+    }
+}
+
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="wrapper">
+        <div class="woodpecker">
+            <div class="crest"></div>
+            <div class="head">
+                <div class="head__details"></div>
+                <div class="eye"></div>
+            </div>
+            <div class="body">
+                <div class="wing">
+                    <div class="wing__details"></div>
+                </div>
+            </div>
+            <div class="tail"></div>
+    
+            <div class="paw1 paw2">
+                <div class="paw1__detail"></div>
+            </div>
+    
+            <div class="paw1">
+                <div class="paw1__detail"></div>
+            </div>
+    
+        </div>
+        <div class="tree">
+            <div class="tree__details"></div>
+            <div class="wood-chips"></div>
+            <div class="wood-chips2"></div>
+            <div class="wood-chips3"></div>
+        </div>
+    </div>
+</div>
+ 
+</body>
+</html>

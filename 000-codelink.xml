@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <CODE>
  <!--Insert new record here -->
+  <!--Example#259 -->
+ <EXAMPLE>
+    <LINK>&lt;a href="259-woodpecker-challenge.html"&gt;259-woodpecker-challenge.html&lt;a&gt;</LINK>
+    <CATEGORY>Agentic AI Challege</CATEGORY>
+	<DESC>Woodpecker Challenge</DESC>
+ </EXAMPLE>
  <!--Example#258b -->
  <EXAMPLE>
     <LINK>&lt;a href="258-mock-llm-python.txt"&gt;258-mock-llm-python.txt&lt;a&gt;</LINK>
